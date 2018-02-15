@@ -43,6 +43,9 @@ public class DemoActivity extends AppCompatActivity {
   Toolbar toolbar;
 
 
+  static {
+
+  }
 
   @AfterViews
   void init() {

@@ -54,5 +54,7 @@ public abstract class TouchPromptImpl {
     touchPrompt.onClosed();
   }
 
-
+  protected final void onShown() {
+    touchPrompt.onShown();
+  }
 }

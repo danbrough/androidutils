@@ -15,11 +15,13 @@
  *
  */
 
-package danbroid.touchprompt;
+package danbroid.touchprompt.material;
 
 import android.app.Activity;
 import android.widget.Toast;
 
+import danbroid.touchprompt.TouchPrompt;
+import danbroid.touchprompt.TouchPromptImpl;
 import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
 
 /**
@@ -117,7 +119,7 @@ public class MaterialTouchPrompt extends TouchPromptImpl {
     prompt = builder.show();
 
     if (prompt != null) {
-      touchPrompt.onShown();
+      onShown();
     } else {
       log.error("prompt failed to show");
     }
