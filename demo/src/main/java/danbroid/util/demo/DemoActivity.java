@@ -21,9 +21,12 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import danbroid.test.Test;
 
 /**
  * Created by dan on 15/02/18.
@@ -42,6 +45,8 @@ public class DemoActivity extends AppCompatActivity {
   @Override
   protected void onStart() {
     super.onStart();
+
+    Toast.makeText(this, "Test message is : " + Test.getMessage(), Toast.LENGTH_SHORT).show();
 
     Logger log = LoggerFactory.getLogger(DemoActivity.class);
 
