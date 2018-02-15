@@ -22,7 +22,7 @@ compile 'com.github.danbrough.util:slf4j:master-SNAPSHOT'
 in your dependencies (for the latest version), or:
 
 ```gradle
-compile 'com.github.danbrough:danbroid_slf4j:v1.001'
+compile 'com.github.danbrough.util:slf4j:1.0'
 ```
 
 for a particular version
