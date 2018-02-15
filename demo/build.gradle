@@ -27,7 +27,7 @@ android {
     versionCode 1
     versionName "1.0.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    multiDexEnabled true
+    //multiDexEnabled true
 
   }
 
@@ -53,6 +53,8 @@ dependencies {
   implementation "org.slf4j:slf4j-api:${SLF4J}"
 
   implementation 'com.github.danbrough.util:slf4j:master-SNAPSHOT'
+  implementation 'com.github.danbrough.util:touchprompt:master-SNAPSHOT'
+
   implementation 'com.github.danbrough.util:touchprompt_material:master-SNAPSHOT'
 
 

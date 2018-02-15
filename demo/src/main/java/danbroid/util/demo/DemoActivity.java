@@ -28,7 +28,6 @@ import org.androidannotations.annotations.ViewById;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import danbroid.touchprompt.MaterialTouchPrompt;
 import danbroid.touchprompt.TouchPrompt;
 
 
@@ -43,9 +42,7 @@ public class DemoActivity extends AppCompatActivity {
   @ViewById(R.id.toolbar)
   Toolbar toolbar;
 
-  static {
-    MaterialTouchPrompt.install();
-  }
+
 
   @AfterViews
   void init() {

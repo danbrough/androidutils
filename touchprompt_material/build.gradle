@@ -26,7 +26,7 @@ android {
     minSdkVersion 14
     targetSdkVersion 27
     versionCode 1
-    versionName "1.0.3"
+    versionName "1.0.4"
 
     //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
@@ -49,7 +49,9 @@ android {
 }
 
 dependencies {
-  api project(':touchprompt')
+  api "com.github.danbrough.util:touchprompt:master-SNAPSHOT"
+  implementation "com.android.support:support-annotations:$SUPPORT_LIB"
+
   api 'uk.co.samuelwall:material-tap-target-prompt:2.6.1'
 
   //testImplementation 'junit:junit:4.12'
