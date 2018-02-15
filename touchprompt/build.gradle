@@ -1,8 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 
-
-group='com.github.danbroid.util'
 
 android {
   compileSdkVersion SDK_COMPILE as int
@@ -12,12 +9,15 @@ android {
     minSdkVersion 1
     targetSdkVersion SDK_TARGET as int
     versionCode 1
-    versionName "1.0.0"
+    versionName "1.0.1"
 
     // testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
   }
-
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
   buildTypes {
     release {
       minifyEnabled false
@@ -29,7 +29,8 @@ android {
 
 dependencies {
 
-  implementation "org.slf4j:slf4j-api:${SLF4J}"
+  api "org.slf4j:slf4j-api:${SLF4J}"
+  api "com.android.support:support-annotations:$SUPPORT_LIB"
 
   testImplementation 'junit:junit:4.12'
 
