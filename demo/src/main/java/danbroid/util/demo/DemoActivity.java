@@ -29,6 +29,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import danbroid.touchprompt.TouchPrompt;
+import danbroid.touchprompt.material.MaterialTouchPrompt;
 
 
 /**
@@ -39,13 +40,14 @@ import danbroid.touchprompt.TouchPrompt;
 public class DemoActivity extends AppCompatActivity {
   private static final Logger log = LoggerFactory.getLogger(DemoActivity.class);
 
+  static {
+    MaterialTouchPrompt.install();
+  }
+  
+
   @ViewById(R.id.toolbar)
   Toolbar toolbar;
 
-
-  static {
-
-  }
 
   @AfterViews
   void init() {
