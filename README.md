@@ -1,2 +1,5 @@
-# util
-Utility classes for java and android
+### Danbroid's Util Library
+
+Simple android routines for doing stuff.
+
+
