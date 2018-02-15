@@ -17,36 +17,54 @@
 
 package danbroid.util.demo;
 
-import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import danbroid.test.Test;
+import danbroid.touchprompt.MaterialTouchPrompt;
+import danbroid.touchprompt.TouchPrompt;
+
 
 /**
  * Created by dan on 15/02/18.
- * Evidently.
  */
 
+@EActivity(R.layout.activity_main)
 public class DemoActivity extends AppCompatActivity {
   private static final Logger log = LoggerFactory.getLogger(DemoActivity.class);
 
-  @Override
-  public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-    super.onCreate(savedInstanceState, persistentState);
+  @ViewById(R.id.toolbar)
+  Toolbar toolbar;
 
+  static {
+    MaterialTouchPrompt.install();
+  }
+
+  @AfterViews
+  void init() {
+    setSupportActionBar(toolbar);
+  }
+
+  @Click(R.id.test1)
+  void actionTest1(View view) {
+    new TouchPrompt(this)
+        .setTarget(view)
+        .setPrimaryText("Test 1")
+        .setSecondaryText("You just clicked this button!")
+        .show();
   }
 
   @Override
   protected void onStart() {
     super.onStart();
 
-    Toast.makeText(this, "Test message is : " + Test.getMessage(), Toast.LENGTH_SHORT).show();
 
     Logger log = LoggerFactory.getLogger(DemoActivity.class);
 

@@ -27,7 +27,13 @@ android {
     versionCode 1
     versionName "1.0.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    multiDexEnabled true
 
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
   }
 
   buildTypes {
@@ -41,14 +47,20 @@ android {
 }
 
 dependencies {
+  annotationProcessor "org.androidannotations:androidannotations:${ANNOTATIONS}"
+  implementation "org.androidannotations:androidannotations-api:${ANNOTATIONS}"
 
+  implementation "org.slf4j:slf4j-api:${SLF4J}"
 
   implementation 'com.github.danbrough.util:slf4j:master-SNAPSHOT'
-  implementation 'com.github.danbrough.util:test:master-SNAPSHOT'
+  implementation 'com.github.danbrough.util:touchprompt_material:master-SNAPSHOT'
+
+
 
   implementation "com.android.support:appcompat-v7:${SUPPORT_LIB}"
   implementation 'com.android.support.constraint:constraint-layout:1.0.2'
   implementation "com.android.support:design:${SUPPORT_LIB}"
+
   testImplementation 'junit:junit:4.12'
   androidTestImplementation 'com.android.support.test:runner:1.0.1'
   androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'

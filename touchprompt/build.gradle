@@ -10,7 +10,7 @@ android {
     minSdkVersion 11
     targetSdkVersion SDK_TARGET as int
     versionCode 1
-    versionName "1.0.2"
+    versionName "1.0.3"
 
     // testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -35,7 +35,7 @@ android {
 
 dependencies {
 
-  api "org.slf4j:slf4j-api:${SLF4J}"
+  implementation "org.slf4j:slf4j-api:${SLF4J}"
   api "com.android.support:support-annotations:$SUPPORT_LIB"
 
   testImplementation 'junit:junit:4.12'

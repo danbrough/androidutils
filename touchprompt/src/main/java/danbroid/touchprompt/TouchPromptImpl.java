@@ -18,24 +18,41 @@
 package danbroid.touchprompt;
 
 import android.app.Activity;
+import android.view.View;
 
 /**
  * Created by dan on 7/06/17.
  */
 
-class TouchPromptImpl extends AbstractTouchPromptImpl {
+public abstract class TouchPromptImpl {
+  private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(TouchPromptImpl.class);
 
-  public TouchPromptImpl(TouchPrompt touchPrompt, Activity activity) {
-    super(touchPrompt, activity);
+  protected CharSequence primaryText;
+  protected CharSequence secondaryText;
+  protected Activity activity;
+  protected float left = -1;
+  protected float top = -1;
+  protected int targetID;
+  protected View target;
+  protected long delay = 0L;
+  protected int primaryTextID = 0;
+  protected int secondaryTextID = 0;
+  protected final TouchPrompt touchPrompt;
+
+
+  protected TouchPromptImpl(TouchPrompt touchPrompt, Activity activity) {
+    this.activity = activity;
+    this.touchPrompt = touchPrompt;
   }
 
-  @Override
-  public void close() {
-    throw new UnsupportedOperationException();
+
+  protected abstract void show();
+
+  public abstract void close();
+
+  protected final void onClosed() {
+    touchPrompt.onClosed();
   }
 
-  @Override
-  protected void show() {
-    throw new UnsupportedOperationException();
-  }
+
 }

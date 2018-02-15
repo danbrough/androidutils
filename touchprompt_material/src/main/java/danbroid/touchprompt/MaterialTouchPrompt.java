@@ -26,13 +26,18 @@ import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
  * Created by dan on 7/06/17.
  */
 
-class TouchPromptImpl extends AbstractTouchPromptImpl {
+public class MaterialTouchPrompt extends TouchPromptImpl {
+
+
+  public static void install() {
+    TouchPrompt.IMPLEMENTATION = MaterialTouchPrompt.class;
+  }
 
   private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(TouchPromptImpl.class);
 
   private MaterialTapTargetPrompt prompt;
 
-  public TouchPromptImpl(TouchPrompt touchPrompt, Activity activity) {
+  public MaterialTouchPrompt(TouchPrompt touchPrompt, Activity activity) {
     super(touchPrompt, activity);
   }
 

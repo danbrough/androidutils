@@ -47,10 +47,21 @@ public class TouchPrompt {
     return context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
   }
 
+  public static Class<? extends TouchPromptImpl> IMPLEMENTATION;
+
+
   public static boolean SHOW_ALL = false;
 
   public TouchPrompt(Activity activity) {
-    impl = new TouchPromptImpl(this, activity);
+    if (IMPLEMENTATION == null)
+      throw new IllegalArgumentException("IMPLEMENTATION not set");
+
+    try {
+      impl = IMPLEMENTATION.getConstructor(TouchPrompt.class, Activity.class)
+          .newInstance(this, activity);
+    } catch (Exception e) {
+      log.error(e.getMessage(), e);
+    }
   }
 
 

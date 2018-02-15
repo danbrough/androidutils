@@ -27,7 +27,7 @@
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
     <activity
-        android:name=".DemoActivity"
+        android:name=".DemoActivity_"
         android:label="@string/app_name"
         android:theme="@style/AppTheme.NoActionBar">
       <intent-filter>
