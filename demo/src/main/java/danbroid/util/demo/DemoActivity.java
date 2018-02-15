@@ -43,7 +43,7 @@ public class DemoActivity extends AppCompatActivity {
   static {
     MaterialTouchPrompt.install();
   }
-  
+
 
   @ViewById(R.id.toolbar)
   Toolbar toolbar;
