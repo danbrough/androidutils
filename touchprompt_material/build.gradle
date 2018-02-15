@@ -49,7 +49,8 @@ android {
 }
 
 dependencies {
-  api "com.github.danbrough.util:touchprompt:master-SNAPSHOT"
+  //api "com.github.danbrough.util:touchprompt:master-SNAPSHOT"
+  api project(":touchprompt")
   implementation "com.android.support:support-annotations:$SUPPORT_LIB"
 
   api 'uk.co.samuelwall:material-tap-target-prompt:2.6.1'
