@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.danbroid.util'
 
 android {
   compileSdkVersion SDK_COMPILE as int
@@ -23,6 +24,9 @@ android {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
+  }
+  lintOptions {
+    abortOnError false
   }
 
 }
