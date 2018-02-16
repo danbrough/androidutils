@@ -51,8 +51,11 @@ dependencies {
   implementation "org.slf4j:slf4j-api:${SLF4J}"
 
   //slfj implementation
-  implementation 'com.github.danbrough.util:slf4j:1.0.5'
-  implementation 'com.github.danbrough.util:touchprompt_material:1.0.5'
+  //implementation 'com.github.danbrough.util:slf4j:1.0.5'
+  implementation project(":slf4j")
+  implementation project(":touchprompt_material")
+
+  //implementation 'com.github.danbrough.util:touchprompt_material:1.0.5'
 
   annotationProcessor "org.androidannotations:androidannotations:${ANNOTATIONS}"
   implementation "org.androidannotations:androidannotations-api:${ANNOTATIONS}"

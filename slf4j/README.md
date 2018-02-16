@@ -22,7 +22,7 @@ compile 'com.github.danbrough.util:slf4j:master-SNAPSHOT'
 in your dependencies (for the latest version), or:
 
 ```gradle
-compile 'com.github.danbrough.util:slf4j:1.0.0'
+compile 'com.github.danbrough.util:slf4j:1.0.6'
 ```
 
 for a particular version
@@ -32,7 +32,7 @@ for a particular version
 see: 
 
 ```ini
-# Overriding the default logging.properties
+# Overriding the default slf4j.properties
 # the logger names are hierarchical (via the . operator) and must be
 # defined top down/depth first.
 # eg:

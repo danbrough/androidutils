@@ -41,7 +41,7 @@ public class AndroidLoggerFactory implements ILoggerFactory {
 	static final int TAG_MAX_LENGTH = 23;
 
 
-	private static final String PROPERTIES_FILE = "/logging.properties";
+	private static final String PROPERTIES_FILE = "/slf4j.properties";
 	public static String TAG = "SLF4J";
 
 	static ConcurrentHashMap<String, LogInfo> LOGGERS;
