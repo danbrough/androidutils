@@ -1,1 +1,1 @@
-include ':slf4j', ':touchprompt', ':touchprompt_material',':demo'
+include ':slf4j', ':touchprompt', ':touchprompt_material',':demo', ':ui'
