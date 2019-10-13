@@ -6,6 +6,8 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.danbroid.util'
 
+//version = '1.0'
+
 android {
   compileSdkVersion sdk_version
 
