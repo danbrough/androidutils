@@ -1,1 +1,1 @@
-include ':slf4j', ':touchprompt', ':touchprompt_material',':demo', ':android-ui', ':android-core'
+include ':slf4j', ':touchprompt', ':touchprompt_material',':demo', ':android-ui',':android_resource'
