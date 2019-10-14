@@ -4,18 +4,17 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.danbroid.util'
+group = 'com.github.danbroid.util'
 
 android {
   compileSdkVersion sdk_version
-
 
 
   defaultConfig {
     minSdkVersion 15
     targetSdkVersion sdk_version
     versionCode 1
-    versionName 'resource-0.0.1'
+    versionName 'resource-0.0.2'
 
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     consumerProguardFiles 'consumer-rules.pro'
@@ -23,9 +22,9 @@ android {
     javaCompileOptions {
       annotationProcessorOptions {
         arguments = [
-            "room.schemaLocation":"$projectDir/schemas".toString(),
-            "room.incremental":"true",
-            "room.expandProjection":"true"]
+            "room.schemaLocation"  : "$projectDir/schemas".toString(),
+            "room.incremental"     : "true",
+            "room.expandProjection": "true"]
       }
     }
 
@@ -47,6 +46,14 @@ android {
     jvmTarget = "1.8"
   }
 
+  task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+  }
+
+  artifacts {
+    archives sourcesJar
+  }
 
 }
 
