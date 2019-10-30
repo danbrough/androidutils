@@ -21,9 +21,7 @@ buildscript {
 
 
 plugins {
-
-  //buildSrcVersions
-  id("de.fayard.refreshVersions") version "0.7.0"
+  buildSrcVersions
 }
 
 allprojects {

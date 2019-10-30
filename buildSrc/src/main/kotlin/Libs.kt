@@ -54,9 +54,9 @@ object Libs {
     const val com_android_tools_build_gradle: String = "com.android.tools.build:gradle:" +
             Versions.com_android_tools_build_gradle
 
-    const val de_fayard_refreshversions_gradle_plugin: String =
-            "de.fayard.refreshVersions:de.fayard.refreshVersions.gradle.plugin:" +
-            Versions.de_fayard_refreshversions_gradle_plugin
+    const val de_fayard_buildsrcversions_gradle_plugin: String =
+            "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
+            Versions.de_fayard_buildsrcversions_gradle_plugin
 
     /**
      * https://github.com/dcendents/android-maven-gradle-plugin
