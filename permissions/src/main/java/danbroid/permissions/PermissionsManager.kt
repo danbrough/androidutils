@@ -1,4 +1,4 @@
-package danbroid.util.permissions
+package danbroid.permissions
 
 import android.content.Context
 import android.content.pm.PackageManager
@@ -101,7 +101,12 @@ class PermissionsManager(val activity: AppCompatActivity) {
 
     if (EasyPermissions.hasPermissions(context, *request.perms)) {
       log.trace("has permissions")
-      callback.invoke(PermissionResult(requestCode, request.perms, request.perms.map { true }))
+      callback.invoke(
+        PermissionResult(
+          requestCode,
+          request.perms,
+          request.perms.map { true })
+      )
     } else {
       log.trace("requesting permission..")
       EasyPermissions.requestPermissions(request)
