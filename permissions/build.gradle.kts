@@ -8,7 +8,6 @@ plugins {
 
 
 group = "com.github.danbroid.util"
-version = "0.0.1"
 
 android {
   compileSdkVersion(ProjectVersions.SDK_VERSION)
