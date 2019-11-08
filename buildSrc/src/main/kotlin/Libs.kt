@@ -8,6 +8,13 @@ import kotlin.String
  */
 object Libs {
     /**
+     * https://github.com/Kotlin/kotlinx.coroutines
+     */
+    const val kotlinx_coroutines_android: String =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:" +
+            Versions.org_jetbrains_kotlinx_kotlinx_coroutines
+
+    /**
      * https://kotlinlang.org/
      */
     const val kotlin_android_extensions: String =
@@ -31,6 +38,12 @@ object Libs {
      * https://kotlinlang.org/
      */
     const val kotlin_gradle_plugin: String = "org.jetbrains.kotlin:kotlin-gradle-plugin:" +
+            Versions.org_jetbrains_kotlin
+
+    /**
+     * https://kotlinlang.org/
+     */
+    const val kotlin_stdlib_jdk8: String = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" +
             Versions.org_jetbrains_kotlin
 
     /**
@@ -64,6 +77,14 @@ object Libs {
     const val android_maven_gradle_plugin: String =
             "com.github.dcendents:android-maven-gradle-plugin:" +
             Versions.android_maven_gradle_plugin
+
+    const val lifecycle_runtime_ktx: String = "androidx.lifecycle:lifecycle-runtime-ktx:" +
+            Versions.lifecycle_runtime_ktx
+
+    /**
+     * https://github.com/googlesamples/easypermissions
+     */
+    const val easypermissions: String = "pub.devrel:easypermissions:" + Versions.easypermissions
 
     /**
      * https://developer.android.com/studio
