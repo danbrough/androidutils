@@ -1,6 +1,8 @@
 plugins {
   id("com.android.library")
-  id("com.github.dcendents.android-maven")
+
+  id("digital.wup.android-maven-publish") version "3.6.3"
+
 }
 
 group = "com.github.danbrough"
@@ -10,8 +12,8 @@ android {
   defaultConfig {
     minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
     targetSdkVersion(ProjectVersions.SDK_VERSION)
-    versionCode = 1
-    versionName = "1.0.8"
+    versionCode = ProjectVersions.VERSION_CODE
+    versionName = ProjectVersions.VERSION_NAME
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     consumerProguardFiles("consumer-rules.pro")
   }
@@ -32,12 +34,22 @@ android {
     }
 
   }
+  publishing {
+    publications {
 
+      create<MavenPublication>("mavenAar") {
+        groupId = "com.github.danbrough.util"
+        artifactId = "slf4j"
+        version = ProjectVersions.VERSION_NAME
+        from(components["android"])
+      }
+    }
+  }
 }
 
 dependencies {
   api(Libs.slf4j_api)
-  api(Libs.appcompat)
+  //api(Libs.appcompat)
 
   androidTestImplementation(Libs.androidx_test_runner)
   androidTestImplementation(Libs.androidx_test_rules)

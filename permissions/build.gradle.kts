@@ -3,11 +3,8 @@ plugins {
   kotlin("android")
   kotlin("kapt")
   kotlin("android.extensions")
-  id("com.github.dcendents.android-maven")
 }
 
-group = "com.github.danbrough"
-version = ProjectVersions.VERSION_NAME
 
 android {
   compileSdkVersion(ProjectVersions.SDK_VERSION)

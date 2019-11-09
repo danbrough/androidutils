@@ -4,12 +4,9 @@ plugins {
   kotlin("android")
   kotlin("android.extensions")
   kotlin("kapt")
-  id("com.github.dcendents.android-maven")
 }
 
 
-group = "com.github.danbrough"
-version = ProjectVersions.VERSION_NAME
 
 android {
 
