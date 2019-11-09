@@ -19,13 +19,6 @@ android {
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     consumerProguardFiles("consumer-rules.pro")
 
-    javaCompileOptions {
-      annotationProcessorOptions {
-        argument("room.schemaLocation", "$projectDir/schemas")
-        argument("room.incremental", "true")
-        argument("room.expandProjection", "true")
-      }
-    }
 
   }
 
@@ -48,8 +41,8 @@ android {
 }
 
 dependencies {
-  api(Libs.slf4j_api)
-  api(Libs.appcompat)
+  implementation(Libs.slf4j_api)
+  implementation(Libs.appcompat)
 
   androidTestImplementation(Libs.androidx_test_runner)
   androidTestImplementation(Libs.androidx_test_rules)
