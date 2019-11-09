@@ -7,8 +7,9 @@ plugins {
   id("com.github.dcendents.android-maven")
 }
 
-group = "com.github.danbrough.util"
 
+group = "com.github.danbrough"
+version = ProjectVersions.VERSION_NAME
 
 android {
 
@@ -16,8 +17,8 @@ android {
   defaultConfig {
     minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
     targetSdkVersion(ProjectVersions.SDK_VERSION)
-    versionCode = 1
-    versionName = "resource-0.0.2"
+    versionCode = ProjectVersions.VERSION_CODE
+    versionName = ProjectVersions.VERSION_NAME
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     consumerProguardFiles("consumer-rules.pro")
 
