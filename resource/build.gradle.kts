@@ -4,6 +4,8 @@ plugins {
   kotlin("android")
   kotlin("android.extensions")
   kotlin("kapt")
+  id("digital.wup.android-maven-publish") version "3.6.3"
+
 }
 
 
@@ -37,6 +39,18 @@ android {
       )
     }
 
+  }
+
+  publishing {
+    publications {
+
+      create<MavenPublication>("mavenAar") {
+        groupId = "com.github.danbrough.util"
+        artifactId = "resource"
+        version = ProjectVersions.VERSION_NAME
+        from(components["android"])
+      }
+    }
   }
 }
 

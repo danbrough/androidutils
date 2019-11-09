@@ -3,6 +3,8 @@ plugins {
   kotlin("android")
   kotlin("kapt")
   kotlin("android.extensions")
+  id("digital.wup.android-maven-publish") version "3.6.3"
+
 }
 
 
@@ -42,8 +44,17 @@ android {
     unitTests.setReturnDefaultValues(true)
   }
 
-  sourceSets {
-    maybeCreate("main").java.srcDir("../jvm_src/domain")
+
+  publishing {
+    publications {
+
+      create<MavenPublication>("mavenAar") {
+        groupId = "com.github.danbrough.util"
+        artifactId = "permissions"
+        version = ProjectVersions.VERSION_NAME
+        from(components["android"])
+      }
+    }
   }
 }
 

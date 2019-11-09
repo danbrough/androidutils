@@ -5,7 +5,7 @@ plugins {
 
 }
 
-group = "com.github.danbrough"
+
 
 android {
   compileSdkVersion(ProjectVersions.SDK_VERSION)
