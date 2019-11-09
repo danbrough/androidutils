@@ -17,7 +17,7 @@
 
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.danbroid.util'
+group = 'com.github.danbrough'
 
 android {
   compileSdkVersion SDK_COMPILE as int

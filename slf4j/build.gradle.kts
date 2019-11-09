@@ -3,7 +3,7 @@ plugins {
   id("com.github.dcendents.android-maven")
 }
 
-group = "com.github.danbrough.util"
+group = "com.github.danbrough"
 
 android {
   compileSdkVersion(ProjectVersions.SDK_VERSION)
