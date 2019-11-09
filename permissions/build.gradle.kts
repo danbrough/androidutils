@@ -69,11 +69,11 @@ dependencies {
    }*/
 
   implementation(Libs.slf4j_api)
-  implementation(Libs.kotlin_stdlib_jdk8)
-  implementation(Libs.kotlinx_coroutines_android)
-  implementation(Libs.lifecycle_runtime_ktx)
+  implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.50")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.2")
+  implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-rc02")
 
-  api(Libs.easypermissions)
+  api("pub.devrel:easypermissions:3.0.0")
 
 /*  testImplementation(Libs.junit)
   testImplementation(Libs.androidx_test_core)
