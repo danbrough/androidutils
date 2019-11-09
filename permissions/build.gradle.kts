@@ -6,7 +6,6 @@ plugins {
   id("com.github.dcendents.android-maven")
 }
 
-
 group = "com.github.danbrough.util"
 
 android {

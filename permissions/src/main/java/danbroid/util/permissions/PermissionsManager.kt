@@ -1,4 +1,4 @@
-package danbroid.permissions
+package danbroid.util.permissions
 
 import android.content.Context
 import android.content.pm.PackageManager
