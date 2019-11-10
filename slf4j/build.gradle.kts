@@ -34,6 +34,13 @@ android {
     }
 
   }
+
+  val sourcesJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("sources")
+    from(android.sourceSets.getByName("main").java.srcDirs)
+  }
+
+
   publishing {
     publications {
 
@@ -42,6 +49,8 @@ android {
         artifactId = "slf4j"
         version = ProjectVersions.VERSION_NAME
         from(components["android"])
+        artifact(sourcesJar.get())
+
       }
     }
   }
