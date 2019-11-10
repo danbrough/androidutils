@@ -47,7 +47,7 @@ android {
       create<MavenPublication>("mavenAar") {
         groupId = "com.github.danbrough.util"
         artifactId = "slf4j"
-        version = ProjectVersions.VERSION_NAME
+        version = "1.0.0-test"
         from(components["android"])
         artifact(sourcesJar.get())
 
