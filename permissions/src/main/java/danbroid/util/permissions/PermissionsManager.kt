@@ -15,6 +15,9 @@ import pub.devrel.easypermissions.PermissionRequest
 import java.util.concurrent.CancellationException
 import java.util.concurrent.atomic.AtomicInteger
 
+var ACTIVITY_MANAGER_PROVIDER: ((AppCompatActivity)->PermissionsManager)? = null
+
+
 class PermissionsManager(val activity: AppCompatActivity) {
 
   var fragment: Fragment? = null
