@@ -19,15 +19,6 @@ VERSION_NAME=$(./gradlew -q projectVersion -PVERSION_CODE=$VERSION_CODE)
 
 echo Creating release: $VERSION_NAME
 
-while true; do
-    read -p "Do you wish to proceed?: " yn
-    case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
-
 if git tag | grep "$VERSION_NAME" > /dev/null; then
   while true; do
     read -p "Existing Tag $VERSION_NAME found. Shall I delete it?: " yn
