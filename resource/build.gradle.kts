@@ -4,8 +4,7 @@ plugins {
   kotlin("android")
   kotlin("android.extensions")
   kotlin("kapt")
-  id("digital.wup.android-maven-publish") version "3.6.3"
-
+  id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
 }
 
 
@@ -32,7 +31,7 @@ android {
   buildTypes {
 
     getByName("release") {
-      isMinifyEnabled = true
+      isMinifyEnabled = false
       proguardFiles(
         getDefaultProguardFile("proguard-android-optimize.txt"),
         "proguard-rules.pro"

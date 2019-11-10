@@ -16,17 +16,6 @@ buildscript {
   }
 }
 
-tasks.register("projectVersion") {
-  this.description = "Prints the VERSION_NAME,VERSION_CODE from ProjectVersions"
-  var versionCode = ProjectVersions.VERSION_CODE
-  if (project.properties.containsKey("INCREMENT_VERSION")) {
-    versionCode++
-  }
-  if (project.hasProperty("VERSION_CODE")) {
-    versionCode = project.properties["VERSION_CODE"].toString().toInt()
-  }
-  println(ProjectVersions.getVersionName(versionCode))
-}
 
 
 
@@ -55,3 +44,20 @@ allprojects {
   }
 
 }
+
+tasks.register("projectVersion") {
+  this.description = "Prints the VERSION_NAME,VERSION_CODE from ProjectVersions"
+  var versionCode = ProjectVersions.VERSION_CODE
+  if (project.properties.containsKey("INCREMENT_VERSION")) {
+    versionCode++
+  }
+  if (project.hasProperty("VERSION_CODE")) {
+    versionCode = project.properties["VERSION_CODE"].toString().toInt()
+  }
+
+  doLast {
+    println(ProjectVersions.getVersionName(versionCode))
+  }
+
+}
+
