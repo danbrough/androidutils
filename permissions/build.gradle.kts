@@ -60,11 +60,17 @@ android {
       }
     }
   }
+
+  kotlin {
+    sourceSets {
+      all {
+        languageSettings.useExperimentalAnnotation("kotlinx.coroutines.ExperimentalCoroutinesApi")
+        languageSettings.useExperimentalAnnotation("kotlinx.coroutines.FlowPreview")
+      }
+    }
+  }
 }
 
-kotlin.sourceSets.all {
-  languageSettings.useExperimentalAnnotation("kotlin.Experimental")
-}
 
 
 dependencies {
@@ -74,6 +80,7 @@ dependencies {
   implementation(Libs.kotlin_stdlib_jdk8)
   implementation(Libs.kotlinx_coroutines_android)
   implementation(Libs.lifecycle_runtime_ktx)
+//  implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-rc02")
 
   api(Libs.easypermissions)
 

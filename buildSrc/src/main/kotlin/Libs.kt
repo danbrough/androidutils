@@ -47,6 +47,26 @@ object Libs {
             Versions.org_jetbrains_kotlin
 
     /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    const val lifecycle_extensions: String = "androidx.lifecycle:lifecycle-extensions:" +
+            Versions.androidx_lifecycle
+
+    /**
+     * http://developer.android.com/tools/extras/support-library.html
+     */
+    const val lifecycle_viewmodel_ktx: String = "androidx.lifecycle:lifecycle-viewmodel-ktx:" +
+            Versions.androidx_lifecycle
+
+    const val lifecycle_runtime_ktx: String = "androidx.lifecycle:lifecycle-runtime-ktx:" +
+            Versions.androidx_lifecycle
+
+    const val multidex_instrumentation: String = "androidx.multidex:multidex-instrumentation:" +
+            Versions.androidx_multidex
+
+    const val multidex: String = "androidx.multidex:multidex:" + Versions.androidx_multidex
+
+    /**
      * https://developer.android.com/testing
      */
     const val androidx_test_core: String = "androidx.test:core:" + Versions.androidx_test
@@ -75,13 +95,15 @@ object Libs {
             "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
             Versions.de_fayard_buildsrcversions_gradle_plugin
 
-    const val lifecycle_runtime_ktx: String = "androidx.lifecycle:lifecycle-runtime-ktx:" +
-            Versions.lifecycle_runtime_ktx
-
     /**
      * https://github.com/googlesamples/easypermissions
      */
     const val easypermissions: String = "pub.devrel:easypermissions:" + Versions.easypermissions
+
+    /**
+     * https://developer.android.com/jetpack/androidx
+     */
+    const val fragment_ktx: String = "androidx.fragment:fragment-ktx:" + Versions.fragment_ktx
 
     /**
      * https://developer.android.com/studio
@@ -99,7 +121,17 @@ object Libs {
     const val slf4j_api: String = "org.slf4j:slf4j-api:" + Versions.slf4j_api
 
     /**
+     * http://developer.android.com/tools/extras/support-library.html
+     */
+    const val core_ktx: String = "androidx.core:core-ktx:" + Versions.core_ktx
+
+    /**
      * https://developer.android.com/studio
      */
     const val aapt2: String = "com.android.tools.build:aapt2:" + Versions.aapt2
+
+    /**
+     * https://github.com/danbrough/util
+     */
+    const val slf4j: String = "com.github.danbrough.util:slf4j:" + Versions.slf4j
 }

@@ -16,6 +16,10 @@ object Versions {
 
     const val org_jetbrains_kotlin: String = "1.3.50"
 
+    const val androidx_lifecycle: String = "2.2.0-rc02"
+
+    const val androidx_multidex: String = "2.0.0"
+
     const val androidx_test: String = "1.2.0"
 
     const val com_android_tools_build_gradle: String = "3.5.2"
@@ -24,9 +28,9 @@ object Versions {
 
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
-    const val lifecycle_runtime_ktx: String = "2.2.0-rc02"
-
     const val easypermissions: String = "3.0.0"
+
+    const val fragment_ktx: String = "1.2.0-rc02"
 
     const val lint_gradle: String = "26.5.2"
 
@@ -34,7 +38,11 @@ object Versions {
 
     const val slf4j_api: String = "1.7.29"
 
+    const val core_ktx: String = "1.2.0-beta02"
+
     const val aapt2: String = "3.5.2-5435860"
+
+    const val slf4j: String = "1.0.11"
 
     /**
      * Current version: "6.0"

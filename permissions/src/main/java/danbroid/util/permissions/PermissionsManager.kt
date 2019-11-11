@@ -1,9 +1,9 @@
 package danbroid.util.permissions
 
+import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.BroadcastChannel
@@ -12,66 +12,18 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import pub.devrel.easypermissions.EasyPermissions
 import pub.devrel.easypermissions.PermissionRequest
-import java.util.concurrent.CancellationException
 import java.util.concurrent.atomic.AtomicInteger
 
-var ACTIVITY_MANAGER_PROVIDER: ((AppCompatActivity)->PermissionsManager)? = null
+object PermissionsManager {
 
+  internal val REQUEST_CODE = AtomicInteger(1000)
 
-class PermissionsManager(val activity: AppCompatActivity) {
-
-  var fragment: Fragment? = null
-
-  val context: Context
-    get() = fragment?.context ?: activity
-
-
-  constructor(fragment: Fragment) : this(fragment.activity!! as AppCompatActivity) {
-    this.fragment = fragment
-  }
-
-  data class PermissionResult(
-    val requestCode: Int,
-    val permissions: Array<String>,
-    val results: List<Boolean>
-  ) {
-    fun isGranted(permission: String) =
-      permissions.indexOf(permission).let {
-        if (it > -1) results[it] else false
-      }
-  }
-
-  private val permissionsChannel: BroadcastChannel<PermissionResult> by lazy {
+  internal val permissionsChannel: BroadcastChannel<PermissionResult> by lazy {
     BroadcastChannel<PermissionResult>(20)
   }
 
   suspend fun withPermission(
-    activity: AppCompatActivity,
-    permission: String,
-    callback: suspend (Boolean) -> Unit
-  ) = withPermission(
-    PermissionRequest.Builder(
-      activity,
-      REQUEST_CODE.getAndIncrement(),
-      permission
-    ).build(),
-    callback
-  )
-
-  suspend fun withPermission(
-    fragment: Fragment,
-    permission: String,
-    callback: suspend (Boolean) -> Unit
-  ) = withPermission(
-    PermissionRequest.Builder(
-      fragment,
-      REQUEST_CODE.getAndIncrement(),
-      permission
-    ).build(),
-    callback
-  )
-
-  suspend fun withPermission(
+    context: Context,
     request: PermissionRequest,
     callback: suspend (Boolean) -> Unit
   ) {
@@ -91,18 +43,13 @@ class PermissionsManager(val activity: AppCompatActivity) {
     }
   }
 
-  companion object {
-    private val REQUEST_CODE = AtomicInteger(1243)
-  }
-
-
   suspend fun withPermissions(
-    request: PermissionRequest,
-    callback: suspend (PermissionResult) -> Unit
+    activity: Activity,
+    request: PermissionRequest, callback: suspend (PermissionResult) -> Unit
   ) {
     val requestCode = REQUEST_CODE.incrementAndGet()
 
-    if (EasyPermissions.hasPermissions(context, *request.perms)) {
+    if (EasyPermissions.hasPermissions(activity, *request.perms)) {
       log.trace("has permissions")
       callback.invoke(
         PermissionResult(
@@ -123,13 +70,13 @@ class PermissionsManager(val activity: AppCompatActivity) {
     }
   }
 
-
-  fun onRequestPermissionsResult(
+  fun processPermissionResult(
+    activity: AppCompatActivity,
     requestCode: Int,
-    permissions: Array<String>,
+    permissions: Array<out String>,
     grantResults: IntArray
   ) {
-    log.info("onRequestPermissionsResult()")
+    log.info("processPermissionResult()")
 
     activity.lifecycleScope.launch(Dispatchers.Main) {
       permissionsChannel.send(
@@ -141,13 +88,7 @@ class PermissionsManager(val activity: AppCompatActivity) {
     }
   }
 
-  fun close() {
-    permissionsChannel.cancel(CancellationException("PermissionsManager was closed"))
-  }
-
-
 }
-
 
 private val log = org.slf4j.LoggerFactory.getLogger(PermissionsManager::class.java)
 
