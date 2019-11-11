@@ -4,6 +4,9 @@
 Some utility functions for dealing with android permissions using
 kotlin extensions
 
+Published via jitpack's maven repository: 
+`com.github.danbrough.util:permissions:master-SNAPSHOT`
+
 
 ## Usage
 
