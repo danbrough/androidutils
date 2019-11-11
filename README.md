@@ -1,4 +1,7 @@
-# Danbroid's Util Library
+# Danbroid's Util Library 
+
+![version badge](https://img.shields.io/jitpack/v/github/danbrough/util)
+
 
 Simple android routines for doing stuff.
 
