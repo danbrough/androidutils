@@ -4,6 +4,7 @@
 Some utility functions for dealing with android permissions using
 kotlin extensions
 
+
 ## Usage
 
 ### Basic 
