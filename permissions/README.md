@@ -11,6 +11,13 @@ To do something in an activity that requires a permission:
 
 ```kotlin
 
+import androidx.lifecycle.lifecycleScope
+import danbroid.util.demo.R
+import danbroid.util.permissions.processPermissionResult
+import danbroid.util.permissions.withPermission
+import kotlinx.android.synthetic.main.activity_permissions.*
+import kotlinx.coroutines.launch
+
 class MyActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
