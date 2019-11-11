@@ -50,4 +50,5 @@ class MyActivity : AppCompatActivity() {
 
 
 ```
+see the [demo app](../demo/) for more information.
 
