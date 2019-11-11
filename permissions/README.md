@@ -1,7 +1,8 @@
 
 # Permissions Utils
 
-Some utility functions for dealing with android permissions nicely.
+Some utility functions for dealing with android permissions using
+kotlin extensions
 
 ## Usage
 
@@ -26,10 +27,10 @@ class MyActivity : AppCompatActivity() {
 
     button_browse.setOnClickListener {
       lifecycleScope.launch {
-        withPermission(Manifest.permission.READ_EXTERNAL_STORAGE) {
+        withPermission(Manifest.permission.READ_EXTERNAL_STORAGE) { granted ->
           Toast.makeText(
             this@PermissionsActivity,
-            if (it) "Permission Granted" else "Permission Denied",
+            if (granted) "Permission Granted" else "Permission Denied",
             Toast.LENGTH_SHORT
           ).show()
         }
