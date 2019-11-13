@@ -3,6 +3,9 @@ plugins {
   kotlin("android")
   kotlin("kapt")
   kotlin("android.extensions")
+  id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
+  id("org.jetbrains.dokka")
+
 }
 
 
@@ -61,10 +64,6 @@ android {
     unitTests.isReturnDefaultValues = true
   }
 
-  sourceSets {
-    getByName("main").java.srcDir("../jvm_src/rnz")
-  }
-
   kotlin {
     sourceSets {
       all {
@@ -78,17 +77,25 @@ android {
 
 
 
-dependencies {
-  implementation(project(":permissions"))
 
-  implementation(Libs.slf4j)
-  implementation(Libs.kotlinx_coroutines_android)
+dependencies {
+
+  implementation(project(":permissions"))
+  // or implementation("com.github.danbrough.util:permissions:master-SNAPSHOT")
+
+  implementation(project(":slf4j"))
+  // or implementation("com.github.danbrough.util:slf4j:master-SNAPSHOT")
+
+  implementation(project(":resource"))
+  // or implementation("com.github.danbrough.util:resource:master-SNAPSHOT")
+
 
   implementation(Libs.lifecycle_extensions)
   implementation(Libs.lifecycle_runtime_ktx)
   implementation(Libs.core_ktx)
   implementation(Libs.lifecycle_viewmodel_ktx)
   implementation(Libs.fragment_ktx)
+  implementation(Libs.recyclerview)
 
 }
 

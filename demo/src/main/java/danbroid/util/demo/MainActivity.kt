@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import danbroid.util.demo.permissions.PermissionsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * THis is the main activity
+ */
 class MainActivity : AppCompatActivity() {
 
   class Demo(val title: String, val activityClass: Class<out Activity>) {
@@ -15,6 +18,7 @@ class MainActivity : AppCompatActivity() {
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {
+    log.info("onCreate()")
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
@@ -22,17 +26,15 @@ class MainActivity : AppCompatActivity() {
       Demo("Permissions", PermissionsActivity::class.java)
     )
 
-
     val adapter = object : ArrayAdapter<Demo>(this, android.R.layout.simple_list_item_1, demos) {
-
       override fun hasStableIds() = true
     }
 
+    demo_list.adapter = adapter
 
-    list_view.adapter = adapter
-    list_view.setOnItemClickListener { parent, view, position, id ->
+    demo_list.setOnItemClickListener { parent, view, position, id ->
       val demo = adapter.getItem(position)!!
-      log.debug("opening demo $demo")
+      log.info("opening demo $demo")
       startActivity(Intent(this, demo.activityClass))
     }
 

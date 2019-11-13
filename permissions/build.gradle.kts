@@ -1,14 +1,19 @@
+import org.jetbrains.dokka.gradle.DokkaTask
+
 plugins {
   id("com.android.library")
   kotlin("android")
   kotlin("kapt")
   kotlin("android.extensions")
   id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
+  id("org.jetbrains.dokka")
+
 }
 
 
 android {
   compileSdkVersion(ProjectVersions.SDK_VERSION)
+
   defaultConfig {
     minSdkVersion(16)
     targetSdkVersion(ProjectVersions.SDK_VERSION)
@@ -69,7 +74,13 @@ android {
       }
     }
   }
+
+
+
+
+
 }
+
 
 
 
@@ -78,7 +89,9 @@ dependencies {
 
   implementation(Libs.slf4j_api)
   implementation(Libs.kotlin_stdlib_jdk8)
-  implementation(Libs.kotlinx_coroutines_android)
+
+  api(Libs.kotlinx_coroutines_android)
+
   implementation(Libs.lifecycle_runtime_ktx)
 //  implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-rc02")
 

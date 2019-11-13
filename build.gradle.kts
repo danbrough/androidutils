@@ -1,6 +1,8 @@
+import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
+
 
   dependencies {
     classpath(Libs.com_android_tools_build_gradle)
@@ -12,16 +14,29 @@ buildscript {
   repositories {
     google()
     jcenter()
+    maven {
+      setUrl("https://dl.bintray.com/kotlin/kotlin-eap")
+    }
+  }
+}
 
+plugins {
+  buildSrcVersions
+  id("org.jetbrains.dokka") version Versions.org_jetbrains_dokka_gradle_plugin
+
+}
+
+
+tasks {
+  val dokka by getting(DokkaTask::class) {
+    outputFormat = "gfm"
+    outputDirectory = "$rootDir/docs"
+
+    subProjects = listOf("demo","permissions","resource") //listOf("demo", "util", "permissions", "slf4j")
   }
 }
 
 
-
-
-plugins {
-  buildSrcVersions
-}
 
 allprojects {
   repositories {
@@ -30,6 +45,9 @@ allprojects {
     //    maven { url 'https://jitpack.io' }
     maven {
       setUrl("https://jitpack.io")
+    }
+    maven {
+      setUrl("https://dl.bintray.com/kotlin/kotlin-eap")
     }
 
   }

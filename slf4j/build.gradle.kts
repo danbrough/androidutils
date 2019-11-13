@@ -1,13 +1,12 @@
 plugins {
   id("com.android.library")
-
   id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
-
 }
 
 
 
 android {
+
   compileSdkVersion(ProjectVersions.SDK_VERSION)
   defaultConfig {
     minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
@@ -38,6 +37,17 @@ android {
   val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
     from(android.sourceSets.getByName("main").java.srcDirs)
+  }
+
+  flavorDimensions("stuff")
+
+  productFlavors {
+
+    create("stdout") {
+      setDimension("stuff")
+    }
+    println("PRODUCT FLAVOURS: ${asMap}")
+
   }
 
 

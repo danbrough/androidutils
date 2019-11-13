@@ -2,3 +2,4 @@
 //include( ":resource",":slf4j",":permissions")
 include(":slf4j",":permissions",":resource",":demo")
 
+rootProject.name = "util"

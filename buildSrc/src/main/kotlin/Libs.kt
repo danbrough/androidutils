@@ -95,6 +95,10 @@ object Libs {
             "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
             Versions.de_fayard_buildsrcversions_gradle_plugin
 
+    const val org_jetbrains_dokka_gradle_plugin: String =
+            "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin:" +
+            Versions.org_jetbrains_dokka_gradle_plugin
+
     /**
      * https://github.com/googlesamples/easypermissions
      */
@@ -104,6 +108,11 @@ object Libs {
      * https://developer.android.com/jetpack/androidx
      */
     const val fragment_ktx: String = "androidx.fragment:fragment-ktx:" + Versions.fragment_ktx
+
+    /**
+     * http://developer.android.com/tools/extras/support-library.html
+     */
+    const val recyclerview: String = "androidx.recyclerview:recyclerview:" + Versions.recyclerview
 
     /**
      * https://developer.android.com/studio
@@ -129,9 +138,4 @@ object Libs {
      * https://developer.android.com/studio
      */
     const val aapt2: String = "com.android.tools.build:aapt2:" + Versions.aapt2
-
-    /**
-     * https://github.com/danbrough/util
-     */
-    const val slf4j: String = "com.github.danbrough.util:slf4j:" + Versions.slf4j
 }

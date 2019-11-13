@@ -12,9 +12,12 @@ import org.gradle.plugin.use.PluginDependencySpec
  * YOU are responsible for updating manually the dependency version.
  */
 object Versions {
-    const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.3.2"
 
-    const val org_jetbrains_kotlin: String = "1.3.50"
+    const val org_jetbrains_kotlin: String = "1.3.60-eap-25"
+
+    const val com_android_tools_build_gradle: String = "3.6.0-beta03"
+
+    const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.3.2"
 
     const val androidx_lifecycle: String = "2.2.0-rc02"
 
@@ -22,15 +25,18 @@ object Versions {
 
     const val androidx_test: String = "1.2.0"
 
-    const val com_android_tools_build_gradle: String = "3.5.2"
 
     const val digital_wup_android_maven_publish_gradle_plugin: String = "3.6.3"
 
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
+    const val org_jetbrains_dokka_gradle_plugin: String = "0.10.0"
+
     const val easypermissions: String = "3.0.0"
 
     const val fragment_ktx: String = "1.2.0-rc02"
+
+    const val recyclerview: String = "1.1.0-rc01"
 
     const val lint_gradle: String = "26.5.2"
 
@@ -41,8 +47,6 @@ object Versions {
     const val core_ktx: String = "1.2.0-beta02"
 
     const val aapt2: String = "3.5.2-5435860"
-
-    const val slf4j: String = "1.0.11"
 
     /**
      * Current version: "6.0"
