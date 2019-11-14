@@ -16,13 +16,13 @@ maven { url 'https://jitpack.io' }
 and then include:
 
 ```gradle
-compile 'com.github.danbrough.util:slf4j:master-SNAPSHOT'
+compile 'com.github.danbrough.androidutils:slf4j:master-SNAPSHOT'
 ```
 
 in your dependencies (for the latest version), or:
 
 ```gradle
-compile 'com.github.danbrough.util:slf4j:1.0.6'
+compile 'com.github.danbrough.androidutils:slf4j:1.0.6'
 ```
 
 for a particular version

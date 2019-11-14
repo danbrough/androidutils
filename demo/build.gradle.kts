@@ -69,13 +69,13 @@ android {
 dependencies {
 
   implementation(project(":permissions"))
-  // or implementation("com.github.danbrough.util:permissions:master-SNAPSHOT")
+  // or implementation("com.github.danbrough.androidutils:permissions:master-SNAPSHOT")
 
   implementation(project(":slf4j"))
-  // or implementation("com.github.danbrough.util:slf4j:master-SNAPSHOT")
+  // or implementation("com.github.danbrough.androidutils:slf4j:master-SNAPSHOT")
 
   implementation(project(":resource"))
-  // or implementation("com.github.danbrough.util:resource:master-SNAPSHOT")
+  // or implementation("com.github.danbrough.androidutils:resource:master-SNAPSHOT")
 
 
   implementation(Libs.lifecycle_extensions)

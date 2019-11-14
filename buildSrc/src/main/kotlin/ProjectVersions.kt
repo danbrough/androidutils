@@ -6,6 +6,7 @@ object ProjectVersions {
   const val VERSION_CODE = 14
   val JAVA_VERSION = JavaVersion.VERSION_1_8
   val VERSION_NAME = getVersionName()
+  const val GROUP_ID = "com.github.danbrough.androidutils"
 
   fun getVersionName(code: Int = VERSION_CODE) = "1.0.${code-1}"
 }

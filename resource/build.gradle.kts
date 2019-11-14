@@ -51,7 +51,8 @@ android {
     publications {
 
       create<MavenPublication>("mavenAar") {
-        groupId = "com.github.danbrough.util"
+        groupId = ProjectVersions.GROUP_ID
+
         artifactId = "resource"
         version = ProjectVersions.VERSION_NAME
         from(components["android"])

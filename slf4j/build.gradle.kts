@@ -55,7 +55,7 @@ android {
     publications {
 
       create<MavenPublication>("mavenAar") {
-        groupId = "com.github.danbrough.util"
+        groupId = ProjectVersions.GROUP_ID
         artifactId = "slf4j"
         version = ProjectVersions.VERSION_NAME
         from(components["android"])
@@ -75,43 +75,3 @@ dependencies {
   androidTestImplementation(Libs.androidx_test_core)
 }
 
-/*
-apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-
-group=
-
-android {
-  compileSdkVersion SDK_COMPILE as int
-
-
-  defaultConfig {
-    minSdkVersion 1
-    targetSdkVersion SDK_TARGET as int
-    versionCode 1
-    versionName "1.0.6"
-
-    // testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-  }
-
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-    }
-  }
-
-}
-
-dependencies {
-
-  implementation "org.slf4j:slf4j-api:${SLF4J}"
-
-  testImplementation 'junit:junit:4.12'
-
-  //androidTestImplementation 'com.android.support.test:runner:1.0.1'
-  //androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-}
-*/

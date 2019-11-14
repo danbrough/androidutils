@@ -4,6 +4,6 @@
 Some utility functions for dealing with android resource urls
 
 Published via jitpack's maven repository: 
-`com.github.danbrough.util:resource:master-SNAPSHOT`
+`com.github.danbrough.androidutils:resource:master-SNAPSHOT`
 
 
