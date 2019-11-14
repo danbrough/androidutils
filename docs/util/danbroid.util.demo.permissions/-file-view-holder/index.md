@@ -14,7 +14,7 @@
 
 | Name | Summary |
 |---|---|
-| [file](file.md) | `var file: `[`File`](https://docs.oracle.com/javase/6/docs/api/java/io/File.html)`?` |
+| [file](file.md) | `var file: `[`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html)`?` |
 | [subTitle](sub-title.md) | `val subTitle: TextView!` |
 | [title](title.md) | `val title: TextView!` |
 
@@ -22,4 +22,4 @@
 
 | Name | Summary |
 |---|---|
-| [bind](bind.md) | `fun bind(file: `[`File`](https://docs.oracle.com/javase/6/docs/api/java/io/File.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [bind](bind.md) | `fun bind(file: `[`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |

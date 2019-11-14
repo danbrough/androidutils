@@ -23,7 +23,6 @@ buildscript {
 plugins {
   buildSrcVersions
   id("org.jetbrains.dokka") version Versions.org_jetbrains_dokka_gradle_plugin
-
 }
 
 
@@ -33,6 +32,13 @@ tasks {
     outputDirectory = "$rootDir/docs"
 
     subProjects = listOf("demo","permissions","resource") //listOf("demo", "util", "permissions", "slf4j")
+
+
+    configuration {
+      jdkVersion = 8
+      includes = listOf("README.md")
+    }
+
   }
 }
 

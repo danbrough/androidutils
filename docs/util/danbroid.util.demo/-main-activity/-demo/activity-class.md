@@ -2,4 +2,4 @@
 
 # activityClass
 
-`val activityClass: `[`Class`](https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<out Activity>`
+`val activityClass: `[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)`<out Activity>`

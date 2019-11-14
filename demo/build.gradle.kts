@@ -37,16 +37,6 @@ android {
     isExperimental = true
   }
 
-
-/*  signingConfigs {
-    register("release") {
-      storeFile = File("/home/dan/.android/nzrp_keystore2")
-      keyAlias = "nzrp"
-      storePassword = KeystoreConfig.KEYSTORE_PASSWORD
-      keyPassword = KeystoreConfig.KEYSTORE_PASSWORD
-    }
-  }*/
-
   buildTypes {
     getByName("release") {
       isMinifyEnabled = true
@@ -54,8 +44,6 @@ android {
         getDefaultProguardFile("proguard-android-optimize.txt"),
         "proguard-rules.pro"
       )
-      //      signingConfig signingConfigs.release
-      // signingConfig = signingConfigs.getByName("release")
     }
   }
 

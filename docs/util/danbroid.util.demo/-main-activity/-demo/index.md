@@ -8,13 +8,13 @@
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Demo(title: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, activityClass: `[`Class`](https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<out Activity>)` |
+| [&lt;init&gt;](-init-.md) | `Demo(title: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, activityClass: `[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)`<out Activity>)` |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [activityClass](activity-class.md) | `val activityClass: `[`Class`](https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<out Activity>` |
+| [activityClass](activity-class.md) | `val activityClass: `[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)`<out Activity>` |
 | [title](title.md) | `val title: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 
 ### Functions

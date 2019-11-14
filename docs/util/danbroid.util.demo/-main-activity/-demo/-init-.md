@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`Demo(title: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, activityClass: `[`Class`](https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<out Activity>)`
+`Demo(title: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, activityClass: `[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)`<out Activity>)`
