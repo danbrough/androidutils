@@ -46,7 +46,7 @@ android {
     create("stdout") {
       setDimension("stuff")
     }
-    println("PRODUCT FLAVOURS: ${asMap}")
+   // println("PRODUCT FLAVOURS: ${asMap}")
 
   }
 
