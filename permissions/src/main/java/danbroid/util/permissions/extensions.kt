@@ -3,14 +3,13 @@ package danbroid.util.permissions
 import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import danbroid.util.permissions.PermissionsManager.REQUEST_CODE
-import kotlinx.coroutines.launch
 import pub.devrel.easypermissions.PermissionRequest
 
 
 suspend fun AppCompatActivity.withPermission(
   permission: String,
+  rationale: String? = null,
   callback: suspend (Boolean) -> Unit
 ) =
   PermissionsManager.withPermission(
@@ -19,13 +18,16 @@ suspend fun AppCompatActivity.withPermission(
       this@withPermission,
       REQUEST_CODE.getAndIncrement(),
       permission
-    ).build(),
+    ).also {
+      if (rationale != null) it.setRationale(rationale)
+    }.build(),
     callback
   )
 
 
 suspend fun Fragment.withPermission(
   permission: String,
+  rationale:String? = null,
   callback: suspend (Boolean) -> Unit
 ) = PermissionsManager.withPermission(
   context!!,
@@ -33,14 +35,16 @@ suspend fun Fragment.withPermission(
     activity!!,
     REQUEST_CODE.getAndIncrement(),
     permission
-  ).build(),
+  ).also {
+    if (rationale != null) it.setRationale(rationale)
+  }.build(),
   callback
 )
 
 
 suspend fun Fragment.withPermissions(
   request: PermissionRequest, callback: suspend (PermissionResult) -> Unit
-) = activity!!.withPermissions(request, callback)
+) = PermissionsManager.withPermissions(activity!!, request, callback)
 
 
 suspend fun Activity.withPermissions(
