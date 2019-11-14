@@ -55,5 +55,5 @@ class MyActivity : AppCompatActivity() {
 
 
 ```
-see the [demo app](../demo/) for more information.
+see the [demo app](https://github.com/danbrough/androidutils/tree/master/demo) for more information.
 
