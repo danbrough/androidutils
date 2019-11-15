@@ -24,6 +24,10 @@ class FileBrowserFragment : Fragment() {
 
   lateinit var adapter: FilesAdapter
 
+  /**
+   * The directory path for this fragment
+   * defaults to "/sdcard/"
+   */
   var path: String
     get() = arguments?.getString("path") ?: "/sdcard/"
     set(value) {
@@ -70,6 +74,7 @@ class FileBrowserFragment : Fragment() {
         //doing file IO on Dispatchers.IO
         if (granted)
           File(path).listFiles()?.filter {
+            //filter for non empty directories
             !it.isDirectory || !it.listFiles().isNullOrEmpty()
           }?.also {
             withContext(Dispatchers.Main) {

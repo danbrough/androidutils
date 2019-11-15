@@ -135,6 +135,11 @@ object Libs {
     const val core_ktx: String = "androidx.core:core-ktx:" + Versions.core_ktx
 
     /**
+     * http://developer.android.com/tools/extras/support-library.html
+     */
+    const val material: String = "com.google.android.material:material:" + Versions.material
+
+    /**
      * https://developer.android.com/studio
      */
     const val aapt2: String = "com.android.tools.build:aapt2:" + Versions.aapt2

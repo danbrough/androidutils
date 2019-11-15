@@ -7,22 +7,23 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.BroadcastChannel
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.asFlow
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
 import pub.devrel.easypermissions.EasyPermissions
 import pub.devrel.easypermissions.PermissionRequest
-import java.util.concurrent.atomic.AtomicInteger
+import java.util.concurrent.CancellationException
 
+/**
+ * Manages processing and dispatching of permissions request
+ *
+ */
 object PermissionsManager {
+  const val REQUEST_CODE = 1234
 
-  internal val REQUEST_CODE = AtomicInteger(1000)
-
-  internal val permissionsChannel: BroadcastChannel<PermissionResult> by lazy {
-    BroadcastChannel<PermissionResult>(20)
+  private val permissionsChannel: BroadcastChannel<PermissionResult> by lazy {
+    BroadcastChannel<PermissionResult>(Channel.BUFFERED)
   }
+
 
   suspend fun withPermission(
     context: Context,
@@ -33,41 +34,48 @@ object PermissionsManager {
       log.trace("has permissions")
       callback.invoke(true)
     } else {
-      requestPermission(request).collect {
-        callback.invoke(it.results[0])
+      requestPermission(request) {
+        if (it.permissions[0] == request.perms[0]) {
+          callback.invoke(it.results[0])
+          false
+        } else true
       }
+
     }
   }
 
-  internal fun requestPermission(request: PermissionRequest): Flow<PermissionResult> {
+  private suspend fun requestPermission(
+    request: PermissionRequest,
+    callback: suspend (PermissionResult) -> Boolean
+  ) {
     log.debug("requesting permission..")
     EasyPermissions.requestPermissions(request)
     log.debug("waiting on permission channel..")
-    return permissionsChannel.asFlow().filter {
-      log.trace("filtering flow for request:${request.requestCode} with result: ${it.requestCode}")
-      it.requestCode == request.requestCode
-    }
+    val subscription = permissionsChannel.openSubscription()
+    do {
+      val result = subscription.receive()
+    } while (callback.invoke(result))
+
+    log.warn("cancelling subscription")
+    subscription.cancel()
   }
 
   suspend fun withPermissions(
     activity: Activity,
-    request: PermissionRequest, callback: suspend (PermissionResult) -> Unit
+    request: PermissionRequest, callback: suspend (PermissionResult) -> Boolean
   ) {
-    val requestCode = REQUEST_CODE.incrementAndGet()
 
     if (EasyPermissions.hasPermissions(activity, *request.perms)) {
       log.trace("has permissions")
       callback.invoke(
         PermissionResult(
-          requestCode,
+          REQUEST_CODE,
           request.perms,
           request.perms.map { true })
       )
     } else {
       log.trace("requesting permission..")
-      requestPermission(request).collect {
-        callback.invoke(it)
-      }
+      requestPermission(request, callback)
     }
   }
 
@@ -87,6 +95,10 @@ object PermissionsManager {
           grantResults.map { it == PackageManager.PERMISSION_GRANTED })
       )
     }
+  }
+
+  fun close() {
+    permissionsChannel.cancel(CancellationException("PermissionsManager was closed"))
   }
 
 }

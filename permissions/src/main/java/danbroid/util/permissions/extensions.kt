@@ -18,7 +18,7 @@ suspend fun AppCompatActivity.withPermission(
     this@withPermission,
     PermissionRequest.Builder(
       this@withPermission,
-      REQUEST_CODE.getAndIncrement(),
+      REQUEST_CODE,
       permission
     ).also {
       if (rationale != null) it.setRationale(rationale)
@@ -35,7 +35,7 @@ suspend fun Fragment.withPermission(
   context!!,
   PermissionRequest.Builder(
     activity!!,
-    REQUEST_CODE.getAndIncrement(),
+    REQUEST_CODE,
     permission
   ).also {
     if (rationale != null) it.setRationale(rationale)
@@ -55,12 +55,12 @@ fun AppCompatActivity.showAppPermissionsSettings() = startActivity(
 )
 
 suspend fun Fragment.withPermissions(
-  request: PermissionRequest, callback: suspend (PermissionResult) -> Unit
+  request: PermissionRequest, callback: suspend (PermissionResult) -> Boolean
 ) = PermissionsManager.withPermissions(activity!!, request, callback)
 
 
 suspend fun Activity.withPermissions(
-  request: PermissionRequest, callback: suspend (PermissionResult) -> Unit
+  request: PermissionRequest, callback: suspend (PermissionResult) -> Boolean
 ) = PermissionsManager.withPermissions(this, request, callback)
 
 

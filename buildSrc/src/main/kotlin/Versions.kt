@@ -36,7 +36,7 @@ object Versions {
 
     const val recyclerview: String = "1.1.0-rc01"
 
-    const val lint_gradle: String = "26.6.0-beta03"
+    const val lint_gradle: String = "26.6.0-beta04"
 
     const val appcompat: String = "1.1.0"
 
@@ -44,7 +44,9 @@ object Versions {
 
     const val core_ktx: String = "1.2.0-beta02"
 
-    const val aapt2: String = "3.6.0-beta03-5836729"
+    const val material: String = "1.1.0-beta02"
+
+    const val aapt2: String = "3.6.0-beta04-5836729"
 
     /**
      * Current version: "6.0"

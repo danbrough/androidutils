@@ -3,3 +3,7 @@
 # path
 
 `var path: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
+
+The directory path for this fragment
+defaults to "/sdcard/"
+

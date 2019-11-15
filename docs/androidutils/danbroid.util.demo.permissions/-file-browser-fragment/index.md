@@ -15,7 +15,7 @@
 | Name | Summary |
 |---|---|
 | [adapter](adapter.md) | `lateinit var adapter: `[`FilesAdapter`](../-files-adapter/index.md) |
-| [path](path.md) | `var path: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [path](path.md) | The directory path for this fragment defaults to "/sdcard/"`var path: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 
 ### Functions
 

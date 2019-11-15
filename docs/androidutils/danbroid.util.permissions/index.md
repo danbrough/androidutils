@@ -7,7 +7,7 @@
 | Name | Summary |
 |---|---|
 | [PermissionResult](-permission-result/index.md) | `data class PermissionResult` |
-| [PermissionsManager](-permissions-manager/index.md) | `object PermissionsManager` |
+| [PermissionsManager](-permissions-manager/index.md) | Manages processing and dispatching of permissions request`object PermissionsManager` |
 
 ### Extensions for External Classes
 

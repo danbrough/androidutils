@@ -65,6 +65,8 @@ THis is the main activity
 
 ##### [danbroid.util.permissions.PermissionsManager](../danbroid.util.permissions/-permissions-manager/index.md)
 
+Manages processing and dispatching of permissions request
+
 
 |
 
