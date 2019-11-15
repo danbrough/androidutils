@@ -14,7 +14,7 @@ import org.gradle.plugin.use.PluginDependencySpec
 object Versions {
     const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.3.2"
 
-    const val org_jetbrains_kotlin: String = "1.3.60-eap-25"
+    const val org_jetbrains_kotlin: String = "1.3.60"
 
     const val androidx_lifecycle: String = "2.2.0-rc02"
 
@@ -22,7 +22,7 @@ object Versions {
 
     const val androidx_test: String = "1.2.0"
 
-    const val com_android_tools_build_gradle: String = "3.6.0-beta03"
+    const val com_android_tools_build_gradle: String = "3.6.0-beta04"
 
     const val digital_wup_android_maven_publish_gradle_plugin: String = "3.6.3"
 

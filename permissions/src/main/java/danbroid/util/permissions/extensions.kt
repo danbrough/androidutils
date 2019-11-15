@@ -1,6 +1,8 @@
 package danbroid.util.permissions
 
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import danbroid.util.permissions.PermissionsManager.REQUEST_CODE
@@ -27,7 +29,7 @@ suspend fun AppCompatActivity.withPermission(
 
 suspend fun Fragment.withPermission(
   permission: String,
-  rationale:String? = null,
+  rationale: String? = null,
   callback: suspend (Boolean) -> Unit
 ) = PermissionsManager.withPermission(
   context!!,
@@ -41,6 +43,16 @@ suspend fun Fragment.withPermission(
   callback
 )
 
+/**
+ * Displays the settings for this application so that
+ * the user can modify the permissions
+ */
+fun AppCompatActivity.showAppPermissionsSettings() = startActivity(
+  Intent(
+    android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+    Uri.fromParts("package", packageName, null)
+  )
+)
 
 suspend fun Fragment.withPermissions(
   request: PermissionRequest, callback: suspend (PermissionResult) -> Unit

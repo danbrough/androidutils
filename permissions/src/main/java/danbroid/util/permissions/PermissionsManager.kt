@@ -7,8 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.BroadcastChannel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import pub.devrel.easypermissions.EasyPermissions
 import pub.devrel.easypermissions.PermissionRequest
@@ -31,15 +33,19 @@ object PermissionsManager {
       log.trace("has permissions")
       callback.invoke(true)
     } else {
-      log.debug("requesting permission..")
-      EasyPermissions.requestPermissions(request)
-      log.debug("waiting on permission channel..")
-      permissionsChannel.asFlow().collect {
-        log.warn("received permission result:  $it")
-        if (request.requestCode == it.requestCode) {
-          callback.invoke(it.results[0])
-        }
+      requestPermission(request).collect {
+        callback.invoke(it.results[0])
       }
+    }
+  }
+
+  internal fun requestPermission(request: PermissionRequest): Flow<PermissionResult> {
+    log.debug("requesting permission..")
+    EasyPermissions.requestPermissions(request)
+    log.debug("waiting on permission channel..")
+    return permissionsChannel.asFlow().filter {
+      log.trace("filtering flow for request:${request.requestCode} with result: ${it.requestCode}")
+      it.requestCode == request.requestCode
     }
   }
 
@@ -59,13 +65,8 @@ object PermissionsManager {
       )
     } else {
       log.trace("requesting permission..")
-      EasyPermissions.requestPermissions(request)
-      log.trace("waiting on permission channel..")
-      permissionsChannel.asFlow().collect {
-        log.trace("received permission result:  $it")
-        if (it.requestCode == requestCode) {
-          callback.invoke(it)
-        }
+      requestPermission(request).collect {
+        callback.invoke(it)
       }
     }
   }

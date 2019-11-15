@@ -61,7 +61,10 @@ class FileBrowserFragment : Fragment() {
 
   suspend fun loadFiles() {
     log.debug("loadFiles()")
-    withPermission(Manifest.permission.READ_EXTERNAL_STORAGE) { granted ->
+    withPermission(
+      Manifest.permission.READ_EXTERNAL_STORAGE,
+      rationale = getString(R.string.rationale_read_storage)
+    ) { granted ->
       log.info("permission granted: $granted")
       withContext(Dispatchers.IO) {
         //doing file IO on Dispatchers.IO

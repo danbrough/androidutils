@@ -76,6 +76,7 @@ dependencies {
 
   implementation(project(":resource"))
   // or implementation("com.github.danbrough.androidutils:resource:master-SNAPSHOT")
+  implementation("com.google.android.material:material:1.1.0-beta02")
 
   implementation(Libs.lifecycle_extensions)
   implementation(Libs.lifecycle_runtime_ktx)
