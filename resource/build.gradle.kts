@@ -1,4 +1,3 @@
-
 plugins {
   id("com.android.library")
   kotlin("android")
@@ -67,6 +66,7 @@ dependencies {
   implementation(Libs.slf4j_api)
   implementation(Libs.appcompat)
 
+  androidTestImplementation(project(":slf4j"))
   androidTestImplementation(Libs.androidx_test_runner)
   androidTestImplementation(Libs.androidx_test_rules)
   androidTestImplementation(Libs.androidx_test_core)
