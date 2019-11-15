@@ -3,7 +3,7 @@ package danbroid.util.resource.test
 import androidx.test.platform.app.InstrumentationRegistry
 import danbroid.util.resource.R
 import danbroid.util.resource.ResourceUtils
-import danbroid.util.resource.toURI
+import danbroid.util.resource.toResourceURI
 import org.junit.Assert
 
 class ResourceTest {
@@ -12,7 +12,7 @@ class ResourceTest {
     val context = InstrumentationRegistry.getInstrumentation().context
     val resID1 = R.string.app_name
     log.info("resID is $resID1")
-    val resourceURI = resID1.toURI(context)
+    val resourceURI = resID1.toResourceURI(context)
     log.info("resourceURI  is $resourceURI")
     val resID2 = ResourceUtils.parseResourceURI(context, resourceURI)
     Assert.assertEquals(resID1, resID2)

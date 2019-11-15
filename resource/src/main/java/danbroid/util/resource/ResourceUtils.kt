@@ -10,7 +10,7 @@ import androidx.core.text.HtmlCompat
 
 object ResourceUtils {
 
-  fun resourceURI(context: Context, @AnyRes resID: Int) =
+  fun toResourceURI(context: Context, @AnyRes resID: Int) =
     Uri.Builder()
       .scheme(ContentResolver.SCHEME_ANDROID_RESOURCE)
       .authority(context.resources.getResourcePackageName(resID))
@@ -71,7 +71,7 @@ object ResourceUtils {
 }
 
 
-fun Int.toURI(context: Context) = ResourceUtils.resourceURI(context, this)
+fun Int.toResourceURI(context: Context) = ResourceUtils.toResourceURI(context, this)
 
 
 fun String?.resolveStringURI(context: Context): String? =
