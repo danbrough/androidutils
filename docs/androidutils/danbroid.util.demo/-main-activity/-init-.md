@@ -4,5 +4,9 @@
 
 `MainActivity()`
 
-THis is the main activity
+Displays a list of activities to launch
+
+**See Also**
+
+[PermissionsActivity](../../danbroid.util.demo.permissions/-permissions-activity/index.md)
 

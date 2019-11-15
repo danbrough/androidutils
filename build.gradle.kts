@@ -36,7 +36,6 @@ tasks {
 
     configuration {
       jdkVersion = 8
-      includes = listOf("README.md")
     }
 
   }

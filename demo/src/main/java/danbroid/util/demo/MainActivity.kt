@@ -9,7 +9,8 @@ import danbroid.util.demo.permissions.PermissionsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
- * THis is the main activity
+ * Displays a list of activities to launch
+ * @see [PermissionsActivity]
  */
 class MainActivity : AppCompatActivity() {
 

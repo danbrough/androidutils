@@ -48,7 +48,7 @@
 
 ##### [danbroid.util.demo.MainActivity](../danbroid.util.demo/-main-activity/index.md)
 
-THis is the main activity
+Displays a list of activities to launch
 
 
 |
