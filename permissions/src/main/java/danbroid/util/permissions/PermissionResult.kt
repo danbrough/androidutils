@@ -9,7 +9,7 @@ data class PermissionResult(
    * The list of permissions that were requested
    */
   val permissions: Array<out String>,
-  
+
   /**
    * Whether or not each pf the [permissions] was granted
    */
