@@ -6,21 +6,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
-import androidx.lifecycle.lifecycleScope
 import danbroid.util.demo.R
 import danbroid.util.permissions.processPermissionResult
+import danbroid.util.permissions.showAppPermissionsSettings
 import kotlinx.android.synthetic.main.activity_permissions.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.channels.BroadcastChannel
-import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.channels.awaitClose
-import kotlinx.coroutines.channels.consumeEach
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.launch
 import pub.devrel.easypermissions.EasyPermissions
 import java.io.File
-import java.util.concurrent.atomic.AtomicInteger
 
 
 class PermissionsActivity : AppCompatActivity(), EasyPermissions.RationaleCallbacks {
@@ -37,10 +28,6 @@ class PermissionsActivity : AppCompatActivity(), EasyPermissions.RationaleCallba
     Toast.makeText(this, "Rationale accepted", Toast.LENGTH_SHORT).show()
   }
 
-
-  val channel = BroadcastChannel<String>(Channel.BUFFERED)
-  val flowID = AtomicInteger(0)
-
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_permissions)
@@ -54,19 +41,7 @@ class PermissionsActivity : AppCompatActivity(), EasyPermissions.RationaleCallba
 
 
     button_permission_settings.setOnClickListener {
-      val id = flowID.incrementAndGet()
-
-      lifecycleScope.launch(Dispatchers.Default) {
-        log.trace("collecting for $id")
-        val flow = channel.asFlow()
-          .collect {
-            log.trace("$id collected $it")
-          }
-
-      }.invokeOnCompletion {
-        log.warn("FLOW $id finished")
-      }
-
+      showAppPermissionsSettings()
     }
 
     if (savedInstanceState == null)

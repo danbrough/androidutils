@@ -10,13 +10,6 @@
 |---|---|
 | [&lt;init&gt;](-init-.md) | `PermissionsActivity()` |
 
-### Properties
-
-| Name | Summary |
-|---|---|
-| [channel](channel.md) | `val channel: BroadcastChannel<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>` |
-| [flowID](flow-i-d.md) | `val flowID: `[`AtomicInteger`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html) |
-
 ### Functions
 
 | Name | Summary |

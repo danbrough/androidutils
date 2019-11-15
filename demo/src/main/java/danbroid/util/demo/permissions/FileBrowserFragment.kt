@@ -57,31 +57,34 @@ class FileBrowserFragment : Fragment() {
 
     recycler_view.adapter = adapter
 
-    lifecycleScope.launch {
-      loadFiles()
-    }
-
+    loadFiles()
   }
 
-  suspend fun loadFiles() {
+  /**
+   * Launces a coroutine to request [Manifest.permission.READ_EXTERNAL_STORAGE]
+   * and if granted will load the contents into the [adapter]
+   */
+  fun loadFiles() {
     log.debug("loadFiles()")
-    withPermission(
-      Manifest.permission.READ_EXTERNAL_STORAGE,
-      rationale = getString(R.string.rationale_read_storage)
-    ) { granted ->
-      log.info("permission granted: $granted")
-      withContext(Dispatchers.IO) {
-        //doing file IO on Dispatchers.IO
-        if (granted)
-          File(path).listFiles()?.filter {
-            //filter for non empty directories
-            !it.isDirectory || !it.listFiles().isNullOrEmpty()
-          }?.also {
-            withContext(Dispatchers.Main) {
-              //update the ui on the main thread
-              adapter.setFiles(it)
+    lifecycleScope.launch {
+      withPermission(
+        Manifest.permission.READ_EXTERNAL_STORAGE,
+        rationale = getString(R.string.rationale_read_storage)
+      ) { granted ->
+        log.info("permission granted: $granted")
+        withContext(Dispatchers.IO) {
+          //doing file IO on Dispatchers.IO
+          if (granted)
+            File(path).listFiles()?.filter {
+              //filter for non empty directories
+              !it.isDirectory || !it.listFiles().isNullOrEmpty()
+            }?.also {
+              withContext(Dispatchers.Main) {
+                //update the ui on the main thread
+                adapter.setFiles(it)
+              }
             }
-          }
+        }
       }
     }
   }
