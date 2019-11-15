@@ -60,6 +60,8 @@ THis is the main activity
 
 ##### [danbroid.util.demo.permissions.PermissionsActivity](../danbroid.util.demo.permissions/-permissions-activity/index.md)
 
+This activity demonstrates the functionality in the permissions library
+
 
 |
 

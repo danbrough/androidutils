@@ -9,4 +9,4 @@
 | [FileBrowserFragment](-file-browser-fragment/index.md) | `class FileBrowserFragment : Fragment` |
 | [FilesAdapter](-files-adapter/index.md) | `class FilesAdapter : Adapter<`[`FileViewHolder`](-file-view-holder/index.md)`>` |
 | [FileViewHolder](-file-view-holder/index.md) | `class FileViewHolder : ViewHolder` |
-| [PermissionsActivity](-permissions-activity/index.md) | `class PermissionsActivity : AppCompatActivity, RationaleCallbacks` |
+| [PermissionsActivity](-permissions-activity/index.md) | This activity demonstrates the functionality in the permissions library`class PermissionsActivity : AppCompatActivity, RationaleCallbacks` |

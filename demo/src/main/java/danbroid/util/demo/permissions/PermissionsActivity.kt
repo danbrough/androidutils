@@ -13,6 +13,9 @@ import kotlinx.android.synthetic.main.activity_permissions.*
 import pub.devrel.easypermissions.EasyPermissions
 import java.io.File
 
+/**
+ * This activity demonstrates the functionality in the permissions library
+ */
 
 class PermissionsActivity : AppCompatActivity(), EasyPermissions.RationaleCallbacks {
 
@@ -57,6 +60,9 @@ class PermissionsActivity : AppCompatActivity(), EasyPermissions.RationaleCallba
       if (addToBackStack) addToBackStack(null)
     }
 
+  /**
+   * Dispatches the result to [danbroid.util.permissions.processPermissionResult]
+   */
   override fun onRequestPermissionsResult(
     requestCode: Int,
     permissions: Array<out String>,

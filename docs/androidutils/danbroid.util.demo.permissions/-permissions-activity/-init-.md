@@ -3,3 +3,6 @@
 # &lt;init&gt;
 
 `PermissionsActivity()`
+
+This activity demonstrates the functionality in the permissions library
+
