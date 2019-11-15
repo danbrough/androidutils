@@ -55,6 +55,8 @@ THis is the main activity
 
 ##### [danbroid.util.permissions.PermissionResult](../danbroid.util.permissions/-permission-result/index.md)
 
+The result from a permissions request
+
 
 |
 

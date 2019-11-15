@@ -24,6 +24,9 @@ class PermissionsActivity : AppCompatActivity(), EasyPermissions.RationaleCallba
       .setTitle("Rationale was denied!")
       .setPositiveButton(android.R.string.ok) { dialog, which ->
 
+      }
+      .setNegativeButton(android.R.string.cancel) { dialog, which ->
+
       }.show()
   }
 
@@ -61,7 +64,7 @@ class PermissionsActivity : AppCompatActivity(), EasyPermissions.RationaleCallba
     }
 
   /**
-   * Dispatches the result to [danbroid.util.permissions.processPermissionResult]
+   * Dispatches the result to [danbroid.util.permissions.PermissionsManager.processPermissionResult]
    */
   override fun onRequestPermissionsResult(
     requestCode: Int,
