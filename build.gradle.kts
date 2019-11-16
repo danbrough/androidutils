@@ -31,7 +31,8 @@ tasks {
     outputFormat = "gfm"
     outputDirectory = "$rootDir/docs"
 
-    subProjects = listOf("demo","permissions","resource") //listOf("demo", "util", "permissions", "slf4j")
+    subProjects =
+      listOf("demo", "permissions", "resource") //listOf("demo", "util", "permissions", "slf4j")
 
 
     configuration {
@@ -69,18 +70,15 @@ allprojects {
 }
 
 tasks.register("projectVersion") {
-  this.description = "Prints the VERSION_NAME,VERSION_CODE from ProjectVersions"
-  var versionCode = ProjectVersions.VERSION_CODE
-  if (project.properties.containsKey("INCREMENT_VERSION")) {
-    versionCode++
-  }
-  if (project.hasProperty("VERSION_CODE")) {
-    versionCode = project.properties["VERSION_CODE"].toString().toInt()
-  }
-
+  this.description = "Prints Project.getVersionName()"
   doLast {
-    println(ProjectVersions.getVersionName(versionCode))
+    println(ProjectVersions.getVersionName())
   }
-
 }
 
+tasks.register("nextProjectVersion") {
+  this.description = "Prints Project.getIncrementedVersionName()"
+  doLast {
+    println(ProjectVersions.getIncrementedVersionName())
+  }
+}

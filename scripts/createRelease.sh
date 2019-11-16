@@ -5,15 +5,9 @@ cd `dirname $0` && cd ..
 
 #arrIN=(${IN//;/ })
 
-if [ $# -eq 0 ]; then
-    VERSION_CODE=$(awk '/const val VERSION_CODE/ {print $5}' <   buildSrc/src/main/kotlin/ProjectVersions.kt)
-    VERSION_CODE=$(( VERSION_CODE + 1 ))
-else
-    VERSION_CODE=$1
-fi
 
 
-VERSION_NAME=$(./gradlew -q projectVersion -PVERSION_CODE=$VERSION_CODE)
+VERSION_NAME=$(./gradlew -q nextProjectVersion)
 
 echo Creating release: $VERSION_NAME
 
@@ -40,8 +34,19 @@ if git tag | grep "$VERSION_NAME" > /dev/null; then
   git push origin --delete "$VERSION_NAME"
 fi
 
-sed -i buildSrc/src/main/kotlin/ProjectVersions.kt \
-    -e 's:VERSION_CODE = .*:VERSION_CODE = '$VERSION_CODE':g'
+
+
+incrementVersion(){
+  VERSION=$(awk '/'$1'/ {print $5}' < buildSrc/src/main/kotlin/ProjectVersions.kt)
+  VERSION=$((VERSION+1))
+  KEY="$1"
+  sed -i buildSrc/src/main/kotlin/ProjectVersions.kt  -e  's:'${KEY}' = .*:'${KEY}' = '$VERSION':g'
+}
+
+IN_BETA=$(awk '/IN_BETA/ {print $5}' < buildSrc/src/main/kotlin/ProjectVersions.kt)
+
+incrementVersion VERSION_CODE
+
 
 git add .
 git commit -am "$VERSION_NAME"
