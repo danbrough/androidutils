@@ -72,9 +72,9 @@ class FileBrowserFragment : Fragment() {
         rationale = getString(R.string.rationale_read_storage)
       ) { granted ->
         log.info("permission granted: $granted")
-        withContext(Dispatchers.IO) {
-          //doing file IO on Dispatchers.IO
-          if (granted)
+        if (granted)
+          withContext(Dispatchers.IO) {
+            //doing file IO on Dispatchers.IO
             File(path).listFiles()?.filter {
               //filter for non empty directories
               !it.isDirectory || !it.listFiles().isNullOrEmpty()
@@ -84,7 +84,7 @@ class FileBrowserFragment : Fragment() {
                 adapter.setFiles(it)
               }
             }
-        }
+          }
       }
     }
   }

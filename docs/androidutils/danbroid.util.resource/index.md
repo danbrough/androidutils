@@ -6,7 +6,7 @@
 
 | Name | Summary |
 |---|---|
-| [ResourceUtils](-resource-utils/index.md) | `class ResourceUtils` |
+| [ResourceUtils](-resource-utils/index.md) | `object ResourceUtils` |
 
 ### Extensions for External Classes
 
