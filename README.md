@@ -1,6 +1,6 @@
 # Danbroid's Util Library 
 
-![version badge](https://img.shields.io/jitpack/v/github/danbrough/util)
+## Latest version: 1.0.14
 
 
 Simple android routines for doing stuff.

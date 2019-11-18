@@ -1,12 +1,9 @@
 fun ProjectVersions.getVersionName(
-  versionCode: Int = VERSION_CODE,
-  projectVersion: Int = PROJECT_VERSION
-) =
-  "1.0.${projectVersion}" +
-      if (IN_BETA) "-beta%02d".format(
-        versionCode - projectVersion
-      ) else ""
+  projectVersion: Int = PROJECT_VERSION,
+  betaVersion: Int = BETA_VERSION
+) = "$MAJOR_VERSION.$MINOR_VERSION.${projectVersion}" +
+    if (betaVersion > 0) "-beta%02d".format(betaVersion) else ""
 
 fun ProjectVersions.getIncrementedVersionName() =
-  if (IN_BETA) getVersionName(VERSION_CODE + 1) else
-    getVersionName(VERSION_CODE, PROJECT_VERSION + 1)
+  if (BETA_VERSION < 0) getVersionName(PROJECT_VERSION + 1) else
+    getVersionName(PROJECT_VERSION, BETA_VERSION + 1)

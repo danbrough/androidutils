@@ -6,10 +6,12 @@ object ProjectVersions {
   val JAVA_VERSION = JavaVersion.VERSION_1_8
   val VERSION_NAME = getVersionName()
   const val GROUP_ID = "com.github.danbrough.androidutils"
-  const val VERSION_CODE = 16
-  const val PROJECT_VERSION = 14
-  const val IN_BETA = true
 
+  const val BUILD_VERSION = 16
+  const val MAJOR_VERSION = 1
+  const val MINOR_VERSION = 0
+  const val PROJECT_VERSION = 13
+  const val BETA_VERSION = -1
 
 }
 

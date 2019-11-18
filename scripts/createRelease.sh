@@ -47,9 +47,11 @@ IN_BETA=$(awk '/IN_BETA/ {print $5}' < buildSrc/src/main/kotlin/ProjectVersions.
 
 incrementVersion VERSION_CODE
 
-
+sed -i  README.md  -e 's/Latest version.*/Latest version: '$VERSION_NAME'/g'
 git add .
 git commit -am "$VERSION_NAME"
 git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"
+
+
 
 
