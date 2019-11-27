@@ -43,11 +43,17 @@ incrementVersion(){
   sed -i buildSrc/src/main/kotlin/ProjectVersions.kt  -e  's:'${KEY}' = .*:'${KEY}' = '$VERSION':g'
 }
 
-IN_BETA=$(awk '/IN_BETA/ {print $5}' < buildSrc/src/main/kotlin/ProjectVersions.kt)
+BETA_VERSION=$(awk '/BETA_VERSION/ {print $5}' < buildSrc/src/main/kotlin/ProjectVersions.kt)
 
-incrementVersion VERSION_CODE
+incrementVersion "BUILD_VERSION"
+if (( BETA_VERSION > -1 )); then
+  incrementVersion "BETA_VERSION"
+else
+  incrementVersion "PROJECT_VERSION"
+fi
 
-sed -i  README.md  -e 's/Latest version.*/Latest version: '$VERSION_NAME'/g'
+#sed -i  README.md  -e 's/Latest version.*/Latest version: '$VERSION_NAME'/g'
+
 git add .
 git commit -am "$VERSION_NAME"
 git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"

@@ -13,6 +13,7 @@ import org.gradle.plugin.use.PluginDependencySpec
  */
 object Versions {
     const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.3.2"
+             // available: "1.3.2-1.3.60"
 
     const val org_jetbrains_kotlin: String = "1.3.60"
 
@@ -34,7 +35,7 @@ object Versions {
 
     const val fragment_ktx: String = "1.2.0-rc02"
 
-    const val recyclerview: String = "1.1.0-rc01"
+    const val recyclerview: String = "1.1.0-rc01" // available: "1.1.0"
 
     const val lint_gradle: String = "26.6.0-beta04"
 
@@ -49,11 +50,11 @@ object Versions {
     const val aapt2: String = "3.6.0-beta04-5836729"
 
     /**
-     * Current version: "6.0"
+     * Current version: "6.0.1"
      * See issue 19: How to update Gradle itself?
      * https://github.com/jmfayard/buildSrcVersions/issues/19
      */
-    const val gradleLatestVersion: String = "6.0"
+    const val gradleLatestVersion: String = "6.0.1"
 }
 
 /**

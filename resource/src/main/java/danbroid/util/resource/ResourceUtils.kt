@@ -2,11 +2,14 @@ package danbroid.util.resource
 
 import android.content.ContentResolver
 import android.content.Context
+import android.content.res.ColorStateList
 import android.net.Uri
 import android.util.TypedValue
+import android.widget.ImageView
 import androidx.annotation.*
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.text.HtmlCompat
+import androidx.core.widget.ImageViewCompat
 
 object ResourceUtils {
 
@@ -65,14 +68,25 @@ object ResourceUtils {
 
   @ColorInt
   fun getResourceColour(context: Context, @ColorRes colorId: Int): Int {
-    return ResourcesCompat.getColor(context.resources, colorId, null)
+    return ResourcesCompat.getColor(context.resources, colorId, context.theme)
   }
-
 }
 
+fun ImageView.setTint(@ColorRes tint: Int) =
+  ImageViewCompat.setImageTintList(
+    this,
+    if (tint != 0)
+      ColorStateList.valueOf(
+        ResourcesCompat.getColor(
+          context.resources,
+          tint,
+          context.theme
+        )
+      )
+    else null
+  )
 
 fun Int.toResourceURI(context: Context) = ResourceUtils.toResourceURI(context, this)
-
 
 fun String?.resolveStringURI(context: Context): String? =
   ResourceUtils.resolveStringURI(context, this)
