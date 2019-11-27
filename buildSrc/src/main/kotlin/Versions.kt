@@ -15,7 +15,7 @@ object Versions {
     const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.3.2"
              // available: "1.3.2-1.3.60"
 
-    const val org_jetbrains_kotlin: String = "1.3.60"
+    const val org_jetbrains_kotlin: String = "1.3.61"
 
     const val androidx_lifecycle: String = "2.2.0-rc02"
 
@@ -35,7 +35,7 @@ object Versions {
 
     const val fragment_ktx: String = "1.2.0-rc02"
 
-    const val recyclerview: String = "1.1.0-rc01" // available: "1.1.0"
+    const val recyclerview: String = "1.1.0"
 
     const val lint_gradle: String = "26.6.0-beta04"
 
