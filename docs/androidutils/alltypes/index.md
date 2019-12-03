@@ -14,9 +14,24 @@
 ##### [androidx.appcompat.app.AppCompatActivity](../danbroid.util.permissions/androidx.appcompat.app.-app-compat-activity/index.md)
 
 
+|
+
+##### [danbroid.util.prefs.BasePref](../danbroid.util.prefs/-base-pref/index.md)
+
+
+|
+
+##### [danbroid.util.prefs.BooleanPref](../danbroid.util.prefs/-boolean-pref/index.md)
+
+
 | (extensions in package danbroid.util.resource)
 
 ##### [android.content.Context](../danbroid.util.resource/android.content.-context/index.md)
+
+
+|
+
+##### [danbroid.util.prefs.DoublePref](../danbroid.util.prefs/-double-pref/index.md)
 
 
 |
@@ -34,14 +49,41 @@
 ##### [danbroid.util.demo.permissions.FileViewHolder](../danbroid.util.demo.permissions/-file-view-holder/index.md)
 
 
+|
+
+##### [danbroid.util.prefs.FloatPref](../danbroid.util.prefs/-float-pref/index.md)
+
+
 | (extensions in package danbroid.util.permissions)
 
 ##### [androidx.fragment.app.Fragment](../danbroid.util.permissions/androidx.fragment.app.-fragment/index.md)
 
 
+|
+
+##### [danbroid.util.prefs.HasPrefs](../danbroid.util.prefs/-has-prefs/index.md)
+
+Classes that allow you to implement properties that delegate to a [android.content.SharedPreferences](#) instance
+
+
+| (extensions in package danbroid.util.resource)
+
+##### [android.widget.ImageView](../danbroid.util.resource/android.widget.-image-view/index.md)
+
+
 | (extensions in package danbroid.util.resource)
 
 ##### [kotlin.Int](../danbroid.util.resource/kotlin.-int/index.md)
+
+
+|
+
+##### [danbroid.util.prefs.IntPref](../danbroid.util.prefs/-int-pref/index.md)
+
+
+|
+
+##### [danbroid.util.prefs.LongPref](../danbroid.util.prefs/-long-pref/index.md)
 
 
 |
@@ -80,5 +122,10 @@ Manages processing and dispatching of permissions request
 | (extensions in package danbroid.util.resource)
 
 ##### [kotlin.String](../danbroid.util.resource/kotlin.-string/index.md)
+
+
+|
+
+##### [danbroid.util.prefs.StringPref](../danbroid.util.prefs/-string-pref/index.md)
 
 

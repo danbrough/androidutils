@@ -74,7 +74,7 @@ dependencies {
   implementation(project(":slf4j"))
   // or implementation("com.github.danbrough.androidutils:slf4j:master-SNAPSHOT")
 
-  implementation(project(":resource"))
+  implementation(project(":misc"))
   // or implementation("com.github.danbrough.androidutils:resource:master-SNAPSHOT")
   implementation(Libs.material)
 

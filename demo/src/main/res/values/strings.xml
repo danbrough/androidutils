@@ -3,4 +3,5 @@
     <string name="app_name">Danbroid Utils Demo</string>
     <string name="title_permissions_activity">Permissions Activity</string>
     <string name="rationale_read_storage">I want to look at your stuff</string>
+    <string name="prefs_counter">counter</string>
 </resources>

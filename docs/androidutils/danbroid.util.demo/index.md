@@ -6,4 +6,4 @@
 
 | Name | Summary |
 |---|---|
-| [MainActivity](-main-activity/index.md) | Displays a list of activities to launch`class MainActivity : AppCompatActivity` |
+| [MainActivity](-main-activity/index.md) | Displays a list of activities to launch`class MainActivity : AppCompatActivity, `[`HasPrefs`](../danbroid.util.prefs/-has-prefs/index.md) |

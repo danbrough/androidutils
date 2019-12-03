@@ -13,5 +13,6 @@
 | Name | Summary |
 |---|---|
 | [android.content.Context](android.content.-context/index.md) |  |
+| [android.widget.ImageView](android.widget.-image-view/index.md) |  |
 | [kotlin.Int](kotlin.-int/index.md) |  |
 | [kotlin.String](kotlin.-string/index.md) |  |

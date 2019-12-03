@@ -33,7 +33,7 @@ tasks {
     outputDirectory = "$rootDir/docs"
 
     subProjects =
-      listOf("demo", "permissions", "resource") //listOf("demo", "util", "permissions", "slf4j")
+      listOf("demo", "permissions", "misc") //listOf("demo", "util", "permissions", "slf4j")
 
 
     configuration {

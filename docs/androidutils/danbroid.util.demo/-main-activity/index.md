@@ -2,7 +2,7 @@
 
 # MainActivity
 
-`class MainActivity : AppCompatActivity`
+`class MainActivity : AppCompatActivity, `[`HasPrefs`](../../danbroid.util.prefs/-has-prefs/index.md)
 
 Displays a list of activities to launch
 
@@ -22,8 +22,21 @@ Displays a list of activities to launch
 |---|---|
 | [&lt;init&gt;](-init-.md) | Displays a list of activities to launch`MainActivity()` |
 
+### Properties
+
+| Name | Summary |
+|---|---|
+| [prefs](prefs.md) | `val prefs: SharedPreferences` |
+| [prefsContext](prefs-context.md) | `val prefsContext: Context` |
+
 ### Functions
 
 | Name | Summary |
 |---|---|
 | [onCreate](on-create.md) | `fun onCreate(savedInstanceState: Bundle?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+
+### Extension Functions
+
+| Name | Summary |
+|---|---|
+| [key](../../danbroid.util.prefs/key.md) | `fun `[`HasPrefs`](../../danbroid.util.prefs/-has-prefs/index.md)`.key(keyID: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`!` |
