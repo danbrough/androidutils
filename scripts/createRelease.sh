@@ -35,6 +35,7 @@ if git tag | grep "$VERSION_NAME" > /dev/null; then
 fi
 
 
+./gradlew assembleDebug || exit 1
 
 incrementVersion(){
   VERSION=$(awk '/'$1'/ {print $5}' < buildSrc/src/main/kotlin/ProjectVersions.kt)
@@ -59,5 +60,6 @@ git commit -am "$VERSION_NAME"
 git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"
 
 
+curl "https://jitpack.io/com/github/danbrough/util/$VERSION_NAME/build.log"
 
 
