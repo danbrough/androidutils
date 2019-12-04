@@ -22,10 +22,10 @@ class PermissionsActivity : AppCompatActivity(), EasyPermissions.RationaleCallba
   override fun onRationaleDenied(requestCode: Int) {
     AlertDialog.Builder(this).setMessage("Opportunity to retry.. hit OK to retry ..")
       .setTitle("Rationale was denied!")
-      .setPositiveButton(android.R.string.ok) { dialog, which ->
+      .setPositiveButton(android.R.string.ok) { _, _ ->
 
       }
-      .setNegativeButton(android.R.string.cancel) { dialog, which ->
+      .setNegativeButton(android.R.string.cancel) { _, _ ->
 
       }.show()
   }

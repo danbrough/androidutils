@@ -1,8 +1,11 @@
 package danbroid.util.prefs
 
-import android.content.Context
+/**
+ * Classes that allow you to implement properties that delegate to a [android.content.SharedPreferences] instance
+ */
+
+
 import android.content.SharedPreferences
-import androidx.annotation.StringRes
 import kotlin.reflect.KProperty
 
 /**
@@ -11,83 +14,78 @@ import kotlin.reflect.KProperty
 
 interface HasPrefs {
   val prefs: SharedPreferences
-  val prefsContext: Context
 }
 
-abstract class BasePref<T>(@StringRes val keyID: Int, val defValue: T) {
+abstract class BasePref<T, K : Enum<*>>(val keyID: K, val defValue: T) {
 
-  operator fun getValue(thisRef: Any?, property: KProperty<*>): T =
-    getPrefValue(thisRef as HasPrefs)
+  operator fun getValue(thisRef: HasPrefs, property: KProperty<*>): T =
+    getPrefValue(thisRef)
 
-  operator fun setValue(thisRef: Any?, property: KProperty<*>, value: T) =
-    setPrefValue(thisRef as HasPrefs, value)
+  operator fun setValue(thisRef: HasPrefs, property: KProperty<*>, value: T) =
+    setPrefValue(thisRef, value)
 
   abstract fun getPrefValue(hasPrefs: HasPrefs): T
 
   abstract fun setPrefValue(hasPrefs: HasPrefs, value: T)
 }
 
-class StringPref(@StringRes keyID: Int, defValue: String?) : BasePref<String?>(keyID, defValue) {
+class StringPref<K : Enum<*>>(keyID: K, defValue: String?) :
+  BasePref<String?, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getString(hasPrefs.key(keyID), defValue)
+    hasPrefs.prefs.getString(keyID.name, defValue)
 
   override fun setPrefValue(hasPrefs: HasPrefs, value: String?) =
-    hasPrefs.prefs.edit().putString(hasPrefs.key(keyID), value).apply()
+    hasPrefs.prefs.edit().putString(keyID.name, value).apply()
 }
 
-
-class DoublePref(@StringRes key: Int, defValue: Double) : BasePref<Double>(key, defValue) {
-
-  override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getString(hasPrefs.key(keyID), null)?.let {
-      java.lang.Double.parseDouble(it)
-    } ?: defValue
-
-
-  override fun setPrefValue(hasPrefs: HasPrefs, value: Double) =
-    hasPrefs.prefs.edit().putString(hasPrefs.key(keyID), value.toString()).apply()
-}
-
-
-class FloatPref(@StringRes key: Int, defValue: Float) : BasePref<Float>(key, defValue) {
+class IntPref<K : Enum<*>>(keyID: K, defValue: Int) : BasePref<Int, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getFloat(hasPrefs.key(keyID), defValue)
-
-  override fun setPrefValue(hasPrefs: HasPrefs, value: Float) =
-    hasPrefs.prefs.edit().putFloat(hasPrefs.key(keyID), value).apply()
-}
-
-
-class IntPref(@StringRes key: Int, defValue: Int) : BasePref<Int>(key, defValue) {
-
-  override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getInt(hasPrefs.key(keyID), defValue)
+    hasPrefs.prefs.getInt(keyID.name, defValue)
 
   override fun setPrefValue(hasPrefs: HasPrefs, value: Int) =
-    hasPrefs.prefs.edit().putInt(hasPrefs.key(keyID), value).apply()
+    hasPrefs.prefs.edit().putInt(keyID.name, value).apply()
 }
 
-class LongPref(@StringRes key: Int, defValue: Long) : BasePref<Long>(key, defValue) {
+class LongPref<K : Enum<*>>(keyID: K, defValue: Long) : BasePref<Long, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getLong(hasPrefs.key(keyID), defValue)
+    hasPrefs.prefs.getLong(keyID.name, defValue)
 
   override fun setPrefValue(hasPrefs: HasPrefs, value: Long) =
-    hasPrefs.prefs.edit().putLong(hasPrefs.key(keyID), value).apply()
+    hasPrefs.prefs.edit().putLong(keyID.name, value).apply()
 }
 
-class BooleanPref(@StringRes key: Int, defValue: Boolean) : BasePref<Boolean>(key, defValue) {
+
+class BooleanPref<K : Enum<*>>(keyID: K, defValue: Boolean) :
+  BasePref<Boolean, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getBoolean(hasPrefs.key(keyID), defValue)
+    hasPrefs.prefs.getBoolean(keyID.name, defValue)
 
   override fun setPrefValue(hasPrefs: HasPrefs, value: Boolean) =
-    hasPrefs.prefs.edit().putBoolean(hasPrefs.key(keyID), value).apply()
+    hasPrefs.prefs.edit().putBoolean(keyID.name, value).apply()
 }
 
-fun HasPrefs.key(@StringRes keyID: Int) = prefsContext.getString(keyID)
+
+class FloatPref<K : Enum<*>>(keyID: K, defValue: Float) :
+  BasePref<Float, K>(keyID, defValue) {
+
+  override fun getPrefValue(hasPrefs: HasPrefs) =
+    hasPrefs.prefs.getFloat(keyID.name, defValue)
+
+  override fun setPrefValue(hasPrefs: HasPrefs, value: Float) =
+    hasPrefs.prefs.edit().putFloat(keyID.name, value).apply()
+}
 
 
-//private val log = org.slf4j.LoggerFactory.getLogger(Prefs::class.java)
+class DoublePref<K : Enum<*>>(keyID: K, defValue: Double) :
+  BasePref<Double, K>(keyID, defValue) {
+
+  override fun getPrefValue(hasPrefs: HasPrefs) =
+    hasPrefs.prefs.getString(keyID.name, null)?.toDouble() ?: defValue
+
+  override fun setPrefValue(hasPrefs: HasPrefs, value: Double) =
+    hasPrefs.prefs.edit().putString(keyID.name, value.toString()).apply()
+}

@@ -135,13 +135,18 @@ fun Context.getThemeColour(@AttrRes themeColorAttribute: Int) =
 fun Context.getResourceColour(@ColorRes colorID: Int) =
   ResourceUtils.getResourceColour(this, colorID)
 
+@ColorInt
+fun Int.toThemeColour(context: Context): Int = ResourceUtils.getThemeColour(context, this)
+
+@ColorInt
+fun Int.toResourceColour(context: Context): Int = ResourceUtils.getResourceColour(context, this)
 
 @Px
-fun Context.getThemeDimension(@AttrRes themeDimensionAttr:Int, @Px defValue: Float = 0f) =
+fun Context.getThemeDimension(@AttrRes themeDimensionAttr: Int, @Px defValue: Float = 0f) =
   ResourceUtils.getDimension(this, themeDimensionAttr, defValue)
 
 @Px
-fun Context.getThemeDimensionPixelSize(@AttrRes themeDimensionAttr:Int, @Px defValue: Int = 0) =
+fun Context.getThemeDimensionPixelSize(@AttrRes themeDimensionAttr: Int, @Px defValue: Int = 0) =
   ResourceUtils.getDimensionPixelSize(this, themeDimensionAttr, defValue)
 
 
