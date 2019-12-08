@@ -22,7 +22,7 @@ object Versions {
 
     const val androidx_test: String = "1.2.0"
 
-    const val com_android_tools_build_gradle: String = "3.6.0-beta04"
+    const val com_android_tools_build_gradle: String = "3.6.0-beta05"
 
     const val digital_wup_android_maven_publish_gradle_plugin: String = "3.6.3"
 
@@ -36,7 +36,7 @@ object Versions {
 
     const val recyclerview: String = "1.1.0"
 
-    const val lint_gradle: String = "26.6.0-beta04"
+    const val lint_gradle: String = "26.6.0-beta05"
 
     const val appcompat: String = "1.1.0"
 
@@ -46,7 +46,7 @@ object Versions {
 
     const val material: String = "1.1.0-beta02"
 
-    const val aapt2: String = "3.6.0-beta04-5836729"
+    const val aapt2: String = "3.6.0-beta05-5836729"
 
     /**
      * Current version: "6.0.1"
