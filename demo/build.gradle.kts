@@ -29,8 +29,8 @@ android {
     targetCompatibility = ProjectVersions.JAVA_VERSION
   }
 
-  dataBinding {
-    isEnabled = false
+  buildFeatures {
+    dataBinding = false
   }
 
   androidExtensions {
