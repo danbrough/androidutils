@@ -55,7 +55,6 @@ android {
 
   publishing {
     publications {
-
       create<MavenPublication>("mavenAar") {
         groupId = ProjectVersions.GROUP_ID
         artifactId = "permissions"
