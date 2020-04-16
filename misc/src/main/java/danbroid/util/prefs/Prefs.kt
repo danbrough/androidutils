@@ -19,73 +19,87 @@ interface HasPrefs {
 abstract class BasePref<T, K : Enum<*>>(val keyID: K, val defValue: T) {
 
   operator fun getValue(thisRef: HasPrefs, property: KProperty<*>): T =
-    getPrefValue(thisRef)
+      getPrefValue(thisRef)
 
   operator fun setValue(thisRef: HasPrefs, property: KProperty<*>, value: T) =
-    setPrefValue(thisRef, value)
+      setPrefValue(thisRef, value)
 
   abstract fun getPrefValue(hasPrefs: HasPrefs): T
 
   abstract fun setPrefValue(hasPrefs: HasPrefs, value: T)
 }
 
-class StringPref<K : Enum<*>>(keyID: K, defValue: String?) :
-  BasePref<String?, K>(keyID, defValue) {
+class NullableStringPref<K : Enum<*>>(keyID: K, defValue: String) :
+    BasePref<String, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getString(keyID.name, defValue)
+      hasPrefs.prefs.getString(keyID.name, defValue)!!
 
-  override fun setPrefValue(hasPrefs: HasPrefs, value: String?) =
-    hasPrefs.prefs.edit().putString(keyID.name, value).apply()
+  override fun setPrefValue(hasPrefs: HasPrefs, value: String) =
+      hasPrefs.prefs.edit().putString(keyID.name, value).apply()
+}
+
+class StringPref<K : Enum<*>>(keyID: K, defValue: String) :
+    BasePref<String, K>(keyID, defValue) {
+
+  override fun getPrefValue(hasPrefs: HasPrefs) =
+      hasPrefs.prefs.getString(keyID.name, defValue)!!
+
+  override fun setPrefValue(hasPrefs: HasPrefs, value: String): Unit {
+    hasPrefs.prefs.edit().apply {
+      putString(keyID.name, value)
+      apply()
+    }
+  }
 }
 
 class IntPref<K : Enum<*>>(keyID: K, defValue: Int) : BasePref<Int, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getInt(keyID.name, defValue)
+      hasPrefs.prefs.getInt(keyID.name, defValue)
 
   override fun setPrefValue(hasPrefs: HasPrefs, value: Int) =
-    hasPrefs.prefs.edit().putInt(keyID.name, value).apply()
+      hasPrefs.prefs.edit().putInt(keyID.name, value).apply()
 }
 
 class LongPref<K : Enum<*>>(keyID: K, defValue: Long) : BasePref<Long, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getLong(keyID.name, defValue)
+      hasPrefs.prefs.getLong(keyID.name, defValue)
 
   override fun setPrefValue(hasPrefs: HasPrefs, value: Long) =
-    hasPrefs.prefs.edit().putLong(keyID.name, value).apply()
+      hasPrefs.prefs.edit().putLong(keyID.name, value).apply()
 }
 
 
 class BooleanPref<K : Enum<*>>(keyID: K, defValue: Boolean) :
-  BasePref<Boolean, K>(keyID, defValue) {
+    BasePref<Boolean, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getBoolean(keyID.name, defValue)
+      hasPrefs.prefs.getBoolean(keyID.name, defValue)
 
   override fun setPrefValue(hasPrefs: HasPrefs, value: Boolean) =
-    hasPrefs.prefs.edit().putBoolean(keyID.name, value).apply()
+      hasPrefs.prefs.edit().putBoolean(keyID.name, value).apply()
 }
 
 
 class FloatPref<K : Enum<*>>(keyID: K, defValue: Float) :
-  BasePref<Float, K>(keyID, defValue) {
+    BasePref<Float, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getFloat(keyID.name, defValue)
+      hasPrefs.prefs.getFloat(keyID.name, defValue)
 
   override fun setPrefValue(hasPrefs: HasPrefs, value: Float) =
-    hasPrefs.prefs.edit().putFloat(keyID.name, value).apply()
+      hasPrefs.prefs.edit().putFloat(keyID.name, value).apply()
 }
 
 
 class DoublePref<K : Enum<*>>(keyID: K, defValue: Double) :
-  BasePref<Double, K>(keyID, defValue) {
+    BasePref<Double, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-    hasPrefs.prefs.getString(keyID.name, null)?.toDouble() ?: defValue
+      hasPrefs.prefs.getString(keyID.name, null)?.toDouble() ?: defValue
 
   override fun setPrefValue(hasPrefs: HasPrefs, value: Double) =
-    hasPrefs.prefs.edit().putString(keyID.name, value.toString()).apply()
+      hasPrefs.prefs.edit().putString(keyID.name, value.toString()).apply()
 }

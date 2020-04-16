@@ -13,17 +13,17 @@ import org.gradle.plugin.use.PluginDependencySpec
  */
 object Versions {
     const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.3.5"
+             // available: "1.3.5-1.4-M1-release-99"
 
-
-    const val org_jetbrains_kotlin: String = "1.3.71"
+    const val org_jetbrains_kotlin: String = "1.3.72"
 
     const val androidx_lifecycle: String = "2.2.0"
 
-    const val androidx_multidex: String = "2.0.1"
+    const val androidx_multidex: String = "2.0.0"
 
     const val androidx_test: String = "1.2.0"
 
-    const val com_android_tools_build_gradle: String = "4.0.0-beta03"
+    const val com_android_tools_build_gradle: String = "4.0.0-beta04"
 
     const val digital_wup_android_maven_publish_gradle_plugin: String = "3.6.3"
 
@@ -37,7 +37,7 @@ object Versions {
 
     const val recyclerview: String = "1.1.0"
 
-    const val lint_gradle: String = "27.0.0-beta03"
+    const val lint_gradle: String = "27.0.0-beta04"
 
     const val appcompat: String = "1.1.0"
 
@@ -47,7 +47,7 @@ object Versions {
 
     const val material: String = "1.1.0"
 
-    const val aapt2: String = "4.0.0-beta03-6051327"
+    const val aapt2: String = "4.0.0-beta04-6051327"
 
     /**
      * Current version: "6.3"
