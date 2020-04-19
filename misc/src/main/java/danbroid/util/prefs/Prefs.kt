@@ -29,13 +29,13 @@ abstract class BasePref<T, K : Enum<*>>(val keyID: K, val defValue: T) {
   abstract fun setPrefValue(hasPrefs: HasPrefs, value: T)
 }
 
-class NullableStringPref<K : Enum<*>>(keyID: K, defValue: String) :
-    BasePref<String, K>(keyID, defValue) {
+class NullableStringPref<K : Enum<*>>(keyID: K, defValue: String?) :
+    BasePref<String?, K>(keyID, defValue) {
 
   override fun getPrefValue(hasPrefs: HasPrefs) =
-      hasPrefs.prefs.getString(keyID.name, defValue)!!
+      hasPrefs.prefs.getString(keyID.name, defValue)
 
-  override fun setPrefValue(hasPrefs: HasPrefs, value: String) =
+  override fun setPrefValue(hasPrefs: HasPrefs, value: String?) =
       hasPrefs.prefs.edit().putString(keyID.name, value).apply()
 }
 
