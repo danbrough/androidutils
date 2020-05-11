@@ -34,8 +34,8 @@ android {
     getByName("release") {
       isMinifyEnabled = false
       proguardFiles(
-        getDefaultProguardFile("proguard-android-optimize.txt"),
-        "proguard-rules.pro"
+          getDefaultProguardFile("proguard-android-optimize.txt"),
+          "proguard-rules.pro"
       )
     }
 
@@ -65,6 +65,7 @@ android {
 dependencies {
   implementation(Libs.slf4j_api)
   implementation(Libs.appcompat)
+  implementation(Libs.kotlin_reflect)
 
   androidTestImplementation(project(":slf4j"))
   androidTestImplementation(Libs.androidx_test_runner)
