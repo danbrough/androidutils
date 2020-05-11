@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`FloatPref(@StringRes key: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, defValue: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`)`
+`FloatPref(keyID: K, defValue: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`)`

@@ -1,14 +1,13 @@
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import java.util.*
 
 buildscript {
-
 
   dependencies {
     classpath(Libs.com_android_tools_build_gradle)
     classpath(Libs.kotlin_gradle_plugin)
-    //classpath(Libs.navigation_safe_args_gradle_plugin)
+    //"classpath"("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+    //classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.2.2")
 
   }
 
@@ -33,7 +32,7 @@ tasks {
     outputDirectory = "$rootDir/docs"
 
     subProjects =
-      listOf("demo", "permissions", "misc") //listOf("demo", "util", "permissions", "slf4j")
+        listOf("demo", "permissions", "misc") //listOf("demo", "util", "permissions", "slf4j")
 
 
     configuration {

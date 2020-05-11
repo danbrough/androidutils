@@ -15,6 +15,7 @@ Displays a list of activities to launch
 | Name | Summary |
 |---|---|
 | [Demo](-demo/index.md) | `class Demo` |
+| [PreferenceKeys](-preference-keys/index.md) | `enum class PreferenceKeys` |
 
 ### Constructors
 
@@ -27,16 +28,9 @@ Displays a list of activities to launch
 | Name | Summary |
 |---|---|
 | [prefs](prefs.md) | `val prefs: SharedPreferences` |
-| [prefsContext](prefs-context.md) | `val prefsContext: Context` |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
 | [onCreate](on-create.md) | `fun onCreate(savedInstanceState: Bundle?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
-
-### Extension Functions
-
-| Name | Summary |
-|---|---|
-| [key](../../danbroid.util.prefs/key.md) | `fun `[`HasPrefs`](../../danbroid.util.prefs/-has-prefs/index.md)`.key(keyID: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`!` |

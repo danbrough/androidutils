@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`BasePref(@StringRes keyID: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, defValue: T)`
+`BasePref(keyID: K, defValue: T)`

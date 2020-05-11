@@ -2,4 +2,4 @@
 
 # getPrefValue
 
-`fun getPrefValue(hasPrefs: `[`HasPrefs`](../-has-prefs/index.md)`): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`!`
+`fun getPrefValue(hasPrefs: `[`HasPrefs`](../-has-prefs/index.md)`): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)

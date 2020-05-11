@@ -37,12 +37,16 @@ android {
     isExperimental = true
   }
 
+  kotlinOptions {
+    jvmTarget = "1.8"
+    //freeCompilerArgs = listOf("-Xjsr305=strict")
+  }
   buildTypes {
     getByName("release") {
       isMinifyEnabled = true
       proguardFiles(
-        getDefaultProguardFile("proguard-android-optimize.txt"),
-        "proguard-rules.pro"
+          getDefaultProguardFile("proguard-android-optimize.txt"),
+          "proguard-rules.pro"
       )
     }
   }
@@ -53,6 +57,7 @@ android {
   }
 
   kotlin {
+
     sourceSets {
       all {
         languageSettings.useExperimentalAnnotation("kotlinx.coroutines.ExperimentalCoroutinesApi")
@@ -67,6 +72,8 @@ android {
 
 
 dependencies {
+  implementation(project(":menu"))
+  // or implementation("com.github.danbrough.androidutils:content:master-SNAPSHOT")
 
   implementation(project(":permissions"))
   // or implementation("com.github.danbrough.androidutils:permissions:master-SNAPSHOT")

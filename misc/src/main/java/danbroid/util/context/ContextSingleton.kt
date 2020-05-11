@@ -22,3 +22,4 @@ abstract class ContextSingleton {
   }
 }
 
+inline fun <reified T : ContextSingleton> Context.singletons() = ContextSingleton.getInstance<T>(this)

@@ -61,6 +61,12 @@ object Libs {
     /**
      * https://developer.android.com/jetpack/androidx
      */
+    const val lifecycle_livedata_ktx: String = "androidx.lifecycle:lifecycle-livedata-ktx:" +
+            Versions.androidx_lifecycle
+
+    /**
+     * https://developer.android.com/jetpack/androidx
+     */
     const val lifecycle_runtime_ktx: String = "androidx.lifecycle:lifecycle-runtime-ktx:" +
             Versions.androidx_lifecycle
 
@@ -107,6 +113,12 @@ object Libs {
     const val org_jetbrains_dokka_gradle_plugin: String =
             "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin:" +
             Versions.org_jetbrains_dokka_gradle_plugin
+
+    /**
+     * http://tools.android.com
+     */
+    const val constraintlayout: String = "androidx.constraintlayout:constraintlayout:" +
+            Versions.constraintlayout
 
     /**
      * https://github.com/googlesamples/easypermissions

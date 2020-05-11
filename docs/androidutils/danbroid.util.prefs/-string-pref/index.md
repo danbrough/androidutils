@@ -2,17 +2,17 @@
 
 # StringPref
 
-`class StringPref : `[`BasePref`](../-base-pref/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?>`
+`class StringPref<K : `[`Enum`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html)`<*>> : `[`BasePref`](../-base-pref/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, K>`
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `StringPref(keyID: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, defValue: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?)` |
+| [&lt;init&gt;](-init-.md) | `StringPref(keyID: K, defValue: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)` |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [getPrefValue](get-pref-value.md) | `fun getPrefValue(hasPrefs: `[`HasPrefs`](../-has-prefs/index.md)`): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`!` |
-| [setPrefValue](set-pref-value.md) | `fun setPrefValue(hasPrefs: `[`HasPrefs`](../-has-prefs/index.md)`, value: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [getPrefValue](get-pref-value.md) | `fun getPrefValue(hasPrefs: `[`HasPrefs`](../-has-prefs/index.md)`): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [setPrefValue](set-pref-value.md) | `fun setPrefValue(hasPrefs: `[`HasPrefs`](../-has-prefs/index.md)`, value: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |

@@ -12,7 +12,7 @@ import org.gradle.plugin.use.PluginDependencySpec
  * YOU are responsible for updating manually the dependency version.
  */
 object Versions {
-    const val org_jetbrains_kotlinx_kotlinx_coroutines: String =  "1.3.6"
+    const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.3.6"
 
     const val org_jetbrains_kotlin: String = "1.3.72"
 
@@ -29,6 +29,8 @@ object Versions {
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
     const val org_jetbrains_dokka_gradle_plugin: String = "0.10.1"
+
+    const val constraintlayout: String = "1.1.3"
 
     const val easypermissions: String = "3.0.0"
 

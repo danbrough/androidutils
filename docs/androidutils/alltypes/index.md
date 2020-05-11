@@ -24,6 +24,16 @@
 ##### [danbroid.util.prefs.BooleanPref](../danbroid.util.prefs/-boolean-pref/index.md)
 
 
+| (extensions in package danbroid.util)
+
+##### [kotlin.CharSequence](../danbroid.util/kotlin.-char-sequence/index.md)
+
+
+| (extensions in package danbroid.util.context)
+
+##### [android.content.Context](../danbroid.util.context/android.content.-context/index.md)
+
+
 | (extensions in package danbroid.util.resource)
 
 ##### [android.content.Context](../danbroid.util.resource/android.content.-context/index.md)
@@ -31,7 +41,19 @@
 
 |
 
+##### [danbroid.util.context.ContextSingleton](../danbroid.util.context/-context-singleton/index.md)
+
+
+|
+
 ##### [danbroid.util.prefs.DoublePref](../danbroid.util.prefs/-double-pref/index.md)
+
+
+|
+
+##### [danbroid.util.event.Event](../danbroid.util.event/-event/index.md)
+
+Used as a wrapper for data that is exposed via a LiveData that represents an event.
 
 
 |
@@ -95,6 +117,11 @@ Displays a list of activities to launch
 
 |
 
+##### [danbroid.util.prefs.NullableStringPref](../danbroid.util.prefs/-nullable-string-pref/index.md)
+
+
+|
+
 ##### [danbroid.util.permissions.PermissionResult](../danbroid.util.permissions/-permission-result/index.md)
 
 The result from a permissions request
@@ -117,6 +144,11 @@ Manages processing and dispatching of permissions request
 |
 
 ##### [danbroid.util.resource.ResourceUtils](../danbroid.util.resource/-resource-utils/index.md)
+
+
+| (extensions in package danbroid.util.prefs)
+
+##### [android.content.SharedPreferences](../danbroid.util.prefs/android.content.-shared-preferences/index.md)
 
 
 | (extensions in package danbroid.util.resource)
