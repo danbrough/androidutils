@@ -1,11 +1,11 @@
-package danbroid.menu.ui.model
+package danbroid.util.menu.ui.model
 
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.*
-import danbroid.menu.ContentManager
-import danbroid.menu.MenuItem
-import danbroid.menu.MenuItemBuilder
+import danbroid.util.menu.ContentManager
+import danbroid.util.menu.MenuItem
+import danbroid.util.menu.MenuItemBuilder
 import danbroid.util.context.singleton
 
 open class MenuListModel(context: Context, id: String, builder: MenuItemBuilder) : ViewModel() {

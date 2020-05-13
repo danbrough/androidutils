@@ -1,4 +1,4 @@
-package danbroid.menu
+package danbroid.util.menu
 
 import danbroid.util.context.ContextSingleton
 import kotlinx.coroutines.Dispatchers

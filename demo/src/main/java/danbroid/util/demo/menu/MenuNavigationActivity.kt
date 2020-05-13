@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import danbroid.menu.MenuItem
-import danbroid.menu.ui.menulist.AbstractMenuListFragment
+import danbroid.util.menu.MenuItem
+import danbroid.util.menu.ui.menulist.AbstractMenuListFragment
 import danbroid.util.demo.R
 import kotlinx.android.synthetic.main.activity_menu_navigation.*
 

@@ -1,4 +1,4 @@
-package danbroid.menu
+package danbroid.util.menu
 import androidx.annotation.DrawableRes
 import androidx.annotation.MenuRes
 import androidx.annotation.StringRes

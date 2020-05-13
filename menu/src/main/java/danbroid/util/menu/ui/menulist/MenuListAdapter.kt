@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import danbroid.menu.MenuItem
-import danbroid.menu.R
+import danbroid.util.menu.MenuItem
+import danbroid.util.menu.R
 import kotlinx.android.synthetic.main.menu_item_fragment.view.*
 
 class MenuListAdapter(

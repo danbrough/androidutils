@@ -1,4 +1,4 @@
-package danbroid.menu.ui.menulist
+package danbroid.util.menu.ui.menulist
 
 import android.os.Bundle
 import android.view.ContextMenu
@@ -11,10 +11,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import danbroid.habitrack.ui.menulist.MenuListAdapter
-import danbroid.menu.MenuActionContext
-import danbroid.menu.MenuItem
-import danbroid.menu.R
-import danbroid.menu.ui.model.MenuListModel
+import danbroid.util.menu.MenuActionContext
+import danbroid.util.menu.MenuItem
+import danbroid.util.menu.R
+import danbroid.util.menu.ui.model.MenuListModel
 import kotlinx.android.synthetic.main.fragment_menu_list.*
 import kotlinx.coroutines.launch
 import org.slf4j.LoggerFactory

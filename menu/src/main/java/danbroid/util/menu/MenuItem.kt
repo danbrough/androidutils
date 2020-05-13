@@ -1,4 +1,4 @@
-package danbroid.menu
+package danbroid.util.menu
 
 import androidx.annotation.ColorInt
 import androidx.annotation.MenuRes

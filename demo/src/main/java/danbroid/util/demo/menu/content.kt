@@ -3,7 +3,7 @@ package danbroid.util.demo.menu
 import android.graphics.Color
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import danbroid.menu.*
+import danbroid.util.menu.*
 import danbroid.util.demo.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

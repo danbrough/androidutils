@@ -2,11 +2,10 @@ package danbroid.util.demo.menu
 
 import android.os.Bundle
 import android.view.View
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import danbroid.menu.find
-import danbroid.menu.ui.menulist.AbstractMenuListFragment
-import danbroid.menu.ui.model.menuListModel
+import danbroid.util.menu.find
+import danbroid.util.menu.ui.menulist.AbstractMenuListFragment
+import danbroid.util.menu.ui.model.menuListModel
 
 class MenuListFragment : AbstractMenuListFragment() {
   val args: MenuListFragmentArgs by navArgs()
