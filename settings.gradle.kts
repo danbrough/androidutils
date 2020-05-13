@@ -1,6 +1,8 @@
-
 //include ':android_resource',':slf4j', ':touchprompt', ':touchprompt_material',':demo', ':android-ui'
 //include( ":resource",":slf4j",":permissions")
-include(":slf4j",":permissions",":misc",":demo",":menu")
+include(":slf4j", ":permissions", ":misc", ":demo", ":menu")
 
 rootProject.name = "androidutils"
+
+include(":menu")
+project(":menu").projectDir = file("../androidutils/menu")

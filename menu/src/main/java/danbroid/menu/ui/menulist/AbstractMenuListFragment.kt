@@ -1,6 +1,5 @@
 package danbroid.menu.ui.menulist
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,18 +18,12 @@ import kotlinx.android.synthetic.main.fragment_menu_list.*
 import kotlinx.coroutines.launch
 import org.slf4j.LoggerFactory
 
-abstract class MenuListFragment : Fragment() {
-
-  //protected val args: MenuListFragmentArgs by navArgs()
+abstract class AbstractMenuListFragment : Fragment() {
 
   @LayoutRes
   protected open val layoutID: Int = R.layout.fragment_menu_list
 
-  val model: MenuListModel by lazy {
-    TODO("")
-    // menuListModel(args.menuID)
-  }
-
+  protected open lateinit var model: MenuListModel
 
   override fun onCreateView(
       inflater: LayoutInflater,
@@ -45,7 +38,7 @@ abstract class MenuListFragment : Fragment() {
       it.onClick = { menuItem ->
         menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
           requireActivity().lifecycleScope.launch {
-            clickHandler(MenuActionContext(requireContext(), menuItem, this@MenuListFragment)) {
+            clickHandler(MenuActionContext(requireContext(), menuItem, this@AbstractMenuListFragment)) {
               // if (it) activityInterface.onClicked(menuItem)
             }
           }
@@ -73,13 +66,6 @@ abstract class MenuListFragment : Fragment() {
     }
   }
 
-  override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-    log.error("onActivityResult() requestCode: $requestCode resultCode: $resultCode data: $data")
-    log.error("uri:${data?.data} extras:${data?.extras}")
-
-    super.onActivityResult(requestCode, resultCode, data)
-  }
-
 }
 
-private val log = LoggerFactory.getLogger(MenuListFragment::class.java)
+private val log = LoggerFactory.getLogger(AbstractMenuListFragment::class.java)

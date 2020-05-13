@@ -55,6 +55,18 @@ object Libs {
     /**
      * https://developer.android.com/topic/libraries/architecture/index.html
      */
+    const val navigation_fragment_ktx: String = "androidx.navigation:navigation-fragment-ktx:" +
+            Versions.androidx_navigation
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    const val navigation_ui_ktx: String = "androidx.navigation:navigation-ui-ktx:" +
+            Versions.androidx_navigation
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
     const val lifecycle_extensions: String = "androidx.lifecycle:lifecycle-extensions:" +
             Versions.androidx_lifecycle
 

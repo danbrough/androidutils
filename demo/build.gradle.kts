@@ -91,6 +91,8 @@ dependencies {
   implementation(Libs.lifecycle_viewmodel_ktx)
   implementation(Libs.fragment_ktx)
   implementation(Libs.recyclerview)
+  implementation("androidx.navigation:navigation-fragment-ktx:2.3.0-alpha06")
+  implementation("androidx.navigation:navigation-ui-ktx:2.3.0-alpha06")
 
 }
 

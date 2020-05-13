@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import danbroid.util.demo.menu.MenuNavigationActivity
 import danbroid.util.demo.permissions.PermissionsActivity
 import danbroid.util.prefs.HasPrefs
 import danbroid.util.prefs.IntPref
@@ -42,7 +43,8 @@ class MainActivity : AppCompatActivity(), HasPrefs {
     prefsCounter++
 
     val demos = listOf(
-      Demo("Permissions", PermissionsActivity::class.java)
+        Demo("Permissions", PermissionsActivity::class.java),
+        Demo(getString(R.string.title_menu_activity), MenuNavigationActivity::class.java)
     )
 
     val adapter = object : ArrayAdapter<Demo>(this, android.R.layout.simple_list_item_1, demos) {

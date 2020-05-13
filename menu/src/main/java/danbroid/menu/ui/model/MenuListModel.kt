@@ -6,31 +6,24 @@ import androidx.lifecycle.*
 import danbroid.menu.ContentManager
 import danbroid.menu.MenuItem
 import danbroid.menu.MenuItemBuilder
-import danbroid.menu.find
 import danbroid.util.context.singletons
 
-class MenuListModel(context: Context, val id: String) : ViewModel() {
-
-  lateinit var rootContent: MenuItemBuilder
-
-  val builder: MenuItemBuilder by lazy {
-    rootContent.find(id) ?: throw Exception("Failed to find builder: $id")
-  }
-
-  val menu: LiveData<MenuItem> =
+open class MenuListModel(context: Context, id: String, builder: MenuItemBuilder) : ViewModel() {
+  open val menu: LiveData<MenuItem> =
       context.singletons<ContentManager>().liveItemFlow(id, builder).asLiveData(viewModelScope.coroutineContext)
 
-
-  class Factory(val context: Context, val id: String) : ViewModelProvider.NewInstanceFactory() {
-    @Suppress("UNCHECKED_CAST")
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-      return MenuListModel(context, id) as T
+  companion object {
+    class NewInstanceFactory(val context: Context, val id: String, val builder: MenuItemBuilder) : ViewModelProvider.NewInstanceFactory() {
+      @Suppress("UNCHECKED_CAST")
+      override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        return MenuListModel(context, id, builder) as T
+      }
     }
   }
 }
 
 
-fun Fragment.menuListModel(id: String): MenuListModel =
-    ViewModelProvider(this, MenuListModel.Factory(context!!, id)).get(MenuListModel::class.java)
-
-private val log = org.slf4j.LoggerFactory.getLogger(MenuListModel::class.java)
+fun Fragment.menuListModel(id: String, builder: MenuItemBuilder): MenuListModel {
+  return ViewModelProvider(this, MenuListModel.Companion.NewInstanceFactory(context!!, id, builder))
+      .get(id, MenuListModel::class.java)
+}
