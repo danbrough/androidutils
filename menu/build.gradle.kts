@@ -79,7 +79,7 @@ android {
       create<MavenPublication>("mavenAar") {
         groupId = ProjectVersions.GROUP_ID
 
-        artifactId = "misc"
+        artifactId = "menu"
         version = ProjectVersions.VERSION_NAME
         from(components["android"])
         artifact(sourcesJar.get())
