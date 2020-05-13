@@ -52,6 +52,7 @@ class MenuListAdapter(
       this.menu = menu
       itemView.title.text = menu.title
       itemView.subtitle.text = menu.subtitle
+
     }
   }
 

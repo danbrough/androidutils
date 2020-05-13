@@ -8,7 +8,7 @@ plugins {
   id("kotlin-android-extensions")
   //id("androidx.navigation.safeargs.kotlin")
 
-  id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
+  id("digital.wup.android-maven-publish") version "3.6.3"
   id("org.jetbrains.dokka")
 
 }

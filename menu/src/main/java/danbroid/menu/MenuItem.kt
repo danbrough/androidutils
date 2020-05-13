@@ -17,7 +17,7 @@ data class MenuItem(
     var isVisible:Boolean = true,
     var inlineChildren: Boolean = false,
     @Transient
-    var menuItemBuilder: MenuItemBuilder?
+    var menuItemBuilder: MenuItemBuilder? = null
 ) {
 
   @Transient

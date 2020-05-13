@@ -55,18 +55,6 @@ object Libs {
     /**
      * https://developer.android.com/topic/libraries/architecture/index.html
      */
-    const val navigation_fragment_ktx: String = "androidx.navigation:navigation-fragment-ktx:" +
-            Versions.androidx_navigation
-
-    /**
-     * https://developer.android.com/topic/libraries/architecture/index.html
-     */
-    const val navigation_ui_ktx: String = "androidx.navigation:navigation-ui-ktx:" +
-            Versions.androidx_navigation
-
-    /**
-     * https://developer.android.com/topic/libraries/architecture/index.html
-     */
     const val lifecycle_extensions: String = "androidx.lifecycle:lifecycle-extensions:" +
             Versions.androidx_lifecycle
 
@@ -122,9 +110,28 @@ object Libs {
             "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
             Versions.de_fayard_buildsrcversions_gradle_plugin
 
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    const val navigation_safe_args_gradle_plugin: String =
+            "androidx.navigation:navigation-safe-args-gradle-plugin:" +
+            Versions.navigation_safe_args_gradle_plugin
+
     const val org_jetbrains_dokka_gradle_plugin: String =
             "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin:" +
             Versions.org_jetbrains_dokka_gradle_plugin
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    const val navigation_fragment_ktx: String = "androidx.navigation:navigation-fragment-ktx:" +
+            Versions.navigation_fragment_ktx
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    const val navigation_ui_ktx: String = "androidx.navigation:navigation-ui-ktx:" +
+            Versions.navigation_ui_ktx
 
     /**
      * http://tools.android.com

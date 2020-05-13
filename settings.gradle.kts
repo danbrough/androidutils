@@ -4,5 +4,3 @@ include(":slf4j", ":permissions", ":misc", ":demo", ":menu")
 
 rootProject.name = "androidutils"
 
-include(":menu")
-project(":menu").projectDir = file("../androidutils/menu")

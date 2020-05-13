@@ -3,6 +3,7 @@ plugins {
   kotlin("android")
   kotlin("kapt")
   kotlin("android.extensions")
+  id("androidx.navigation.safeargs.kotlin")
   id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
   id("org.jetbrains.dokka")
 

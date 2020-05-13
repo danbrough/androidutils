@@ -1,6 +1,7 @@
 package danbroid.menu.ui.menulist
 
 import android.os.Bundle
+import android.view.ContextMenu
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,22 @@ import kotlinx.coroutines.launch
 import org.slf4j.LoggerFactory
 
 abstract class AbstractMenuListFragment : Fragment() {
+  interface MenuItemHandler {
+
+    fun onClicked(menu: MenuItem)
+
+    fun onCreateContextMenu(
+        menuItem: MenuItem,
+        menu: ContextMenu,
+        view: View,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    )
+
+    fun setToolbarTitle(title: CharSequence)
+  }
+
+  protected open val menuItemClickHandler: MenuItemHandler?
+    get() = activity as? MenuItemHandler
 
   @LayoutRes
   protected open val layoutID: Int = R.layout.fragment_menu_list
@@ -31,6 +48,7 @@ abstract class AbstractMenuListFragment : Fragment() {
       savedInstanceState: Bundle?
   ) = inflater.inflate(layoutID, container, false)
 
+
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     val adapter = MenuListAdapter()
 
@@ -39,12 +57,12 @@ abstract class AbstractMenuListFragment : Fragment() {
         menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
           requireActivity().lifecycleScope.launch {
             clickHandler(MenuActionContext(requireContext(), menuItem, this@AbstractMenuListFragment)) {
-              // if (it) activityInterface.onClicked(menuItem)
+              if (it) menuItemClickHandler?.onClicked(menuItem)
             }
           }
-        } //?: activityInterface.onClicked(menuItem)
+        } ?: menuItemClickHandler?.onClicked(menuItem)
       }
-      //it.onContextMenu = activityInterface::onCreateContextMenu
+      it.onContextMenu = menuItemClickHandler?.let { it::onCreateContextMenu }
     }
 
     recycler_view.adapter = adapter
@@ -55,9 +73,13 @@ abstract class AbstractMenuListFragment : Fragment() {
     }
   }
 
+  protected open fun setToolbarTitle(menu: MenuItem) = activity?.setTitle(menu.title)
+
+
   open fun onMenuChanged(menu: MenuItem, adapter: MenuListAdapter) {
     //log.trace("onMenuChanged() $menu")
     //activityInterface.setToolbarTitle(menu.title)
+    setToolbarTitle(menu)
 
     menu.children?.also {
       progress_bar.visibility = View.GONE

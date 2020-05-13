@@ -16,8 +16,6 @@ object Versions {
 
     const val org_jetbrains_kotlin: String = "1.3.72"
 
-    const val androidx_navigation: String = "2.3.0-alpha06"
-
     const val androidx_lifecycle: String = "2.2.0"
 
     const val androidx_multidex: String = "2.0.0"
@@ -30,7 +28,13 @@ object Versions {
 
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
+    const val navigation_safe_args_gradle_plugin: String = "2.2.2"
+
     const val org_jetbrains_dokka_gradle_plugin: String = "0.10.1"
+
+    const val navigation_fragment_ktx: String = "2.3.0-alpha06"
+
+    const val navigation_ui_ktx: String = "2.3.0-alpha06"
 
     const val constraintlayout: String = "1.1.3"
 
