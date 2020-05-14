@@ -3,15 +3,17 @@ package danbroid.util.menu.ui.model
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.*
+import danbroid.util.context.singleton
 import danbroid.util.menu.ContentManager
 import danbroid.util.menu.MenuItem
 import danbroid.util.menu.MenuItemBuilder
-import danbroid.util.context.singleton
 
 open class MenuListModel(context: Context, id: String, builder: MenuItemBuilder) : ViewModel() {
 
   open val menu: LiveData<MenuItem> =
-      context.singleton<ContentManager>().liveItemFlow(id, builder).asLiveData(viewModelScope.coroutineContext)
+      context.singleton<ContentManager>()
+          .liveItemFlow(id, builder)
+          .asLiveData(viewModelScope.coroutineContext)
 
   companion object {
     class NewInstanceFactory(val context: Context, val id: String, val builder: MenuItemBuilder) : ViewModelProvider.NewInstanceFactory() {

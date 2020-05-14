@@ -1,12 +1,13 @@
 package danbroid.util.menu
 
-import danbroid.util.context.ContextSingleton
+import android.content.Context
+import danbroid.util.context.Singleton
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
-class ContentManager : ContextSingleton() {
+class ContentManager(context: Context) : Singleton<Context>(context) {
 
   fun liveItemFlow(id: String, builder: MenuItemBuilder): Flow<MenuItem> = itemFlow(id, builder)
 

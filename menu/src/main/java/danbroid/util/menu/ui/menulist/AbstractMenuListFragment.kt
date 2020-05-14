@@ -5,7 +5,6 @@ import android.view.ContextMenu
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
@@ -13,13 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import danbroid.habitrack.ui.menulist.MenuListAdapter
 import danbroid.util.menu.MenuActionContext
 import danbroid.util.menu.MenuItem
-import danbroid.util.menu.R
+import danbroid.util.menu.menuImplementation
 import danbroid.util.menu.ui.model.MenuListModel
 import kotlinx.android.synthetic.main.fragment_menu_list.*
 import kotlinx.coroutines.launch
-import org.slf4j.LoggerFactory
 
 abstract class AbstractMenuListFragment : Fragment() {
+
   interface MenuItemHandler {
 
     fun onClicked(menu: MenuItem)
@@ -37,8 +36,9 @@ abstract class AbstractMenuListFragment : Fragment() {
   protected open val menuItemClickHandler: MenuItemHandler?
     get() = activity as? MenuItemHandler
 
-  @LayoutRes
-  protected open val layoutID: Int = R.layout.fragment_menu_list
+  protected val menuImpl by lazy {
+    menuImplementation()
+  }
 
   protected open lateinit var model: MenuListModel
 
@@ -46,7 +46,7 @@ abstract class AbstractMenuListFragment : Fragment() {
       inflater: LayoutInflater,
       container: ViewGroup?,
       savedInstanceState: Bundle?
-  ) = inflater.inflate(layoutID, container, false)
+  ) = inflater.inflate(menuImpl.layoutID, container, false)
 
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -73,13 +73,11 @@ abstract class AbstractMenuListFragment : Fragment() {
     }
   }
 
-  protected open fun setToolbarTitle(menu: MenuItem) = activity?.setTitle(menu.title)
-
 
   open fun onMenuChanged(menu: MenuItem, adapter: MenuListAdapter) {
     //log.trace("onMenuChanged() $menu")
     //activityInterface.setToolbarTitle(menu.title)
-    setToolbarTitle(menu)
+    menuImpl.setToolbarTitle(menu.title)
 
     menu.children?.also {
       progress_bar.visibility = View.GONE
@@ -90,4 +88,4 @@ abstract class AbstractMenuListFragment : Fragment() {
 
 }
 
-private val log = LoggerFactory.getLogger(AbstractMenuListFragment::class.java)
+//private val log = LoggerFactory.getLogger(AbstractMenuListFragment::class.java)

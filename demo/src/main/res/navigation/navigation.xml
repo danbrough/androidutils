@@ -26,4 +26,5 @@
   <action
       android:id="@+id/action_global_navigation_menu"
       app:destination="@id/navigation_menu" />
+
 </navigation>

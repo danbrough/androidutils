@@ -1,25 +1,27 @@
 package danbroid.util.context
 
 import android.content.Context
-import kotlin.reflect.full.createInstance
+import danbroid.util.context.Singleton.Companion.getInstance
 
-abstract class ContextSingleton {
-
-  lateinit var context: Context
+abstract class Singleton<C : Any>(val context: C) {
 
   companion object {
 
     @Volatile
-    var INSTANCE: ContextSingleton? = null
+    var INSTANCE: Singleton<*>? = null
 
-    inline fun <reified T : ContextSingleton> getInstance(context: Context): T = INSTANCE as? T
-        ?: synchronized(ContextSingleton::class) {
-          INSTANCE as? T ?: T::class.createInstance().also {
+    inline fun <C : Any, reified T : Singleton<C>> getInstance(context: C): T = INSTANCE as? T
+        ?: synchronized(T::class) {
+          INSTANCE as? T ?: T::class.constructors.first().call(context).also {
             INSTANCE = it
-            it.context = context.applicationContext
           }
         }
   }
 }
 
-inline fun <reified T : ContextSingleton> Context.singleton() = ContextSingleton.getInstance<T>(this)
+
+//inline fun <C : Any, reified T : Singleton<C>> C.singleton(): T = getInstance(this)
+inline fun <reified T : Singleton<Context>> Context.singleton(): T = getInstance(this)
+
+
+

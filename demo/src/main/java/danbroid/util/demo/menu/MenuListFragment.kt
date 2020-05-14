@@ -10,6 +10,8 @@ import danbroid.util.menu.ui.model.menuListModel
 class MenuListFragment : AbstractMenuListFragment() {
   val args: MenuListFragmentArgs by navArgs()
 
+
+
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     val menuID = args.menuID
     val builder = rootContent.find(menuID)
