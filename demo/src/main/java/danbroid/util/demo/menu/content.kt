@@ -3,8 +3,8 @@ package danbroid.util.demo.menu
 import android.graphics.Color
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import danbroid.util.menu.*
 import danbroid.util.demo.R
+import danbroid.util.menu.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
@@ -40,6 +40,12 @@ val rootContent: MenuItemBuilder by lazy {
       isBrowsable = true
       tint = Color.BLUE
       liveChildren = liveChildrenProducer
+    }
+
+    menu {
+      title = "Context Menu"
+      subtitle = "Long press for context menu"
+      contextMenuID = R.menu.context_menu
     }
   }
 }

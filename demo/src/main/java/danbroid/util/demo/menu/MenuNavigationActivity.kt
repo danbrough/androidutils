@@ -15,7 +15,7 @@ import danbroid.util.menu.ui.menulist.MenuListFragment
 import danbroid.util.menu.ui.menulist.MenuListFragmentDirections
 import kotlinx.android.synthetic.main.activity_menu_navigation.*
 
-class MenuNavigationActivity : AppCompatActivity(), MenuListFragment.MenuItemHandler {
+class MenuNavigationActivity : AppCompatActivity() {
 
   init {
     MenuImplementation.rootContent = {
@@ -36,28 +36,6 @@ class MenuNavigationActivity : AppCompatActivity(), MenuListFragment.MenuItemHan
 
   override fun onSupportNavigateUp() = navController.navigateUp() || super.onSupportNavigateUp()
 
-  override fun onClicked(menu: MenuItem) {
-    log.info("onClicked() $menu")
-
-    if (menu.isBrowsable) {
-      MenuListFragmentDirections.actionGlobalNavigationMenu(menu.id).also {
-        navController.navigate(it)
-        return
-      }
-    }
-
-    val uri = Uri.parse(menu.id)
-    if (navController.graph.hasDeepLink(Uri.parse(menu.id))) {
-      navController.navigate(uri)
-      return
-    }
-  }
-
-  override fun onCreateContextMenu(menuItem: MenuItem, menu: ContextMenu, view: View, menuInfo: ContextMenu.ContextMenuInfo?) {
-    TODO("Not yet implemented")
-  }
-
-  override fun setToolbarTitle(title: CharSequence) = toolbar.setTitle(title)
 }
 
 private val log = org.slf4j.LoggerFactory.getLogger(MenuNavigationActivity::class.java)

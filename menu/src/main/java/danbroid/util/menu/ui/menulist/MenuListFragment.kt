@@ -1,7 +1,6 @@
 package danbroid.util.menu.ui.menulist
 
 import android.os.Bundle
-import android.view.ContextMenu
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +13,8 @@ import danbroid.util.menu.MenuActionContext
 import danbroid.util.menu.MenuItem
 import danbroid.util.menu.find
 import danbroid.util.menu.ui.MenuImplementation
+import danbroid.util.menu.ui.MenuImplementation.menuClickHandler
+import danbroid.util.menu.ui.MenuImplementation.menuContextMenuHandler
 import danbroid.util.menu.ui.MenuImplementation.rootContent
 import danbroid.util.menu.ui.model.MenuListModel
 import danbroid.util.menu.ui.model.menuListModel
@@ -21,25 +22,7 @@ import kotlinx.android.synthetic.main.fragment_menu_list.*
 import kotlinx.coroutines.launch
 import org.slf4j.LoggerFactory
 
-class MenuListFragment : Fragment() {
-
-  interface MenuItemHandler {
-
-    fun onClicked(menu: MenuItem)
-
-    fun onCreateContextMenu(
-        menuItem: MenuItem,
-        menu: ContextMenu,
-        view: View,
-        menuInfo: ContextMenu.ContextMenuInfo?
-    )
-
-    fun setToolbarTitle(title: CharSequence)
-  }
-
-  protected open val menuItemClickHandler: MenuItemHandler?
-    get() = activity as? MenuItemHandler
-
+open class MenuListFragment : Fragment() {
 
   protected open lateinit var model: MenuListModel
 
@@ -53,7 +36,7 @@ class MenuListFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     val adapter = MenuListAdapter()
 
-    val menuID = MenuImplementation.menuID(this)
+    val menuID = requireArguments().getString("menuID")!!
     val builder = rootContent.invoke(this).find(menuID)
     log.trace("menuID: $menuID builder: $builder")
     model = menuListModel(menuID, builder!!)
@@ -63,12 +46,16 @@ class MenuListFragment : Fragment() {
         menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
           requireActivity().lifecycleScope.launch {
             clickHandler(MenuActionContext(requireContext(), menuItem, this@MenuListFragment)) {
-              if (it) menuItemClickHandler?.onClicked(menuItem)
+              if (it) menuClickHandler.invoke(this@MenuListFragment, menuItem)
             }
           }
-        } ?: menuItemClickHandler?.onClicked(menuItem)
+        } ?: menuClickHandler.invoke(this@MenuListFragment, menuItem)
       }
-      it.onContextMenu = menuItemClickHandler?.let { it::onCreateContextMenu }
+
+      it.onContextMenu = { menuItem, contextMenu, view, menuInfo ->
+        menuContextMenuHandler.invoke(this@MenuListFragment, menuItem, contextMenu, view, menuInfo)
+
+      }
     }
 
     recycler_view.adapter = adapter
@@ -79,6 +66,10 @@ class MenuListFragment : Fragment() {
     }
   }
 
+  override fun onContextItemSelected(item: android.view.MenuItem): Boolean {
+    log.trace("onContextItemSelected() $item")
+    return super.onContextItemSelected(item)
+  }
 
   open fun onMenuChanged(menu: MenuItem, adapter: MenuListAdapter) {
     //log.trace("onMenuChanged() $menu")
@@ -91,6 +82,7 @@ class MenuListFragment : Fragment() {
       adapter.submitList(it.filter { it.isVisible })
     }
   }
+
 
 }
 
