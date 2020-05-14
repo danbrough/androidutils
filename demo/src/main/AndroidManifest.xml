@@ -40,7 +40,7 @@
         android:label="@string/title_menu_activity"
         android:launchMode="singleInstance"
         android:theme="@style/AppTheme.NoActionBar">
-      <nav-graph android:value="@navigation/navigation" />
+      <nav-graph android:value="@navigation/navigation_menu" />
     </activity>
 
     <activity

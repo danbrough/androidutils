@@ -12,12 +12,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import danbroid.habitrack.ui.menulist.MenuListAdapter
 import danbroid.util.menu.MenuActionContext
 import danbroid.util.menu.MenuItem
-import danbroid.util.menu.menuImplementation
+import danbroid.util.menu.find
+import danbroid.util.menu.ui.MenuImplementation
+import danbroid.util.menu.ui.MenuImplementation.rootContent
 import danbroid.util.menu.ui.model.MenuListModel
+import danbroid.util.menu.ui.model.menuListModel
 import kotlinx.android.synthetic.main.fragment_menu_list.*
 import kotlinx.coroutines.launch
+import org.slf4j.LoggerFactory
 
-abstract class AbstractMenuListFragment : Fragment() {
+class MenuListFragment : Fragment() {
 
   interface MenuItemHandler {
 
@@ -36,9 +40,6 @@ abstract class AbstractMenuListFragment : Fragment() {
   protected open val menuItemClickHandler: MenuItemHandler?
     get() = activity as? MenuItemHandler
 
-  protected val menuImpl by lazy {
-    menuImplementation()
-  }
 
   protected open lateinit var model: MenuListModel
 
@@ -46,17 +47,22 @@ abstract class AbstractMenuListFragment : Fragment() {
       inflater: LayoutInflater,
       container: ViewGroup?,
       savedInstanceState: Bundle?
-  ) = inflater.inflate(menuImpl.layoutID, container, false)
+  ) = inflater.inflate(MenuImplementation.layoutID, container, false)
 
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     val adapter = MenuListAdapter()
 
+    val menuID = MenuImplementation.menuID(this)
+    val builder = rootContent.invoke(this).find(menuID)
+    log.trace("menuID: $menuID builder: $builder")
+    model = menuListModel(menuID, builder!!)
+
     adapter.also {
       it.onClick = { menuItem ->
         menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
           requireActivity().lifecycleScope.launch {
-            clickHandler(MenuActionContext(requireContext(), menuItem, this@AbstractMenuListFragment)) {
+            clickHandler(MenuActionContext(requireContext(), menuItem, this@MenuListFragment)) {
               if (it) menuItemClickHandler?.onClicked(menuItem)
             }
           }
@@ -77,7 +83,7 @@ abstract class AbstractMenuListFragment : Fragment() {
   open fun onMenuChanged(menu: MenuItem, adapter: MenuListAdapter) {
     //log.trace("onMenuChanged() $menu")
     //activityInterface.setToolbarTitle(menu.title)
-    menuImpl.setToolbarTitle(menu.title)
+    MenuImplementation.setToolbarTitle.invoke(requireActivity(), menu.title)
 
     menu.children?.also {
       progress_bar.visibility = View.GONE
@@ -88,4 +94,4 @@ abstract class AbstractMenuListFragment : Fragment() {
 
 }
 
-//private val log = LoggerFactory.getLogger(AbstractMenuListFragment::class.java)
+private val log = LoggerFactory.getLogger(MenuListFragment::class.java)

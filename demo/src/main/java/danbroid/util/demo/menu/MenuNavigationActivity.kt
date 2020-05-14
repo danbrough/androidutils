@@ -8,12 +8,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import danbroid.util.menu.MenuItem
-import danbroid.util.menu.ui.menulist.AbstractMenuListFragment
 import danbroid.util.demo.R
+import danbroid.util.menu.MenuItem
+import danbroid.util.menu.ui.MenuImplementation
+import danbroid.util.menu.ui.menulist.MenuListFragment
+import danbroid.util.menu.ui.menulist.MenuListFragmentDirections
 import kotlinx.android.synthetic.main.activity_menu_navigation.*
 
-class MenuNavigationActivity : AppCompatActivity(), AbstractMenuListFragment.MenuItemHandler {
+class MenuNavigationActivity : AppCompatActivity(), MenuListFragment.MenuItemHandler {
+
+  init {
+    MenuImplementation.rootContent = {
+      rootContent
+    }
+  }
+
   protected val navController: NavController
     get() = findNavController(R.id.nav_host_fragment)
 

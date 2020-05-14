@@ -7,7 +7,7 @@
 
   <fragment
       android:id="@+id/navigation_menu"
-      android:name="danbroid.util.demo.menu.MenuListFragment"
+      android:name="danbroid.util.menu.ui.menulist.MenuListFragment"
       tools:layout="@layout/fragment_menu_list">
     <argument
         android:name="menuID"
@@ -16,7 +16,7 @@
 
   <fragment
       android:id="@+id/navigation_home"
-      android:name="danbroid.util.demo.menu.MenuListFragment"
+      android:name="danbroid.util.menu.ui.menulist.MenuListFragment"
       tools:layout="@layout/fragment_menu_list">
     <argument
         android:name="menuID"

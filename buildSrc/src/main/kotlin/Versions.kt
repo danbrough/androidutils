@@ -34,6 +34,8 @@ object Versions {
 
     const val navigation_fragment_ktx: String = "2.3.0-alpha06"
 
+    const val navigation_fragment: String = "2.3.0-alpha06"
+
     const val navigation_ui_ktx: String = "2.3.0-alpha06"
 
     const val constraintlayout: String = "1.1.3"

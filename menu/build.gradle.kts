@@ -3,10 +3,10 @@ plugins {
   kotlin("android")
   kotlin("kapt")
   kotlin("android.extensions")
-  // id("androidx.navigation.safeargs.kotlin")
+  id("androidx.navigation.safeargs.kotlin")
+
   id("kotlin-android")
   id("kotlin-android-extensions")
-  //id("androidx.navigation.safeargs.kotlin")
 
   id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
   id("org.jetbrains.dokka")
@@ -98,12 +98,12 @@ dependencies {
   implementation(Libs.recyclerview)
   implementation(Libs.constraintlayout)
   implementation(Libs.kotlinx_coroutines_android)
-  //implementation("androidx.navigation:navigation-fragment-ktx:2.2.2")
   implementation(Libs.lifecycle_runtime_ktx)
   implementation(Libs.lifecycle_viewmodel_ktx)
   implementation(Libs.lifecycle_extensions)
   implementation(Libs.lifecycle_livedata_ktx)
-
+  implementation(Libs.navigation_fragment_ktx)
+  implementation(Libs.navigation_ui_ktx)
   androidTestImplementation(project(":slf4j"))
   androidTestImplementation(Libs.androidx_test_runner)
   androidTestImplementation(Libs.androidx_test_rules)
