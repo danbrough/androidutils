@@ -12,7 +12,7 @@ import org.gradle.plugin.use.PluginDependencySpec
  * YOU are responsible for updating manually the dependency version.
  */
 object Versions {
-    const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.3.6"
+    const val org_jetbrains_kotlinx_kotlinx_coroutines: String =  "1.3.7"
 
     const val org_jetbrains_kotlin: String = "1.3.72"
 
@@ -33,8 +33,6 @@ object Versions {
     const val org_jetbrains_dokka_gradle_plugin: String = "0.10.1"
 
     const val navigation_fragment_ktx: String = "2.3.0-alpha06"
-
-    const val navigation_fragment: String = "2.3.0-alpha06"
 
     const val navigation_ui_ktx: String = "2.3.0-alpha06"
 
@@ -59,11 +57,11 @@ object Versions {
     const val aapt2: String = "4.0.0-rc01-6051327"
 
     /**
-     * Current version: "6.4"
+     * Current version: "6.4.1"
      * See issue 19: How to update Gradle itself?
      * https://github.com/jmfayard/buildSrcVersions/issues/19
      */
-    const val gradleLatestVersion: String = "6.4"
+    const val gradleLatestVersion: String = "6.4.1"
 }
 
 /**
