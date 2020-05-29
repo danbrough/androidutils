@@ -2,5 +2,5 @@
 
 
 cd `dirname $0` && cd ..
-./gradlew buildSrcVersions
+./gradlew refreshVersions
 

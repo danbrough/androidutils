@@ -3,7 +3,7 @@ plugins {
   kotlin("android")
   kotlin("android.extensions")
   kotlin("kapt")
-  id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
+  id("digital.wup.android-maven-publish")
   id("org.jetbrains.dokka")
 
 }
@@ -63,14 +63,13 @@ android {
 }
 
 dependencies {
-  implementation(Libs.slf4j_api)
-  implementation(Libs.appcompat)
-  implementation(Libs.kotlin_reflect)
+  implementation("org.slf4j:slf4j-api:_")
+  //implementation(Android.appcompat)
+  implementation("org.jetbrains.kotlin:kotlin-reflect:_")
+  implementation(AndroidX.appCompat)
 
   androidTestImplementation(project(":slf4j"))
-  androidTestImplementation(Libs.androidx_test_runner)
-  androidTestImplementation(Libs.androidx_test_rules)
-  androidTestImplementation(Libs.androidx_test_core)
+  
 }
 
 

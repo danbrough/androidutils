@@ -4,7 +4,7 @@ plugins {
   kotlin("kapt")
   kotlin("android.extensions")
   id("androidx.navigation.safeargs.kotlin")
-  id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
+  id("digital.wup.android-maven-publish")
   id("org.jetbrains.dokka")
 
 }
@@ -73,6 +73,8 @@ android {
 
 
 dependencies {
+  implementation( "org.slf4j:slf4j-api:_")
+
   implementation(project(":menu"))
   // or implementation("com.github.danbrough.androidutils:content:master-SNAPSHOT")
 
@@ -84,16 +86,17 @@ dependencies {
 
   implementation(project(":misc"))
   // or implementation("com.github.danbrough.androidutils:resource:master-SNAPSHOT")
-  implementation(Libs.material)
+  implementation(Google.android.material)
 
-  implementation(Libs.lifecycle_extensions)
-  implementation(Libs.lifecycle_runtime_ktx)
-  implementation(Libs.core_ktx)
-  implementation(Libs.lifecycle_viewmodel_ktx)
-  implementation(Libs.fragment_ktx)
-  implementation(Libs.recyclerview)
-  implementation(Libs.navigation_fragment_ktx)
-  implementation(Libs.navigation_ui_ktx)
+  implementation(AndroidX.lifecycle.extensions)
+
+  implementation(AndroidX.lifecycle.runtimeKtx)
+  implementation(AndroidX.coreKtx)
+  implementation(AndroidX.lifecycle.viewModelKtx)
+  implementation(AndroidX.fragmentKtx)
+  implementation(AndroidX.recyclerView)
+  implementation(AndroidX.navigation.fragmentKtx)
+  implementation(AndroidX.navigation.uiKtx)
 
 }
 

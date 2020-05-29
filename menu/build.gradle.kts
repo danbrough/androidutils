@@ -8,7 +8,7 @@ plugins {
   id("kotlin-android")
   id("kotlin-android-extensions")
 
-  id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
+  id("digital.wup.android-maven-publish")
   id("org.jetbrains.dokka")
 
 }
@@ -91,23 +91,28 @@ android {
 
 dependencies {
 
-  implementation(Libs.slf4j_api)
-  implementation(Libs.appcompat)
-  implementation(Libs.kotlin_reflect)
+  implementation("org.slf4j:slf4j-api:_")
+  implementation(AndroidX.appCompat)
+  implementation("org.jetbrains.kotlin:kotlin-reflect:_")
   implementation(project(":misc"))
-  implementation(Libs.recyclerview)
-  implementation(Libs.constraintlayout)
-  implementation(Libs.kotlinx_coroutines_android)
-  implementation(Libs.lifecycle_runtime_ktx)
-  implementation(Libs.lifecycle_viewmodel_ktx)
-  implementation(Libs.lifecycle_extensions)
-  implementation(Libs.lifecycle_livedata_ktx)
-  implementation(Libs.navigation_fragment_ktx)
-  implementation(Libs.navigation_ui_ktx)
+  implementation(AndroidX.recyclerView)
+  implementation(AndroidX.constraintLayout)
+  implementation(KotlinX.coroutines.android)
+  implementation(AndroidX.lifecycle.runtimeKtx)
+  implementation(AndroidX.lifecycle.viewModelKtx)
+  implementation(AndroidX.lifecycle.extensions)
+  implementation(AndroidX.lifecycle.liveDataKtx)
+
+
+
+  implementation(AndroidX.navigation.fragmentKtx)
+  implementation(AndroidX.navigation.uiKtx)
+
   androidTestImplementation(project(":slf4j"))
-  androidTestImplementation(Libs.androidx_test_runner)
-  androidTestImplementation(Libs.androidx_test_rules)
-  androidTestImplementation(Libs.androidx_test_core)
+  androidTestImplementation(AndroidX.test.rules)
+  androidTestImplementation(AndroidX.test.runner)
+  androidTestImplementation(AndroidX.test.core)
+
 }
 
 

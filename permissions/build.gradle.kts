@@ -5,7 +5,7 @@ plugins {
   kotlin("android")
   kotlin("kapt")
   kotlin("android.extensions")
-  id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
+  id("digital.wup.android-maven-publish")
   id("org.jetbrains.dokka")
 
 }
@@ -45,7 +45,7 @@ android {
   }
 
   testOptions {
-    unitTests.setReturnDefaultValues(true)
+    //unitTests.setReturnDefaultValues(true)
   }
 
   val sourcesJar by tasks.registering(Jar::class) {
@@ -86,15 +86,15 @@ android {
 dependencies {
 
 
-  implementation(Libs.slf4j_api)
-  implementation(Libs.kotlin_stdlib_jdk8)
+  implementation( "org.slf4j:slf4j-api:_")
+  implementation(Kotlin.stdlib.jdk8)
 
-  api(Libs.kotlinx_coroutines_android)
+  api( KotlinX.coroutines.android)
 
-  implementation(Libs.lifecycle_runtime_ktx)
+  implementation(AndroidX.lifecycle.runtimeKtx)
 //  implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-rc02")
 
-  api(Libs.easypermissions)
+  api( "pub.devrel:easypermissions:_")
 
 /*  testImplementation(Libs.junit)
   testImplementation(Libs.androidx_test_core)

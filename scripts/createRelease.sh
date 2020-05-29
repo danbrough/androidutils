@@ -7,7 +7,7 @@ cd `dirname $0` && cd ..
 
 
 
-VERSION_NAME=$(./gradlew -q nextProjectVersion)
+VERSION_NAME=$(./gradlew -q projectNextVersionName)
 
 echo Creating release: $VERSION_NAME
 
@@ -37,24 +37,10 @@ fi
 
 ./gradlew assembleDebug || exit 1
 
-incrementVersion(){
-  VERSION=$(awk '/'$1'/ {print $5}' < buildSrc/src/main/kotlin/ProjectVersions.kt)
-  VERSION=$((VERSION+1))
-  KEY="$1"
-  sed -i buildSrc/src/main/kotlin/ProjectVersions.kt  -e  's:'${KEY}' = .*:'${KEY}' = '$VERSION':g'
-}
-
-BETA_VERSION=$(awk '/BETA_VERSION/ {print $5}' < buildSrc/src/main/kotlin/ProjectVersions.kt)
-
-incrementVersion "BUILD_VERSION"
-if (( BETA_VERSION > -1 )); then
-  incrementVersion "BETA_VERSION"
-else
-  incrementVersion "PROJECT_VERSION"
-fi
 
 #sed -i  README.md  -e 's/Latest version.*/Latest version: '$VERSION_NAME'/g'
 
+./gradlew -q projectIncrementVersion
 git add .
 git commit -am "$VERSION_NAME"
 git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"

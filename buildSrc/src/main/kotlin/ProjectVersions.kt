@@ -1,19 +1,33 @@
 import org.gradle.api.JavaVersion
+import java.util.*
+
 
 object ProjectVersions {
-  const val SDK_VERSION = 29
-  const val MIN_SDK_VERSION = 16
+  var SDK_VERSION = 29
+  var MIN_SDK_VERSION = 23
   val JAVA_VERSION = JavaVersion.VERSION_1_8
-  val VERSION_NAME = getVersionName()
-  const val GROUP_ID = "com.github.danbrough.androidutils"
+  var BUILD_VERSION = 1
+  var VERSION_OFFSET = 1
+  var GROUP_ID = ""
+  var KEYSTORE_PASSWORD = ""
+  var VERSION_FORMAT = ""
 
-  const val BUILD_VERSION = 42
-  const val MAJOR_VERSION = 1
-  const val MINOR_VERSION = 0
-  const val PROJECT_VERSION = 22
-  const val BETA_VERSION = -1
+  val VERSION_NAME: String
+    get() = getVersionName()
 
+  fun init(props: Properties) {
+    SDK_VERSION = props.getProperty("sdkVersion", "29").toInt()
+    MIN_SDK_VERSION = props.getProperty("minSdkVersion", "23").toInt()
+    BUILD_VERSION = props.getProperty("buildVersion", "1").toInt()
+    VERSION_OFFSET = props.getProperty("versionOffset", "1").toInt()
+    VERSION_FORMAT = props.getProperty("versionFormat", "0.0.%d")
+    GROUP_ID = props.getProperty("groupID", "")
+    KEYSTORE_PASSWORD = props.getProperty("keystorePassword", "")
+  }
+
+  fun getIncrementedVersionName() = getVersionName(BUILD_VERSION + 1)
+
+
+  fun getVersionName(version: Int = BUILD_VERSION) =
+    VERSION_FORMAT.format(version - VERSION_OFFSET)
 }
-
-
-

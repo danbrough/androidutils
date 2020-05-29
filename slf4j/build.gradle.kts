@@ -1,6 +1,6 @@
 plugins {
   id("com.android.library")
-  id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
+  id("digital.wup.android-maven-publish")
 }
 
 
@@ -69,11 +69,12 @@ android {
 }
 
 dependencies {
-  api(Libs.slf4j_api)
+  implementation( "org.slf4j:slf4j-api:_")
   //api(Libs.appcompat)
 
-  androidTestImplementation(Libs.androidx_test_runner)
-  androidTestImplementation(Libs.androidx_test_rules)
-  androidTestImplementation(Libs.androidx_test_core)
+  androidTestImplementation(AndroidX.test.core)
+  androidTestImplementation(AndroidX.test.runner)
+  androidTestImplementation(AndroidX.test.rules)
+
 }
 
