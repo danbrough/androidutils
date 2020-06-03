@@ -1,18 +1,12 @@
 package danbroid.util.demo.menu
 
-import android.net.Uri
 import android.os.Bundle
-import android.view.ContextMenu
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import danbroid.util.demo.R
-import danbroid.util.menu.MenuItem
 import danbroid.util.menu.ui.MenuImplementation
-import danbroid.util.menu.ui.menulist.MenuListFragment
-import danbroid.util.menu.ui.menulist.MenuListFragmentDirections
 import kotlinx.android.synthetic.main.activity_menu_navigation.*
 
 class MenuNavigationActivity : AppCompatActivity() {

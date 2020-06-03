@@ -4,7 +4,7 @@ import java.util.*
 
 object ProjectVersions {
   var SDK_VERSION = 29
-  var MIN_SDK_VERSION = 23
+  var MIN_SDK_VERSION = 21
   val JAVA_VERSION = JavaVersion.VERSION_1_8
   var BUILD_VERSION = 1
   var VERSION_OFFSET = 1
@@ -17,7 +17,7 @@ object ProjectVersions {
 
   fun init(props: Properties) {
     SDK_VERSION = props.getProperty("sdkVersion", "29").toInt()
-    MIN_SDK_VERSION = props.getProperty("minSdkVersion", "23").toInt()
+    MIN_SDK_VERSION = props.getProperty("minSdkVersion", "21").toInt()
     BUILD_VERSION = props.getProperty("buildVersion", "1").toInt()
     VERSION_OFFSET = props.getProperty("versionOffset", "1").toInt()
     VERSION_FORMAT = props.getProperty("versionFormat", "0.0.%d")

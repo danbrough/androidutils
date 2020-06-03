@@ -22,7 +22,7 @@
 
       android:scaleType="fitXY"
       android:src="@drawable/ic_folder"
-      android:tint="?colorPrimary"
+      app:tint="?colorPrimary"
       app:backgroundTint="?colorAccent"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +67,7 @@
       android:paddingEnd="4dp"
       android:paddingRight="4dp"
       android:src="@drawable/ic_folder"
-      android:tint="?colorAccent"
+      app:tint="?colorAccent"
       android:visibility="gone"
       app:layout_constraintRight_toRightOf="parent"
       app:layout_constraintTop_toTopOf="@id/icon" />
