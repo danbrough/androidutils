@@ -4,4 +4,4 @@
 
 | Name | Summary |
 |---|---|
-| [singletons](singletons.md) | `fun <T : `[`ContextSingleton`](../-context-singleton/index.md)`> Context.singletons(): T` |
+| [singleton](singleton.md) | `fun <T : `[`Singleton`](../-singleton/index.md)`<Context>> Context.singleton(): T` |

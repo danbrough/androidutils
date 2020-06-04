@@ -6,7 +6,7 @@
 
 | Name | Summary |
 |---|---|
-| [ContextSingleton](-context-singleton/index.md) | `abstract class ContextSingleton` |
+| [Singleton](-singleton/index.md) | `abstract class Singleton<C : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>` |
 
 ### Extensions for External Classes
 

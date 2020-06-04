@@ -41,11 +41,6 @@
 
 |
 
-##### [danbroid.util.context.ContextSingleton](../danbroid.util.context/-context-singleton/index.md)
-
-
-|
-
 ##### [danbroid.util.prefs.DoublePref](../danbroid.util.prefs/-double-pref/index.md)
 
 
@@ -117,6 +112,11 @@ Displays a list of activities to launch
 
 |
 
+##### [danbroid.util.demo.menu.MenuNavigationActivity](../danbroid.util.demo.menu/-menu-navigation-activity/index.md)
+
+
+|
+
 ##### [danbroid.util.prefs.NullableStringPref](../danbroid.util.prefs/-nullable-string-pref/index.md)
 
 
@@ -149,6 +149,11 @@ Manages processing and dispatching of permissions request
 | (extensions in package danbroid.util.prefs)
 
 ##### [android.content.SharedPreferences](../danbroid.util.prefs/android.content.-shared-preferences/index.md)
+
+
+|
+
+##### [danbroid.util.context.Singleton](../danbroid.util.context/-singleton/index.md)
 
 
 | (extensions in package danbroid.util.resource)

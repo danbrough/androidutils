@@ -2,7 +2,7 @@ $dokka.format:gfm
 $dokka.linkExtension:md
 $dokka.location:danbroid.util$uriDecode(kotlin.CharSequence)danbroid.util/kotlin.-char-sequence/uri-decode.md
 $dokka.location:danbroid.util$uriEncode(kotlin.CharSequence)danbroid.util/kotlin.-char-sequence/uri-encode.md
-$dokka.location:danbroid.util.context$singletons(android.content.Context)danbroid.util.context/android.content.-context/singletons.md
+$dokka.location:danbroid.util.context$singleton(android.content.Context)danbroid.util.context/android.content.-context/singleton.md
 $dokka.location:danbroid.util.permissions$processPermissionResult(androidx.appcompat.app.AppCompatActivity, kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)danbroid.util.permissions/androidx.appcompat.app.-app-compat-activity/process-permission-result.md
 $dokka.location:danbroid.util.permissions$showAppPermissionsSettings(androidx.appcompat.app.AppCompatActivity)danbroid.util.permissions/androidx.appcompat.app.-app-compat-activity/show-app-permissions-settings.md
 $dokka.location:danbroid.util.permissions$withPermission(androidx.appcompat.app.AppCompatActivity, kotlin.String, kotlin.String)danbroid.util.permissions/androidx.appcompat.app.-app-compat-activity/with-permission.md
@@ -27,6 +27,7 @@ $dokka.location:danbroid.util.resource$toThemeColour(kotlin.Int, android.content
 danbroid.util
 danbroid.util.context
 danbroid.util.demo
+danbroid.util.demo.menu
 danbroid.util.demo.permissions
 danbroid.util.event
 danbroid.util.permissions

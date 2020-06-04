@@ -2,4 +2,4 @@
 
 # getThemeColour
 
-`fun Context.getThemeColour(@AttrRes themeColorAttribute: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
+`@ColorInt fun Context.getThemeColour(@AttrRes themeColorAttribute: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
