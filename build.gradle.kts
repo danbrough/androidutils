@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 buildscript {
 
   dependencies {
-    classpath("com.android.tools.build:gradle:4.2.0-alpha03")
+    classpath("com.android.tools.build:gradle:4.2.0-alpha07")
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:_")
     classpath("digital.wup:android-maven-publish:3.6.3")
     classpath(AndroidX.navigation.safeArgsGradlePlugin)
@@ -22,7 +22,7 @@ buildscript {
 }
 
 plugins {
-  id("org.jetbrains.dokka") version "0.10.1"
+  id("org.jetbrains.dokka")
 }
 
 

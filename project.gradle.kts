@@ -1,10 +1,9 @@
 import java.io.FileInputStream
-import java.util.*
 
 fun initProps() {
   //println("initProps()")
   val fis = FileInputStream("project.properties")
-  val prop = Properties()
+  val prop = java.util.Properties()
   prop.load(fis)
   fis.close()
 
@@ -18,22 +17,13 @@ fun initProps() {
 
 
 
+
 initProps()
 
+
+
 class ProjectPlugin : Plugin<Project> {
-  fun incrementVersion() {
-    val fis = FileInputStream("project.properties")
-    val prop = Properties()
-    prop.load(fis)
-    fis.close()
-    val version = prop.getProperty("buildVersion", "0").toInt()
-    println("version $version")
-    prop.setProperty("buildVersion", "${version + 1}")
-    val fos = java.io.PrintWriter(java.io.FileWriter("project.properties"))
-    prop.store(fos, "")
-    fos.println()
-    fos.close()
-  }
+
 
   override fun apply(project: Project) {
 
@@ -51,7 +41,18 @@ class ProjectPlugin : Plugin<Project> {
 
     project.task("projectIncrementVersion") {
       doLast {
-        incrementVersion()
+        val propsFile = project.file("project.properties")
+        val fis = FileInputStream(propsFile)
+        val prop = java.util.Properties()
+        prop.load(fis)
+        fis.close()
+        val version = prop.getProperty("buildVersion", "0").toInt()
+        println("version $version")
+        prop.setProperty("buildVersion", "${version + 1}")
+        val fos = java.io.PrintWriter(java.io.FileWriter(propsFile))
+        prop.store(fos, "")
+        fos.println()
+        fos.close()
       }
     }
   }
