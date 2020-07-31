@@ -2,4 +2,4 @@
 
 # rootContent
 
-`val rootContent: <ERROR CLASS>`
+`val rootContent: MenuItemBuilder`

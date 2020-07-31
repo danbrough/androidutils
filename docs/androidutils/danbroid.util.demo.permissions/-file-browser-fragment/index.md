@@ -22,5 +22,5 @@
 | Name | Summary |
 |---|---|
 | [loadFiles](load-files.md) | Launces a coroutine to request [Manifest.permission.READ_EXTERNAL_STORAGE](#) and if granted will load the contents into the [adapter](adapter.md)`fun loadFiles(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
-| [onCreateView](on-create-view.md) | `fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): <ERROR CLASS>` |
+| [onCreateView](on-create-view.md) | `fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View!` |
 | [onViewCreated](on-view-created.md) | `fun onViewCreated(view: View, savedInstanceState: Bundle?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
