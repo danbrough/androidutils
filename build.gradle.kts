@@ -15,9 +15,7 @@ buildscript {
   repositories {
     google()
     jcenter()
-    maven {
-      setUrl("https://dl.bintray.com/kotlin/kotlin-eap")
-    }
+    mavenCentral()
   }
 }
 
@@ -31,13 +29,15 @@ tasks {
     outputFormat = "gfm"
     outputDirectory = "$rootDir/docs"
 
+/*
     subProjects =
         listOf("demo", "permissions", "misc") //listOf("demo", "util", "permissions", "slf4j")
+*/
 
 
-    configuration {
-      jdkVersion = 8
-    }
+//    configuration {
+//      jdkVersion = 8
+//    }
 
   }
 }
@@ -53,9 +53,7 @@ allprojects {
     maven {
       setUrl("https://jitpack.io")
     }
-    maven {
-      setUrl("https://dl.bintray.com/kotlin/kotlin-eap")
-    }
+
 
   }
 

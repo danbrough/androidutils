@@ -1,7 +1,9 @@
 import de.fayard.dependencies.bootstrapRefreshVersionsAndDependencies
 
 buildscript {
-  repositories { gradlePluginPortal() }
+  repositories {
+    gradlePluginPortal()
+  }
   dependencies.classpath("de.fayard:dependencies:+")
 }
 
