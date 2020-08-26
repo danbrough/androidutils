@@ -46,7 +46,7 @@ android {
     from(android.sourceSets.getByName("main").java.srcDirs)
   }
 
-/*  publishing {
+  publishing {
     publications {
 
       create<MavenPublication>("mavenAar") {
@@ -59,7 +59,7 @@ android {
 
       }
     }
-  }*/
+  }
 }
 
 dependencies {
