@@ -45,11 +45,12 @@ git add .
 git commit -am "$VERSION_NAME"
 git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"
 
-while :; do
 sleep 1
 wget "https://jitpack.io/com/github/danbrough/androidutils/${VERSION_NAME}/util-${VERSION_NAME}.jar" -O /tmp/rubbish.jar &
 sleep 5
 BUILD_URL="https://jitpack.io/com/github/danbrough/androidutils/${VERSION_NAME}/build.log"
+
+while :; do
 echo loading $BUILD_URL
 curl "$BUILD_URL" && exit 0
 done

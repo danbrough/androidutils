@@ -46,7 +46,7 @@ android {
     from(android.sourceSets.getByName("main").java.srcDirs)
   }
 
-  publishing {
+/*  publishing {
     publications {
 
       create<MavenPublication>("mavenAar") {
@@ -59,7 +59,7 @@ android {
 
       }
     }
-  }
+  }*/
 }
 
 dependencies {
@@ -69,7 +69,7 @@ dependencies {
   implementation(AndroidX.appCompat)
 
   androidTestImplementation(project(":slf4j"))
-  
+
 }
 
 

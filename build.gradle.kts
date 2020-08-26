@@ -26,7 +26,8 @@ plugins {
 
 tasks {
   val dokka by getting(DokkaTask::class) {
-    outputFormat = "gfm"
+    this.outputFormat = "gfm"
+
     outputDirectory = "$rootDir/docs"
 
 /*

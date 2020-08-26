@@ -1,5 +1,3 @@
-import org.jetbrains.dokka.gradle.DokkaTask
-
 plugins {
   id("com.android.library")
   kotlin("android")
@@ -15,7 +13,7 @@ android {
   compileSdkVersion(ProjectVersions.SDK_VERSION)
 
   defaultConfig {
-    minSdkVersion(16)
+    minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
     targetSdkVersion(ProjectVersions.SDK_VERSION)
     versionCode = ProjectVersions.BUILD_VERSION
     versionName = ProjectVersions.VERSION_NAME
@@ -33,8 +31,8 @@ android {
     getByName("release") {
       isMinifyEnabled = false
       proguardFiles(
-        getDefaultProguardFile("proguard-android-optimize.txt"),
-        "proguard-rules.pro"
+          getDefaultProguardFile("proguard-android-optimize.txt"),
+          "proguard-rules.pro"
       )
     }
 
@@ -75,9 +73,6 @@ android {
   }
 
 
-
-
-
 }
 
 
@@ -86,15 +81,15 @@ android {
 dependencies {
 
 
-  implementation( "org.slf4j:slf4j-api:_")
+  implementation("org.slf4j:slf4j-api:_")
   implementation(Kotlin.stdlib.jdk8)
 
-  api( KotlinX.coroutines.android)
+  api(KotlinX.coroutines.android)
 
   implementation(AndroidX.lifecycle.runtimeKtx)
 //  implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-rc02")
 
-  api( "pub.devrel:easypermissions:_")
+  api("pub.devrel:easypermissions:_")
 
 /*  testImplementation(Libs.junit)
   testImplementation(Libs.androidx_test_core)
