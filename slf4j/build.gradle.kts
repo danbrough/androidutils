@@ -1,6 +1,6 @@
 plugins {
   id("com.android.library")
-  id("digital.wup.android-maven-publish")
+  id("maven-publish")
 }
 
 
@@ -27,49 +27,37 @@ android {
     getByName("release") {
       isMinifyEnabled = false
       proguardFiles(
-        getDefaultProguardFile("proguard-android-optimize.txt"),
-        "proguard-rules.pro"
+          getDefaultProguardFile("proguard-android-optimize.txt"),
+          "proguard-rules.pro"
       )
     }
 
   }
+}
 
+val sourcesJar by tasks.registering(Jar::class) {
+  archiveClassifier.set("sources")
+  from(android.sourceSets.getByName("main").java.srcDirs)
+}
 
-
-  val sourcesJar by tasks.registering(Jar::class) {
-    archiveClassifier.set("sources")
-    from(android.sourceSets.getByName("main").java.srcDirs)
-  }
-
-/*  flavorDimensions("stuff")
-
-  productFlavors {
-
-    create("stdout") {
-      setDimension("stuff")
-    }
-   // println("PRODUCT FLAVOURS: ${asMap}")
-
-  }*/
-
-
+afterEvaluate {
   publishing {
     publications {
-
-      create<MavenPublication>("mavenAar") {
-        groupId = ProjectVersions.GROUP_ID
-        artifactId = "slf4j"
-        version = ProjectVersions.VERSION_NAME
-        from(components["android"])
+      val release by publications.registering(MavenPublication::class) {
+        from(components["release"])
         artifact(sourcesJar.get())
-
+        artifactId = "slf4j"
+        groupId = ProjectVersions.GROUP_ID
+        version = ProjectVersions.VERSION_NAME
       }
     }
   }
 }
 
+
+
 dependencies {
-  implementation( "org.slf4j:slf4j-api:_")
+  implementation("org.slf4j:slf4j-api:_")
   //api(Libs.appcompat)
 
   androidTestImplementation(AndroidX.test.core)

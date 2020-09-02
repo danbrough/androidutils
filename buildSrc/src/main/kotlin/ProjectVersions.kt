@@ -4,7 +4,7 @@ import java.util.*
 
 object ProjectVersions {
   var SDK_VERSION = 29
-  var MIN_SDK_VERSION = 21
+  var MIN_SDK_VERSION = 19
   val JAVA_VERSION = JavaVersion.VERSION_1_8
   var BUILD_VERSION = 1
   var VERSION_OFFSET = 1

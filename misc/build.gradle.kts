@@ -3,9 +3,8 @@ plugins {
   kotlin("android")
   kotlin("android.extensions")
   kotlin("kapt")
-  id("digital.wup.android-maven-publish")
+  id("maven-publish")
   id("org.jetbrains.dokka")
-
 }
 
 
@@ -20,8 +19,6 @@ android {
     versionName = ProjectVersions.VERSION_NAME
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     consumerProguardFiles("consumer-rules.pro")
-
-
   }
 
   compileOptions {
@@ -38,29 +35,30 @@ android {
           "proguard-rules.pro"
       )
     }
-
   }
+}
 
-  val sourcesJar by tasks.registering(Jar::class) {
-    archiveClassifier.set("sources")
-    from(android.sourceSets.getByName("main").java.srcDirs)
-  }
 
+val sourcesJar by tasks.registering(Jar::class) {
+  archiveClassifier.set("sources")
+  from(android.sourceSets.getByName("main").java.srcDirs)
+}
+
+afterEvaluate {
   publishing {
     publications {
-
-      create<MavenPublication>("mavenAar") {
-        groupId = ProjectVersions.GROUP_ID
-
-        artifactId = "misc"
-        version = ProjectVersions.VERSION_NAME
-        from(components["android"])
+      val release by publications.registering(MavenPublication::class) {
+        from(components["release"])
         artifact(sourcesJar.get())
-
+        artifactId = "misc"
+        groupId = ProjectVersions.GROUP_ID
+        version = ProjectVersions.VERSION_NAME
       }
     }
   }
 }
+
+
 
 dependencies {
   implementation("org.slf4j:slf4j-api:_")

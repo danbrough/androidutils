@@ -4,9 +4,8 @@ plugins {
   kotlin("kapt")
   kotlin("android.extensions")
   id("androidx.navigation.safeargs.kotlin")
-  id("digital.wup.android-maven-publish")
+  id("maven-publish")
   id("org.jetbrains.dokka")
-
 }
 
 
@@ -15,7 +14,7 @@ android {
 
   compileSdkVersion(ProjectVersions.SDK_VERSION)
   defaultConfig {
-    minSdkVersion(21)
+    minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
     targetSdkVersion(ProjectVersions.SDK_VERSION)
     versionCode = ProjectVersions.BUILD_VERSION
     versionName = ProjectVersions.VERSION_NAME
@@ -50,10 +49,7 @@ android {
     }
   }
 
-
-
   buildTypes {
-
     getByName("release") {
       isMinifyEnabled = false
       proguardFiles(
@@ -61,25 +57,23 @@ android {
           "proguard-rules.pro"
       )
     }
-
   }
+}
 
-  val sourcesJar by tasks.registering(Jar::class) {
-    archiveClassifier.set("sources")
-    from(android.sourceSets.getByName("main").java.srcDirs)
-  }
+val sourcesJar by tasks.registering(Jar::class) {
+  archiveClassifier.set("sources")
+  from(android.sourceSets.getByName("main").java.srcDirs)
+}
 
+afterEvaluate {
   publishing {
     publications {
-
-      create<MavenPublication>("mavenAar") {
-        groupId = ProjectVersions.GROUP_ID
-
-        artifactId = "menu"
-        version = ProjectVersions.VERSION_NAME
-        from(components["android"])
+      val release by publications.registering(MavenPublication::class) {
+        from(components["release"])
         artifact(sourcesJar.get())
-
+        artifactId = "menu"
+        groupId = ProjectVersions.GROUP_ID
+        version = ProjectVersions.VERSION_NAME
       }
     }
   }

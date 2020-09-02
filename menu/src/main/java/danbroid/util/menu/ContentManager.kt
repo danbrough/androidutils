@@ -7,6 +7,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
+/**
+ *
+ */
 class ContentManager(context: Context) : Singleton<Context>(context) {
 
   fun liveItemFlow(id: String, builder: MenuItemBuilder): Flow<MenuItem> = itemFlow(id, builder)
@@ -36,8 +39,8 @@ class ContentManager(context: Context) : Singleton<Context>(context) {
       return null
     }
 
-    val hasInline = builder.children?.firstOrNull { it.inlineChildren } != null
-    if (!hasInline) return null
+    val hasInlineChild = builder.children?.firstOrNull { it.inlineChildren } != null
+    if (!hasInlineChild) return null
     val children = mutableListOf<MenuItem>()
     builder.children?.forEach {
       it as MenuItemBuilder

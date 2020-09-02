@@ -3,7 +3,7 @@ plugins {
   kotlin("android")
   kotlin("kapt")
   kotlin("android.extensions")
-  id("digital.wup.android-maven-publish")
+  id("maven-publish")
   id("org.jetbrains.dokka")
 
 }
@@ -46,22 +46,6 @@ android {
     //unitTests.setReturnDefaultValues(true)
   }
 
-  val sourcesJar by tasks.registering(Jar::class) {
-    archiveClassifier.set("sources")
-    from(android.sourceSets.getByName("main").java.srcDirs)
-  }
-
-  publishing {
-    publications {
-      create<MavenPublication>("mavenAar") {
-        groupId = ProjectVersions.GROUP_ID
-        artifactId = "permissions"
-        version = ProjectVersions.VERSION_NAME
-        from(components["android"])
-        artifact(sourcesJar.get())
-      }
-    }
-  }
 
   kotlin {
     sourceSets {
@@ -75,6 +59,24 @@ android {
 
 }
 
+val sourcesJar by tasks.registering(Jar::class) {
+  archiveClassifier.set("sources")
+  from(android.sourceSets.getByName("main").java.srcDirs)
+}
+
+afterEvaluate {
+  publishing {
+    publications {
+      val release by publications.registering(MavenPublication::class) {
+        from(components["release"])
+        artifact(sourcesJar.get())
+        artifactId = "permissions"
+        groupId = ProjectVersions.GROUP_ID
+        version = ProjectVersions.VERSION_NAME
+      }
+    }
+  }
+}
 
 
 

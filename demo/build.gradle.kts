@@ -4,7 +4,6 @@ plugins {
   kotlin("kapt")
   kotlin("android.extensions")
   id("androidx.navigation.safeargs.kotlin")
-  id("digital.wup.android-maven-publish")
   id("org.jetbrains.dokka")
 
 }
@@ -85,7 +84,7 @@ dependencies {
   // or implementation("com.github.danbrough.androidutils:slf4j:master-SNAPSHOT")
 
   implementation(project(":misc"))
-  // or implementation("com.github.danbrough.androidutils:resource:master-SNAPSHOT")
+  // or implementation("com.github.danbrough.androidutils:misc:master-SNAPSHOT")
   implementation(Google.android.material)
 
   implementation(AndroidX.lifecycle.extensions)
