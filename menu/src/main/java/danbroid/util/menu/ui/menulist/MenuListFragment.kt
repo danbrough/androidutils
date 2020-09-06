@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
-import danbroid.habitrack.ui.menulist.MenuListAdapter
 import danbroid.util.menu.MenuActionContext
 import danbroid.util.menu.MenuItem
 import danbroid.util.menu.find

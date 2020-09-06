@@ -68,7 +68,7 @@ allprojects {
 
 tasks.dokkaHtmlMultiModule {
   println("dokkaHtmlMultiModule")
-  documentationFileName.set("Module.md")
+  //documentationFileName.set("README.md")
   outputDirectory.set(file("docs"))
 }
 

@@ -1,9 +1,0 @@
-$dokka.format:html-v1
-$dokka.linkExtension:html
-
-danbroid.util
-danbroid.util.context
-danbroid.util.event
-danbroid.util.prefs
-danbroid.util.resource
-

@@ -1,9 +1,0 @@
-$dokka.format:html-v1
-$dokka.linkExtension:html
-
-danbroid.habitrack.ui.menulist
-danbroid.util.menu
-danbroid.util.menu.ui
-danbroid.util.menu.ui.menulist
-danbroid.util.menu.ui.model
-
