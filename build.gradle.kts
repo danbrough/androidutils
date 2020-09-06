@@ -1,11 +1,16 @@
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+plugins {
+  id("org.jetbrains.dokka")
+}
+
 buildscript {
 
   dependencies {
     classpath("com.android.tools.build:gradle:4.1.0-rc02")
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:_")
+
     classpath(AndroidX.navigation.safeArgsGradlePlugin)
   }
 
@@ -16,29 +21,26 @@ buildscript {
   }
 }
 
-plugins {
-  id("org.jetbrains.dokka")
-}
 
-
-tasks {
-  val dokka by getting(DokkaTask::class) {
-    this.outputFormat = "gfm"
-
-    outputDirectory = "$rootDir/docs"
-
-/*
-    subProjects =
-        listOf("demo", "permissions", "misc") //listOf("demo", "util", "permissions", "slf4j")
-*/
-
-
-//    configuration {
-//      jdkVersion = 8
-//    }
-
-  }
-}
+//
+//tasks {
+//  val dokka by getting(DokkaTask::class) {
+//    this.outputFormat = "gfm"
+//
+//    outputDirectory = "$rootDir/docs"
+//
+///*
+//    subProjects =
+//        listOf("demo", "permissions", "misc") //listOf("demo", "util", "permissions", "slf4j")
+//*/
+//
+//
+////    configuration {
+////      jdkVersion = 8
+////    }
+//
+//  }
+//}
 
 apply("project.gradle.kts")
 
@@ -48,36 +50,23 @@ allprojects {
     google()
     jcenter()
     //    maven { url 'https://jitpack.io' }
-    maven {
-      setUrl("https://jitpack.io")
-    }
-
+    maven("https://jitpack.io")
+    maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
 
   }
 
-  tasks.withType<KotlinCompile> {
-    kotlinOptions {
-      jvmTarget = "1.8"
-      //freeCompilerArgs = listOf("-Xjsr305=strict")
-      //freeCompilerArgs = listOf("-Xuse-experimental=kotlin.Experimental")
-      //freeCompilerArgs = listOf("-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi")
+  tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
+    dokkaSourceSets {
+      configureEach {
+        includes.from("README.MD")
+      }
     }
   }
-
-}
-
-tasks.register("projectVersion") {
-  this.description = "Prints Project.getVersionName()"
-  doLast {
-    println(ProjectVersions.getVersionName())
-  }
-}
-
-tasks.register("nextProjectVersion") {
-  this.description = "Prints Project.getIncrementedVersionName()"
-  doLast {
-    println(ProjectVersions.getIncrementedVersionName())
-  }
 }
 
 
+
+tasks.dokkaHtmlMultiModule {
+  println("dokkaHtmlMultiModule")
+  documentationFileName.set("Module.md")
+}

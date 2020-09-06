@@ -33,10 +33,6 @@ android {
     dataBinding = false
   }
 
-  androidExtensions {
-    isExperimental = true
-  }
-
   kotlinOptions {
     jvmTarget = "1.8"
     //freeCompilerArgs = listOf("-Xjsr305=strict")

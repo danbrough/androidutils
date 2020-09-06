@@ -1,6 +1,7 @@
 plugins {
   id("com.android.library")
   id("maven-publish")
+  id("org.jetbrains.dokka")
 }
 
 
@@ -33,6 +34,8 @@ android {
     }
 
   }
+
+
 }
 
 val sourcesJar by tasks.registering(Jar::class) {
@@ -54,7 +57,13 @@ afterEvaluate {
   }
 }
 
-
+tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
+  dokkaSourceSets {
+    configureEach {
+      includes.from("README.MD")
+    }
+  }
+}
 
 dependencies {
   implementation("org.slf4j:slf4j-api:_")
