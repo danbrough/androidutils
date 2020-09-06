@@ -58,7 +58,7 @@ allprojects {
   tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
     dokkaSourceSets {
       configureEach {
-        includes.from("README.MD")
+        includes.from("README.md")
       }
     }
   }
@@ -69,4 +69,6 @@ allprojects {
 tasks.dokkaHtmlMultiModule {
   println("dokkaHtmlMultiModule")
   documentationFileName.set("Module.md")
+  outputDirectory.set(file("docs"))
 }
+

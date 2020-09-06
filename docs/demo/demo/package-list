@@ -1,0 +1,7 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+danbroid.util.demo
+danbroid.util.demo.menu
+danbroid.util.demo.permissions
+
