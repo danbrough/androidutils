@@ -10,7 +10,7 @@ Published via jitpack's maven repository:
 
 ## Usage
 
-``kotlin
+```kotlin
 
 import android.graphics.Color
 import android.widget.Toast
@@ -88,5 +88,5 @@ private val promptToContinue: MenuItemClickHandler = { callback ->
   }
 }
 
-``
+```
 
