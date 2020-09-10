@@ -42,7 +42,6 @@ class MenuListAdapter(
     }
 
     fun recycle() {
-      log.warn("RECYCLED: $menu")
       menu = null
     }
 
