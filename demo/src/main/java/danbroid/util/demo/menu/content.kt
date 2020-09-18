@@ -19,9 +19,10 @@ val rootContent: MenuItemBuilder by lazy {
 
     menu {
       title = "First Menu"
-      subtitle = "subtitle"
+      subtitle = "Shows a toast"
+      imageURI = "https://picsum.photos/200"
       onClick = {
-        Toast.makeText(context, "Clicked the first menu", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "imageURI was set to https://picsum.photos/200", Toast.LENGTH_SHORT).show()
       }
     }
 
@@ -33,14 +34,22 @@ val rootContent: MenuItemBuilder by lazy {
       menu {
         title = "Child of Second Menu"
         id = "$URI_CONTENT_ROOT/second/first"
+
+        menu {
+          title = "Another Child Folder"
+          subtitle = "Has its tint set to Color.BLUE"
+          tint = Color.BLUE
+        }
       }
     }
 
     menu {
       title = "Live Menu"
+      subtitle = "Generates children in the background"
       isBrowsable = true
       tint = Color.BLUE
       liveChildren = liveChildrenProducer
+      imageID = R.drawable.ic_audiotrack
     }
 
     menu {

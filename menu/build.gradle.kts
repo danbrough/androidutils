@@ -84,6 +84,7 @@ dependencies {
   implementation("org.slf4j:slf4j-api:_")
   implementation(AndroidX.appCompat)
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
+
   implementation(project(":misc"))
   implementation(AndroidX.recyclerView)
   implementation(AndroidX.constraintLayout)
@@ -92,7 +93,10 @@ dependencies {
   implementation(AndroidX.lifecycle.viewModelKtx)
   implementation(AndroidX.lifecycle.extensions)
   implementation(AndroidX.lifecycle.liveDataKtx)
+  kapt("com.github.bumptech.glide:compiler:_")
+  api("com.github.bumptech.glide:glide:_")
 
+  implementation("jp.wasabeef:glide-transformations:_")
 
 
   implementation(AndroidX.navigation.fragmentKtx)

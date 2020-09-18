@@ -33,7 +33,7 @@ open class MenuListFragment : Fragment() {
 
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    val adapter = MenuListAdapter()
+    val adapter = MenuListAdapter(requireContext())
 
     val menuID = requireArguments().getString("menuID")!!
     val builder = rootContent.invoke(this).find(menuID)
@@ -60,7 +60,7 @@ open class MenuListFragment : Fragment() {
     recycler_view.adapter = adapter
     recycler_view.layoutManager = LinearLayoutManager(requireContext())
 
-    model.menu.observe(viewLifecycleOwner) {
+    model.menu.observe<MenuItem>(viewLifecycleOwner) {
       onMenuChanged(it, adapter)
     }
   }

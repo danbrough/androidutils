@@ -41,6 +41,7 @@ class MenuItemBuilder : MenuBuilder() {
         inlineChildren,
         this
     ).also {
+      it.tint = tint
       it.children = children?.filter { !it.inlineChildren }?.map {
         (it as MenuItemBuilder).createItem(context, it.id!!)
       }
