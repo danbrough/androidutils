@@ -44,7 +44,7 @@ git commit -am "$VERSION_NAME"
 git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"
 
 ssh h1 mkdir -p /srv/https/maven/com/github/danbrough/android/utils/
-./gradle publishToMavenLocal
+./gradlew publishToMavenLocal
 rsync -avHSx  ~/.m2/repository/com/github/danbrough/androidutils/ h1:/srv/https/maven/com/github/danbrough/android/utils/
 
 sleep 1
