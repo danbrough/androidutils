@@ -4,6 +4,7 @@ import android.content.ContentResolver
 import android.content.Context
 import android.content.res.ColorStateList
 import android.content.res.TypedArray
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.util.TypedValue
 import android.widget.ImageView
@@ -60,15 +61,26 @@ object ResourceUtils {
    * Retrieves the [ColorInt] from your theme with the attribute identified by [themeColorAttribute]
    */
   @ColorInt
-  fun getThemeColour(context: Context, @AttrRes themeColorAttribute: Int, @ColorInt defValue: Int = 0): Int =
+  fun getThemeColour(context: Context, @AttrRes themeColorAttribute: Int, @ColorInt defValue: Int = -1): Int =
       getAttribute(context, themeColorAttribute) {
         it.getColor(0, defValue)
+      }
+
+  fun getThemeResID(context: Context, @AttrRes resID: Int, @DrawableRes defValue: Int = -1): Int =
+      getAttribute(context, resID) {
+        it.getResourceId(0, defValue)
       }
 
 
   fun getThemeBoolean(context: Context, @AttrRes themeBoolAttribute: Int, defValue: Boolean = false): Boolean =
       getAttribute(context, themeBoolAttribute) {
         it.getBoolean(0, defValue)
+      }
+
+
+  fun getThemeDrawable(context: Context, @AttrRes drawableRes: Int): Drawable? =
+      getAttribute(context, drawableRes) {
+        it.getDrawable(0)
       }
 
   /**
@@ -94,7 +106,7 @@ object ResourceUtils {
         it.getDimension(0, defValue)
       }
 
-  private fun <T> getAttribute(
+  fun <T> getAttribute(
       context: Context, @AttrRes attribute: Int,
       producer: (TypedArray) -> T
   ): T {
@@ -142,16 +154,21 @@ fun Context.getThemeColour(@AttrRes themeColorAttribute: Int) =
 fun Context.getResourceColour(@ColorRes colorID: Int) =
     ResourceUtils.getResourceColour(this, colorID)
 
+
+fun Int.getThemeDrawable(context: Context, @DrawableRes defValue: Int): Drawable =
+    ResourceUtils.getThemeDrawable(context, this)
+        ?: ResourcesCompat.getDrawable(context.resources, defValue, context.theme)!!
+
+
 @ColorInt
-fun Int.toThemeColour(context: Context): Int = ResourceUtils.getThemeColour(context, this)
+fun Int.toThemeColour(context: Context, @ColorInt defaultValue: Int = -1): Int = ResourceUtils.getThemeColour(context, this, defaultValue)
 
 @ColorInt
 fun Int.toResourceColour(context: Context): Int = getResourceColour(context, this)
 
-fun Int.getThemeBoolean(context: Context): Boolean {
-  val res = this
-  return ResourceUtils.getThemeBoolean(context, res)
-}
+fun Int.getThemeBoolean(context: Context, defValue: Boolean = false): Boolean = ResourceUtils.getThemeBoolean(context, this, defValue)
+
+fun Int.getThemeDrawableRes(context: Context, @DrawableRes defValue: Int = 0): Int = ResourceUtils.getThemeResID(context, this, defValue)
 
 @Px
 fun Context.getThemeDimension(@AttrRes themeDimensionAttr: Int, @Px defValue: Float = 0f) =

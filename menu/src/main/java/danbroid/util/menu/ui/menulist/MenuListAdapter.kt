@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.ColorInt
-import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.widget.ImageViewCompat
@@ -31,10 +30,10 @@ open class MenuListAdapter(val context: Context,
 ) : ListAdapter<MenuItem, MenuListAdapter.MenuViewHolder>(diffCallback) {
 
   @DrawableRes
-  var DEFAULT_FOLDER_ICON = R.drawable.ic_folder
+  var DEFAULT_FOLDER_ICON: Int = R.attr.dbMenuIconFolder.getThemeDrawableRes(context, R.drawable.ic_folder)
 
   @DrawableRes
-  var DEFAULT_FILE_ICON = R.drawable.ic_file
+  var DEFAULT_FILE_ICON = R.attr.dbMenuIconFile.getThemeDrawableRes(context, R.drawable.ic_file)
 
   var onClick: ((MenuItem) -> Unit)? = null
 
@@ -110,7 +109,10 @@ open class MenuListAdapter(val context: Context,
 
     @ColorInt
     val tint = if (menu.tint != 0) menu.tint.toResourceColour(iconContext) else
-      R.attr.dbMenuIconTint.toThemeColour(iconContext)
+      R.attr.dbMenuIconTint.toThemeColour(iconContext).let {
+        if (it != -1) it else
+          R.attr.colorPrimary.toThemeColour(iconContext)
+      }
 
 
     log.trace("setting tint on ${menu.title}")
@@ -128,7 +130,7 @@ open class MenuListAdapter(val context: Context,
       )
     } else {
 
-      val roundedCorners = R.attr.dbMenuIconRoundedCorners.getThemeBoolean(itemView.icon.context)
+      val roundedCorners = R.attr.dbMenuIconRoundedCorners.getThemeBoolean(itemView.icon.context, false)
       log.error("rounded corners: $roundedCorners")
       val placeholder = ResourcesCompat.getDrawable(
           context.resources,

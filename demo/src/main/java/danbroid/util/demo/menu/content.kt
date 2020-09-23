@@ -39,8 +39,8 @@ val rootContent: MenuItemBuilder by lazy {
 
         menu {
           title = "Another Child Folder"
-          subtitle = "Has its tint set to R.color.colorPrimaryLight"
-          tintRes = R.color.colorPrimaryLight
+          subtitle = "Has its tint set to R.color.colorSecondaryLight"
+          tintRes = R.color.colorSecondaryLight
         }
       }
     }
@@ -50,7 +50,6 @@ val rootContent: MenuItemBuilder by lazy {
       subtitle = "Generates children in the background"
       isBrowsable = true
       liveChildren = liveChildrenProducer
-      imageID = R.drawable.ic_audiotrack
     }
 
     menu {
