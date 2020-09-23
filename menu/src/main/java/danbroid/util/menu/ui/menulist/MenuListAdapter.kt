@@ -115,7 +115,6 @@ open class MenuListAdapter(val context: Context,
       }
 
 
-    log.trace("setting tint on ${menu.title}")
     itemView.icon.setTintColor(tint)
 
     //itemView.icon.setTintColor(if (menu.tint != 0) menu.tint else R.attr.colorPrimary.toThemeColour(context))
@@ -131,7 +130,6 @@ open class MenuListAdapter(val context: Context,
     } else {
 
       val roundedCorners = R.attr.dbMenuIconRoundedCorners.getThemeBoolean(itemView.icon.context, false)
-      log.error("rounded corners: $roundedCorners")
       val placeholder = ResourcesCompat.getDrawable(
           context.resources,
           if (menu.isBrowsable) DEFAULT_FOLDER_ICON else DEFAULT_FILE_ICON,

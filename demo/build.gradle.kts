@@ -4,8 +4,6 @@ plugins {
   kotlin("kapt")
   kotlin("android.extensions")
   id("androidx.navigation.safeargs.kotlin")
-  id("org.jetbrains.dokka")
-
 }
 
 
@@ -54,16 +52,6 @@ android {
   testOptions {
     unitTests.isIncludeAndroidResources = true
     unitTests.isReturnDefaultValues = true
-  }
-
-  kotlin {
-
-    sourceSets {
-      all {
-        languageSettings.useExperimentalAnnotation("kotlinx.coroutines.ExperimentalCoroutinesApi")
-        languageSettings.useExperimentalAnnotation("kotlinx.coroutines.FlowPreview")
-      }
-    }
   }
 }
 

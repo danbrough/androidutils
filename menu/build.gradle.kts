@@ -31,24 +31,9 @@ android {
     targetCompatibility = ProjectVersions.JAVA_VERSION
   }
 
-  androidExtensions {
-    isExperimental = true
-  }
-
   kotlinOptions {
     jvmTarget = "1.8"
     //freeCompilerArgs = listOf("-Xjsr305=strict")
-  }
-
-
-
-  kotlin.sourceSets.all {
-    setOf(
-        "kotlinx.coroutines.ExperimentalCoroutinesApi",
-        "kotlinx.coroutines.FlowPreview"
-    ).forEach {
-      languageSettings.useExperimentalAnnotation(it)
-    }
   }
 
   buildTypes {
@@ -60,6 +45,8 @@ android {
       )
     }
   }
+
+
 }
 
 val sourcesJar by tasks.registering(Jar::class) {

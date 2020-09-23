@@ -40,24 +40,10 @@ android {
 
   }
 
-  androidExtensions {
-    isExperimental = true
-  }
 
   testOptions {
     //unitTests.setReturnDefaultValues(true)
   }
-
-
-  kotlin {
-    sourceSets {
-      all {
-        languageSettings.useExperimentalAnnotation("kotlinx.coroutines.ExperimentalCoroutinesApi")
-        languageSettings.useExperimentalAnnotation("kotlinx.coroutines.FlowPreview")
-      }
-    }
-  }
-
 
 }
 
@@ -82,26 +68,16 @@ afterEvaluate {
 
 
 
-
 dependencies {
 
 
   implementation("org.slf4j:slf4j-api:_")
   implementation(Kotlin.stdlib.jdk8)
-
   api(KotlinX.coroutines.android)
-
   implementation(AndroidX.lifecycle.runtimeKtx)
-//  implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-rc02")
 
   api("pub.devrel:easypermissions:_")
 
-/*  testImplementation(Libs.junit)
-  testImplementation(Libs.androidx_test_core)
-  testImplementation(Libs.logback_core)
-  testImplementation(Libs.logback_classic)
-  testImplementation(Libs.kxml2_min)
-  testImplementation(Libs.robolectric)*/
 
 }
 
