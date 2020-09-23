@@ -23,7 +23,9 @@ android {
 
 
   }
-
+  lintOptions {
+    isAbortOnError = false
+  }
   compileOptions {
     sourceCompatibility = ProjectVersions.JAVA_VERSION
     targetCompatibility = ProjectVersions.JAVA_VERSION

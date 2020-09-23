@@ -47,6 +47,10 @@ android {
     }
   }
 
+  lintOptions {
+    isAbortOnError = false
+  }
+
   testOptions {
     unitTests.isIncludeAndroidResources = true
     unitTests.isReturnDefaultValues = true
@@ -68,7 +72,7 @@ android {
 
 
 dependencies {
-  implementation( "org.slf4j:slf4j-api:_")
+  implementation("org.slf4j:slf4j-api:_")
 
   implementation(project(":menu"))
   // or implementation("com.github.danbrough.androidutils:content:master-SNAPSHOT")

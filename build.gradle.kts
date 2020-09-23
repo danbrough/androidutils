@@ -1,6 +1,3 @@
-import org.jetbrains.dokka.gradle.DokkaTask
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
   id("org.jetbrains.dokka")
 }
@@ -46,7 +43,7 @@ buildscript {
 apply("project.gradle.kts")
 
 
-allprojects {
+subprojects {
   repositories {
     google()
     jcenter()
@@ -63,6 +60,8 @@ allprojects {
       }
     }
   }
+
+
 }
 
 
