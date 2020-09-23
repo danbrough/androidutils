@@ -1,6 +1,6 @@
 package danbroid.util.menu
 
-import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.annotation.MenuRes
 
 
@@ -14,18 +14,17 @@ data class MenuItem(
     @MenuRes
     var contextMenuID: Int = 0,
     var isBrowsable: Boolean = false,
-    var isVisible:Boolean = true,
+    var isVisible: Boolean = true,
     var inlineChildren: Boolean = false,
     @Transient
-    var menuItemBuilder: MenuItemBuilder? = null
+    var menuItemBuilder: MenuItemBuilder? = null,
+    @ColorRes
+    var tint: Int = 0
 ) {
 
   @Transient
   var children: List<MenuItem>? = null
 
-  @Transient
-  @ColorInt
-  var tint: Int = 0
 
   @Transient
   var source: Any? = null

@@ -1,7 +1,7 @@
 package danbroid.util.menu
 
 import android.content.Context
-import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.fragment.app.Fragment
 import danbroid.util.resource.toResourceURI
 
@@ -13,12 +13,14 @@ typealias MenuItemClickHandler = suspend MenuActionContext.((Boolean) -> Unit) -
 
 class MenuItemBuilder : MenuBuilder() {
 
-  @ColorInt
-  var tint: Int = 0
+  @ColorRes
+  var tintRes: Int = 0
 
   var liveItem: LiveItemProducer? = null
 
   var liveChildren: LiveChildrenProducer? = null
+
+  var roundedCorners: Boolean = true
 
   var onClick: MenuItemClickHandler? = null
 
@@ -41,7 +43,7 @@ class MenuItemBuilder : MenuBuilder() {
         inlineChildren,
         this
     ).also {
-      it.tint = tint
+      it.tint = tintRes
       it.children = children?.filter { !it.inlineChildren }?.map {
         (it as MenuItemBuilder).createItem(context, it.id!!)
       }

@@ -6,8 +6,11 @@ import android.view.ContextMenu
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.widget.ImageViewCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -20,10 +23,7 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import danbroid.util.menu.MenuItem
 import danbroid.util.menu.R
-import danbroid.util.resource.resolveDrawableURI
-import danbroid.util.resource.setTint
-import danbroid.util.resource.setTintColor
-import danbroid.util.resource.toThemeColour
+import danbroid.util.resource.*
 import kotlinx.android.synthetic.main.menu_item_fragment.view.*
 
 open class MenuListAdapter(val context: Context,
@@ -105,7 +105,18 @@ open class MenuListAdapter(val context: Context,
     else
       image.resolveDrawableURI(context)
 
-    itemView.icon.setTintColor(if (menu.tint != 0) menu.tint else R.attr.colorPrimary.toThemeColour(context))
+
+    val iconContext = itemView.icon.context
+
+    @ColorInt
+    val tint = if (menu.tint != 0) menu.tint.toResourceColour(iconContext) else
+      R.attr.dbMenuIconTint.toThemeColour(iconContext)
+
+
+    log.trace("setting tint on ${menu.title}")
+    itemView.icon.setTintColor(tint)
+
+    //itemView.icon.setTintColor(if (menu.tint != 0) menu.tint else R.attr.colorPrimary.toThemeColour(context))
 
     if (resID != 0) {
       itemView.icon.setImageDrawable(
@@ -117,15 +128,23 @@ open class MenuListAdapter(val context: Context,
       )
     } else {
 
+      val roundedCorners = R.attr.dbMenuIconRoundedCorners.getThemeBoolean(itemView.icon.context)
+      log.error("rounded corners: $roundedCorners")
       val placeholder = ResourcesCompat.getDrawable(
           context.resources,
           if (menu.isBrowsable) DEFAULT_FOLDER_ICON else DEFAULT_FILE_ICON,
           context.theme
       )!!
+
+
       Glide.with(itemView.context).load(menu.imageURI)
           //      .placeholder(circularProgressDrawable)
-          .diskCacheStrategy(DiskCacheStrategy.DATA)
-          .transform(RoundedCorners(iconCornerRadius))
+          .diskCacheStrategy(DiskCacheStrategy.DATA).let {
+            if (roundedCorners)
+              it.transform(RoundedCorners(iconCornerRadius))
+            else it
+          }
+
           .placeholder(placeholder)
           .addListener(object : RequestListener<Drawable> {
             override fun onLoadFailed(
@@ -142,7 +161,7 @@ open class MenuListAdapter(val context: Context,
                 dataSource: DataSource?,
                 isFirstResource: Boolean
             ): Boolean {
-              itemView.icon.setTint(0)
+              ImageViewCompat.setImageTintList(itemView.icon, null)
               return false
             }
 

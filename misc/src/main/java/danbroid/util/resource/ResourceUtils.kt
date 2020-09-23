@@ -65,6 +65,12 @@ object ResourceUtils {
         it.getColor(0, defValue)
       }
 
+
+  fun getThemeBoolean(context: Context, @AttrRes themeBoolAttribute: Int, defValue: Boolean = false): Boolean =
+      getAttribute(context, themeBoolAttribute) {
+        it.getBoolean(0, defValue)
+      }
+
   /**
    * Retrieves the [Px] from your theme with the attribute identified by [dimensionAttribute]
    */
@@ -117,9 +123,7 @@ fun ImageView.setTint(@ColorRes tint: Int) =
 fun ImageView.setTintColor(@ColorInt tint: Int) =
     ImageViewCompat.setImageTintList(
         this,
-        if (tint != 0)
-          ColorStateList.valueOf(tint)
-        else null
+        ColorStateList.valueOf(tint)
     )
 
 fun Int.toResourceURI(context: Context) = ResourceUtils.toResourceURI(context, this)
@@ -142,7 +146,12 @@ fun Context.getResourceColour(@ColorRes colorID: Int) =
 fun Int.toThemeColour(context: Context): Int = ResourceUtils.getThemeColour(context, this)
 
 @ColorInt
-fun Int.toResourceColour(context: Context): Int = ResourceUtils.getResourceColour(context, this)
+fun Int.toResourceColour(context: Context): Int = getResourceColour(context, this)
+
+fun Int.getThemeBoolean(context: Context): Boolean {
+  val res = this
+  return ResourceUtils.getThemeBoolean(context, res)
+}
 
 @Px
 fun Context.getThemeDimension(@AttrRes themeDimensionAttr: Int, @Px defValue: Float = 0f) =

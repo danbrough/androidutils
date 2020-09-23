@@ -17,28 +17,30 @@ val rootContent: MenuItemBuilder by lazy {
     id = URI_CONTENT_ROOT
     titleID = R.string.title_menu_activity
 
+
     menu {
       title = "First Menu"
-      subtitle = "Shows a toast"
+      subtitle = "imageURI = \"https://picsum.photos/200\""
       imageURI = "https://picsum.photos/200"
       onClick = {
-        Toast.makeText(context, "imageURI was set to https://picsum.photos/200", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "OnClick handled and ignored", Toast.LENGTH_SHORT).show()
       }
     }
 
     menu {
       id = "$URI_CONTENT_ROOT/second"
       title = "Second Menu"
+      subtitle = "tintRes = R.color.colorAccent"
       onClick = promptToContinue
-
+      tintRes = R.color.colorAccent
       menu {
         title = "Child of Second Menu"
         id = "$URI_CONTENT_ROOT/second/first"
 
         menu {
           title = "Another Child Folder"
-          subtitle = "Has its tint set to Color.BLUE"
-          tint = Color.BLUE
+          subtitle = "Has its tint set to R.color.colorPrimaryLight"
+          tintRes = R.color.colorPrimaryLight
         }
       }
     }
@@ -47,7 +49,6 @@ val rootContent: MenuItemBuilder by lazy {
       title = "Live Menu"
       subtitle = "Generates children in the background"
       isBrowsable = true
-      tint = Color.BLUE
       liveChildren = liveChildrenProducer
       imageID = R.drawable.ic_audiotrack
     }
