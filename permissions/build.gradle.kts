@@ -66,6 +66,13 @@ afterEvaluate {
   }
 }
 
+tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
+  dokkaSourceSets {
+    configureEach {
+      includes.from("README.md")
+    }
+  }
+}
 
 
 dependencies {

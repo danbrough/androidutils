@@ -37,7 +37,7 @@ fi
 
 
 #sed -i  README.md  -e 's/Latest version.*/Latest version: '$VERSION_NAME'/g'
-
+sed -i README.md -e 's/## Latest version:.*/## Latest version: '$VERSION_NAME'/g'
 ./gradlew -q projectIncrementVersion
 git add .
 git commit -am "$VERSION_NAME"
