@@ -1,5 +1,4 @@
-
-# Resource Utils
+# Module misc
 
 Some utility functions for dealing with android resource urls
 

@@ -1,6 +1,7 @@
+# Module menu
 
-# Menu UI
 
+## Description 
 Library for managing menu content via a DSL.
 
 Published via jitpack's maven repository: 

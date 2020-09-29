@@ -1,5 +1,6 @@
+# Module permissions
 
-# Permissions Utils
+## Permissions library 
 
 Some utility functions for dealing with android permissions using
 kotlin extensions

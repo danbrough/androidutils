@@ -1,3 +1,5 @@
+import org.jetbrains.dokka.gradle.gradleDokkaSourceSetBuilderFactory
+
 plugins {
   id("org.jetbrains.dokka")
 }
@@ -33,8 +35,39 @@ allprojects {
     jcenter()
     maven("https://jitpack.io")
   }
+
+  tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
+    dokkaSourceSets {
+      named("main") { /* configure main source set */
+        includes.from(file("README.md"))
+        // platform.set(org.jetbrains.dokka.Platform.jvm)
+      }
+      /*configureEach {
+        includes.from("README.md")
+      }*/
+    }
+  }
+
+/*  tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
+    dokkaSourceSets {
+      named("main") { *//* configure main source set *//*
+        includes.from(file("README.md"))
+        // platform.set(org.jetbrains.dokka.Platform.jvm)
+      }
+      *//*configureEach {
+        includes.from("README.md")
+      }*//*
+    }
+  }*/
 }
 
+tasks.dokkaGfmMultiModule {
+  println("GFM MULTI MODULE: $this")
+  outputDirectory.set(file("docs"))
+/*  this.gradleDokkaSourceSetBuilderFactory().create("main").apply {
+    includes.from("README.md")
+  }*/
+}
 
 /*
 

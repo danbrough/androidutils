@@ -1,5 +1,6 @@
-# danbroid_slf4j
-Yet another SL4J implementation for Android
+# Module slf4j
+
+## Yet another SL4J implementation for Android
 
 ## Usage
 

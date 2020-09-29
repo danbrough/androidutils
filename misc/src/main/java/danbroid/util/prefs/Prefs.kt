@@ -45,7 +45,7 @@ class StringPref<K : Enum<*>>(keyID: K, defValue: String) :
   override fun getPrefValue(hasPrefs: HasPrefs) =
       hasPrefs.prefs.getString(keyID.name, defValue)!!
 
-  override fun setPrefValue(hasPrefs: HasPrefs, value: String): Unit {
+  override fun setPrefValue(hasPrefs: HasPrefs, value: String) {
     hasPrefs.prefs.edit().apply {
       putString(keyID.name, value)
       apply()

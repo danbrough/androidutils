@@ -66,13 +66,17 @@ afterEvaluate {
   }
 }
 
+/*
 tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
   dokkaSourceSets {
     configureEach {
+      this.platform.set(org.jetbrains.dokka.Platform.jvm)
       includes.from("README.md")
     }
   }
 }
+*/
+
 
 
 dependencies {

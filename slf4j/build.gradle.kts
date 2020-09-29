@@ -41,6 +41,15 @@ android {
 
 }
 
+
+/*tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
+  dokkaSourceSets {
+    configureEach {
+      this.platform.set(org.jetbrains.dokka.Platform.jvm)
+      includes.from("README.md")
+    }
+  }
+}*/
 val sourcesJar by tasks.registering(Jar::class) {
   archiveClassifier.set("sources")
   from(android.sourceSets.getByName("main").java.srcDirs)
