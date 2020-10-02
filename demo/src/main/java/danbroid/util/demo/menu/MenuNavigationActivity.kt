@@ -5,8 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import danbroid.util.demo.R
+import danbroid.util.menu.navigation.createMenuGraph
 import danbroid.util.menu.ui.MenuImplementation
-import danbroid.util.menu.ui.createMenuGraph
+
 import kotlinx.android.synthetic.main.activity_menu_navigation.*
 
 class MenuNavigationActivity : AppCompatActivity() {
