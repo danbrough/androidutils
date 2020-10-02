@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.BroadcastChannel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.asFlow
@@ -21,11 +22,12 @@ import java.util.concurrent.atomic.AtomicInteger
  * Manages processing and dispatching of permissions request
  *
  */
+@ExperimentalCoroutinesApi
 object PermissionsManager {
   private val requestCode = AtomicInteger(2000)
 
   private val permissionsChannel: BroadcastChannel<PermissionResult> by lazy {
-    BroadcastChannel<PermissionResult>(Channel.BUFFERED)
+    BroadcastChannel(Channel.BUFFERED)
   }
 
 
