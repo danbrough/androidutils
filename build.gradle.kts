@@ -36,10 +36,12 @@ allprojects {
 
   tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
     dokkaSourceSets {
-      named("main") { /* configure main source set */
+      configureEach {
+
         includes.from(file("README.md"))
-        // platform.set(org.jetbrains.dokka.Platform.jvm)
       }
+        // platform.set(org.jetbrains.dokka.Platform.jvm)
+
       /*configureEach {
         includes.from("README.md")
       }*/

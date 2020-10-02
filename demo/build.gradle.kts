@@ -79,6 +79,7 @@ dependencies {
 
   implementation(AndroidX.lifecycle.runtimeKtx)
   implementation(AndroidX.coreKtx)
+  implementation(AndroidX.coordinatorLayout)
   implementation(AndroidX.lifecycle.viewModelKtx)
   implementation(AndroidX.fragmentKtx)
   implementation(AndroidX.recyclerView)
