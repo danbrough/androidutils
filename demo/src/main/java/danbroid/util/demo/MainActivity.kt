@@ -62,5 +62,6 @@ class MainActivity : AppCompatActivity(), HasPrefs {
   }
 }
 
+
 private val log = org.slf4j.LoggerFactory.getLogger(MainActivity::class.java)
 

@@ -3,7 +3,6 @@ plugins {
   kotlin("android")
   kotlin("kapt")
   kotlin("android.extensions")
-  id("androidx.navigation.safeargs.kotlin")
   id("maven-publish")
   id("org.jetbrains.dokka")
 }

@@ -12,7 +12,7 @@ buildscript {
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:_")
     classpath("org.jetbrains.dokka:dokka-gradle-plugin:_")
 
-    classpath(AndroidX.navigation.safeArgsGradlePlugin)
+    //classpath(AndroidX.navigation.safeArgsGradlePlugin)
   }
 
   repositories {
