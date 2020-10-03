@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import danbroid.util.menu.MenuActionContext
 import danbroid.util.menu.MenuItem
 import danbroid.util.menu.find
+import danbroid.util.menu.navigation.MenuNavGraph
 import danbroid.util.menu.ui.MenuImplementation
 import danbroid.util.menu.ui.MenuImplementation.menuClickHandler
 import danbroid.util.menu.ui.MenuImplementation.menuContextMenuHandler
@@ -35,10 +36,14 @@ open class MenuListFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     val adapter = MenuListAdapter(requireContext())
 
-    val menuID = requireArguments().getString("menuID")!!
+    val menuID = requireArguments().getString(MenuNavGraph.args.menuID)
+        ?: throw IllegalArgumentException("Fragment argument ${MenuNavGraph.args.menuID} not specified")
+
     val builder = rootContent.invoke(this).find(menuID)
+        ?: throw IllegalArgumentException("No content found for $menuID")
+
     log.trace("menuID: $menuID builder: $builder")
-    model = menuListModel(menuID, builder!!)
+    model = menuListModel(menuID, builder)
 
     adapter.also {
       it.onClick = { menuItem ->
