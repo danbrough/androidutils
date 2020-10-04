@@ -2,10 +2,11 @@
 
 ## Danbroid's Util Library
 
-### Latest version: 1.1.0
+### Latest version: 1.1.1-beta01
 
+![alt text](https://jitpack.io/v/danbrough/androidutils.svg "Version Logo")
 
-Simple android routines for doing stuff.
+Miscellaneous android utilities
 
 
 ### Featuring
