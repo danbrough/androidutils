@@ -12,6 +12,7 @@ import java.util.*
 const val URI_CONTENT_ROOT = "demo://content"
 
 val rootContent: MenuItemBuilder by lazy {
+
   rootMenu {
     id = URI_CONTENT_ROOT
     titleID = R.string.title_menu_activity

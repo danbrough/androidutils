@@ -27,8 +27,10 @@ class MenuNavigationActivity : AppCompatActivity() {
     setContentView(R.layout.activity_menu_navigation)
     setSupportActionBar(toolbar)
 
-    navHostFragment.navController.also { controller->
-      controller.createMenuGraph()
+    navHostFragment.navController.also { controller ->
+      controller.createMenuGraph {
+
+      }
       setupActionBarWithNavController(controller)
     }
   }

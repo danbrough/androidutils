@@ -79,7 +79,6 @@ dependencies {
   implementation(KotlinX.coroutines.android)
   implementation(AndroidX.lifecycle.runtimeKtx)
   implementation(AndroidX.lifecycle.viewModelKtx)
-  implementation(AndroidX.lifecycle.extensions)
   implementation(AndroidX.lifecycle.liveDataKtx)
   kapt("com.github.bumptech.glide:compiler:_")
   api("com.github.bumptech.glide:glide:_")

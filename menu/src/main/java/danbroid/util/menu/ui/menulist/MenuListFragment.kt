@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import danbroid.util.menu.MenuActionContext
 import danbroid.util.menu.MenuItem
@@ -27,9 +26,9 @@ open class MenuListFragment : Fragment() {
   protected open lateinit var model: MenuListModel
 
   override fun onCreateView(
-      inflater: LayoutInflater,
-      container: ViewGroup?,
-      savedInstanceState: Bundle?
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?
   ) = inflater.inflate(MenuImplementation.layoutID, container, false)
 
 
@@ -37,10 +36,10 @@ open class MenuListFragment : Fragment() {
     val adapter = MenuListAdapter(requireContext())
 
     val menuID = requireArguments().getString(MenuNavGraph.args.menuID)
-        ?: throw IllegalArgumentException("Fragment argument ${MenuNavGraph.args.menuID} not specified")
+      ?: throw IllegalArgumentException("Fragment argument ${MenuNavGraph.args.menuID} not specified")
 
     val builder = rootContent.invoke(this).find(menuID)
-        ?: throw IllegalArgumentException("No content found for $menuID")
+      ?: throw IllegalArgumentException("No content found for $menuID")
 
     log.trace("menuID: $menuID builder: $builder")
     model = menuListModel(menuID, builder)
@@ -65,7 +64,8 @@ open class MenuListFragment : Fragment() {
     recycler_view.adapter = adapter
     recycler_view.layoutManager = LinearLayoutManager(requireContext())
 
-    model.menu.observe<MenuItem>(viewLifecycleOwner) {
+
+    model.menu.observe(viewLifecycleOwner) {
       onMenuChanged(it, adapter)
     }
   }
