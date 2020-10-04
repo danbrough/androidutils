@@ -1,12 +1,14 @@
-# Danbroid's Util Library 
+# Module androidutils
 
-## Latest version: 1.1.0-beta24
+## Danbroid's Util Library
+
+### Latest version: 1.1.0-beta25
 
 
 Simple android routines for doing stuff.
 
 
-## Featuring 
+### Featuring
 
 * [permissions](./permissions)  kotlin extensions for handling android permissions
 * [slf4j](./slf4j) yet another slf4j implementation for android .. but betterer .. maybe

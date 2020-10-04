@@ -37,29 +37,5 @@ class MenuNavigationActivity : AppCompatActivity() {
 
 }
 
-
-/*
-  <fragment
-      android:id="@+id/navigation_menu"
-      android:name="danbroid.util.menu.ui.menulist.MenuListFragment"
-      tools:layout="@layout/fragment_menu_list">
-    <argument
-        android:name="menuID"
-        android:defaultValue="demo://content" />
-  </fragment>
-
-  <fragment
-      android:id="@+id/navigation_home"
-      android:name="danbroid.util.menu.ui.menulist.MenuListFragment"
-      tools:layout="@layout/fragment_menu_list">
-    <argument
-        android:name="menuID"
-        android:defaultValue="demo://content" />
-  </fragment>
-
-  <action
-      android:id="@+id/action_global_navigation_menu"
-      app:destination="@id/navigation_menu" />
- */
 private val log = org.slf4j.LoggerFactory.getLogger(MenuNavigationActivity::class.java)
 

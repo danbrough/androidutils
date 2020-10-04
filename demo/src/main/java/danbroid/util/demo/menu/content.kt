@@ -1,6 +1,5 @@
 package danbroid.util.demo.menu
 
-import android.graphics.Color
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import danbroid.util.demo.R
@@ -13,7 +12,7 @@ import java.util.*
 const val URI_CONTENT_ROOT = "demo://content"
 
 val rootContent: MenuItemBuilder by lazy {
-  rootMenu<MenuItemBuilder> {
+  rootMenu {
     id = URI_CONTENT_ROOT
     titleID = R.string.title_menu_activity
 
