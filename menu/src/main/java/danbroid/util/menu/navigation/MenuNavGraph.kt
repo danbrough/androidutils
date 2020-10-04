@@ -6,25 +6,27 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.createGraph
 import androidx.navigation.fragment.fragment
+import danbroid.util.menu.navigation.UniqueIDS.Companion.nextID
 import danbroid.util.menu.ui.menulist.MenuListFragment
 
-object MenuNavGraph {
+interface UniqueIDS {
+  companion object {
+    private var _id = 1
+    fun nextID() = _id++
+  }
+}
 
-  private var idCounter: Int = 1
+object MenuNavGraph : UniqueIDS {
 
-  val nextID: Int
-    get() = idCounter++
-
-
-  val id = nextID
+  val id = nextID()
 
   object dest {
-    val home = nextID
-    val menu = nextID
+    val home = nextID()
+    val menu = nextID()
   }
 
   object action {
-    val toMenu = nextID
+    val toMenu = nextID()
   }
 
   object args {
