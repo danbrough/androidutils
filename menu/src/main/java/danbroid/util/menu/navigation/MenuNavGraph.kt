@@ -6,14 +6,14 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.createGraph
 import androidx.navigation.fragment.fragment
-import danbroid.util.menu.navigation.UniqueIDS.Companion.nextID
 import danbroid.util.menu.ui.menulist.MenuListFragment
 
 interface UniqueIDS {
   companion object {
     private var _id = 1
-    fun nextID() = _id++
   }
+
+  fun nextID() = _id++
 }
 
 object MenuNavGraph : UniqueIDS {

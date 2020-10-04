@@ -3,12 +3,19 @@ package danbroid.util.menu
 import android.content.Context
 import androidx.annotation.ColorRes
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import danbroid.util.resource.toResourceURI
 
 typealias LiveItemProducer = suspend (context: Context, id: String, oldItem: MenuItem?) -> MenuItem?
 typealias LiveChildrenProducer = suspend (context: Context, id: String, oldItem: MenuItem?) -> List<MenuItem>?
 
-class MenuActionContext(val context: Context, val menuItem: MenuItem, val fragment: Fragment? = null)
+class MenuActionContext(val context: Context, val menuItem: MenuItem, val fragment: Fragment? = null) {
+  val navController: NavController?
+    get() = fragment?.findNavController()
+}
+
 typealias MenuItemClickHandler = suspend MenuActionContext.((Boolean) -> Unit) -> Unit
 
 class MenuItemBuilder : MenuBuilder() {

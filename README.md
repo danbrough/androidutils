@@ -1,6 +1,6 @@
 # Danbroid's Util Library 
 
-## Latest version: 1.1.0-beta23
+## Latest version: 1.1.0-beta24
 
 
 Simple android routines for doing stuff.
