@@ -53,6 +53,8 @@ fun NavController.createMenuGraph(deeplinkPrefix: String = "demo://content", bui
     action(MenuNavGraph.action.toMenu) {
       destinationId = MenuNavGraph.dest.menu
     }
+
+    builder()
   }
 }
 
