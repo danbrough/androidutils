@@ -1,4 +1,5 @@
 package danbroid.util.menu
+
 import androidx.annotation.DrawableRes
 import androidx.annotation.MenuRes
 import androidx.annotation.StringRes
@@ -103,21 +104,22 @@ inline fun <reified T : MenuBuilder> T.find(id: String): T? {
 
 @MenuDSL
 inline fun <reified T : MenuBuilder> T.menu(
-    child: T = T::class.createInstance(),
-    block: T.() -> Unit
-) {
+  child: T = T::class.createInstance(),
+  block: T.() -> Unit
+): T {
   addChild(child)
   if (child.id == null) {
     child.id = if (id!!.endsWith('/')) "$id${children!!.size}" else "${id}/${children!!.size}"
   }
   child.block()
+  return child
 }
 
 
 @MenuDSL
 inline fun <reified T : MenuBuilder> rootMenu(
-    builder: T = T::class.createInstance(),
-    block: T.() -> Unit
+  builder: T = T::class.createInstance(),
+  block: T.() -> Unit
 ) = builder.apply(block)
 
 

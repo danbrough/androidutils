@@ -15,12 +15,17 @@ class ContentManager(context: Context) : Singleton<Context>(context) {
   fun liveItemFlow(id: String, builder: MenuItemBuilder): Flow<MenuItem> = itemFlow(id, builder)
 
   private fun itemFlow(id: String, builder: MenuItemBuilder): Flow<MenuItem> = flow {
-    log.info("itemFlow() $id")
+    log.error("itemFlow() $id")
     var item = builder.createItem(context, id)
-    log.debug("loaded $item")
+    log.error("loaded $item")
     emit(item)
 
+    builder.liveItem?.also {
+      log.error("HAS LIVE ITEM")
+    }
+
     builder.liveItem?.invoke(context, id, item)?.also {
+      log.error("emitting live item: $it")
       emit(it)
       item = it
     }
