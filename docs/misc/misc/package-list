@@ -1,0 +1,9 @@
+$dokka.format:gfm-v1
+$dokka.linkExtension:md
+
+danbroid.util.context
+danbroid.util.event
+danbroid.util.format
+danbroid.util.prefs
+danbroid.util.resource
+
