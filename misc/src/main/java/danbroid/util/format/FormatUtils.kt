@@ -9,11 +9,11 @@ class FormatUtils {
   companion object {
     @SuppressLint("DefaultLocale")
     @JvmStatic
-    fun humanReadableByteCountBin(bytes: Long): String? {
+    fun humanReadableByteCount(bytes: Long): String {
       val absB = if (bytes == Long.MIN_VALUE) Long.MAX_VALUE else Math.abs(bytes)
-      if (absB < 1024) {
+      if (absB < 1024)
         return "$bytes B"
-      }
+
       var value = absB
       val ci: CharacterIterator = StringCharacterIterator("KMGTPE")
       var i = 40
@@ -23,9 +23,11 @@ class FormatUtils {
         i -= 10
       }
       value *= java.lang.Long.signum(bytes).toLong()
-      return java.lang.String.format("%.1f %ciB", value / 1024.0, ci.current())
+      return String.format("%.1f %ciB", value / 1024.0, ci.current())
     }
   }
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(FormatUtils::class.java)
+fun Long.humanReadableByteCount() = FormatUtils.humanReadableByteCount(this)
+
+//private val log = org.slf4j.LoggerFactory.getLogger(FormatUtils::class.java)

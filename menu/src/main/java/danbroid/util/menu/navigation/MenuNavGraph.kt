@@ -7,13 +7,17 @@ import androidx.navigation.NavType
 import androidx.navigation.createGraph
 import androidx.navigation.fragment.fragment
 import danbroid.util.menu.ui.menulist.MenuListFragment
+import java.util.concurrent.atomic.AtomicInteger
 
+/**
+ * Provides a [#nextID] method to return an incremental unique id
+ */
 interface UniqueIDS {
   companion object {
-    private var _id = 1
+    private var _id = AtomicInteger(0)
   }
 
-  fun nextID() = _id++
+  fun nextID() = _id.incrementAndGet()
 }
 
 object MenuNavGraph : UniqueIDS {
@@ -34,7 +38,10 @@ object MenuNavGraph : UniqueIDS {
   }
 }
 
-fun NavController.createMenuGraph(deeplinkPrefix: String = "demo://content", builder: NavGraphBuilder.() -> Unit = {}) {
+fun NavController.createMenuGraph(
+  deeplinkPrefix: String = "demo://content",
+  builder: NavGraphBuilder.() -> Unit = {}
+) {
 
   graph = createGraph(MenuNavGraph.id, MenuNavGraph.dest.home) {
     fragment<MenuListFragment>(MenuNavGraph.dest.home) {
@@ -61,5 +68,5 @@ fun NavController.createMenuGraph(deeplinkPrefix: String = "demo://content", bui
 }
 
 fun NavController.navigateToMenu(menuID: String) =
-    navigate(MenuNavGraph.action.toMenu, bundleOf(MenuNavGraph.args.menuID to menuID))
+  navigate(MenuNavGraph.action.toMenu, bundleOf(MenuNavGraph.args.menuID to menuID))
 
