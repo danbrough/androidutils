@@ -28,6 +28,6 @@ class FormatUtils {
   }
 }
 
-fun Long.humanReadableByteCount() = FormatUtils.humanReadableByteCount(this)
+fun Number.humanReadableByteCount() = FormatUtils.humanReadableByteCount(this.toLong())
 
 //private val log = org.slf4j.LoggerFactory.getLogger(FormatUtils::class.java)

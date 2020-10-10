@@ -3,6 +3,7 @@ package danbroid.util.demo.menu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import danbroid.util.demo.R
+import danbroid.util.format.humanReadableByteCount
 import danbroid.util.menu.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -16,7 +17,6 @@ val rootContent: MenuItemBuilder by lazy {
   rootMenu {
     id = URI_CONTENT_ROOT
     titleID = R.string.title_menu_activity
-
 
     menu {
       title = "First Menu"
