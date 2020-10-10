@@ -22,25 +22,28 @@ object MenuImplementation {
   }
 
   var menuClickHandler: Fragment.(MenuItem) -> Unit = { menu ->
-    log.info("onClicked() $menu")
+    log.trace("onClicked() $menu")
 
     val navController = findNavController()
 
     val uri = Uri.parse(menu.id)
     if (navController.graph.hasDeepLink(Uri.parse(menu.id))) {
+      log.trace("navigating to deeplink $uri")
       navController.navigate(uri)
     } else if (menu.isBrowsable) {
+      log.trace("menu.isBrowsable so navigating to ${menu.id}")
       navController.navigateToMenu(menu.id)
     }
   }
 
-  var menuContextMenuHandler: Fragment.(MenuItem, ContextMenu, View, ContextMenu.ContextMenuInfo?) -> Unit = { menuItem, contextMenu, _, _ ->
-    if (menuItem.contextMenuID != 0) {
-      requireActivity().menuInflater.inflate(menuItem.contextMenuID, contextMenu)
+  var menuContextMenuHandler: Fragment.(MenuItem, ContextMenu, View, ContextMenu.ContextMenuInfo?) -> Unit =
+    { menuItem, contextMenu, _, _ ->
+      if (menuItem.contextMenuID != 0) {
+        requireActivity().menuInflater.inflate(menuItem.contextMenuID, contextMenu)
+      }
     }
-  }
 
-  lateinit var rootContent: Fragment.() -> MenuItemBuilder
+  lateinit var rootContent: () -> MenuItemBuilder
 }
 
 

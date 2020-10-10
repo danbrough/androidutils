@@ -38,9 +38,9 @@ class MenuItemBuilder : MenuBuilder() {
 
   var onCreate: (MenuItem.(Context) -> Unit)? = null
 
-  var onCreateModel: ((MenuListModel) -> Unit)? = null
+/*  var onCreateModel: ((MenuListModel) -> Unit)? = null
 
-  var onClearedModel: ((MenuListModel) -> Unit)? = null
+  var onClearedModel: ((MenuListModel) -> Unit)? = null*/
 
   fun createItem(context: Context, itemID: String = id!!): MenuItem {
     val title = if (titleID != 0) context.getString(titleID) else title
@@ -66,6 +66,8 @@ class MenuItemBuilder : MenuBuilder() {
       onCreate?.invoke(it, context)
     }
   }
+
+  override fun toString() = "MenuItemBuilder[$id:$title]"
 
 
 }

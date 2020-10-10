@@ -26,9 +26,9 @@ open class MenuListFragment : Fragment() {
   protected open lateinit var model: MenuListModel
 
   override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
+      inflater: LayoutInflater,
+      container: ViewGroup?,
+      savedInstanceState: Bundle?
   ) = inflater.inflate(MenuImplementation.layoutID, container, false)
 
 
@@ -36,10 +36,10 @@ open class MenuListFragment : Fragment() {
     val adapter = MenuListAdapter(requireContext())
 
     val menuID = requireArguments().getString(MenuNavGraph.args.menuID)
-      ?: throw IllegalArgumentException("Fragment argument ${MenuNavGraph.args.menuID} not specified")
+        ?: throw IllegalArgumentException("Fragment argument ${MenuNavGraph.args.menuID} not specified")
 
-    val builder = rootContent.invoke(this).find(menuID)
-      ?: throw IllegalArgumentException("No content found for $menuID")
+    val builder = rootContent.invoke().find(menuID)
+        ?: throw IllegalArgumentException("No content found for $menuID")
 
     log.trace("menuID: $menuID builder: $builder")
     model = menuListModel(menuID, builder)
@@ -47,7 +47,7 @@ open class MenuListFragment : Fragment() {
     adapter.also {
       it.onClick = { menuItem ->
         menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
-          requireActivity().lifecycleScope.launch {
+          lifecycleScope.launch {
             clickHandler(MenuActionContext(requireContext(), menuItem, this@MenuListFragment)) {
               if (it) menuClickHandler.invoke(this@MenuListFragment, menuItem)
             }
