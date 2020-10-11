@@ -23,7 +23,7 @@ Tag names cannot be longer than {@value #TAG_MAX_LENGTH} characters on Android p
 
   
 Content  
-open fun [loggerNameToTag](logger-name-to-tag.md)(loggerName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)  
+open fun [loggerNameToTag](logger-name-to-tag.md)(loggerName: [String](https://developer.android.com/reference/kotlin/java/lang/String.html)): [String](https://developer.android.com/reference/kotlin/java/lang/String.html)  
 
 
 

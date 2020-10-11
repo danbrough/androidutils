@@ -5,7 +5,7 @@
 # humanReadableByteCount  
 [androidJvm]  
 Content  
-fun [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html).[humanReadableByteCount](human-readable-byte-count.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)  
+fun [Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html).[humanReadableByteCount](human-readable-byte-count.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)  
 
 
 
