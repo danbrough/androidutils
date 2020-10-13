@@ -9,8 +9,7 @@
   
 |  Name|  Summary| 
 |---|---|
-| [MenuNavGraph](-menu-nav-graph/index.md)| [androidJvm]  <br>Content  <br>object [MenuNavGraph](-menu-nav-graph/index.md) : [UniqueIDS](-unique-i-d-s/index.md)  <br><br><br>
-| [UniqueIDS](-unique-i-d-s/index.md)| [androidJvm]  <br>Brief description  <br><br><br>Provides a #nextID method to return an incremental unique id<br><br>  <br>Content  <br>interface [UniqueIDS](-unique-i-d-s/index.md)  <br><br><br>
+| [MenuNavGraph](-menu-nav-graph/index.md)| [androidJvm]  <br>Content  <br>object [MenuNavGraph](-menu-nav-graph/index.md) : UniqueIDS  <br><br><br>
 
 
 ## Functions  

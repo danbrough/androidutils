@@ -14,7 +14,7 @@ open class MenuBuilder {
   open var id: String? = null
 
   @MenuDSL
-  var title: String? = null
+  open var title: String? = null
     set(value) {
       field = value
       titleID = 0
@@ -22,10 +22,10 @@ open class MenuBuilder {
 
   @MenuDSL
   @StringRes
-  var titleID: Int = 0
+  open var titleID: Int = 0
 
   @MenuDSL
-  var subtitle: String = ""
+  open var subtitle: String = ""
     set(value) {
       field = value
       subtitleID = 0
@@ -33,7 +33,7 @@ open class MenuBuilder {
 
   @MenuDSL
   @StringRes
-  var subtitleID: Int = 0
+  open var subtitleID: Int = 0
 
   @MenuDSL
   var imageURI: String? = null
@@ -44,11 +44,11 @@ open class MenuBuilder {
 
   @MenuDSL
   @DrawableRes
-  var imageID: Int = 0
+  open var imageID: Int = 0
 
   @MenuDSL
   @MenuRes
-  var menuID: Int = 0
+  open var menuID: Int = 0
 
 
   @MenuDSL
@@ -56,14 +56,14 @@ open class MenuBuilder {
   var contextMenuID: Int = 0
 
   @MenuDSL
-  var isBrowsable = false
+  open var isBrowsable = false
     get() = field || !children.isNullOrEmpty()
 
   @MenuDSL
-  var isVisible = true
+  open var isVisible = true
 
   @MenuDSL
-  var inlineChildren = false
+  open var inlineChildren = false
 
 
   @MenuDSL
@@ -104,8 +104,8 @@ inline fun <reified T : MenuBuilder> T.find(id: String): T? {
 
 @MenuDSL
 inline fun <reified T : MenuBuilder> T.menu(
-  child: T = T::class.createInstance(),
-  block: T.() -> Unit
+    child: T = T::class.createInstance(),
+    block: T.() -> Unit
 ): T {
   addChild(child)
   if (child.id == null) {
@@ -118,8 +118,8 @@ inline fun <reified T : MenuBuilder> T.menu(
 
 @MenuDSL
 inline fun <reified T : MenuBuilder> rootMenu(
-  builder: T = T::class.createInstance(),
-  block: T.() -> Unit
+    builder: T = T::class.createInstance(),
+    block: T.() -> Unit
 ) = builder.apply(block)
 
 

@@ -3,7 +3,7 @@
 
 
 # MenuNavGraph  
- [androidJvm] object [MenuNavGraph](index.md) : [UniqueIDS](../-unique-i-d-s/index.md)   
+ [androidJvm] object [MenuNavGraph](index.md) : UniqueIDS   
 
 
 ## Types  
@@ -21,7 +21,7 @@
 |---|---|
 | [equals](../../danbroid.util.menu.ui.model/-menu-list-model/-companion/-new-instance-factory/index.md#kotlin/Any/equals/#kotlin.Any?/PointingToDeclaration/)| [androidJvm]  <br>Content  <br>open operator override fun [equals](../../danbroid.util.menu.ui.model/-menu-list-model/-companion/-new-instance-factory/index.md#kotlin/Any/equals/#kotlin.Any?/PointingToDeclaration/)(other: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  <br><br><br>
 | [hashCode](../../danbroid.util.menu.ui.model/-menu-list-model/-companion/-new-instance-factory/index.md#kotlin/Any/hashCode/#/PointingToDeclaration/)| [androidJvm]  <br>Content  <br>open override fun [hashCode](../../danbroid.util.menu.ui.model/-menu-list-model/-companion/-new-instance-factory/index.md#kotlin/Any/hashCode/#/PointingToDeclaration/)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  <br><br><br>
-| [nextID](../-unique-i-d-s/next-i-d.md)| [androidJvm]  <br>Content  <br>open override fun [nextID](../-unique-i-d-s/next-i-d.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  <br><br><br>
+| [nextID](index.md#danbroid.util.misc/UniqueIDS/nextID/#/PointingToDeclaration/)| [androidJvm]  <br>Content  <br>open override fun [nextID](index.md#danbroid.util.misc/UniqueIDS/nextID/#/PointingToDeclaration/)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  <br><br><br>
 | [toString](../../danbroid.util.menu.ui.model/-menu-list-model/-companion/-new-instance-factory/index.md#kotlin/Any/toString/#/PointingToDeclaration/)| [androidJvm]  <br>Content  <br>open override fun [toString](../../danbroid.util.menu.ui.model/-menu-list-model/-companion/-new-instance-factory/index.md#kotlin/Any/toString/#/PointingToDeclaration/)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)  <br><br><br>
 
 

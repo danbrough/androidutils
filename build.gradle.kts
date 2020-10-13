@@ -8,7 +8,7 @@ buildscript {
 
   dependencies {
     //classpath("com.android.tools.build:gradle:4.2.0-alpha13")
-    classpath("com.android.tools.build:gradle:4.1.0-rc03")
+    classpath("com.android.tools.build:gradle:4.1.0")
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:_")
     classpath("org.jetbrains.dokka:dokka-gradle-plugin:_")
 
@@ -37,53 +37,13 @@ allprojects {
   tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
     dokkaSourceSets {
       configureEach {
-
         includes.from(file("README.md"))
       }
-        // platform.set(org.jetbrains.dokka.Platform.jvm)
-
-      /*configureEach {
-        includes.from("README.md")
-      }*/
     }
   }
-
-/*  tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
-    dokkaSourceSets {
-      named("main") { *//* configure main source set *//*
-        includes.from(file("README.md"))
-        // platform.set(org.jetbrains.dokka.Platform.jvm)
-      }
-      *//*configureEach {
-        includes.from("README.md")
-      }*//*
-    }
-  }*/
 }
 
 tasks.dokkaGfmMultiModule {
-  println("GFM MULTI MODULE: $this")
   outputDirectory.set(file("docs"))
-/*  this.gradleDokkaSourceSetBuilderFactory().create("main").apply {
-    includes.from("README.md")
-  }*/
 }
-
-/*
-
-tasks.dokkaGfmMultiModule {
-  println("GFM MULTI MODULE: $this")
-  outputDirectory.set(file("docs"))
-  this.gradleDokkaSourceSetBuilderFactory().create("main").apply {
-    includes.from("README.md")
-  }
-}
-*/
-
-
-//tasks.dokkaHtmlMultiModule {
-//  println("dokkaHtmlMultiModule")
-//  //documentationFileName.set("README.md")
-//  outputDirectory.set(file("docs"))
-//}
 

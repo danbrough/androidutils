@@ -75,7 +75,7 @@ dependencies {
   implementation(Google.android.material)
 
   implementation(AndroidX.lifecycle.extensions)
-
+  implementation(AndroidX.preferenceKtx)
   implementation(AndroidX.lifecycle.runtimeKtx)
   implementation(AndroidX.coreKtx)
   implementation(AndroidX.coordinatorLayout)

@@ -1,3 +1,4 @@
+
 plugins {
   id("com.android.library")
   kotlin("android")
@@ -8,10 +9,10 @@ plugins {
 }
 
 
-
 android {
 
   compileSdkVersion(ProjectVersions.SDK_VERSION)
+
   defaultConfig {
     minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
     targetSdkVersion(ProjectVersions.SDK_VERSION)
@@ -19,12 +20,12 @@ android {
     versionName = ProjectVersions.VERSION_NAME
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     consumerProguardFiles("consumer-rules.pro")
-
-
   }
+
   lintOptions {
     isAbortOnError = false
   }
+
   compileOptions {
     sourceCompatibility = ProjectVersions.JAVA_VERSION
     targetCompatibility = ProjectVersions.JAVA_VERSION
@@ -32,7 +33,6 @@ android {
 
   kotlinOptions {
     jvmTarget = "1.8"
-    //freeCompilerArgs = listOf("-Xjsr305=strict")
   }
 
   buildTypes {

@@ -8,6 +8,4 @@ Published via jitpack's maven repository:
 
 
 
-## Usage
-
 

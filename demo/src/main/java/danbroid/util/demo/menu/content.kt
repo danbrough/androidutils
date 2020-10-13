@@ -3,19 +3,19 @@ package danbroid.util.demo.menu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import danbroid.util.demo.R
-import danbroid.util.format.humanReadableByteCount
+import danbroid.util.demo.menu.DemoNavGraph.URI_CONTENT_PREFIX
 import danbroid.util.menu.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import java.util.*
 
-const val URI_CONTENT_ROOT = "demo://content"
+
 
 val rootContent: MenuItemBuilder by lazy {
 
   rootMenu {
-    id = URI_CONTENT_ROOT
+    id = URI_CONTENT_PREFIX
     titleID = R.string.title_menu_activity
 
     menu {
@@ -28,14 +28,14 @@ val rootContent: MenuItemBuilder by lazy {
     }
 
     menu {
-      id = "$URI_CONTENT_ROOT/second"
+      id = "$URI_CONTENT_PREFIX/second"
       title = "Second Menu"
       subtitle = "tintRes = R.color.colorAccent"
       onClick = promptToContinue
       tintRes = R.color.colorAccent
       menu {
         title = "Child of Second Menu"
-        id = "$URI_CONTENT_ROOT/second/first"
+        id = "$URI_CONTENT_PREFIX/second/first"
 
         menu {
           title = "Another Child Folder"
@@ -46,9 +46,8 @@ val rootContent: MenuItemBuilder by lazy {
     }
 
     menu {
-      title = "Live Menu"
-      subtitle = "Generates children in the background"
-      isBrowsable = true
+      title = "Live Children"
+      subtitle = "Generates its children in the background"
       liveChildren = liveChildrenProducer
     }
 
@@ -60,13 +59,13 @@ val rootContent: MenuItemBuilder by lazy {
   }
 }
 
-private val liveChildrenProducer: LiveChildrenProducer = { ctx, id, item ->
+private val liveChildrenProducer: LiveChildrenProducer = { ctx, item ->
   withContext(Dispatchers.Main) {
     Toast.makeText(ctx, "Loading the live menu in one second", Toast.LENGTH_SHORT).show()
   }
   delay(1000)
   listOf(
-      MenuItem(item!!.id + "/1", "Sub Menu1", "Created at ${Date()}"),
+      MenuItem(item.id + "/1", "Sub Menu1", "Created at ${Date()}"),
       MenuItem(item.id + "/2", "Sub Menu2", "menu2")
   )
 }

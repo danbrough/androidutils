@@ -18,6 +18,10 @@ class MenuNavigationActivity : AppCompatActivity() {
     }
   }
 
+  companion object{
+    private val log = org.slf4j.LoggerFactory.getLogger(MenuNavigationActivity::class.java)
+  }
+
   protected val navHostFragment: NavHostFragment
     get() = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
@@ -28,9 +32,7 @@ class MenuNavigationActivity : AppCompatActivity() {
     setSupportActionBar(toolbar)
 
     navHostFragment.navController.also { controller ->
-      controller.createMenuGraph {
-
-      }
+      controller.createDemoNavGraph()
       setupActionBarWithNavController(controller)
     }
   }
@@ -39,5 +41,5 @@ class MenuNavigationActivity : AppCompatActivity() {
 
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(MenuNavigationActivity::class.java)
+
 
