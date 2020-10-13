@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import danbroid.util.menu.ui.model.MenuListModel
 import danbroid.util.resource.toResourceURI
 
-typealias LiveItemProducer = suspend (context: Context, id: String, item: MenuItem) -> MenuItem
+typealias LiveItemProducer = suspend (context: Context, item: MenuItem) -> MenuItem
 typealias LiveChildrenProducer = suspend (context: Context, item: MenuItem) -> List<MenuItem>?
 
 class MenuActionContext(

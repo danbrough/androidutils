@@ -20,7 +20,7 @@ class ContentManager(context: Context) : Singleton<Context>(context) {
     emit(item)
 
     builder.liveItem?.also {
-      it.invoke(context, id, item).also {
+      it.invoke(context, item).also {
         log.trace("emitting live item: $it")
         emit(it)
         item = it
