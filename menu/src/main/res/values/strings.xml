@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="title_default_menu">Untitled Menu</string>
+    <string name="title_default_menu">Untitled</string>
 </resources>

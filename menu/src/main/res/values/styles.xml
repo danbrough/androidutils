@@ -1,13 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <style name="DBMenuStyle">
-    <item name="dbMenuIconStyle">@style/DBMenuIconStyle</item>
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="colorSecondary">@color/colorSecondary</item>
+<!--    <item name="dbMenuIconRoundedCorners">true</item>
+    <item name="dbMenuIconTint">@color/colorPrimaryLight</item>
+    <item name="dbMenuIconFolder">@drawable/ic_folder_open</item>
+    <item name="dbMenuIconFile">@drawable/ic_audiotrack</item>-->
+    <item name="dbMenuIconTint">@color/colorPrimaryLight</item>
   </style>
 
-  <style name="DBMenuIconStyle">
-    <item name="tint">?dbMenuIconTint</item>
-    <item name="dbMenuIconRoundedCorners">false</item>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
   </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

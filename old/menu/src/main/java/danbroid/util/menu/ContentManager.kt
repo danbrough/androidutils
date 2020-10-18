@@ -1,7 +1,6 @@
 package danbroid.util.menu
 
 import android.content.Context
-import danbroid.util.context.Singleton
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -10,7 +9,7 @@ import kotlinx.coroutines.flow.flowOn
 /**
  *
  */
-class ContentManager(context: Context) : Singleton<Context>(context) {
+class ContentManager(val context: Context) {
 
   fun liveItemFlow(id: String, builder: MenuItemBuilder): Flow<MenuItem> = itemFlow(id, builder)
 
@@ -62,6 +61,17 @@ class ContentManager(context: Context) : Singleton<Context>(context) {
   }
 
 
+  companion object {
+    @Volatile
+    private var INSTANCE: ContentManager? = null
+
+    @JvmStatic
+    fun getInstance(context: Context) = INSTANCE ?: synchronized(ContentManager::class.java) {
+      INSTANCE ?: ContentManager(context).also {
+        INSTANCE = it
+      }
+    }
+  }
 }
 
 

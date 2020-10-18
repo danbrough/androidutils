@@ -6,6 +6,7 @@ plugins {
 
 buildscript {
 
+  val kotlin_version by extra("1.4.10")
   dependencies {
     //classpath("com.android.tools.build:gradle:4.2.0-alpha13")
     classpath("com.android.tools.build:gradle:4.1.0")
@@ -39,6 +40,17 @@ allprojects {
       configureEach {
         includes.from(file("README.md"))
       }
+    }
+  }
+
+  configurations.all {
+    if (name.contains("Test")) {
+      resolutionStrategy.dependencySubstitution {
+        substitute(project(":slf4j")).with(module("ch.qos.logback:logback-classic:1.2.3"))
+      }
+    }
+    resolutionStrategy.dependencySubstitution {
+      
     }
   }
 }

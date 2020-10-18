@@ -37,11 +37,11 @@ object MenuImplementation {
   }
 
   var menuContextMenuHandler: Fragment.(MenuItem, ContextMenu, View, ContextMenu.ContextMenuInfo?) -> Unit =
-    { menuItem, contextMenu, _, _ ->
-      if (menuItem.contextMenuID != 0) {
-        requireActivity().menuInflater.inflate(menuItem.contextMenuID, contextMenu)
+      { menuItem, contextMenu, _, _ ->
+        if (menuItem.contextMenuID != 0) {
+          requireActivity().menuInflater.inflate(menuItem.contextMenuID, contextMenu)
+        }
       }
-    }
 
   lateinit var rootContent: () -> MenuItemBuilder
 }

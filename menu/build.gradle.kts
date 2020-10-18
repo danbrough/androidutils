@@ -46,6 +46,8 @@ android {
   }
 
 
+
+
 }
 
 val sourcesJar by tasks.registering(Jar::class) {
@@ -69,6 +71,7 @@ afterEvaluate {
 
 dependencies {
 
+  implementation(project(":misc"))
   implementation("org.slf4j:slf4j-api:_")
   implementation(AndroidX.appCompat)
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")

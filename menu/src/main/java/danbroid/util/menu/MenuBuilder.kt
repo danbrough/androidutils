@@ -11,7 +11,7 @@ annotation class MenuDSL
 open class MenuBuilder {
 
   @MenuDSL
-  open var id: String? = null
+  open lateinit var id: String
 
   @MenuDSL
   open var title: String? = null
@@ -107,17 +107,15 @@ inline fun <reified T : MenuBuilder> T.menu(
     child: T = T::class.createInstance(),
     block: T.() -> Unit
 ): T {
+  child.id = if (id.endsWith('/')) "$id${children?.size ?: 0}" else "${id}/${children?.size ?: 0}"
   addChild(child)
-  if (child.id == null) {
-    child.id = if (id!!.endsWith('/')) "$id${children!!.size}" else "${id}/${children!!.size}"
-  }
   child.block()
   return child
 }
 
 
 @MenuDSL
-inline fun <reified T : MenuBuilder> rootMenu(
+inline fun <reified T : MenuBuilder> getRootMenu(
     builder: T = T::class.createInstance(),
     block: T.() -> Unit
 ) = builder.apply(block)

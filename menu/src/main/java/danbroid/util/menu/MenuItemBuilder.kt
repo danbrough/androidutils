@@ -4,39 +4,27 @@ import android.content.Context
 import androidx.annotation.ColorRes
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import danbroid.util.menu.ui.model.MenuListModel
+import danbroid.util.menu.model.MenuModel
 import danbroid.util.resource.toResourceURI
 
-typealias LiveItemProducer = suspend (context: Context, item: MenuItem) -> MenuItem
-typealias LiveChildrenProducer = suspend (context: Context, item: MenuItem) -> List<MenuItem>?
 
-class MenuActionContext(
-    val context: Context,
-    val menuItem: MenuItem,
-    val fragment: Fragment? = null
-) {
-  val navController: NavController?
-    get() = fragment?.findNavController()
-}
+typealias LiveItemProducer = suspend MenuModel.(item: MenuItem) -> Unit
 
-typealias MenuItemClickHandler = suspend MenuActionContext.((Boolean) -> Unit) -> Unit
+typealias MenuItemClickHandler = suspend MenuModel.(continueNavigation: (Boolean) -> Unit) -> Unit
 
 class MenuItemBuilder : MenuBuilder() {
 
   @ColorRes
   var tintRes: Int = 0
 
-  var liveItem: LiveItemProducer? = null
+  var onCreate: LiveItemProducer? = null
 
-  var liveChildren: LiveChildrenProducer? = null
+  var liveChildren: LiveItemProducer? = null
 
   var roundedCorners: Boolean = true
 
   var onClick: MenuItemClickHandler? = null
-
-  var onCreate: (MenuItem.(Context) -> Unit)? = null
 
   override var isBrowsable: Boolean
     get() = super.isBrowsable || liveChildren != null
@@ -44,11 +32,8 @@ class MenuItemBuilder : MenuBuilder() {
       super.isBrowsable = value
     }
 
-/*  var onCreateModel: ((MenuListModel) -> Unit)? = null
 
-  var onClearedModel: ((MenuListModel) -> Unit)? = null*/
-
-  fun createItem(context: Context, itemID: String = id!!): MenuItem {
+  fun createItem(context: Context, itemID: String = id, depth: Int = 1): MenuItem {
     val title = if (titleID != 0) context.getString(titleID) else title
         ?: context.getString(R.string.title_default_menu)
     val subtitle = if (subtitleID != 0) context.getString(subtitleID) else subtitle
@@ -63,15 +48,22 @@ class MenuItemBuilder : MenuBuilder() {
         isBrowsable,
         isVisible,
         inlineChildren,
-        this
-    ).also {
-      it.tint = tintRes
-      it.children = children?.filter { !it.inlineChildren }?.map {
-        (it as MenuItemBuilder).createItem(context, it.id!!)
-      }
-      onCreate?.invoke(it, context)
+    ).also { item ->
+      item.menuItemBuilder = this@MenuItemBuilder
+      item.tint = tintRes
+      item.roundedCorners = roundedCorners
+      if (depth > 0)
+        item.children = children?.filter { !it.inlineChildren }?.map {
+          (it as MenuItemBuilder).createItem(context, it.id, depth - 1)
+        }
     }
   }
+
+/*  fun createChildren(context: Context, item: MenuItem) {
+    item.children = children?.filter { !it.inlineChildren }?.map {
+      (it as MenuItemBuilder).createItem(context, it.id)
+    }
+  }*/
 
   override fun toString() = "MenuItemBuilder[$id:$title]"
 
