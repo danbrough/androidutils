@@ -35,19 +35,19 @@ class MenuItemBuilder : MenuBuilder() {
 
   fun createItem(context: Context, itemID: String = id, depth: Int = 1): MenuItem {
     val title = if (titleID != 0) context.getString(titleID) else title
-      ?: context.getString(R.string.title_default_menu)
+        ?: context.getString(R.string.title_default_menu)
     val subtitle = if (subtitleID != 0) context.getString(subtitleID) else subtitle
     val image = if (imageID != 0) imageID.toResourceURI(context).toString() else imageURI
     return MenuItem(
-      itemID,
-      title,
-      subtitle,
-      image,
-      menuID,
-      contextMenuID,
-      isBrowsable,
-      isVisible,
-      inlineChildren,
+        itemID,
+        title,
+        subtitle,
+        image,
+        icon?.invoke(context),
+        contextMenuID,
+        isBrowsable,
+        isVisible,
+        inlineChildren,
     ).also { item ->
       item.menuItemBuilder = this@MenuItemBuilder
       item.tint = tintRes

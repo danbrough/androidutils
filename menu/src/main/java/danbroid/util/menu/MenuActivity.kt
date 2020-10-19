@@ -38,6 +38,7 @@ abstract class MenuActivity : AppCompatActivity() {
     setupActionBarWithNavController(navController)
   }
 
+
   override fun setTitle(title: CharSequence?) {
     super.setTitle(title)
     toolbar.title = title
@@ -45,10 +46,16 @@ abstract class MenuActivity : AppCompatActivity() {
 
   override fun onSupportNavigateUp() = navHostFragment.navController.navigateUp() || super.onSupportNavigateUp()
 
-  override fun onNewIntent(intent: Intent?) {
+  override fun onNewIntent(intent: Intent) {
     super.onNewIntent(intent)
-    log.warn("onNewIntent() $intent")
-    navHostFragment.navController.handleDeepLink(intent)
+    log.info("onNewIntent() $intent")
+    intent.data ?: return
+    val navController = navHostFragment.navController
+    if (!navController.handleDeepLink(intent)) {
+      val menuID = intent.dataString!!
+      log.debug("no deeplink for ${menuID} .. will try to find the menuID")
+      navController.navigateToMenuID(menuID)
+    }
   }
 }
 

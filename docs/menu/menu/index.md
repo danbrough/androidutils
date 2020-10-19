@@ -396,8 +396,6 @@ private val promptToContinue: MenuItemClickHandler = { callback ->
 |  Name|  Summary| 
 |---|---|
 | [danbroid.util.menu](danbroid.util.menu/index.md) | 
-| [danbroid.util.menu.navigation](danbroid.util.menu.navigation/index.md) | 
+| [danbroid.util.menu.model](danbroid.util.menu.model/index.md) | 
 | [danbroid.util.menu.ui](danbroid.util.menu.ui/index.md) | 
-| [danbroid.util.menu.ui.menulist](danbroid.util.menu.ui.menulist/index.md) | 
-| [danbroid.util.menu.ui.model](danbroid.util.menu.ui.model/index.md) | 
 

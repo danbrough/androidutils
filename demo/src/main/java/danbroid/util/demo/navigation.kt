@@ -40,7 +40,7 @@ fun NavController.createDemoNavGraph(context: Context, builder: NavGraphBuilder.
       }
 
       fragment<SettingsFragment>(DemoNavGraph.dest.settings) {
-        label = "Settings"
+        label = DemoNavGraph.deep_link.settings
         deepLink(DemoNavGraph.deep_link.settings)
       }
 

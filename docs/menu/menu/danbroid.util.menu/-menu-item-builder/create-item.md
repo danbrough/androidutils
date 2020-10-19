@@ -5,7 +5,7 @@
 # createItem  
 [androidJvm]  
 Content  
-fun [createItem](create-item.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), itemID: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [MenuItem](../-menu-item/index.md)  
+fun [createItem](create-item.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), itemID: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), depth: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [MenuItem](../-menu-item/index.md)  
 
 
 

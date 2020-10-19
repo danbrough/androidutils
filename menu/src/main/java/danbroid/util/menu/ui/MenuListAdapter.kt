@@ -2,6 +2,7 @@ package danbroid.util.menu.ui
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.graphics.drawable.Icon
 import android.view.ContextMenu
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.graphics.drawable.IconCompat
 import androidx.core.widget.ImageViewCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -76,7 +78,7 @@ open class MenuListAdapter(val context: Context,
     val itemView = viewHolder.itemView
     //log.trace("bind() payloads: $payloads")
     itemView.subtitle.visibility = if (menu.subtitle.isBlank()) {
-     // log.error("${menu.title} has no subtitle")
+      // log.error("${menu.title} has no subtitle")
       View.GONE
     } else View.VISIBLE
 
@@ -85,15 +87,15 @@ open class MenuListAdapter(val context: Context,
         r or t as Int
       }
       if (changes and MEDIA_ITEM_PAYLOAD_TITLE != 0) {
-      //  log.trace("MEDIA_ITEM_PAYLOAD_TITLE")
+        //  log.trace("MEDIA_ITEM_PAYLOAD_TITLE")
         itemView.title.text = menu.title
       }
       if (changes and MEDIA_ITEM_PAYLOAD_SUBTITLE != 0) {
-       // log.trace("MEDIA_ITEM_PAYLOAD_SUBTITLE")
+        // log.trace("MEDIA_ITEM_PAYLOAD_SUBTITLE")
         itemView.subtitle.text = menu.subtitle
       }
       if (changes and MEDIA_ITEM_PAYLOAD_IMAGE != 0) {
-       // log.trace("MEDIA_ITEM_PAYLOAD_IMAGE")
+        // log.trace("MEDIA_ITEM_PAYLOAD_IMAGE")
         setIcon(viewHolder, menu)
       }
       return
@@ -108,24 +110,32 @@ open class MenuListAdapter(val context: Context,
 
   protected open fun setIcon(viewHolder: MenuViewHolder, menu: MenuItem) {
     val itemView = viewHolder.itemView
+
+    val iconContext = itemView.icon.context
+
+    if (menu.tint != MenuItem.TINT_DISABLED) {
+      @ColorInt
+      val tint = if (menu.tint != 0) menu.tint.toResourceColour(iconContext) else
+        R.attr.dbMenuIconTint.toThemeColour(iconContext).let {
+          if (it != -1) it else
+            R.attr.colorPrimary.toThemeColour(iconContext)
+        }
+
+      itemView.icon.setTintColor(tint)
+    }
+
+    if (menu.icon != null) {
+      itemView.icon.setImageDrawable(menu.icon!!)
+      return
+    }
+
+
     val image = menu.imageURI
     val resID: Int = if (image == null)
       if (menu.isBrowsable) DEFAULT_FOLDER_ICON else DEFAULT_FILE_ICON
     else
       image.resolveDrawableURI(context)
 
-
-    val iconContext = itemView.icon.context
-
-    @ColorInt
-    val tint = if (menu.tint != 0) menu.tint.toResourceColour(iconContext) else
-      R.attr.dbMenuIconTint.toThemeColour(iconContext).let {
-        if (it != -1) it else
-          R.attr.colorPrimary.toThemeColour(iconContext)
-      }
-
-
-    itemView.icon.setTintColor(tint)
 
     //itemView.icon.setTintColor(if (menu.tint != 0) menu.tint else R.attr.colorPrimary.toThemeColour(context))
 
@@ -217,11 +227,11 @@ object MenuItemDiffCallback : DiffUtil.ItemCallback<MenuItem>() {
   override fun getChangePayload(oldItem: MenuItem, newItem: MenuItem): Any? {
     var payload = 0
     if (oldItem.title != newItem.title) {
-     // log.trace("ADDING MEDIA_ITEM_PAYLOAD_TITLE")
+      // log.trace("ADDING MEDIA_ITEM_PAYLOAD_TITLE")
       payload = payload or MEDIA_ITEM_PAYLOAD_TITLE
     }
     if (oldItem.subtitle != newItem.subtitle) {
-     // log.trace("ADDING MEDIA_ITEM_PAYLOAD_SUBTITLE")
+      // log.trace("ADDING MEDIA_ITEM_PAYLOAD_SUBTITLE")
       payload = payload or MEDIA_ITEM_PAYLOAD_SUBTITLE
     }
     if (oldItem.imageURI != newItem.imageURI) {

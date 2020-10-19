@@ -5,7 +5,7 @@
 # component10  
 [androidJvm]  
 Content  
-operator fun [component10](component10.md)(): [MenuItemBuilder](../-menu-item-builder/index.md)?  
+operator fun [component10](component10.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  
 
 
 

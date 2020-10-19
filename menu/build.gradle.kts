@@ -87,6 +87,7 @@ dependencies {
   api("com.github.bumptech.glide:glide:_")
 
   implementation("jp.wasabeef:glide-transformations:_")
+  implementation("com.mikepenz:iconics-core:_")
 
 
   implementation(AndroidX.navigation.fragmentKtx)

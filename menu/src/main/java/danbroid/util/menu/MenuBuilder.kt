@@ -1,8 +1,12 @@
 package danbroid.util.menu
 
+import android.content.Context
+import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes
 import androidx.annotation.MenuRes
 import androidx.annotation.StringRes
+import androidx.core.graphics.drawable.DrawableCompat
+import androidx.core.graphics.drawable.IconCompat
 import kotlin.reflect.full.createInstance
 
 @DslMarker
@@ -47,8 +51,7 @@ open class MenuBuilder {
   open var imageID: Int = 0
 
   @MenuDSL
-  @MenuRes
-  open var menuID: Int = 0
+  open var icon: DrawableProvider? = null
 
 
   @MenuDSL
@@ -115,7 +118,7 @@ inline fun <reified T : MenuBuilder> T.menu(
 
 
 @MenuDSL
-inline fun <reified T : MenuBuilder> getRootMenu(
+inline fun <reified T : MenuBuilder> rootMenu(
     builder: T = T::class.createInstance(),
     block: T.() -> Unit
 ) = builder.apply(block)

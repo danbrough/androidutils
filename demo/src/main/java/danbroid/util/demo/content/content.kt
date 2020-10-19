@@ -3,6 +3,9 @@ package danbroid.util.demo.content
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.findNavController
+import com.mikepenz.iconics.IconicsDrawable
+import com.mikepenz.iconics.typeface.library.googlematerial.GoogleMaterial
+import com.mikepenz.iconics.utils.sizeDp
 import danbroid.util.demo.DemoNavGraph
 import danbroid.util.demo.R
 import danbroid.util.demo.URI_CONTENT_PREFIX
@@ -13,7 +16,7 @@ import org.slf4j.LoggerFactory
 import java.util.*
 
 private val log = LoggerFactory.getLogger("danbroid.util.demo.menu2test.content")
-val rootContent = getRootMenu<MenuItemBuilder> {
+val rootContent = rootMenu<MenuItemBuilder> {
   id = URI_CONTENT_PREFIX
   titleID = R.string.app_name
 
@@ -22,7 +25,7 @@ val rootContent = getRootMenu<MenuItemBuilder> {
     subtitle = "subtitle for menu1"
 
     onClick = {
-      Toast.makeText(context, "Opening menu:$id in 1 seconds", Toast.LENGTH_SHORT).show()
+      Toast.makeText(context, "Opening menu ${this@menu.id} in 1 second", Toast.LENGTH_SHORT).show()
       delay(1000)
       it.invoke(true)
     }
@@ -39,28 +42,38 @@ val rootContent = getRootMenu<MenuItemBuilder> {
 
 
       menu {
-        title = "Sub-sub menu 1"
+        title = "Home Action"
         subtitle = "calls navController?.navigateToHome()"
+        icon = Icons.iconicsIcon(GoogleMaterial.Icon.gmd_home)
+
         onClick = {
           findNavController().navigateToHome()
         }
       }
 
 
-
       menu {
-        title = "CHange Test"
+        title = "Change Test"
+        subtitle = "Updates the model using onClick"
+        var counter = 1
+
         onClick = {
           val model = menuViewModel()
           log.trace("change test on click child count: ${model.children.value?.size}")
           model.children.value?.map { child ->
             @Suppress("LABEL_NAME_CLASH")
             if (child.id == this@menu.id) {
-              child.copy(subtitle = "The date is ${Date()}").also {
+              //Found the child item
+              //update the subtitle field of the builder to make the change persistant
+              subtitle = "Counter: ${counter++}"
+
+              //need to copy rather than modify for the [danbroid.util.menu.ui.MenuListAdapter]
+              child.copy(subtitle = subtitle).also {
                 it.menuItemBuilder = child.menuItemBuilder
               }
             } else child
           }?.also {
+            //update the model with the new children
             model.updateChildren(it)
           }
         }
@@ -69,8 +82,9 @@ val rootContent = getRootMenu<MenuItemBuilder> {
 
       menu {
         id = DemoNavGraph.deep_link.home
-        title = "Sub-sub menu 1"
+        title = "Deeplink to Home"
         subtitle = "uses deeplink ${DemoNavGraph.deep_link.home} as id"
+        icon = Icons.iconicsIcon(GoogleMaterial.Icon.gmd_home)
       }
     }
 
@@ -80,7 +94,7 @@ val rootContent = getRootMenu<MenuItemBuilder> {
     title = "Menu 2"
     subtitle = """imageURI = "https://picsum.photos/128"
 roundedCorners = true"""
-    imageURI = "https://picsum.photos/200"
+    imageURI = "https://picsum.photos/128"
     roundedCorners = true
     var count = 0
 
@@ -113,6 +127,8 @@ roundedCorners = true"""
     }
   }
 
+  iconExamples()
+
 
   menu {
     id = DemoNavGraph.deep_link.settings
@@ -139,3 +155,4 @@ private val promptToContinue: MenuItemClickHandler = { callback ->
     show()
   }
 }
+

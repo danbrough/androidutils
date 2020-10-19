@@ -1,0 +1,74 @@
+package danbroid.util.demo.content
+
+import android.graphics.Color
+import com.mikepenz.iconics.Iconics
+import com.mikepenz.iconics.IconicsDrawable
+import com.mikepenz.iconics.typeface.GenericFont
+import com.mikepenz.iconics.typeface.library.fontawesome.FontAwesome
+import com.mikepenz.iconics.typeface.library.googlematerial.GoogleMaterial
+import com.mikepenz.iconics.utils.colorInt
+import danbroid.util.demo.R
+import danbroid.util.demo.URI_CONTENT_PREFIX
+import danbroid.util.menu.Icons
+import danbroid.util.menu.MenuItem
+import danbroid.util.menu.MenuItemBuilder
+import danbroid.util.menu.menu
+
+internal fun MenuItemBuilder.iconExamples() =
+    menu {
+
+      id = "$URI_CONTENT_PREFIX/icons"
+      title = "Icon Examples"
+      imageURI = "https://picsum.photos/128?b"
+
+      menu {
+        title = "Icon by imageID"
+        subtitle = "imageID = R.drawable.ic_folder_open"
+        imageID = R.drawable.ic_folder_open
+      }
+
+      menu {
+        title = "Icon with tint"
+        subtitle = "tintRes = R.color.colorAccent"
+        tintRes = R.color.colorAccent
+      }
+
+      menu {
+        title = "Rounded Corners"
+        subtitle = "roundedCorners = true"
+        imageURI = "https://picsum.photos/128?c"
+        roundedCorners = true
+      }
+
+      menu {
+        title = "Square Corners"
+        subtitle = "roundedCorners = false"
+        imageURI = "https://picsum.photos/128?c"
+        roundedCorners = false
+      }
+
+      menu {
+        title = "Resource ID Icon"
+        subtitle = "icon = R.drawable.ic_audiotrack.toResourceIDIcon()"
+        icon = Icons.resourceIcon(R.drawable.ic_audiotrack)
+      }
+
+
+      menu {
+        title = "Iconics Icon"
+        subtitle = "icon = Icons.iconicsIcon(GoogleMaterial.Icon.gmd_shopping_cart)"
+        icon = Icons.iconicsIcon(GoogleMaterial.Icon.gmd_shopping_cart)
+      }
+
+      menu {
+        title = "Iconics Icon"
+        subtitle = "icon = Icons.iconicsIcon(FontAwesome.Icon.faw_android)"
+        //disable default tint
+        tintRes = MenuItem.TINT_DISABLED
+        icon = Icons.iconicsIcon(FontAwesome.Icon.faw_android) {
+          colorInt = Color.RED
+
+        }
+      }
+
+    }
