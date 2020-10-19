@@ -1,12 +1,12 @@
-package danbroid.menu2test.ui
+package danbroid.util.demo.ui
 
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
-import danbroid.menu2test.R
+import danbroid.util.demo.R
 
 class SettingsFragment : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-    setPreferencesFromResource(R.xml.settings_prefs,rootKey)
+    setPreferencesFromResource(R.xml.settings_prefs, rootKey)
   }
 }
 

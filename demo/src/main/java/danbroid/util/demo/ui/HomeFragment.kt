@@ -1,15 +1,12 @@
-package danbroid.menu2test.ui
+package danbroid.util.demo.ui
 
-import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import danbroid.menu2test.R
-import danbroid.menu2test.URI_CONTENT_PREFIX
+import danbroid.util.demo.R
+import danbroid.util.demo.URI_CONTENT_PREFIX
 import danbroid.util.menu.navigateToMenuID
 import kotlinx.android.synthetic.main.fragment_home.*
 

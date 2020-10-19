@@ -1,8 +1,7 @@
-package danbroid.menu2test
+package danbroid.util.demo
 
 import androidx.navigation.NavController
-import androidx.navigation.NavGraph
-import danbroid.menu2test.content.rootContent
+import danbroid.util.demo.content.rootContent
 import danbroid.util.menu.MenuActivity
 
 

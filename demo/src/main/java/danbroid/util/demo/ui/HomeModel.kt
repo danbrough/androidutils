@@ -1,5 +1,4 @@
-package danbroid.menu2test.ui
-
+package danbroid.util.demo.ui
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -1,13 +1,11 @@
-package danbroid.menu2test
+package danbroid.util.demo
 
 import android.content.Context
 import androidx.navigation.NavController
-import androidx.navigation.NavGraph
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.fragment.fragment
-import androidx.navigation.navDeepLink
-import danbroid.menu2test.ui.HomeFragment
-import danbroid.menu2test.ui.SettingsFragment
+import danbroid.util.demo.ui.HomeFragment
+import danbroid.util.demo.ui.SettingsFragment
 import danbroid.util.menu.MenuNavGraph
 import danbroid.util.menu.createMenuNavGraph
 import danbroid.util.misc.UniqueIDS

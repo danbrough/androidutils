@@ -1,18 +1,18 @@
-package danbroid.menu2test.content
+package danbroid.util.demo.content
 
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.findNavController
-import danbroid.menu2test.DemoNavGraph
-import danbroid.menu2test.R
-import danbroid.menu2test.URI_CONTENT_PREFIX
+import danbroid.util.demo.DemoNavGraph
+import danbroid.util.demo.R
+import danbroid.util.demo.URI_CONTENT_PREFIX
 import danbroid.util.menu.*
 import danbroid.util.menu.model.menuViewModel
 import kotlinx.coroutines.delay
 import org.slf4j.LoggerFactory
 import java.util.*
 
-private val log = LoggerFactory.getLogger("danbroid.menu2test.content")
+private val log = LoggerFactory.getLogger("danbroid.util.demo.menu2test.content")
 val rootContent = getRootMenu<MenuItemBuilder> {
   id = URI_CONTENT_PREFIX
   titleID = R.string.app_name
@@ -46,12 +46,15 @@ val rootContent = getRootMenu<MenuItemBuilder> {
         }
       }
 
+
+
       menu {
         title = "CHange Test"
         onClick = {
           val model = menuViewModel()
           log.trace("change test on click child count: ${model.children.value?.size}")
           model.children.value?.map { child ->
+            @Suppress("LABEL_NAME_CLASH")
             if (child.id == this@menu.id) {
               child.copy(subtitle = "The date is ${Date()}").also {
                 it.menuItemBuilder = child.menuItemBuilder
@@ -127,10 +130,10 @@ private val promptToContinue: MenuItemClickHandler = { callback ->
   AlertDialog.Builder(requireContext()).apply {
     setTitle(android.R.string.dialog_alert_title)
     setMessage("Do you want to continue?")
-    setPositiveButton(android.R.string.ok) { dialog, which ->
+    setPositiveButton(android.R.string.ok) { _, _ ->
       callback(true)
     }
-    setNegativeButton(android.R.string.cancel) { dialog, which ->
+    setNegativeButton(android.R.string.cancel) { _, _ ->
       callback(false)
     }
     show()
