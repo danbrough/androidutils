@@ -2,10 +2,12 @@ package danbroid.menu2test.content
 
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.navigation.fragment.findNavController
 import danbroid.menu2test.DemoNavGraph
 import danbroid.menu2test.R
 import danbroid.menu2test.URI_CONTENT_PREFIX
 import danbroid.util.menu.*
+import danbroid.util.menu.model.menuViewModel
 import kotlinx.coroutines.delay
 import org.slf4j.LoggerFactory
 import java.util.*
@@ -40,22 +42,23 @@ val rootContent = getRootMenu<MenuItemBuilder> {
         title = "Sub-sub menu 1"
         subtitle = "calls navController?.navigateToHome()"
         onClick = {
-          navController.navigateToHome()
+          findNavController().navigateToHome()
         }
       }
 
       menu {
         title = "CHange Test"
         onClick = {
-          log.trace("change test on click child count: ${children.value?.size}")
-          children.value?.map { child ->
-            if (child.id == id) {
+          val model = menuViewModel()
+          log.trace("change test on click child count: ${model.children.value?.size}")
+          model.children.value?.map { child ->
+            if (child.id == this@menu.id) {
               child.copy(subtitle = "The date is ${Date()}").also {
                 it.menuItemBuilder = child.menuItemBuilder
               }
             } else child
           }?.also {
-            updateChildren(it)
+            model.updateChildren(it)
           }
         }
       }
@@ -78,15 +81,15 @@ roundedCorners = true"""
     roundedCorners = true
     var count = 0
 
-    onCreate = { item ->
+    onCreate = { item, model ->
       while (true) {
         count++
         item.title = "Menu 2: count: ${count}"
-        updateItem(item)
+        model.updateItem(item)
         item.children = item.children?.mapIndexed { n, child ->
           child.copy(title = "Submenu: $n: Count: $count", subtitle = "${Date()}")
         }?.also {
-          updateChildren(it)
+          model.updateChildren(it)
         }
 
         delay(1000)
@@ -121,7 +124,7 @@ roundedCorners = true"""
 }
 
 private val promptToContinue: MenuItemClickHandler = { callback ->
-  AlertDialog.Builder(context).apply {
+  AlertDialog.Builder(requireContext()).apply {
     setTitle(android.R.string.dialog_alert_title)
     setMessage("Do you want to continue?")
     setPositiveButton(android.R.string.ok) { dialog, which ->

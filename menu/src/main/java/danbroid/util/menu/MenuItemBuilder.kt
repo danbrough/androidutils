@@ -9,9 +9,9 @@ import danbroid.util.menu.model.MenuModel
 import danbroid.util.resource.toResourceURI
 
 
-typealias LiveItemProducer = suspend MenuModel.(item: MenuItem) -> Unit
+typealias LiveItemProducer = suspend Fragment.(item: MenuItem, menuModel: MenuModel) -> Unit
 
-typealias MenuItemClickHandler = suspend MenuModel.(continueNavigation: (Boolean) -> Unit) -> Unit
+typealias MenuItemClickHandler = suspend Fragment.(continueNavigation: (Boolean) -> Unit) -> Unit
 
 class MenuItemBuilder : MenuBuilder() {
 
@@ -35,19 +35,19 @@ class MenuItemBuilder : MenuBuilder() {
 
   fun createItem(context: Context, itemID: String = id, depth: Int = 1): MenuItem {
     val title = if (titleID != 0) context.getString(titleID) else title
-        ?: context.getString(R.string.title_default_menu)
+      ?: context.getString(R.string.title_default_menu)
     val subtitle = if (subtitleID != 0) context.getString(subtitleID) else subtitle
     val image = if (imageID != 0) imageID.toResourceURI(context).toString() else imageURI
     return MenuItem(
-        itemID,
-        title,
-        subtitle,
-        image,
-        menuID,
-        contextMenuID,
-        isBrowsable,
-        isVisible,
-        inlineChildren,
+      itemID,
+      title,
+      subtitle,
+      image,
+      menuID,
+      contextMenuID,
+      isBrowsable,
+      isVisible,
+      inlineChildren,
     ).also { item ->
       item.menuItemBuilder = this@MenuItemBuilder
       item.tint = tintRes

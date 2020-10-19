@@ -37,7 +37,7 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
       log.trace("clicked $menuItem builder:${menuItem.menuItemBuilder}")
       menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
         lifecycleScope.launch {
-          clickHandler(model) { useDefaultAction ->
+          clickHandler(this@MenuFragment) { useDefaultAction ->
             if (useDefaultAction) menuClickHandler.invoke(this@MenuFragment, menuItem)
           }
         }
