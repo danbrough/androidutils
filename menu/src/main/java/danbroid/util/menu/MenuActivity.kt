@@ -2,6 +2,7 @@ package danbroid.util.menu
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph
@@ -10,8 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-abstract class MenuActivity : AppCompatActivity() {
-
+abstract class MenuActivity(@LayoutRes layoutID: Int = R.layout.activity_main) : AppCompatActivity(layoutID) {
 
   init {
     MenuConfiguration.rootMenu = ::getRootMenu
@@ -26,7 +26,7 @@ abstract class MenuActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
+
     setSupportActionBar(toolbar)
 
     val navController = navHostFragment.navController

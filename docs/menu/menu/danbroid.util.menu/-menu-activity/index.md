@@ -3,7 +3,7 @@
 
 
 # MenuActivity  
- [androidJvm] abstract class [MenuActivity](index.md) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html)   
+ [androidJvm] abstract class [MenuActivity](index.md)(@[LayoutRes](https://developer.android.com/reference/kotlin/androidx/annotation/LayoutRes.html)()**layoutID**: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html)   
 
 
 ## Functions  
