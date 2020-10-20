@@ -22,6 +22,8 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import danbroid.util.menu.MENU_TINT_DEFAULT
+import danbroid.util.menu.MENU_TINT_DISABLED
 import danbroid.util.menu.MenuItem
 import danbroid.util.menu.R
 import danbroid.util.resource.*
@@ -113,7 +115,7 @@ open class MenuListAdapter(val context: Context,
 
     val iconContext = itemView.icon.context
 
-    if (menu.tint != MenuItem.TINT_DISABLED) {
+    if (menu.tint != MENU_TINT_DISABLED) {
       @ColorInt
       val tint = if (menu.tint != 0) menu.tint.toResourceColour(iconContext) else
         R.attr.dbMenuIconTint.toThemeColour(iconContext).let {

@@ -39,4 +39,6 @@
 |  Name|  Summary| 
 |---|---|
 | [defaultMenuNavOptions](index.md#danbroid.util.menu//defaultMenuNavOptions/#/PointingToDeclaration/)|  [androidJvm] <br><br>Provides animations for menu transitions<br><br>val [defaultMenuNavOptions](index.md#danbroid.util.menu//defaultMenuNavOptions/#/PointingToDeclaration/): [NavOptionsBuilder](https://developer.android.com/reference/kotlin/androidx/navigation/NavOptionsBuilder.html).() -> [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)   <br>
+| [MENU_TINT_DEFAULT](index.md#danbroid.util.menu//MENU_TINT_DEFAULT/#/PointingToDeclaration/)|  [androidJvm] const val [MENU_TINT_DEFAULT](index.md#danbroid.util.menu//MENU_TINT_DEFAULT/#/PointingToDeclaration/): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>
+| [MENU_TINT_DISABLED](index.md#danbroid.util.menu//MENU_TINT_DISABLED/#/PointingToDeclaration/)|  [androidJvm] const val [MENU_TINT_DISABLED](index.md#danbroid.util.menu//MENU_TINT_DISABLED/#/PointingToDeclaration/): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>
 

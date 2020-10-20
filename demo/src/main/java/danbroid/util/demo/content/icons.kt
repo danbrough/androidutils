@@ -1,16 +1,16 @@
 package danbroid.util.demo.content
 
-import android.graphics.Color
-import com.mikepenz.iconics.Iconics
-import com.mikepenz.iconics.IconicsDrawable
-import com.mikepenz.iconics.typeface.GenericFont
+import com.mikepenz.iconics.IconicsSize
 import com.mikepenz.iconics.typeface.library.fontawesome.FontAwesome
 import com.mikepenz.iconics.typeface.library.googlematerial.GoogleMaterial
-import com.mikepenz.iconics.utils.colorInt
+import com.mikepenz.iconics.utils.backgroundColorRes
+import com.mikepenz.iconics.utils.backgroundContourColorRes
+import com.mikepenz.iconics.utils.backgroundContourWidth
+import com.mikepenz.iconics.utils.colorRes
 import danbroid.util.demo.R
 import danbroid.util.demo.URI_CONTENT_PREFIX
 import danbroid.util.menu.Icons
-import danbroid.util.menu.MenuItem
+import danbroid.util.menu.MENU_TINT_DISABLED
 import danbroid.util.menu.MenuItemBuilder
 import danbroid.util.menu.menu
 
@@ -19,6 +19,7 @@ internal fun MenuItemBuilder.iconExamples() =
 
       id = "$URI_CONTENT_PREFIX/icons"
       title = "Icon Examples"
+      subtitle = "Examples of how to configure the icon"
       imageURI = "https://picsum.photos/128?b"
 
       menu {
@@ -64,10 +65,12 @@ internal fun MenuItemBuilder.iconExamples() =
         title = "Iconics Icon"
         subtitle = "icon = Icons.iconicsIcon(FontAwesome.Icon.faw_android)"
         //disable default tint
-        tintRes = MenuItem.TINT_DISABLED
+        tintRes = MENU_TINT_DISABLED
         icon = Icons.iconicsIcon(FontAwesome.Icon.faw_android) {
-          colorInt = Color.RED
-
+          colorRes = R.color.colorAccent
+          backgroundColorRes = R.color.colorPrimaryLight
+          backgroundContourWidth = IconicsSize.dp(2)
+          backgroundContourColorRes = R.color.colorPrimary
         }
       }
 

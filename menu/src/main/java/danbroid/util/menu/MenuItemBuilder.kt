@@ -13,6 +13,7 @@ typealias LiveItemProducer = suspend Fragment.(item: MenuItem, menuModel: MenuMo
 
 typealias MenuItemClickHandler = suspend Fragment.(continueNavigation: (Boolean) -> Unit) -> Unit
 
+
 class MenuItemBuilder : MenuBuilder() {
 
   @ColorRes
@@ -71,4 +72,4 @@ class MenuItemBuilder : MenuBuilder() {
 }
 
 
-private val log = org.slf4j.LoggerFactory.getLogger(MenuItemBuilder::class.java)
+//private val log = org.slf4j.LoggerFactory.getLogger(MenuItemBuilder::class.java)

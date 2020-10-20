@@ -3,10 +3,9 @@ package danbroid.util.menu
 import android.graphics.drawable.Drawable
 import androidx.annotation.ColorRes
 import androidx.annotation.MenuRes
-import androidx.core.graphics.drawable.IconCompat
-import danbroid.util.menu.model.MenuModel
-import kotlin.reflect.KProperty
 
+const val MENU_TINT_DISABLED = -1
+const val MENU_TINT_DEFAULT = 0
 
 data class MenuItem(
     var id: String,
@@ -22,13 +21,10 @@ data class MenuItem(
     var inlineChildren: Boolean = false,
 
     @ColorRes
-    var tint: Int = TINT_DEFAULT,
+    var tint: Int = MENU_TINT_DISABLED,
     var roundedCorners: Boolean = false
 ) {
-  companion object {
-    const val TINT_DISABLED = -1
-    const val TINT_DEFAULT = 0
-  }
+
 
   var menuItemBuilder: MenuItemBuilder? = null
 
