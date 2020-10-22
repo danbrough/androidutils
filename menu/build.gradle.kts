@@ -87,11 +87,11 @@ dependencies {
   api("com.github.bumptech.glide:glide:_")
 
   implementation("jp.wasabeef:glide-transformations:_")
-  implementation("com.mikepenz:iconics-core:_")
+  api("com.mikepenz:iconics-core:_")
 
 
-  implementation(AndroidX.navigation.fragmentKtx)
-  implementation(AndroidX.navigation.uiKtx)
+  api(AndroidX.navigation.fragmentKtx)
+  api(AndroidX.navigation.uiKtx)
 
   androidTestImplementation(project(":slf4j"))
   androidTestImplementation(AndroidX.test.rules)

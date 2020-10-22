@@ -124,4 +124,4 @@ inline fun <reified T : MenuBuilder> rootMenu(
 ) = builder.apply(block)
 
 
-private val log = org.slf4j.LoggerFactory.getLogger(MenuBuilder::class.java)
+//private val log = org.slf4j.LoggerFactory.getLogger(MenuBuilder::class.java)

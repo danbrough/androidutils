@@ -54,7 +54,6 @@ internal fun MenuItemBuilder.iconExamples() =
         icon = Icons.resourceIcon(R.drawable.ic_audiotrack)
       }
 
-
       menu {
         title = "Iconics Icon"
         subtitle = "icon = Icons.iconicsIcon(GoogleMaterial.Icon.gmd_shopping_cart)"
