@@ -1,4 +1,3 @@
-
 plugins {
   id("com.android.library")
   kotlin("android")
@@ -46,8 +45,6 @@ android {
   }
 
 
-
-
 }
 
 val sourcesJar by tasks.registering(Jar::class) {
@@ -58,7 +55,7 @@ val sourcesJar by tasks.registering(Jar::class) {
 afterEvaluate {
   publishing {
     publications {
-      val release by publications.registering(MavenPublication::class) {
+      val release by registering(MavenPublication::class) {
         from(components["release"])
         artifact(sourcesJar.get())
         artifactId = "menu"
