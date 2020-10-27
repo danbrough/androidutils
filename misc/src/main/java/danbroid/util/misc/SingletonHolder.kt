@@ -1,5 +1,7 @@
 package danbroid.util.misc
 
+import java.lang.ref.WeakReference
+
 
 /**
  * Usage:
@@ -21,6 +23,19 @@ open class SingletonHolder<out T : Any, in A>(creator: (A) -> T) {
       creator = null
     }
   }
-
 }
 
+/**
+ * A singleton holder that uses a [WeakReference]
+ */
+open class WeakSingletonHolder<out T : Any, in A>(val creator: (A) -> T) {
+
+  @Volatile
+  private var instance: WeakReference<T>? = null
+
+  fun getInstance(arg: A): T = instance?.get() ?: synchronized(this) {
+    instance?.get() ?: creator.invoke(arg).also {
+      instance = WeakReference(it)
+    }
+  }
+}

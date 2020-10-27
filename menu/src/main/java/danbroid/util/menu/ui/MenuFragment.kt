@@ -1,6 +1,8 @@
 package danbroid.util.menu.ui
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +15,7 @@ import danbroid.util.menu.model.MenuModel
 import danbroid.util.menu.model.menuViewModel
 import kotlinx.android.synthetic.main.fragment_menu_list.*
 import kotlinx.coroutines.launch
+import kotlin.concurrent.timer
 
 class MenuFragment : Fragment(R.layout.fragment_menu_list) {
 
