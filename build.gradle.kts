@@ -57,3 +57,39 @@ tasks.dokkaGfmMultiModule {
   outputDirectory.set(file("docs"))
 }
 
+subprojects {
+  afterEvaluate {
+    (extensions.findByType(com.android.build.gradle.LibraryExtension::class)
+        ?: extensions.findByType(com.android.build.gradle.AppExtension::class))?.apply {
+
+      if (this is com.android.build.gradle.LibraryExtension) {
+
+        val publishing =
+            extensions.findByType(PublishingExtension::class.java) ?: return@afterEvaluate
+
+        val sourcesJar by tasks.registering(Jar::class) {
+          archiveClassifier.set("sources")
+          from(sourceSets.getByName("main").java.srcDirs)
+        }
+
+        afterEvaluate {
+          publishing.apply {
+            val projectName = name
+            publications {
+              val release by registering(MavenPublication::class) {
+                components.forEach {
+                  println("Publication component: ${it.name}")
+                }
+                from(components["release"])
+                artifact(sourcesJar.get())
+                artifactId = projectName
+                groupId = ProjectVersions.GROUP_ID
+                version = ProjectVersions.VERSION_NAME
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
