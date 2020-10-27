@@ -3,6 +3,7 @@ $dokka.linkExtension:md
 
 danbroid.util.event
 danbroid.util.format
+danbroid.util.intent
 danbroid.util.misc
 danbroid.util.prefs
 danbroid.util.resource

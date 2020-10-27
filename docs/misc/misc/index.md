@@ -77,6 +77,7 @@ com.github.danbrough.androidutils:resource:master-SNAPSHOT
 |---|---|
 | [danbroid.util.event](danbroid.util.event/index.md) | 
 | [danbroid.util.format](danbroid.util.format/index.md) | 
+| [danbroid.util.intent](danbroid.util.intent/index.md) | 
 | [danbroid.util.misc](danbroid.util.misc/index.md) | 
 | [danbroid.util.prefs](danbroid.util.prefs/index.md) | 
 | [danbroid.util.resource](danbroid.util.resource/index.md) | 

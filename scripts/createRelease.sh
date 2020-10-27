@@ -55,10 +55,9 @@ wget "https://jitpack.io/com/github/danbrough/androidutils/${VERSION_NAME}/util-
 sleep 5
 BUILD_URL="https://jitpack.io/com/github/danbrough/androidutils/${VERSION_NAME}/build.log"
 
-while :; do
+sleep 10
 echo loading $BUILD_URL
 curl "$BUILD_URL" && exit 0
-done
 
 
 

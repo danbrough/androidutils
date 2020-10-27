@@ -20,12 +20,18 @@ android {
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     consumerProguardFiles("consumer-rules.pro")
   }
+
   lintOptions {
     isAbortOnError = false
   }
+
   compileOptions {
     sourceCompatibility = ProjectVersions.JAVA_VERSION
     targetCompatibility = ProjectVersions.JAVA_VERSION
+  }
+
+  kotlinOptions {
+    jvmTarget = "1.8"
   }
 
   buildTypes {
@@ -68,5 +74,6 @@ dependencies {
   implementation("org.slf4j:slf4j-api:_")
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
   implementation(AndroidX.appCompat)
+  implementation(AndroidX.coreKtx)
   androidTestImplementation(project(":slf4j"))
 }
