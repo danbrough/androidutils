@@ -46,9 +46,8 @@ git add .
 git commit -am "$VERSION_NAME"
 git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"
 
-ssh h1 mkdir -p /srv/https/maven/com/github/danbrough/androidutils
-rsync -avHSx  ~/.m2/repository/com/github/danbrough/androidutils/ h1:/srv/https/maven/com/github/danbrough/androidutils/
 
+rsync -avHSx /home/dan/.m2/repository/com/github/danbrough/ h1:/srv/https/maven/com/github/danbrough/
 sleep 1
 wget "https://jitpack.io/com/github/danbrough/androidutils/${VERSION_NAME}/util-${VERSION_NAME}.jar" -O /tmp/rubbish.jar &
 sleep 5

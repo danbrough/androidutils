@@ -10,7 +10,7 @@ import danbroid.util.resource.toResourceURI
 import kotlinx.coroutines.CoroutineScope
 
 
-typealias LiveItemProducer = suspend (item: MenuItem, menuModel: MenuModel) -> Unit
+typealias MenuItemOnCreate = suspend Fragment.(item: MenuItem) -> Unit
 
 typealias MenuItemClickHandler = suspend Fragment.() -> Boolean
 
@@ -20,7 +20,7 @@ class MenuItemBuilder : MenuBuilder() {
   @ColorRes
   var tintRes: Int = 0
 
- // var onCreate: LiveItemProducer? = null
+  var onCreate: MenuItemOnCreate? = null
 
   var roundedCorners: Boolean = true
 

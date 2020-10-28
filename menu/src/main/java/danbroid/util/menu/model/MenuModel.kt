@@ -23,18 +23,18 @@ class MenuModel(fragment: Fragment, val menuID: String) : ViewModel() {
     log.info("CREATED MODEL FOR $menuID")
 
     viewModelScope.launch {
-      invalidate()
+      invalidate(fragment)
     }
 
   }
 
-  suspend fun invalidate() {
+  suspend fun invalidate(fragment: Fragment) {
     log.trace("invalidate()")
     withContext(Dispatchers.Main) {
       val builder = MenuConfiguration.rootMenu.invoke(menuID).find(menuID)
-          ?: throw IllegalArgumentException("menuID $menuID not found in Configration.rootMenu")
+        ?: throw IllegalArgumentException("menuID $menuID not found in Configration.rootMenu")
       builder.createItem(context).also { item ->
-        //builder.onCreate?.invoke(item, this@MenuModel)
+        builder.onCreate?.invoke(fragment, item)
         _menu.value = item
         _children.value = item.children
       }
@@ -57,7 +57,7 @@ class MenuModel(fragment: Fragment, val menuID: String) : ViewModel() {
   companion object {
 
     class Factory(val fragment: Fragment, val menuID: String) :
-        ViewModelProvider.NewInstanceFactory() {
+      ViewModelProvider.NewInstanceFactory() {
       @Suppress("UNCHECKED_CAST")
       override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return MenuModel(fragment, menuID) as T
@@ -66,14 +66,14 @@ class MenuModel(fragment: Fragment, val menuID: String) : ViewModel() {
 
     @JvmStatic
     fun createModel(fragment: Fragment, menuID: String) =
-        ViewModelProvider(fragment, Factory(fragment, menuID))
-            .get(menuID, MenuModel::class.java)
+      ViewModelProvider(fragment, Factory(fragment, menuID))
+        .get(menuID, MenuModel::class.java)
   }
 
 }
 
 fun Fragment.menuViewModel(): MenuModel =
-    MenuModel.createModel(this, requireArguments().getString(MenuNavGraph.arg.menu)!!)
+  MenuModel.createModel(this, requireArguments().getString(MenuNavGraph.arg.menu)!!)
 
 
 private val log = org.slf4j.LoggerFactory.getLogger(MenuModel::class.java)
