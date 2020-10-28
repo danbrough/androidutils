@@ -4,14 +4,14 @@
 
 # getContentIfNotHandled  
 [androidJvm]  
-Brief description  
+Content  
+fun [getContentIfNotHandled](get-content-if-not-handled.md)(): [T](index.md)?  
+More info  
 
 
 Returns the content and prevents its use again.
 
   
-Content  
-fun [getContentIfNotHandled](get-content-if-not-handled.md)(): [T](index.md)?  
 
 
 

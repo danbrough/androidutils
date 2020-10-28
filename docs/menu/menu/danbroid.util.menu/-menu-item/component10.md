@@ -5,7 +5,7 @@
 # component10  
 [androidJvm]  
 Content  
-operator fun [component10](component10.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  
+operator fun [component10](component10.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
 
 
 

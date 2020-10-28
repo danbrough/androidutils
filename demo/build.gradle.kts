@@ -99,7 +99,7 @@ dependencies {
   implementation("com.mikepenz:google-material-typeface:_")
   implementation("com.mikepenz:iconics-core:_")
 
-  implementation("org.jetbrains.kotlin:kotlin-reflect:_")
+ // implementation("org.jetbrains.kotlin:kotlin-reflect:_")
   //implementation("com.mikepenz:material-design-iconic-typeface:2.2.0.7-kotlin")
   //implementation("com.mikepenz:fontawesome-typeface:5.9.0.1-kotlin@aar")
   //implementation("com.mikepenz:google-material-typeface:3.0.1.5.original-kotlin@aar")

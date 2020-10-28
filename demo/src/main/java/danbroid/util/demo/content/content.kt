@@ -11,14 +11,33 @@ import danbroid.util.demo.R
 import danbroid.util.demo.URI_CONTENT_PREFIX
 import danbroid.util.menu.*
 import danbroid.util.menu.model.menuViewModel
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
 import org.slf4j.LoggerFactory
 import java.util.*
+import kotlin.coroutines.suspendCoroutine
 
 private val log = LoggerFactory.getLogger("danbroid.util.demo.menu2test.content")
+
+@ExperimentalCoroutinesApi
 val rootContent = rootMenu<MenuItemBuilder> {
   id = URI_CONTENT_PREFIX
   titleID = R.string.app_name
+
+  menu {
+    title = "Dynamic Children"
+    val random = Random()
+    onClick = {
+      children?.clear()
+      (0 until random.nextInt(10) + 1).forEach {
+        menu {
+          title = "Child $it"
+          subtitle = "${Date()}"
+        }
+      }
+      true
+    }
+  }
 
   menu {
     title = "Menu 1"
@@ -27,7 +46,7 @@ val rootContent = rootMenu<MenuItemBuilder> {
     onClick = {
       Toast.makeText(context, "Opening menu ${this@menu.id} in 1 second", Toast.LENGTH_SHORT).show()
       delay(1000)
-      it.invoke(true)
+      true
     }
 
     menu {
@@ -48,6 +67,7 @@ val rootContent = rootMenu<MenuItemBuilder> {
 
         onClick = {
           findNavController().navigateToHome()
+          false
         }
       }
 
@@ -60,22 +80,25 @@ val rootContent = rootMenu<MenuItemBuilder> {
         onClick = {
           val model = menuViewModel()
           log.trace("change test on click child count: ${model.children.value?.size}")
-          model.children.value?.map { child ->
-            @Suppress("LABEL_NAME_CLASH")
-            if (child.id == this@menu.id) {
-              //Found the child item
-              //update the subtitle field of the builder to make the change persistant
-              subtitle = "Counter: ${counter++}"
+          subtitle = "Counter: ${counter++}"
+          model.invalidate()
+          /*  model.children.value?.map { child ->
+              @Suppress("LABEL_NAME_CLASH")
+              if (child.id == this@menu.id) {
+                //Found the child item
+                //update the subtitle field of the builder to make the change persistant
+                subtitle = "Counter: ${counter++}"
 
-              //need to copy rather than modify for the [danbroid.util.menu.ui.MenuListAdapter]
-              child.copy(subtitle = subtitle).also {
-                it.menuItemBuilder = child.menuItemBuilder
-              }
-            } else child
-          }?.also {
-            //update the model with the new children
-            model.updateChildren(it)
-          }
+                //need to copy rather than modify for the [danbroid.util.menu.ui.MenuListAdapter]
+                child.copy(subtitle = subtitle).also {
+                  it.menuItemBuilder = child.menuItemBuilder
+                }
+              } else child
+            }?.also {
+              //update the model with the new children
+              model.updateChildren(it)
+            }*/
+          true
         }
       }
 
@@ -98,7 +121,7 @@ roundedCorners = true"""
     roundedCorners = true
     var count = 0
 
-    onCreate = { item, model ->
+/*    onCreate = { item, model ->
       while (true) {
         count++
         item.title = "Menu 2: count: ${count}"
@@ -111,9 +134,12 @@ roundedCorners = true"""
 
         delay(1000)
       }
-    }
+    }*/
 
-    onClick = promptToContinue
+    onClick = {
+      log.warn("ON CLICK")
+      false
+    }
 
     menu {
       title = "Submenu"
@@ -129,6 +155,7 @@ roundedCorners = true"""
 
   iconExamples()
 
+  permissionExamples()
 
   menu {
     id = DemoNavGraph.deep_link.settings
@@ -142,17 +169,22 @@ roundedCorners = true"""
 
 }
 
-private val promptToContinue: MenuItemClickHandler = { callback ->
-  AlertDialog.Builder(requireContext()).apply {
-    setTitle(android.R.string.dialog_alert_title)
-    setMessage("Do you want to continue?")
-    setPositiveButton(android.R.string.ok) { _, _ ->
-      callback(true)
+private val promptToContinue: MenuItemClickHandler = {
+  log.warn("promptToCOntinue")
+  suspendCoroutine<Boolean> { cont ->
+    AlertDialog.Builder(requireContext()).apply {
+      setTitle(android.R.string.dialog_alert_title)
+      setMessage("Do you want to continue?")
+      setPositiveButton(android.R.string.ok) { _, _ ->
+        cont.resumeWith(Result.success(true))
+      }
+      setNegativeButton(android.R.string.cancel) { _, _ ->
+        cont.resumeWith(Result.success(false))
+      }
+      show()
     }
-    setNegativeButton(android.R.string.cancel) { _, _ ->
-      callback(false)
-    }
-    show()
   }
+  log.warn("returning false")
+  false
 }
 

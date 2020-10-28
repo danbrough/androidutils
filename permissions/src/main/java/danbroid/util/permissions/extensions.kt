@@ -40,7 +40,7 @@ suspend fun Fragment.withPermission(
  * Displays the settings for this application so that
  * the user can modify the permissions
  */
-fun AppCompatActivity.showAppPermissionsSettings() = startActivity(
+fun Activity.showAppPermissionsSettings() = startActivity(
     Intent(
         android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
         Uri.fromParts("package", packageName, null)

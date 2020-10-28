@@ -4,14 +4,14 @@
 
 # peekContent  
 [androidJvm]  
-Brief description  
+Content  
+fun [peekContent](peek-content.md)(): [T](index.md)  
+More info  
 
 
 Returns the content, even if it's already been handled.
 
   
-Content  
-fun [peekContent](peek-content.md)(): [T](index.md)  
 
 
 

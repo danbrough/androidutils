@@ -5,7 +5,7 @@
 # rootMenu  
 [androidJvm]  
 Content  
-inline fun <[T](root-menu.md) : [MenuBuilder](-menu-builder/index.md)> [rootMenu](root-menu.md)(builder: [T](root-menu.md), block: [T](root-menu.md).() -> [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)): [T](root-menu.md)  
+inline fun <[T](root-menu.md) : [MenuBuilder](-menu-builder/index.md)> [rootMenu](root-menu.md)(builder: [T](root-menu.md) = T::class.createInstance(), block: [T](root-menu.md).() -> [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)): [T](root-menu.md)  
 
 
 

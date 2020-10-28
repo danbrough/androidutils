@@ -29,6 +29,7 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     log.debug("onViewCreated() model $model")
 
+
     adapter = MenuListAdapter(requireContext())
     recycler_view.adapter = adapter
     recycler_view.layoutManager = LinearLayoutManager(requireContext())
@@ -38,11 +39,12 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
 
     adapter.onClick = { menuItem ->
       log.trace("clicked $menuItem builder:${menuItem.menuItemBuilder}")
+      menuItem.menuItemBuilder?.onClick ?: log.error("NO ONCLICK for ${menuItem.menuItemBuilder}")
       menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
+        log.debug("RUNNING CLICK HANDLER")
         lifecycleScope.launch {
-          clickHandler.invoke(this@MenuFragment) { useDefaultAction ->
-            if (useDefaultAction) menuClickHandler.invoke(this@MenuFragment, menuItem)
-          }
+          if (clickHandler.invoke(this@MenuFragment))
+            menuClickHandler.invoke(this@MenuFragment, menuItem)
         }
       } ?: run {
         log.debug("no click handler")

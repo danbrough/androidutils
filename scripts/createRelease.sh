@@ -33,7 +33,7 @@ if git tag | grep "$VERSION_NAME" > /dev/null; then
 fi
 
 
-./gradlew assembleDebug || exit 1
+./gradlew publishToMavenLocal || exit 1
 
 
 #sed -i  README.md  -e 's/Latest version.*/Latest version: '$VERSION_NAME'/g'
@@ -46,8 +46,7 @@ git add .
 git commit -am "$VERSION_NAME"
 git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"
 
-ssh h1 mkdir -p /srv/https/maven/com/github/danbrough/android/utils/
-./gradlew publishToMavenLocal
+ssh h1 mkdir -p /srv/https/maven/com/github/danbrough/androidutils
 rsync -avHSx  ~/.m2/repository/com/github/danbrough/androidutils/ h1:/srv/https/maven/com/github/danbrough/androidutils/
 
 sleep 1

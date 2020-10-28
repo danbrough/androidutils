@@ -4,7 +4,9 @@
 
 # isErrorEnabled  
 [androidJvm]  
-Brief description  
+Content  
+open fun [isErrorEnabled](is-error-enabled.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+More info  
 
 
 Is this logger instance enabled for level ERROR?
@@ -14,11 +16,9 @@ Is this logger instance enabled for level ERROR?
 #### Return  
 
 
-True if this Logger is enabled for level ERROR, false otherwise.
+if this Logger is enabled for level ERROR, false otherwise.
 
   
-Content  
-open fun [isErrorEnabled](is-error-enabled.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
 
 
 

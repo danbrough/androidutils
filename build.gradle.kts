@@ -6,7 +6,6 @@ plugins {
 
 buildscript {
 
-  val kotlin_version by extra("1.4.10")
   dependencies {
     //classpath("com.android.tools.build:gradle:4.2.0-alpha13")
     classpath("com.android.tools.build:gradle:4.1.0")
@@ -72,14 +71,25 @@ subprojects {
           from(sourceSets.getByName("main").java.srcDirs)
         }
 
+
+        lintOptions {
+          isAbortOnError = false
+        }
+
+        compileOptions {
+          sourceCompatibility = ProjectVersions.JAVA_VERSION
+          targetCompatibility = ProjectVersions.JAVA_VERSION
+        }
+
         afterEvaluate {
+
           publishing.apply {
             val projectName = name
             publications {
               val release by registering(MavenPublication::class) {
-                components.forEach {
+                /*components.forEach {
                   println("Publication component: ${it.name}")
-                }
+                }*/
                 from(components["release"])
                 artifact(sourcesJar.get())
                 artifactId = projectName

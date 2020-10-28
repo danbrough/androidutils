@@ -16,7 +16,6 @@ data class MenuItem(
 
     @MenuRes
     var contextMenuID: Int = 0,
-    var isBrowsable: Boolean = false,
     var isVisible: Boolean = true,
     var inlineChildren: Boolean = false,
 
@@ -27,6 +26,9 @@ data class MenuItem(
 
 
   var menuItemBuilder: MenuItemBuilder? = null
+
+  val isBrowsable: Boolean
+    get() = menuItemBuilder?.isBrowsable == true
 
   var children: List<MenuItem>? = null
 }

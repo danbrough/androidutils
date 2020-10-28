@@ -4,7 +4,9 @@
 
 # isInfoEnabled  
 [androidJvm]  
-Brief description  
+Content  
+open fun [isInfoEnabled](is-info-enabled.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+More info  
 
 
 Is this logger instance enabled for the INFO level?
@@ -14,11 +16,9 @@ Is this logger instance enabled for the INFO level?
 #### Return  
 
 
-True if this Logger is enabled for the INFO level, false otherwise.
+if this Logger is enabled for the INFO level, false otherwise.
 
   
-Content  
-open fun [isInfoEnabled](is-info-enabled.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
 
 
 

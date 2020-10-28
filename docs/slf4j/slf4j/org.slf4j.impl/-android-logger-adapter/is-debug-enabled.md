@@ -4,7 +4,9 @@
 
 # isDebugEnabled  
 [androidJvm]  
-Brief description  
+Content  
+open fun [isDebugEnabled](is-debug-enabled.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+More info  
 
 
 Is this logger instance enabled for the DEBUG level?
@@ -14,11 +16,9 @@ Is this logger instance enabled for the DEBUG level?
 #### Return  
 
 
-True if this Logger is enabled for level DEBUG, false otherwise.
+if this Logger is enabled for level DEBUG, false otherwise.
 
   
-Content  
-open fun [isDebugEnabled](is-debug-enabled.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
 
 
 
