@@ -33,7 +33,6 @@ if git tag | grep "$VERSION_NAME" > /dev/null; then
 fi
 
 
-./gradlew publishToMavenLocal || exit 1
 
 
 #sed -i  README.md  -e 's/Latest version.*/Latest version: '$VERSION_NAME'/g'
@@ -46,7 +45,7 @@ git add .
 git commit -am "$VERSION_NAME"
 git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"
 
-
+./gradlew publishToMavenLocal || exit 1
 rsync -avHSx /home/dan/.m2/repository/com/github/danbrough/ h1:/srv/https/maven/com/github/danbrough/
 sleep 1
 wget "https://jitpack.io/com/github/danbrough/androidutils/${VERSION_NAME}/util-${VERSION_NAME}.jar" -O /tmp/rubbish.jar &
