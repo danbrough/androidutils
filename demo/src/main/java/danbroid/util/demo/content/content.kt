@@ -81,7 +81,7 @@ val rootContent = rootMenu<MenuItemBuilder> {
           val model = menuViewModel()
           log.trace("change test on click child count: ${model.children.value?.size}")
           subtitle = "Counter: ${counter++}"
-          model.invalidate()
+          model.invalidate(this)
           /*  model.children.value?.map { child ->
               @Suppress("LABEL_NAME_CLASH")
               if (child.id == this@menu.id) {
