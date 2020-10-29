@@ -37,7 +37,6 @@ class MenuItemBuilder : MenuBuilder() {
         subtitle,
         image,
         icon?.invoke(context),
-        contextMenuID,
         isVisible,
         inlineChildren,
     ).also { item ->

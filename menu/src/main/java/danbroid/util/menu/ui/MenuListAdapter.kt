@@ -2,7 +2,6 @@ package danbroid.util.menu.ui
 
 import android.content.Context
 import android.graphics.drawable.Drawable
-import android.graphics.drawable.Icon
 import android.view.ContextMenu
 import android.view.LayoutInflater
 import android.view.View
@@ -10,8 +9,8 @@ import android.view.ViewGroup
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.graphics.drawable.IconCompat
 import androidx.core.widget.ImageViewCompat
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -22,16 +21,23 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
-import danbroid.util.menu.MENU_TINT_DEFAULT
 import danbroid.util.menu.MENU_TINT_DISABLED
 import danbroid.util.menu.MenuItem
 import danbroid.util.menu.R
 import danbroid.util.resource.*
 import kotlinx.android.synthetic.main.menu_item_fragment.view.*
 
-open class MenuListAdapter(val context: Context,
+typealias ContextMenuHandler = MenuListAdapter.MenuViewHolder.(
+    menu: ContextMenu,
+    view: View,
+    menuInfo: ContextMenu.ContextMenuInfo?
+) -> Unit
+
+open class MenuListAdapter(val fragment: Fragment,
                            diffCallback: DiffUtil.ItemCallback<MenuItem> = MenuItemDiffCallback
 ) : ListAdapter<MenuItem, MenuListAdapter.MenuViewHolder>(diffCallback) {
+
+  val context: Context = fragment.requireContext()
 
   @DrawableRes
   var DEFAULT_FOLDER_ICON: Int = R.attr.dbMenuIconFolder.getThemeDrawableRes(context, R.drawable.ic_folder)
@@ -41,13 +47,6 @@ open class MenuListAdapter(val context: Context,
 
   var onClick: ((MenuItem) -> Unit)? = null
 
-  var onContextMenu: ((
-      menuItem: MenuItem,
-      menu: ContextMenu,
-      view: View,
-      menuInfo: ContextMenu.ContextMenuInfo?
-  ) -> Unit)? = null
-
   override fun onViewRecycled(holder: MenuViewHolder) {
     super.onViewRecycled(holder)
     holder.recycle()
@@ -56,19 +55,21 @@ open class MenuListAdapter(val context: Context,
   inner class MenuViewHolder(itemView: ViewGroup) : RecyclerView.ViewHolder(itemView) {
 
     init {
-      itemView.setOnCreateContextMenuListener { contextMenu, v, menuInfo ->
-        onContextMenu?.invoke(menu!!, contextMenu, v, menuInfo)
-      }
-      itemView.setOnClickListener {
-        onClick?.invoke(menu!!)
-      }
+
+
+      onClick?.also { handler ->
+        itemView.setOnClickListener {
+          handler.invoke(menuItem!!)
+        }
+      } ?: itemView.setOnClickListener(null)
+
     }
 
     fun recycle() {
-      menu = null
+      menuItem = null
     }
 
-    var menu: MenuItem? = null
+    var menuItem: MenuItem? = null
 
 
   }
@@ -76,10 +77,20 @@ open class MenuListAdapter(val context: Context,
   val iconSize = context.resources.getDimension(R.dimen.media_item_icon_size)
   val iconCornerRadius = (iconSize / 8).toInt()
 
-  protected open fun bind(viewHolder: MenuViewHolder, menu: MenuItem, payloads: MutableList<Any>) {
+  protected open fun bind(viewHolder: MenuViewHolder, payloads: MutableList<Any>) {
+    val menuItem = viewHolder.menuItem!!
+    log.trace("bind() ${viewHolder.menuItem}")
     val itemView = viewHolder.itemView
+
+    menuItem.menuItemBuilder?.contextMenu?.also { provider ->
+      itemView.setOnCreateContextMenuListener { contextMenu, _, _ ->
+        provider.invoke(contextMenu, fragment)
+      }
+
+    } ?: itemView.setOnCreateContextMenuListener(null)
+
     //log.trace("bind() payloads: $payloads")
-    itemView.subtitle.visibility = if (menu.subtitle.isBlank()) {
+    itemView.subtitle.visibility = if (menuItem.subtitle.isBlank()) {
       // log.error("${menu.title} has no subtitle")
       View.GONE
     } else View.VISIBLE
@@ -90,28 +101,29 @@ open class MenuListAdapter(val context: Context,
       }
       if (changes and MEDIA_ITEM_PAYLOAD_TITLE != 0) {
         //  log.trace("MEDIA_ITEM_PAYLOAD_TITLE")
-        itemView.title.text = menu.title
+        itemView.title.text = menuItem.title
       }
       if (changes and MEDIA_ITEM_PAYLOAD_SUBTITLE != 0) {
         // log.trace("MEDIA_ITEM_PAYLOAD_SUBTITLE")
-        itemView.subtitle.text = menu.subtitle
+        itemView.subtitle.text = menuItem.subtitle
       }
       if (changes and MEDIA_ITEM_PAYLOAD_IMAGE != 0) {
         // log.trace("MEDIA_ITEM_PAYLOAD_IMAGE")
-        setIcon(viewHolder, menu)
+        setIcon(viewHolder)
       }
       return
     }
-    itemView.title.text = menu.title
-    itemView.subtitle.text = menu.subtitle
+    itemView.title.text = menuItem.title
+    itemView.subtitle.text = menuItem.subtitle
 
     itemView.state_in_playlist.visibility = View.GONE
-    setIcon(viewHolder, menu)
+    setIcon(viewHolder)
   }
 
 
-  protected open fun setIcon(viewHolder: MenuViewHolder, menu: MenuItem) {
+  protected open fun setIcon(viewHolder: MenuViewHolder) {
     val itemView = viewHolder.itemView
+    val menu = viewHolder.menuItem!!
 
     val iconContext = itemView.icon.context
 
@@ -202,13 +214,13 @@ open class MenuListAdapter(val context: Context,
       )
 
 
-  override fun onBindViewHolder(holder: MenuViewHolder, position: Int) =
+  override fun onBindViewHolder(holder: MenuViewHolder, position: Int): Unit =
       onBindViewHolder(holder, position, mutableListOf())
 
-
-  override fun onBindViewHolder(holder: MenuViewHolder, position: Int, payloads: MutableList<Any>) =
-      bind(holder, getItem(position).also { holder.menu = it }, payloads)
-
+  override fun onBindViewHolder(holder: MenuViewHolder, position: Int, payloads: MutableList<Any>) {
+    holder.menuItem = getItem(position)
+    bind(holder, payloads)
+  }
 
 }
 

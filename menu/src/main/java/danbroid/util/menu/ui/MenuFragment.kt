@@ -3,9 +3,11 @@ package danbroid.util.menu.ui
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.ContextMenu
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,8 +31,7 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     log.debug("onViewCreated() model $model")
 
-
-    adapter = MenuListAdapter(requireContext())
+    adapter = MenuListAdapter(this)
     recycler_view.adapter = adapter
     recycler_view.layoutManager = LinearLayoutManager(requireContext())
 
@@ -39,9 +40,8 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
 
     adapter.onClick = { menuItem ->
       log.trace("clicked $menuItem builder:${menuItem.menuItemBuilder}")
-      menuItem.menuItemBuilder?.onClick ?: log.error("NO ONCLICK for ${menuItem.menuItemBuilder}")
+
       menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
-        log.debug("RUNNING CLICK HANDLER")
         lifecycleScope.launch {
           if (clickHandler.invoke(this@MenuFragment))
             menuClickHandler.invoke(this@MenuFragment, menuItem)
@@ -50,13 +50,8 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
         log.debug("no click handler")
         menuClickHandler.invoke(this@MenuFragment, menuItem)
       }
-    }
-    /*
-       it.onContextMenu = { menuItem, contextMenu, view, menuInfo ->
-         menuContextMenuHandler.invoke(this@MenuListFragment, menuItem, contextMenu, view, menuInfo)
 
-       }
-     }*/
+    }
 
 
   }

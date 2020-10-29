@@ -1,5 +1,6 @@
 package danbroid.util.demo.content
 
+import android.view.ContextMenu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.findNavController
@@ -10,6 +11,7 @@ import danbroid.util.demo.DemoNavGraph
 import danbroid.util.demo.R
 import danbroid.util.demo.URI_CONTENT_PREFIX
 import danbroid.util.menu.*
+import danbroid.util.menu.Icons.iconicsIcon
 import danbroid.util.menu.model.menuViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
@@ -26,9 +28,13 @@ val rootContent = rootMenu<MenuItemBuilder> {
 
   menu {
     title = "Dynamic Children"
+    subtitle = "Generates children when clicked"
     val random = Random()
+    var viewCount = 1
+    isBrowsable = true
     onClick = {
       children?.clear()
+      title = "View count: ${viewCount++}"
       (0 until random.nextInt(10) + 1).forEach {
         menu {
           title = "Child $it"
@@ -36,6 +42,24 @@ val rootContent = rootMenu<MenuItemBuilder> {
         }
       }
       true
+    }
+  }
+
+  menu {
+    title = "Context Menu Item"
+    subtitle = "Long press for context menu"
+    icon = iconicsIcon(GoogleMaterial.Icon.gmd_restaurant_menu)
+
+    contextMenu = { fragment ->
+      setHeaderTitle("Items")
+      add("Item 1").setOnMenuItemClickListener {
+        Toast.makeText(fragment.requireContext(), "Clicked: $it", Toast.LENGTH_SHORT).show()
+        true
+      }
+      add("Item 2").setOnMenuItemClickListener {
+        Toast.makeText(fragment.requireContext(), "Clicked: $it", Toast.LENGTH_SHORT).show()
+        true
+      }
     }
   }
 

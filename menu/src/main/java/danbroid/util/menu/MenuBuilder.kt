@@ -53,10 +53,8 @@ open class MenuBuilder {
   @MenuDSL
   open var icon: DrawableProvider? = null
 
-
   @MenuDSL
-  @MenuRes
-  var contextMenuID: Int = 0
+  var contextMenu: ContextMenuProvider? = null
 
   @MenuDSL
   open var isBrowsable = false

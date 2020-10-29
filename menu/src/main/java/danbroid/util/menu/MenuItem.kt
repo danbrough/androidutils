@@ -13,9 +13,6 @@ data class MenuItem(
     var subtitle: String,
     var imageURI: String? = null,
     var icon: Drawable? = null,
-
-    @MenuRes
-    var contextMenuID: Int = 0,
     var isVisible: Boolean = true,
     var inlineChildren: Boolean = false,
 

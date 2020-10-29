@@ -9,10 +9,9 @@ import com.mikepenz.iconics.utils.backgroundContourWidth
 import com.mikepenz.iconics.utils.colorRes
 import danbroid.util.demo.R
 import danbroid.util.demo.URI_CONTENT_PREFIX
-import danbroid.util.menu.Icons
-import danbroid.util.menu.MENU_TINT_DISABLED
-import danbroid.util.menu.MenuItemBuilder
-import danbroid.util.menu.menu
+import danbroid.util.menu.*
+import danbroid.util.menu.Icons.iconicsIcon
+import danbroid.util.menu.Icons.resourceIcon
 
 internal fun MenuItemBuilder.iconExamples() =
     menu {
@@ -51,13 +50,13 @@ internal fun MenuItemBuilder.iconExamples() =
       menu {
         title = "Resource ID Icon"
         subtitle = "icon = R.drawable.ic_audiotrack.toResourceIDIcon()"
-        icon = Icons.resourceIcon(R.drawable.ic_audiotrack)
+        icon = resourceIcon(R.drawable.ic_audiotrack)
       }
 
       menu {
         title = "Iconics Icon"
         subtitle = "icon = Icons.iconicsIcon(GoogleMaterial.Icon.gmd_shopping_cart)"
-        icon = Icons.iconicsIcon(GoogleMaterial.Icon.gmd_shopping_cart)
+        icon = iconicsIcon(GoogleMaterial.Icon.gmd_shopping_cart)
       }
 
       menu {
@@ -65,7 +64,7 @@ internal fun MenuItemBuilder.iconExamples() =
         subtitle = "icon = Icons.iconicsIcon(FontAwesome.Icon.faw_android)"
         //disable default tint
         tintRes = MENU_TINT_DISABLED
-        icon = Icons.iconicsIcon(FontAwesome.Icon.faw_android) {
+        icon = iconicsIcon(FontAwesome.Icon.faw_android) {
           colorRes = R.color.colorAccent
           backgroundColorRes = R.color.colorPrimaryLight
           backgroundContourWidth = IconicsSize.dp(2)
