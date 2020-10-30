@@ -5,7 +5,7 @@
 # MenuItemBuilder  
 [androidJvm]  
 Content  
-fun [MenuItemBuilder](-menu-item-builder.md)()  
+fun [MenuItemBuilder](-menu-item-builder.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html))  
 
 
 

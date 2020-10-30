@@ -1,5 +1,6 @@
 package danbroid.util.demo.content
 
+import android.content.Context
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.findNavController
@@ -19,7 +20,7 @@ import kotlin.coroutines.suspendCoroutine
 private val log = LoggerFactory.getLogger("danbroid.util.demo.menu2test.content")
 
 @ExperimentalCoroutinesApi
-val rootContent = rootMenu<MenuItemBuilder> {
+fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
   id = URI_CONTENT_PREFIX
   titleID = R.string.app_name
 
@@ -62,7 +63,7 @@ val rootContent = rootMenu<MenuItemBuilder> {
 
   menu {
     title = "Menu 1"
-    subtitle = "subtitle for menu1"
+    subtitle = context.getString(R.string.app_name)
 
     onClick = {
       Toast.makeText(context, "Opening menu ${this@menu.id} in 1 second", Toast.LENGTH_SHORT).show()

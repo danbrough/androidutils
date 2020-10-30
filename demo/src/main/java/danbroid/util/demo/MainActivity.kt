@@ -9,7 +9,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 class MainActivity : MenuActivity() {
 
-  override fun getRootMenu(menuID: String) = rootContent
+  override fun getRootMenu(menuID: String) = rootContent(this)
 
   override fun createNavGraph(navController: NavController) =
       navController.createDemoNavGraph(this)

@@ -12,7 +12,9 @@ import kotlin.reflect.full.createInstance
 @DslMarker
 annotation class MenuDSL
 
-open class MenuBuilder {
+open class MenuBuilder(private val context: Context) {
+
+  fun requireContext() = context
 
   @MenuDSL
   open lateinit var id: String
@@ -105,7 +107,7 @@ inline fun <reified T : MenuBuilder> T.find(id: String): T? {
 
 @MenuDSL
 inline fun <reified T : MenuBuilder> T.menu(
-    child: T = T::class.createInstance(),
+    child: T = T::class.java.getConstructor(Context::class.java).newInstance(requireContext()),
     block: T.() -> Unit
 ): T {
   child.id = if (id.endsWith('/')) "$id${children?.size ?: 0}" else "${id}/${children?.size ?: 0}"
@@ -116,8 +118,8 @@ inline fun <reified T : MenuBuilder> T.menu(
 
 
 @MenuDSL
-inline fun <reified T : MenuBuilder> rootMenu(
-    builder: T = T::class.createInstance(),
+inline fun <reified T : MenuBuilder> Context.rootMenu(
+    builder: T = T::class.java.getConstructor(Context::class.java).newInstance(this),
     block: T.() -> Unit
 ) = builder.apply(block)
 

@@ -11,7 +11,8 @@ typealias MenuItemOnCreated = suspend Fragment.(item: MenuItem) -> Unit
 typealias MenuItemClickHandler = suspend Fragment.() -> Boolean
 
 
-class MenuItemBuilder : MenuBuilder() {
+class MenuItemBuilder(context: Context) : MenuBuilder(context) {
+
 
   @ColorRes
   var tintRes: Int = 0

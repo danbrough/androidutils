@@ -24,27 +24,42 @@ internal fun MenuItemBuilder.prefsExamples() = menu {
   subtitle = "SharedPreference demo"
 
   isBrowsable = true
-  onCreate = {
-    val prefs = requireContext().demoPrefs()
 
+  val prefs = requireContext().demoPrefs()
 
-
-    menu {
-      title = "Prefs.Count: ${prefs.count}"
-      subtitle = "Click to increment"
-      onClick = {
-        requireContext().demoPrefs().edit {
-          count++
-        }
-        menuViewModel().invalidate(this)
-        false
+  menu {
+    title = "Prefs.Count: ${prefs.count}"
+    subtitle = "Click to increment"
+    onClick = {
+      requireContext().demoPrefs().edit {
+        count++
       }
+      menuViewModel().invalidate(this)
+      false
     }
   }
 
   menu {
-    title = "Prefs.message not set"
+    title = prefs.message ?: let {
+      val msg = "prefs.message: ${Date()}"
+      prefs.edit {
+        this.message = msg
+      }
+      msg
+    }
     subtitle = "prefs.message initialized once"
+  }
+
+  menu {
+    title = "Remove prefs.message"
+    subtitle = "reset prefs.message to null"
+    onClick = {
+      requireContext().demoPrefs().edit {
+        message = null
+      }
+      menuViewModel().invalidate(this)
+      false
+    }
   }
 }
 
