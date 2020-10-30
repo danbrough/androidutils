@@ -1,12 +1,9 @@
 package danbroid.util.demo.content
 
-import android.view.ContextMenu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.findNavController
-import com.mikepenz.iconics.IconicsDrawable
 import com.mikepenz.iconics.typeface.library.googlematerial.GoogleMaterial
-import com.mikepenz.iconics.utils.sizeDp
 import danbroid.util.demo.DemoNavGraph
 import danbroid.util.demo.R
 import danbroid.util.demo.URI_CONTENT_PREFIX
@@ -180,6 +177,8 @@ roundedCorners = true"""
   iconExamples()
 
   permissionExamples()
+
+  prefsExamples()
 
   menu {
     id = DemoNavGraph.deep_link.settings

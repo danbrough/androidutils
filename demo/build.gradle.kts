@@ -33,6 +33,9 @@ android {
   kotlinOptions {
     jvmTarget = "1.8"
     //freeCompilerArgs = listOf("-Xjsr305=strict")
+    freeCompilerArgs = mutableListOf("-Xopt-in=kotlin.ExperimentalStdlibApi").also {
+      it.addAll(freeCompilerArgs)
+    }
   }
   buildTypes {
     getByName("release") {
@@ -54,6 +57,10 @@ android {
   }
 
 
+  useLibrary("android.test.runner")
+
+  useLibrary("android.test.base")
+  useLibrary("android.test.mock")
 /*  configurations.all {
     println("CONF: $this")
     forEach {
@@ -99,7 +106,7 @@ dependencies {
   implementation("com.mikepenz:google-material-typeface:_")
   implementation("com.mikepenz:iconics-core:_")
 
- // implementation("org.jetbrains.kotlin:kotlin-reflect:_")
+  implementation("org.jetbrains.kotlin:kotlin-reflect:_")
   //implementation("com.mikepenz:material-design-iconic-typeface:2.2.0.7-kotlin")
   //implementation("com.mikepenz:fontawesome-typeface:5.9.0.1-kotlin@aar")
   //implementation("com.mikepenz:google-material-typeface:3.0.1.5.original-kotlin@aar")
@@ -131,7 +138,12 @@ dependencies {
   implementation(AndroidX.navigation.uiKtx)
   implementation(AndroidX.recyclerView)
 
-
+  androidTestImplementation(AndroidX.test.core)
+  androidTestImplementation(AndroidX.test.rules)
+  androidTestImplementation(AndroidX.test.runner)
+  androidTestImplementation(AndroidX.test.ext.junit)
+  androidTestImplementation(AndroidX.test.ext.truth)
+  androidTestImplementation(project(":slf4j"))
 }
 
 

@@ -44,9 +44,9 @@ allprojects {
 
   configurations.all {
     if (name.contains("Test")) {
-      resolutionStrategy.dependencySubstitution {
+/*      resolutionStrategy.dependencySubstitution {
         substitute(project(":slf4j")).with(module("ch.qos.logback:logback-classic:1.2.3"))
-      }
+      }*/
     }
     resolutionStrategy.force("org.slf4j:slf4j-api:1.7.30")
   }

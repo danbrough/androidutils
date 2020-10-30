@@ -3,14 +3,10 @@ package danbroid.util.menu
 import android.content.Context
 import androidx.annotation.ColorRes
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
-import danbroid.util.menu.model.MenuModel
 import danbroid.util.resource.toResourceURI
-import kotlinx.coroutines.CoroutineScope
 
 
-typealias MenuItemOnCreate = suspend Fragment.(item: MenuItem) -> Unit
+typealias MenuItemOnCreated = suspend Fragment.(item: MenuItem) -> Unit
 
 typealias MenuItemClickHandler = suspend Fragment.() -> Boolean
 
@@ -20,7 +16,7 @@ class MenuItemBuilder : MenuBuilder() {
   @ColorRes
   var tintRes: Int = 0
 
-  var onCreate: MenuItemOnCreate? = null
+  var onCreate: MenuItemOnCreated? = null
 
   var roundedCorners: Boolean = true
 
