@@ -4,9 +4,9 @@
 
 # loggerNameToTag  
 [androidJvm]  
-Brief description  
-
-
+Content  
+open fun [loggerNameToTag](logger-name-to-tag.md)(loggerName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)  
+More info  
 
 
 Tag names cannot be longer than {@value #TAG_MAX_LENGTH} characters on Android platform. 
@@ -19,11 +19,7 @@ Tag names cannot be longer than {@value #TAG_MAX_LENGTH} characters on Android p
 
  See also: android/system/core/include/cutils/property.h android/frameworks/base/core/jni/android_util_Log.cpp dalvik.system.DalvikLogging
 
-
-
   
-Content  
-open fun [loggerNameToTag](logger-name-to-tag.md)(loggerName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)  
 
 
 

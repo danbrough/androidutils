@@ -175,6 +175,12 @@ fun Context.getThemeDimension(@AttrRes themeDimensionAttr: Int, @Px defValue: Fl
     ResourceUtils.getDimension(this, themeDimensionAttr, defValue)
 
 @Px
+fun Int.getThemeDimension(context: Context): Int {
+  ResourceUtils.getDimension(context,this)
+  return 0
+}
+
+@Px
 fun Context.getThemeDimensionPixelSize(@AttrRes themeDimensionAttr: Int, @Px defValue: Int = 0) =
     ResourceUtils.getDimensionPixelSize(this, themeDimensionAttr, defValue)
 

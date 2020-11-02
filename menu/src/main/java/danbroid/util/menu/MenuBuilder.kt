@@ -1,17 +1,23 @@
 package danbroid.util.menu
 
+import android.content.Context
+import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes
 import androidx.annotation.MenuRes
 import androidx.annotation.StringRes
+import androidx.core.graphics.drawable.DrawableCompat
+import androidx.core.graphics.drawable.IconCompat
 import kotlin.reflect.full.createInstance
 
 @DslMarker
 annotation class MenuDSL
 
-open class MenuBuilder {
+open class MenuBuilder(private val context: Context) {
+
+  fun requireContext() = context
 
   @MenuDSL
-  open var id: String? = null
+  open lateinit var id: String
 
   @MenuDSL
   open var title: String? = null
@@ -47,13 +53,10 @@ open class MenuBuilder {
   open var imageID: Int = 0
 
   @MenuDSL
-  @MenuRes
-  open var menuID: Int = 0
-
+  open var icon: DrawableProvider? = null
 
   @MenuDSL
-  @MenuRes
-  var contextMenuID: Int = 0
+  var contextMenu: ContextMenuProvider? = null
 
   @MenuDSL
   open var isBrowsable = false
@@ -104,23 +107,21 @@ inline fun <reified T : MenuBuilder> T.find(id: String): T? {
 
 @MenuDSL
 inline fun <reified T : MenuBuilder> T.menu(
-    child: T = T::class.createInstance(),
+    child: T = T::class.java.getConstructor(Context::class.java).newInstance(requireContext()),
     block: T.() -> Unit
 ): T {
+  child.id = if (id.endsWith('/')) "$id${children?.size ?: 0}" else "${id}/${children?.size ?: 0}"
   addChild(child)
-  if (child.id == null) {
-    child.id = if (id!!.endsWith('/')) "$id${children!!.size}" else "${id}/${children!!.size}"
-  }
   child.block()
   return child
 }
 
 
 @MenuDSL
-inline fun <reified T : MenuBuilder> rootMenu(
-    builder: T = T::class.createInstance(),
+inline fun <reified T : MenuBuilder> Context.rootMenu(
+    builder: T = T::class.java.getConstructor(Context::class.java).newInstance(this),
     block: T.() -> Unit
 ) = builder.apply(block)
 
 
-private val log = org.slf4j.LoggerFactory.getLogger(MenuBuilder::class.java)
+//private val log = org.slf4j.LoggerFactory.getLogger(MenuBuilder::class.java)

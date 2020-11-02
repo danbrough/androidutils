@@ -10,8 +10,8 @@
   
 |  Name|  Summary| 
 |---|---|
-| [color](index.md#org.slf4j.impl/AndroidLoggerFactory.LogInfo/color/#/PointingToDeclaration/)|  [androidJvm] open val [color](index.md#org.slf4j.impl/AndroidLoggerFactory.LogInfo/color/#/PointingToDeclaration/): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)   <br>
-| [log](index.md#org.slf4j.impl/AndroidLoggerFactory.LogInfo/log/#/PointingToDeclaration/)|  [androidJvm] open val [log](index.md#org.slf4j.impl/AndroidLoggerFactory.LogInfo/log/#/PointingToDeclaration/): Logger   <br>
-| [priority](index.md#org.slf4j.impl/AndroidLoggerFactory.LogInfo/priority/#/PointingToDeclaration/)|  [androidJvm] open val [priority](index.md#org.slf4j.impl/AndroidLoggerFactory.LogInfo/priority/#/PointingToDeclaration/): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>
-| [tag](index.md#org.slf4j.impl/AndroidLoggerFactory.LogInfo/tag/#/PointingToDeclaration/)|  [androidJvm] open val [tag](index.md#org.slf4j.impl/AndroidLoggerFactory.LogInfo/tag/#/PointingToDeclaration/): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)   <br>
+| <a name="org.slf4j.impl/AndroidLoggerFactory.LogInfo/color/#/PointingToDeclaration/"></a>[color](color.md)| <a name="org.slf4j.impl/AndroidLoggerFactory.LogInfo/color/#/PointingToDeclaration/"></a> [androidJvm] open val [color](color.md): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)   <br>
+| <a name="org.slf4j.impl/AndroidLoggerFactory.LogInfo/log/#/PointingToDeclaration/"></a>[log](log.md)| <a name="org.slf4j.impl/AndroidLoggerFactory.LogInfo/log/#/PointingToDeclaration/"></a> [androidJvm] open val [log](log.md): Logger   <br>
+| <a name="org.slf4j.impl/AndroidLoggerFactory.LogInfo/priority/#/PointingToDeclaration/"></a>[priority](priority.md)| <a name="org.slf4j.impl/AndroidLoggerFactory.LogInfo/priority/#/PointingToDeclaration/"></a> [androidJvm] open val [priority](priority.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>
+| <a name="org.slf4j.impl/AndroidLoggerFactory.LogInfo/tag/#/PointingToDeclaration/"></a>[tag](tag.md)| <a name="org.slf4j.impl/AndroidLoggerFactory.LogInfo/tag/#/PointingToDeclaration/"></a> [androidJvm] open val [tag](tag.md): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)   <br>
 

@@ -37,8 +37,6 @@ android {
     }
 
   }
-
-
 }
 
 
@@ -50,6 +48,7 @@ android {
     }
   }
 }*/
+/*
 val sourcesJar by tasks.registering(Jar::class) {
   archiveClassifier.set("sources")
   from(android.sourceSets.getByName("main").java.srcDirs)
@@ -68,6 +67,7 @@ afterEvaluate {
     }
   }
 }
+*/
 
 
 dependencies {

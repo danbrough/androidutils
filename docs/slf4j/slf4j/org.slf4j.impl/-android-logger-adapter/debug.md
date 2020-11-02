@@ -4,7 +4,9 @@
 
 # debug  
 [androidJvm]  
-Brief description  
+Content  
+open fun [debug](debug.md)(msg: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))  
+More info  
 
 
 Log a message object at level DEBUG.
@@ -17,17 +19,15 @@ androidJvm
   
 |  Name|  Summary| 
 |---|---|
-| msg| <br><br>- the message object to be logged<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String/PointingToDeclaration/"></a>msg| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String/PointingToDeclaration/"></a><br><br>- the message object to be logged<br><br>
   
   
-Content  
-open fun [debug](debug.md)(msg: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))  
 
 
 [androidJvm]  
-Brief description  
-
-
+Content  
+open fun [debug](debug.md)(format: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), arg: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html))  
+More info  
 
 
 Log a message at level DEBUG according to the specified format and argument. 
@@ -38,57 +38,22 @@ Log a message at level DEBUG according to the specified format and argument.
 
 
 
-
-
 ## Parameters  
   
 androidJvm  
   
 |  Name|  Summary| 
 |---|---|
-| arg| <br><br>the argument<br><br>
-| format| <br><br>the format string<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object/PointingToDeclaration/"></a>arg| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object/PointingToDeclaration/"></a><br><br>the argument<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object/PointingToDeclaration/"></a>format| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object/PointingToDeclaration/"></a><br><br>the format string<br><br>
   
   
-Content  
-open fun [debug](debug.md)(format: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), arg: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html))  
 
 
 [androidJvm]  
-Brief description  
-
-
-
-
-Log a message at level DEBUG according to the specified format and arguments. 
-
-
-
- This form avoids superfluous object creation when the logger is disabled for the DEBUG level. 
-
-
-
-
-
-## Parameters  
-  
-androidJvm  
-  
-|  Name|  Summary| 
-|---|---|
-| arg1| <br><br>the first argument<br><br>
-| arg2| <br><br>the second argument<br><br>
-| format| <br><br>the format string<br><br>
-  
-  
 Content  
 open fun [debug](debug.md)(format: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), arg1: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), arg2: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html))  
-
-
-[androidJvm]  
-Brief description  
-
-
+More info  
 
 
 Log a message at level DEBUG according to the specified format and arguments. 
@@ -99,6 +64,31 @@ Log a message at level DEBUG according to the specified format and arguments.
 
 
 
+## Parameters  
+  
+androidJvm  
+  
+|  Name|  Summary| 
+|---|---|
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a>arg1| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a><br><br>the first argument<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a>arg2| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a><br><br>the second argument<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a>format| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a><br><br>the format string<br><br>
+  
+  
+
+
+[androidJvm]  
+Content  
+open fun [debug](debug.md)(format: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), argArray: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)  
+More info  
+
+
+Log a message at level DEBUG according to the specified format and arguments. 
+
+
+
+ This form avoids superfluous object creation when the logger is disabled for the DEBUG level. 
+
 
 
 ## Parameters  
@@ -107,16 +97,16 @@ androidJvm
   
 |  Name|  Summary| 
 |---|---|
-| argArray| <br><br>an array of arguments<br><br>
-| format| <br><br>the format string<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object.../PointingToDeclaration/"></a>argArray| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object.../PointingToDeclaration/"></a><br><br>an array of arguments<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object.../PointingToDeclaration/"></a>format| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Object.../PointingToDeclaration/"></a><br><br>the format string<br><br>
   
   
-Content  
-open fun [debug](debug.md)(format: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), argArray: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)  
 
 
 [androidJvm]  
-Brief description  
+Content  
+open fun [debug](debug.md)(msg: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), t: [Throwable](https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html))  
+More info  
 
 
 Log an exception (throwable) at level DEBUG with an accompanying message.
@@ -129,12 +119,10 @@ androidJvm
   
 |  Name|  Summary| 
 |---|---|
-| msg| <br><br>the message accompanying the exception<br><br>
-| t| <br><br>the exception (throwable) to log<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Throwable/PointingToDeclaration/"></a>msg| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Throwable/PointingToDeclaration/"></a><br><br>the message accompanying the exception<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Throwable/PointingToDeclaration/"></a>t| <a name="org.slf4j.impl/AndroidLoggerAdapter/debug/#java.lang.String#java.lang.Throwable/PointingToDeclaration/"></a><br><br>the exception (throwable) to log<br><br>
   
   
-Content  
-open fun [debug](debug.md)(msg: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), t: [Throwable](https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html))  
 
 
 

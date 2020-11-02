@@ -1,35 +1,34 @@
 package danbroid.util.menu
 
+import android.graphics.drawable.Drawable
 import androidx.annotation.ColorRes
 import androidx.annotation.MenuRes
 
+const val MENU_TINT_DISABLED = -1
+const val MENU_TINT_DEFAULT = 0
 
 data class MenuItem(
     var id: String,
     var title: String,
     var subtitle: String,
     var imageURI: String? = null,
-    @MenuRes
-    var menuID: Int = 0,
-    @MenuRes
-    var contextMenuID: Int = 0,
-    var isBrowsable: Boolean = false,
+    var icon: Drawable? = null,
     var isVisible: Boolean = true,
     var inlineChildren: Boolean = false,
-    @Transient
-    var menuItemBuilder: MenuItemBuilder? = null,
+
     @ColorRes
-    var tint: Int = 0
+    var tint: Int = MENU_TINT_DISABLED,
+    var roundedCorners: Boolean = false
 ) {
 
-  @Transient
+
+  var menuItemBuilder: MenuItemBuilder? = null
+
+  val isBrowsable: Boolean
+    get() = menuItemBuilder?.isBrowsable == true
+
   var children: List<MenuItem>? = null
-
-
-  @Transient
-  var source: Any? = null
-
-
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(MenuItem::class.java)
+
+//private val log = org.slf4j.LoggerFactory.getLogger(MenuItem::class.java)

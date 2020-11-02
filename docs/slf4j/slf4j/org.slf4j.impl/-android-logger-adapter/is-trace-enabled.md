@@ -4,7 +4,9 @@
 
 # isTraceEnabled  
 [androidJvm]  
-Brief description  
+Content  
+open fun [isTraceEnabled](is-trace-enabled.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+More info  
 
 
 Is this logger instance enabled for the VERBOSE level?
@@ -14,11 +16,9 @@ Is this logger instance enabled for the VERBOSE level?
 #### Return  
 
 
-True if this Logger is enabled for level VERBOSE, false otherwise.
+if this Logger is enabled for level VERBOSE, false otherwise.
 
   
-Content  
-open fun [isTraceEnabled](is-trace-enabled.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
 
 
 

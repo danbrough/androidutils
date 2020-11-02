@@ -33,6 +33,9 @@ android {
   kotlinOptions {
     jvmTarget = "1.8"
     //freeCompilerArgs = listOf("-Xjsr305=strict")
+    freeCompilerArgs = mutableListOf("-Xopt-in=kotlin.ExperimentalStdlibApi").also {
+      it.addAll(freeCompilerArgs)
+    }
   }
   buildTypes {
     getByName("release") {
@@ -52,40 +55,23 @@ android {
     unitTests.isIncludeAndroidResources = true
     unitTests.isReturnDefaultValues = true
   }
-}
 
 
+  useLibrary("android.test.runner")
 
-
-
-dependencies {
-  implementation("org.slf4j:slf4j-api:_")
-
-  implementation(project(":menu"))
-  // or implementation("com.github.danbrough.androidutils:content:master-SNAPSHOT")
-
-  implementation(project(":permissions"))
-  // or implementation("com.github.danbrough.androidutils:permissions:master-SNAPSHOT")
-
-  implementation(project(":slf4j"))
-  // or implementation("com.github.danbrough.androidutils:slf4j:master-SNAPSHOT")
-
-  implementation(project(":misc"))
-  // or implementation("com.github.danbrough.androidutils:misc:master-SNAPSHOT")
-  implementation(Google.android.material)
-
-  implementation(AndroidX.lifecycle.extensions)
-  implementation(AndroidX.preferenceKtx)
-  implementation(AndroidX.lifecycle.runtimeKtx)
-  implementation(AndroidX.coreKtx)
-  implementation(AndroidX.coordinatorLayout)
-  implementation(AndroidX.lifecycle.viewModelKtx)
-  implementation(AndroidX.fragmentKtx)
-  implementation(AndroidX.recyclerView)
-  implementation(AndroidX.navigation.fragmentKtx)
-  implementation(AndroidX.navigation.uiKtx)
+  useLibrary("android.test.base")
+  useLibrary("android.test.mock")
+/*  configurations.all {
+    println("CONF: $this")
+    forEach {
+      println("FOR EACH $it")
+    }
+  }*/
 
 }
+
+
+
 
 tasks.withType<Test> {
   useJUnit()
@@ -97,4 +83,67 @@ tasks.withType<Test> {
     }
   }
 }
+
+
+
+
+dependencies {
+
+  implementation(project(":menu"))
+
+  implementation("org.slf4j:slf4j-api:_")
+
+
+  testImplementation(Testing.junit4)
+  testImplementation("ch.qos.logback:logback-core:_")
+  testImplementation("ch.qos.logback:logback-classic:_")
+  //testImplementation("org.mockito:mockito-core:2.28.2")
+
+//  implementation("com.mikepenz:iconics-core:_")
+  implementation(AndroidX.appCompat)
+
+  implementation("com.mikepenz:fontawesome-typeface:_")
+  implementation("com.mikepenz:google-material-typeface:_")
+  implementation("com.mikepenz:iconics-core:_")
+
+  implementation("org.jetbrains.kotlin:kotlin-reflect:_")
+  //implementation("com.mikepenz:material-design-iconic-typeface:2.2.0.7-kotlin")
+  //implementation("com.mikepenz:fontawesome-typeface:5.9.0.1-kotlin@aar")
+  //implementation("com.mikepenz:google-material-typeface:3.0.1.5.original-kotlin@aar")
+
+  implementation(project(":permissions"))
+  // or implementation("com.github.danbrough.androidutils:permissions:master-SNAPSHOT")
+
+  implementation(project(":slf4j"))
+  // or implementation("com.github.danbrough.androidutils:slf4j:master-SNAPSHOT")
+
+  implementation(project(":misc"))
+  // or implementation("com.github.danbrough.androidutils:misc:master-SNAPSHOT")
+  implementation(Google.android.material)
+
+  implementation(AndroidX.preferenceKtx)
+
+  //implementation(AndroidX.activityKtx)
+  implementation(AndroidX.coreKtx)
+  implementation(AndroidX.coordinatorLayout)
+
+  implementation(AndroidX.fragmentKtx)
+
+  //implementation(AndroidX.lifecycle.extensions)
+  implementation(AndroidX.lifecycle.liveDataCoreKtx)
+  implementation(AndroidX.lifecycle.liveDataKtx)
+  implementation(AndroidX.lifecycle.viewModelKtx)
+  implementation(AndroidX.lifecycle.runtimeKtx)
+  implementation(AndroidX.navigation.fragmentKtx)
+  implementation(AndroidX.navigation.uiKtx)
+  implementation(AndroidX.recyclerView)
+
+  androidTestImplementation(AndroidX.test.core)
+  androidTestImplementation(AndroidX.test.rules)
+  androidTestImplementation(AndroidX.test.runner)
+  androidTestImplementation(AndroidX.test.ext.junit)
+  androidTestImplementation(AndroidX.test.ext.truth)
+  androidTestImplementation(project(":slf4j"))
+}
+
 

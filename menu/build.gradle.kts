@@ -1,4 +1,3 @@
-
 plugins {
   id("com.android.library")
   kotlin("android")
@@ -48,7 +47,7 @@ android {
 
 }
 
-val sourcesJar by tasks.registering(Jar::class) {
+/*val sourcesJar by tasks.registering(Jar::class) {
   archiveClassifier.set("sources")
   from(android.sourceSets.getByName("main").java.srcDirs)
 }
@@ -56,7 +55,7 @@ val sourcesJar by tasks.registering(Jar::class) {
 afterEvaluate {
   publishing {
     publications {
-      val release by publications.registering(MavenPublication::class) {
+      val release by registering(MavenPublication::class) {
         from(components["release"])
         artifact(sourcesJar.get())
         artifactId = "menu"
@@ -65,10 +64,11 @@ afterEvaluate {
       }
     }
   }
-}
+}*/
 
 dependencies {
 
+  implementation(project(":misc"))
   implementation("org.slf4j:slf4j-api:_")
   implementation(AndroidX.appCompat)
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
@@ -84,10 +84,11 @@ dependencies {
   api("com.github.bumptech.glide:glide:_")
 
   implementation("jp.wasabeef:glide-transformations:_")
+  api("com.mikepenz:iconics-core:_")
 
 
-  implementation(AndroidX.navigation.fragmentKtx)
-  implementation(AndroidX.navigation.uiKtx)
+  api(AndroidX.navigation.fragmentKtx)
+  api(AndroidX.navigation.uiKtx)
 
   androidTestImplementation(project(":slf4j"))
   androidTestImplementation(AndroidX.test.rules)

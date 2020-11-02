@@ -7,11 +7,11 @@
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
     <item name="colorSecondary">@color/colorSecondary</item>
-    <item name="dbMenuIconRoundedCorners">true</item>
+<!--    <item name="dbMenuIconRoundedCorners">true</item>
     <item name="dbMenuIconTint">@color/colorPrimaryLight</item>
     <item name="dbMenuIconFolder">@drawable/ic_folder_open</item>
-    <item name="dbMenuIconFile">@drawable/ic_audiotrack</item>
-
+    <item name="dbMenuIconFile">@drawable/ic_audiotrack</item>-->
+    <item name="dbMenuIconTint">@color/colorPrimaryLight</item>
   </style>
 
 

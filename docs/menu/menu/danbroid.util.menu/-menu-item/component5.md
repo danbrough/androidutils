@@ -5,7 +5,7 @@
 # component5  
 [androidJvm]  
 Content  
-operator fun [component5](component5.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  
+operator fun [component5](component5.md)(): [Drawable](https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html)?  
 
 
 

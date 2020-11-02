@@ -4,7 +4,9 @@
 
 # isWarnEnabled  
 [androidJvm]  
-Brief description  
+Content  
+open fun [isWarnEnabled](is-warn-enabled.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+More info  
 
 
 Is this logger instance enabled for the WARN level?
@@ -14,11 +16,9 @@ Is this logger instance enabled for the WARN level?
 #### Return  
 
 
-True if this Logger is enabled for the WARN level, false otherwise.
+if this Logger is enabled for the WARN level, false otherwise.
 
   
-Content  
-open fun [isWarnEnabled](is-warn-enabled.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
 
 
 

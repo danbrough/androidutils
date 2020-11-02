@@ -5,4 +5,5 @@
     <string name="title_menu_activity">Menu Navigation Activity</string>
     <string name="rationale_read_storage">I want to look at your stuff</string>
     <string name="prefs_counter">counter</string>
+  <string name="title_default_menu">Untitled</string>
 </resources>
