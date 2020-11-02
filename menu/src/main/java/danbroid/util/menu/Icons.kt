@@ -5,6 +5,9 @@ import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes
 import androidx.core.content.res.ResourcesCompat
 import com.mikepenz.iconics.IconicsDrawable
+import com.mikepenz.iconics.dsl.ExperimentalIconicsDSL
+import com.mikepenz.iconics.dsl.IconicsDrawableDsl
+import com.mikepenz.iconics.dsl.iconicsDrawable
 import com.mikepenz.iconics.typeface.IIcon
 
 typealias DrawableProvider = Context.() -> Drawable?
@@ -20,6 +23,14 @@ object Icons {
   @JvmStatic
   fun iconicsIcon(icon: IIcon, builder: IconicsDrawable.() -> Unit = {}): DrawableProvider = {
     IconicsDrawable(this, icon).also(builder)
+  }
+
+
+  @ExperimentalIconicsDSL
+  @MenuDSL
+  @JvmStatic
+  fun iconicsIconDSL(icon: IIcon, builder: IconicsDrawableDsl.() -> Unit = {}): DrawableProvider = {
+    iconicsDrawable(icon, builder)
   }
 
 

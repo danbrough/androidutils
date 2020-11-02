@@ -18,7 +18,6 @@ import kotlin.reflect.typeOf
 @Suppress("IMPLICIT_CAST_TO_ANY")
 open class Prefs(val context: Context, val fileName: String) {
 
-
   /**
    * val message:String by Pref("default value")
    * var count:Int? by Pref(null)

@@ -7,8 +7,8 @@ plugins {
 buildscript {
 
   dependencies {
-    //classpath("com.android.tools.build:gradle:4.2.0-alpha13")
-    classpath("com.android.tools.build:gradle:4.1.0")
+    classpath("com.android.tools.build:gradle:4.2.0-alpha15")
+   // classpath("com.android.tools.build:gradle:4.1.0")
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:_")
     classpath("org.jetbrains.dokka:dokka-gradle-plugin:_")
 
