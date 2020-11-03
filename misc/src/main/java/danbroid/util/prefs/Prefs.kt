@@ -13,7 +13,15 @@ import kotlin.reflect.typeOf
 
 
 @Suppress("IMPLICIT_CAST_TO_ANY")
-abstract class Prefs(val context: Context) {
+open class Prefs(
+  protected val context: Context,
+  protected val prefsCreator: (Context) -> SharedPreferences
+) {
+
+  constructor(context: Context, prefsFile: String) : this(
+    context,
+    { it.getSharedPreferences(prefsFile, Context.MODE_PRIVATE) }
+  )
 
   /**
    * val message:String by Pref("default value")
@@ -29,17 +37,15 @@ abstract class Prefs(val context: Context) {
     }
 
     operator fun <T> setValue(thisRef: Prefs, property: KProperty<*>, value: T) =
-        put(property.name, value)
+      put(property.name, value)
 
   }
 
   var _prefs: SharedPreferences? = null
   val prefs: SharedPreferences
-    get() = _prefs ?: createPrefs().also {
+    get() = _prefs ?: prefsCreator.invoke(context).also {
       _prefs = it
     }
-
-  protected abstract fun createPrefs(): SharedPreferences
 
   var _editor: SharedPreferences.Editor? = null
   val editor: SharedPreferences.Editor
@@ -83,7 +89,10 @@ abstract class Prefs(val context: Context) {
       return defaultValue
     }
 
-    if (type.isSubtypeOf(typeOf<CharSequence>()) || type.isSubtypeOf(typeOf<CharSequence?>())) return prefs.getString(key, defaultValue?.toString())
+    if (type.isSubtypeOf(typeOf<CharSequence>()) || type.isSubtypeOf(typeOf<CharSequence?>())) return prefs.getString(
+      key,
+      defaultValue?.toString()
+    )
 
     @Suppress("UNCHECKED_CAST")
     return when (type) {

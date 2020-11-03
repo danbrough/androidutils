@@ -5,7 +5,7 @@
 # loggerFactoryClassStr  
 [androidJvm]  
 Content  
-private val [loggerFactoryClassStr](logger-factory-class-str.md): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)  
+private val [loggerFactoryClassStr](logger-factory-class-str.md): [String](https://developer.android.com/reference/kotlin/java/lang/String.html)  
 
 
 

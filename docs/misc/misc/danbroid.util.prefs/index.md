@@ -9,7 +9,7 @@
   
 |  Name|  Summary| 
 |---|---|
-| <a name="danbroid.util.prefs/Prefs///PointingToDeclaration/"></a>[Prefs](-prefs/index.md)| <a name="danbroid.util.prefs/Prefs///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>abstract class [Prefs](-prefs/index.md)(**context**: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html))  <br>More info  <br>Classes that allow you to implement properties that delegate to a [android.content.SharedPreferences](https://developer.android.com/reference/kotlin/android/content/SharedPreferences.html) instance  <br><br><br>
+| <a name="danbroid.util.prefs/Prefs///PointingToDeclaration/"></a>[Prefs](-prefs/index.md)| <a name="danbroid.util.prefs/Prefs///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open class [Prefs](-prefs/index.md)(**context**: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), **prefsCreator**: ([Context](https://developer.android.com/reference/kotlin/android/content/Context.html)) -> [SharedPreferences](https://developer.android.com/reference/kotlin/android/content/SharedPreferences.html))  <br>More info  <br>Classes that allow you to implement properties that delegate to a [android.content.SharedPreferences](https://developer.android.com/reference/kotlin/android/content/SharedPreferences.html) instance  <br><br><br>
 
 
 ## Functions  
