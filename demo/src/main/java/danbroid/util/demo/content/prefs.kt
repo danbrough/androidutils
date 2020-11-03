@@ -10,9 +10,10 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.slf4j.LoggerFactory
 import java.util.*
 
-class ExamplePrefs(context: Context) : Prefs(context, "example_prefs") {
+class ExamplePrefs(context: Context) : Prefs(context) {
   var message: String? by Pref(null)
   var count: Int by Pref(1)
+  override fun createPrefs() = context.getSharedPreferences("example_prefs", Context.MODE_PRIVATE)
 }
 
 private fun Context.demoPrefs(): ExamplePrefs = ExamplePrefs(this)

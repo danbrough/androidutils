@@ -2,9 +2,6 @@ package danbroid.util.prefs
 
 import android.content.Context
 import android.content.SharedPreferences
-import org.slf4j.LoggerFactory
-import java.lang.IllegalArgumentException
-import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
 import kotlin.reflect.KType
 import kotlin.reflect.full.isSubtypeOf
@@ -16,7 +13,7 @@ import kotlin.reflect.typeOf
 
 
 @Suppress("IMPLICIT_CAST_TO_ANY")
-open class Prefs(val context: Context, val fileName: String) {
+abstract class Prefs(val context: Context) {
 
   /**
    * val message:String by Pref("default value")
@@ -38,9 +35,11 @@ open class Prefs(val context: Context, val fileName: String) {
 
   var _prefs: SharedPreferences? = null
   val prefs: SharedPreferences
-    get() = _prefs ?: context.getSharedPreferences(fileName, Context.MODE_PRIVATE).also {
+    get() = _prefs ?: createPrefs().also {
       _prefs = it
     }
+
+  protected abstract fun createPrefs(): SharedPreferences
 
   var _editor: SharedPreferences.Editor? = null
   val editor: SharedPreferences.Editor
@@ -61,7 +60,7 @@ open class Prefs(val context: Context, val fileName: String) {
   }
 
   fun put(key: String, value: Any?) {
-   // log.warn("setting pref: $key to $value")
+    // log.warn("setting pref: $key to $value")
     @Suppress("UNCHECKED_CAST")
     when (value) {
       null -> editor.remove(key)
