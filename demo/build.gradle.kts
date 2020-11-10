@@ -90,6 +90,14 @@ tasks.withType<Test> {
 dependencies {
 
   implementation(project(":menu"))
+  implementation(project(":permissions"))
+  // or implementation("com.github.danbrough.androidutils:permissions:master-SNAPSHOT")
+
+  implementation(project(":slf4j"))
+  // or implementation("com.github.danbrough.androidutils:slf4j:master-SNAPSHOT")
+
+  implementation(project(":misc"))
+  // or implementation("com.github.danbrough.androidutils:misc:master-SNAPSHOT")
 
   implementation("org.slf4j:slf4j-api:_")
 
@@ -111,14 +119,7 @@ dependencies {
   //implementation("com.mikepenz:fontawesome-typeface:5.9.0.1-kotlin@aar")
   //implementation("com.mikepenz:google-material-typeface:3.0.1.5.original-kotlin@aar")
 
-  implementation(project(":permissions"))
-  // or implementation("com.github.danbrough.androidutils:permissions:master-SNAPSHOT")
 
-  implementation(project(":slf4j"))
-  // or implementation("com.github.danbrough.androidutils:slf4j:master-SNAPSHOT")
-
-  implementation(project(":misc"))
-  // or implementation("com.github.danbrough.androidutils:misc:master-SNAPSHOT")
   implementation(Google.android.material)
 
   implementation(AndroidX.preferenceKtx)

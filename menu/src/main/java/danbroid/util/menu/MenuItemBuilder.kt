@@ -3,6 +3,7 @@ package danbroid.util.menu
 import android.content.Context
 import androidx.annotation.ColorRes
 import androidx.fragment.app.Fragment
+import danbroid.util.menu.model.menuViewModel
 import danbroid.util.resource.toResourceURI
 
 
@@ -23,7 +24,8 @@ class MenuItemBuilder(context: Context) : MenuBuilder(context) {
 
   var onClick: MenuItemClickHandler? = null
 
-  fun createItem(context: Context, itemID: String = id, depth: Int = 1): MenuItem {
+  suspend fun createItem(fragment: Fragment, itemID: String = id, depth: Int = 1): MenuItem {
+    val context = fragment.requireContext()
     val title = if (titleID != 0) context.getString(titleID) else title
         ?: context.getString(R.string.title_default_menu)
     val subtitle = if (subtitleID != 0) context.getString(subtitleID) else subtitle
@@ -34,16 +36,31 @@ class MenuItemBuilder(context: Context) : MenuBuilder(context) {
         subtitle,
         image,
         icon?.invoke(context),
-        isVisible,
-        inlineChildren,
+        isVisible
     ).also { item ->
       item.menuItemBuilder = this@MenuItemBuilder
       item.tint = tintRes
       item.roundedCorners = roundedCorners
-      if (depth > 0)
-        item.children = children?.filter { !it.inlineChildren }?.map {
-          (it as MenuItemBuilder).createItem(context, it.id, depth - 1)
+
+      onCreate?.invoke(fragment, item)
+
+      item.children = buildList { createChildren(fragment, this, depth) }.let {
+        if (it.isEmpty()) null else it
+      }
+    }
+  }
+
+
+  private suspend fun createChildren(fragment: Fragment, items: MutableList<MenuItem>, depth: Int) {
+    children?.forEach {
+      val child = (it as MenuItemBuilder).createItem(fragment, it.id, if (it.inlineChildren) depth else depth - 1)
+      if (it.inlineChildren) {
+        child.children?.also {
+          items.addAll(it)
         }
+      } else {
+        items.add(child)
+      }
     }
   }
 
@@ -57,6 +74,9 @@ class MenuItemBuilder(context: Context) : MenuBuilder(context) {
 
 
 }
+
+@MenuDSL
+fun Fragment.invalidateMenu() = menuViewModel().invalidate(this)
 
 
 //private val log = org.slf4j.LoggerFactory.getLogger(MenuItemBuilder::class.java)

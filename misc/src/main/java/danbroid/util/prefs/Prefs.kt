@@ -14,13 +14,13 @@ import kotlin.reflect.typeOf
 
 @Suppress("IMPLICIT_CAST_TO_ANY")
 open class Prefs(
-  protected val context: Context,
-  protected val prefsCreator: (Context) -> SharedPreferences
+    protected val context: Context,
+    protected val prefsCreator: (Context) -> SharedPreferences
 ) {
 
   constructor(context: Context, prefsFile: String) : this(
-    context,
-    { it.getSharedPreferences(prefsFile, Context.MODE_PRIVATE) }
+      context,
+      { it.getSharedPreferences(prefsFile, Context.MODE_PRIVATE) }
   )
 
   /**
@@ -37,17 +37,17 @@ open class Prefs(
     }
 
     operator fun <T> setValue(thisRef: Prefs, property: KProperty<*>, value: T) =
-      put(property.name, value)
+        put(property.name, value)
 
   }
 
-  var _prefs: SharedPreferences? = null
+  internal var _prefs: SharedPreferences? = null
   val prefs: SharedPreferences
     get() = _prefs ?: prefsCreator.invoke(context).also {
       _prefs = it
     }
 
-  var _editor: SharedPreferences.Editor? = null
+  internal var _editor: SharedPreferences.Editor? = null
   val editor: SharedPreferences.Editor
     get() = _editor ?: prefs.edit().also {
       // log.error("created editor")
@@ -55,15 +55,11 @@ open class Prefs(
     }
 
 
-  fun clear(commit: Boolean = false) = editor.clear().also {
-    if (commit) it.commit() else it.apply()
-    _prefs = null
-    _editor = null
-  }
+  fun clear(commit: Boolean = false) = editor.clear().also { close(commit) }
 
-  companion object {
-    //val log = LoggerFactory.getLogger(Prefs::class.java)
-  }
+  /*companion object {
+    val log = LoggerFactory.getLogger(Prefs::class.java)
+  }*/
 
   fun put(key: String, value: Any?) {
     // log.warn("setting pref: $key to $value")
@@ -90,8 +86,8 @@ open class Prefs(
     }
 
     if (type.isSubtypeOf(typeOf<CharSequence>()) || type.isSubtypeOf(typeOf<CharSequence?>())) return prefs.getString(
-      key,
-      defaultValue?.toString()
+        key,
+        defaultValue?.toString()
     )
 
     @Suppress("UNCHECKED_CAST")
@@ -106,17 +102,23 @@ open class Prefs(
     }
   }
 
+  fun close(commit: Boolean = false) {
+    _editor?.also {
+      if (commit) it.commit() else it.apply()
+      //Prefs.log.error("${if (commit) "committed" else "applyed"} transaction")
+      _editor = null
+    }
+    _prefs = null
+  }
+
+
 }
 
-inline fun <T : Prefs> T.edit(commit: Boolean = true, block: T.() -> Unit) {
+inline fun <reified T : Prefs> T.edit(commit: Boolean = false, block: T.() -> Unit) {
   block()
-  _editor?.also {
-    if (commit) it.commit() else it.apply()
-    //Prefs.log.error("${if (commit) "committed" else "applyed"} transaction")
-    _prefs = null
-    _editor = null
-  }
+  close(commit)
 }
+
 
 
 

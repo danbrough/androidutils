@@ -10,14 +10,13 @@ import danbroid.util.demo.R
 import danbroid.util.demo.URI_CONTENT_PREFIX
 import danbroid.util.menu.*
 import danbroid.util.menu.Icons.iconicsIcon
-import danbroid.util.menu.model.menuViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
 import org.slf4j.LoggerFactory
 import java.util.*
 import kotlin.coroutines.suspendCoroutine
 
-private val log = LoggerFactory.getLogger("danbroid.util.demo.menu2test.content")
+private val log = LoggerFactory.getLogger("danbroid.util.demo.content")
 
 @ExperimentalCoroutinesApi
 fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
@@ -100,27 +99,9 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
         var counter = 1
 
         onClick = {
-          val model = menuViewModel()
-          log.trace("change test on click child count: ${model.children.value?.size}")
           subtitle = "Counter: ${counter++}"
-          model.invalidate(this)
-          /*  model.children.value?.map { child ->
-              @Suppress("LABEL_NAME_CLASH")
-              if (child.id == this@menu.id) {
-                //Found the child item
-                //update the subtitle field of the builder to make the change persistant
-                subtitle = "Counter: ${counter++}"
-
-                //need to copy rather than modify for the [danbroid.util.menu.ui.MenuListAdapter]
-                child.copy(subtitle = subtitle).also {
-                  it.menuItemBuilder = child.menuItemBuilder
-                }
-              } else child
-            }?.also {
-              //update the model with the new children
-              model.updateChildren(it)
-            }*/
-          true
+          invalidateMenu()
+          false
         }
       }
 
@@ -141,36 +122,20 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
 roundedCorners = true"""
     imageURI = "https://picsum.photos/128"
     roundedCorners = true
-    var count = 0
-
-/*    onCreate = { item, model ->
-      while (true) {
-        count++
-        item.title = "Menu 2: count: ${count}"
-        model.updateItem(item)
-        item.children = item.children?.mapIndexed { n, child ->
-          child.copy(title = "Submenu: $n: Count: $count", subtitle = "${Date()}")
-        }?.also {
-          model.updateChildren(it)
-        }
-
-        delay(1000)
-      }
-    }*/
-
-    onClick = {
-      log.warn("ON CLICK")
-      false
-    }
-
     menu {
-      title = "Submenu"
-    }
+      title = "Inline Children Example"
+      inlineChildren = true
 
-    menu {
-      title = "Submenu"
+
+
       menu {
-        title = "Submenu"
+        title = "Inline Child 1"
+        onCreate = { item->
+          item.title = "The date is ${Date()}"
+        }
+      }
+      menu {
+        title = "Inline Child 2"
       }
     }
   }

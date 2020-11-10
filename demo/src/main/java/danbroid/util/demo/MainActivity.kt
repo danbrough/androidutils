@@ -9,7 +9,11 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 class MainActivity : MenuActivity() {
 
-  override fun getRootMenu(menuID: String) = rootContent(this)
+  private val rootContent by lazy {
+    rootContent(this)
+  }
+
+  override fun getRootMenu() = rootContent
 
   override fun createNavGraph(navController: NavController) =
       navController.createDemoNavGraph(this)

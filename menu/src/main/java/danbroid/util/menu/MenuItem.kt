@@ -2,7 +2,6 @@ package danbroid.util.menu
 
 import android.graphics.drawable.Drawable
 import androidx.annotation.ColorRes
-import androidx.annotation.MenuRes
 
 const val MENU_TINT_DISABLED = -1
 const val MENU_TINT_DEFAULT = 0
@@ -14,13 +13,10 @@ data class MenuItem(
     var imageURI: String? = null,
     var icon: Drawable? = null,
     var isVisible: Boolean = true,
-    var inlineChildren: Boolean = false,
-
     @ColorRes
     var tint: Int = MENU_TINT_DISABLED,
     var roundedCorners: Boolean = false
 ) {
-
 
   var menuItemBuilder: MenuItemBuilder? = null
 

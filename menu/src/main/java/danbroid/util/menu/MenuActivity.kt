@@ -17,7 +17,7 @@ abstract class MenuActivity(@LayoutRes layoutID: Int = R.layout.activity_main) :
     MenuConfiguration.rootMenu = ::getRootMenu
   }
 
-  protected abstract fun getRootMenu(menuID: String): MenuItemBuilder
+  protected abstract fun getRootMenu(): MenuItemBuilder
 
   protected abstract fun createNavGraph(navController: NavController): NavGraph?
 

@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory
 object MenuConfiguration {
   private val log = LoggerFactory.getLogger(MenuConfiguration::class.java)
 
-  lateinit var rootMenu: (menuID: String) -> MenuItemBuilder
+  lateinit var rootMenu: () -> MenuItemBuilder
 
   var menuClickHandler: Fragment.(MenuItem) -> Unit = { menu ->
     log.trace("onClicked() $menu")

@@ -2,18 +2,17 @@ package danbroid.util.demo.content
 
 import android.content.Context
 import danbroid.util.menu.MenuItemBuilder
+import danbroid.util.menu.invalidateMenu
 import danbroid.util.menu.menu
-import danbroid.util.menu.model.menuViewModel
 import danbroid.util.prefs.Prefs
 import danbroid.util.prefs.edit
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.slf4j.LoggerFactory
 import java.util.*
 
-class ExamplePrefs(context: Context) : Prefs(context) {
+class ExamplePrefs(context: Context) : Prefs(context, "example_prefs") {
   var message: String? by Pref(null)
   var count: Int by Pref(1)
-  override fun createPrefs() = context.getSharedPreferences("example_prefs", Context.MODE_PRIVATE)
 }
 
 private fun Context.demoPrefs(): ExamplePrefs = ExamplePrefs(this)
@@ -32,10 +31,11 @@ internal fun MenuItemBuilder.prefsExamples() = menu {
     title = "Prefs.Count: ${prefs.count}"
     subtitle = "Click to increment"
     onClick = {
-      requireContext().demoPrefs().edit {
+      log.debug("prefs.count: ${prefs.count}")
+      prefs.edit(commit = true) {
         count++
       }
-      menuViewModel().invalidate(this)
+      log.debug("prefs.count now: ${prefs.count}")
       false
     }
   }
@@ -43,6 +43,7 @@ internal fun MenuItemBuilder.prefsExamples() = menu {
   menu {
     title = prefs.message ?: let {
       val msg = "prefs.message: ${Date()}"
+
       prefs.edit {
         this.message = msg
       }
@@ -58,7 +59,7 @@ internal fun MenuItemBuilder.prefsExamples() = menu {
       requireContext().demoPrefs().edit {
         message = null
       }
-      menuViewModel().invalidate(this)
+      invalidateMenu()
       false
     }
   }
