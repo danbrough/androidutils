@@ -5,7 +5,7 @@
 # LOGGERS  
 [androidJvm]  
 Content  
-open val [LOGGERS](-l-o-g-g-e-r-s.md): [ConcurrentHashMap](https://developer.android.com/reference/kotlin/java/util/concurrent/ConcurrentHashMap.html)<[String](https://developer.android.com/reference/kotlin/java/lang/String.html), [AndroidLoggerFactory.LogInfo](-log-info/index.md)>  
+open val [LOGGERS](-l-o-g-g-e-r-s.md): [ConcurrentHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), [AndroidLoggerFactory.LogInfo](-log-info/index.md)>  
 
 
 

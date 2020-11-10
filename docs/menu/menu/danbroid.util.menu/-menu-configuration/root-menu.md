@@ -5,7 +5,7 @@
 # rootMenu  
 [androidJvm]  
 Content  
-lateinit var [rootMenu](root-menu.md): (menuID: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) -> [MenuItemBuilder](../-menu-item-builder/index.md)  
+lateinit var [rootMenu](root-menu.md): () -> [MenuItemBuilder](../-menu-item-builder/index.md)  
 
 
 

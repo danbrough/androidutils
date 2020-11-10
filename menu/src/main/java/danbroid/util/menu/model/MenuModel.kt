@@ -33,7 +33,10 @@ class MenuModel(fragment: Fragment, val menuID: String) : ViewModel() {
           ?: throw IllegalArgumentException("menuID $menuID not found in Configration.rootMenu")
       log.trace("builder: $builder")
       builder.createItem(fragment).also { item ->
-        log.trace("created item: $item")
+        log.debug("created item: $item")
+        item.children?.forEach {
+          log.trace("child: $it")
+        }
         _menu.postValue(item)
         _children.postValue(item.children)
       }
@@ -67,8 +70,8 @@ class MenuModel(fragment: Fragment, val menuID: String) : ViewModel() {
 
 }
 
-fun Fragment.menuViewModel(): MenuModel =
-    MenuModel.createModel(this, requireArguments().getString(MenuNavGraph.arg.menu)!!)
+fun Fragment.menuViewModel(id: String = requireArguments().getString(MenuNavGraph.arg.menu)!!): MenuModel =
+    MenuModel.createModel(this, id)
 
 
 private val log = org.slf4j.LoggerFactory.getLogger(MenuModel::class.java)

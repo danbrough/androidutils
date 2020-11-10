@@ -31,23 +31,25 @@ internal fun MenuItemBuilder.prefsExamples() = menu {
     title = "Prefs.Count: ${prefs.count}"
     subtitle = "Click to increment"
     onClick = {
-      log.debug("prefs.count: ${prefs.count}")
-      prefs.edit(commit = true) {
+      prefs.edit {
         count++
       }
-      log.debug("prefs.count now: ${prefs.count}")
+      title = "Prefs.Count: ${prefs.count}"
+      invalidateMenu()
       false
     }
   }
 
   menu {
-    title = prefs.message ?: let {
-      val msg = "prefs.message: ${Date()}"
+    onCreate = {
+      title = prefs.message ?: let {
+        val msg = "prefs.message: ${Date()}"
 
-      prefs.edit {
-        this.message = msg
+        prefs.edit {
+          this.message = msg
+        }
+        msg
       }
-      msg
     }
     subtitle = "prefs.message initialized once"
   }
