@@ -22,21 +22,16 @@ class MenuModel(fragment: Fragment, val menuID: String) : ViewModel() {
   val children: LiveData<List<MenuItem>> = _children
 
   init {
-    log.trace("CREATED MODEL FOR $menuID")
+    log.trace("menuID: $menuID")
     invalidate(fragment)
   }
 
   fun invalidate(fragment: Fragment) {
     log.trace("invalidate() $menuID")
-    viewModelScope.launch(Dispatchers.IO) {
+    viewModelScope.launch(Dispatchers.Main) {
       val builder = MenuConfiguration.rootMenu.invoke().find(menuID)
           ?: throw IllegalArgumentException("menuID $menuID not found in Configration.rootMenu")
-      log.trace("builder: $builder")
       builder.createItem(fragment).also { item ->
-        log.debug("created item: $item")
-        item.children?.forEach {
-          log.trace("child: $it")
-        }
         _menu.postValue(item)
         _children.postValue(item.children)
       }
@@ -48,7 +43,7 @@ class MenuModel(fragment: Fragment, val menuID: String) : ViewModel() {
 
 
   override fun onCleared() {
-    log.warn("onCleared() $menuID")
+    log.trace("onCleared() $menuID")
   }
 
 
