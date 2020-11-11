@@ -2,8 +2,8 @@ package danbroid.util.demo.content
 
 import android.content.Context
 import danbroid.util.menu.MenuItemBuilder
+import danbroid.util.menu.invalidateMenu
 import danbroid.util.menu.menu
-import danbroid.util.menu.model.menuViewModel
 import danbroid.util.prefs.Prefs
 import danbroid.util.prefs.edit
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -31,21 +31,25 @@ internal fun MenuItemBuilder.prefsExamples() = menu {
     title = "Prefs.Count: ${prefs.count}"
     subtitle = "Click to increment"
     onClick = {
-      requireContext().demoPrefs().edit {
+      prefs.edit {
         count++
       }
-      menuViewModel().invalidate(this)
+      title = "Prefs.Count: ${prefs.count}"
+      invalidateMenu()
       false
     }
   }
 
   menu {
-    title = prefs.message ?: let {
-      val msg = "prefs.message: ${Date()}"
-      prefs.edit {
-        this.message = msg
+    onCreate = {
+      title = prefs.message ?: let {
+        val msg = "prefs.message: ${Date()}"
+
+        prefs.edit {
+          this.message = msg
+        }
+        msg
       }
-      msg
     }
     subtitle = "prefs.message initialized once"
   }
@@ -57,7 +61,7 @@ internal fun MenuItemBuilder.prefsExamples() = menu {
       requireContext().demoPrefs().edit {
         message = null
       }
-      menuViewModel().invalidate(this)
+      invalidateMenu()
       false
     }
   }

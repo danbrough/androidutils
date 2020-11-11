@@ -5,7 +5,7 @@
 # invalidate  
 [androidJvm]  
 Content  
-suspend fun [invalidate](invalidate.md)(fragment: [Fragment](https://developer.android.com/reference/kotlin/androidx/fragment/app/Fragment.html))  
+fun [invalidate](invalidate.md)(fragment: [Fragment](https://developer.android.com/reference/kotlin/androidx/fragment/app/Fragment.html))  
 
 
 

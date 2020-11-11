@@ -1,23 +1,18 @@
 package danbroid.util.menu.ui
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.view.ContextMenu
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import danbroid.util.menu.*
+import danbroid.util.menu.MenuConfiguration
 import danbroid.util.menu.MenuConfiguration.menuClickHandler
+import danbroid.util.menu.MenuItem
+import danbroid.util.menu.R
 import danbroid.util.menu.model.MenuModel
 import danbroid.util.menu.model.menuViewModel
 import kotlinx.android.synthetic.main.fragment_menu_list.*
 import kotlinx.coroutines.launch
-import kotlin.concurrent.timer
 
 class MenuFragment : Fragment(R.layout.fragment_menu_list) {
 
@@ -46,11 +41,7 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
           if (clickHandler.invoke(this@MenuFragment))
             menuClickHandler.invoke(this@MenuFragment, menuItem)
         }
-      } ?: run {
-        log.debug("no click handler")
-        menuClickHandler.invoke(this@MenuFragment, menuItem)
-      }
-
+      } ?: menuClickHandler.invoke(this@MenuFragment, menuItem)
     }
 
 
@@ -61,7 +52,12 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
     MenuConfiguration.setToolbarTitle.invoke(this, item.title)
   }
 
-  fun onMenuChildren(children: List<MenuItem>) {
+  fun onMenuChildren(children: List<MenuItem>?) {
+    if (children == null) {
+      progress_bar.visibility = View.VISIBLE
+      recycler_view.visibility = View.GONE
+      return
+    }
     progress_bar.visibility = View.GONE
     recycler_view.visibility = View.VISIBLE
     children.filter { it.isVisible }.also {

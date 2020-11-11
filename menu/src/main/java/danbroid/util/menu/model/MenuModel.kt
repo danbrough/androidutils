@@ -2,16 +2,18 @@ package danbroid.util.menu.model
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.*
-import androidx.navigation.fragment.findNavController
-import danbroid.util.menu.*
+import danbroid.util.menu.MenuConfiguration
+import danbroid.util.menu.MenuItem
+import danbroid.util.menu.MenuNavGraph
+import danbroid.util.menu.find
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.lang.IllegalArgumentException
 
 class MenuModel(fragment: Fragment, val menuID: String) : ViewModel() {
 
-  val context = fragment.requireContext()
+  val context by lazy {
+    fragment.requireContext()
+  }
 
   private val _menu = MutableLiveData<MenuItem>()
   val menu: LiveData<MenuItem> = _menu
@@ -20,44 +22,35 @@ class MenuModel(fragment: Fragment, val menuID: String) : ViewModel() {
   val children: LiveData<List<MenuItem>> = _children
 
   init {
-    log.info("CREATED MODEL FOR $menuID")
-
-    viewModelScope.launch {
-      invalidate(fragment)
-    }
-
+    log.trace("menuID: $menuID")
+    invalidate(fragment)
   }
 
-  suspend fun invalidate(fragment: Fragment) {
-    log.trace("invalidate()")
-    withContext(Dispatchers.Main) {
-      val builder = MenuConfiguration.rootMenu.invoke(menuID).find(menuID)
-        ?: throw IllegalArgumentException("menuID $menuID not found in Configration.rootMenu")
-      builder.createItem(context).also { item ->
-        builder.onCreate?.invoke(fragment, item)
-        _menu.value = item
-        _children.value = item.children
+  fun invalidate(fragment: Fragment) {
+    log.trace("invalidate() $menuID")
+    viewModelScope.launch(Dispatchers.Main) {
+      val builder = MenuConfiguration.rootMenu.invoke().find(menuID)
+          ?: throw IllegalArgumentException("menuID $menuID not found in Configration.rootMenu")
+      builder.createItem(fragment).also { item ->
+        _menu.postValue(item)
+        _children.postValue(item.children)
       }
+    }.invokeOnCompletion {
+      it ?: return@invokeOnCompletion
+      log.error(it.message, it)
     }
   }
 
-  fun updateItem(item: MenuItem) {
-    _menu.postValue(item)
-  }
-
-  fun updateChildren(children: List<MenuItem>) {
-    _children.postValue(children)
-  }
 
   override fun onCleared() {
-    log.warn("onCleared() $menuID")
+    log.trace("onCleared() $menuID")
   }
 
 
   companion object {
 
     class Factory(val fragment: Fragment, val menuID: String) :
-      ViewModelProvider.NewInstanceFactory() {
+        ViewModelProvider.NewInstanceFactory() {
       @Suppress("UNCHECKED_CAST")
       override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return MenuModel(fragment, menuID) as T
@@ -66,14 +59,14 @@ class MenuModel(fragment: Fragment, val menuID: String) : ViewModel() {
 
     @JvmStatic
     fun createModel(fragment: Fragment, menuID: String) =
-      ViewModelProvider(fragment, Factory(fragment, menuID))
-        .get(menuID, MenuModel::class.java)
+        ViewModelProvider(fragment, Factory(fragment, menuID))
+            .get(menuID, MenuModel::class.java)
   }
 
 }
 
-fun Fragment.menuViewModel(): MenuModel =
-  MenuModel.createModel(this, requireArguments().getString(MenuNavGraph.arg.menu)!!)
+fun Fragment.menuViewModel(id: String = requireArguments().getString(MenuNavGraph.arg.menu)!!): MenuModel =
+    MenuModel.createModel(this, id)
 
 
 private val log = org.slf4j.LoggerFactory.getLogger(MenuModel::class.java)
