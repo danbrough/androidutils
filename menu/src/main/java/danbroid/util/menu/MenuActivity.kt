@@ -8,7 +8,6 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
-import kotlinx.android.synthetic.main.activity_main.*
 
 
 abstract class MenuActivity(@LayoutRes layoutID: Int = R.layout.activity_main) : AppCompatActivity(layoutID) {
@@ -27,7 +26,7 @@ abstract class MenuActivity(@LayoutRes layoutID: Int = R.layout.activity_main) :
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
-    setSupportActionBar(toolbar)
+    setSupportActionBar(findViewById(R.id.toolbar))
 
     val navController = navHostFragment.navController
 
@@ -41,7 +40,11 @@ abstract class MenuActivity(@LayoutRes layoutID: Int = R.layout.activity_main) :
 
   override fun setTitle(title: CharSequence?) {
     super.setTitle(title)
-    toolbar.title = title
+    setToolbarTitle(title)
+  }
+
+  protected open fun setToolbarTitle(title: CharSequence?) {
+    findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar).title = title
   }
 
   override fun onSupportNavigateUp() = navHostFragment.navController.navigateUp() || super.onSupportNavigateUp()

@@ -2,7 +2,6 @@ plugins {
   id("com.android.library")
   kotlin("android")
   kotlin("kapt")
-  kotlin("android.extensions")
   id("maven-publish")
   id("org.jetbrains.dokka")
 }
@@ -13,7 +12,7 @@ android {
   compileSdkVersion(ProjectVersions.SDK_VERSION)
 
   defaultConfig {
-    minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
+    minSdkVersion(21)
     targetSdkVersion(ProjectVersions.SDK_VERSION)
     versionCode = ProjectVersions.BUILD_VERSION
     versionName = ProjectVersions.VERSION_NAME
@@ -23,6 +22,10 @@ android {
 
   lintOptions {
     isAbortOnError = false
+  }
+
+  buildFeatures {
+    viewBinding = true
   }
 
   compileOptions {

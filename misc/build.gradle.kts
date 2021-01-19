@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.dsl.copyFreeCompilerArgsToArgs
 plugins {
   id("com.android.library")
   kotlin("android")
-  kotlin("android.extensions")
   kotlin("kapt")
   id("maven-publish")
   id("org.jetbrains.dokka")

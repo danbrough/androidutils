@@ -2,7 +2,6 @@ plugins {
   id("com.android.application")
   kotlin("android")
   kotlin("kapt")
-  kotlin("android.extensions")
 }
 
 
@@ -11,7 +10,7 @@ android {
   compileSdkVersion(ProjectVersions.SDK_VERSION)
 
   defaultConfig {
-    minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
+    minSdkVersion(21)
     targetSdkVersion(ProjectVersions.SDK_VERSION)
     versionCode = ProjectVersions.BUILD_VERSION
     versionName = ProjectVersions.VERSION_NAME
@@ -109,6 +108,7 @@ dependencies {
 
 //  implementation("com.mikepenz:iconics-core:_")
   implementation(AndroidX.appCompat)
+
 
   implementation("com.mikepenz:fontawesome-typeface:_")
   implementation("com.mikepenz:google-material-typeface:_")

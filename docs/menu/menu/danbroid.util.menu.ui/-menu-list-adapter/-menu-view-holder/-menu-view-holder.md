@@ -5,7 +5,7 @@
 # MenuViewHolder  
 [androidJvm]  
 Content  
-fun [MenuViewHolder](-menu-view-holder.md)(itemView: [ViewGroup](https://developer.android.com/reference/kotlin/android/view/ViewGroup.html))  
+fun [MenuViewHolder](-menu-view-holder.md)(binding: <ERROR CLASS>)  
 
 
 

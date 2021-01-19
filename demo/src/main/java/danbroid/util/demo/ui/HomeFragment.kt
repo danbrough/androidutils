@@ -8,7 +8,6 @@ import androidx.navigation.fragment.findNavController
 import danbroid.util.demo.R
 import danbroid.util.demo.URI_CONTENT_PREFIX
 import danbroid.util.menu.navigateToMenuID
-import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -23,11 +22,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
       log.warn("OBSERVED: $it")
     }
 
-    test1.setOnClickListener {
+    view.findViewById<View>(R.id.test1).setOnClickListener {
       test1()
     }
 
-    test2.setOnClickListener {
+    view.findViewById<View>(R.id.test2).setOnClickListener {
       findNavController().navigateToMenuID(URI_CONTENT_PREFIX)
     }
   }
