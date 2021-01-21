@@ -16,7 +16,7 @@ Is this logger instance enabled for the DEBUG level?
 #### Return  
 
 
-if this Logger is enabled for level DEBUG, false otherwise.
+True if this Logger is enabled for level DEBUG, false otherwise.
 
   
 

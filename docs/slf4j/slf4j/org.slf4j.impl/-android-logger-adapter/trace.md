@@ -30,11 +30,11 @@ open fun [trace](trace.md)(format: [String](https://docs.oracle.com/javase/8/doc
 More info  
 
 
-Log a message at level VERBOSE according to the specified format and argument. 
+Log a message at level VERBOSE according to the specified format andargument.
 
 
 
- This form avoids superfluous object creation when the logger is disabled for level VERBOSE. 
+This form avoids superfluous object creation when the logger is disabledfor level VERBOSE.
 
 
 
@@ -44,8 +44,8 @@ androidJvm
   
 |  Name|  Summary| 
 |---|---|
-| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object/PointingToDeclaration/"></a>arg| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object/PointingToDeclaration/"></a><br><br>the argument<br><br>
 | <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object/PointingToDeclaration/"></a>format| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object/PointingToDeclaration/"></a><br><br>the format string<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object/PointingToDeclaration/"></a>arg| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object/PointingToDeclaration/"></a><br><br>the argument<br><br>
   
   
 
@@ -56,11 +56,11 @@ open fun [trace](trace.md)(format: [String](https://docs.oracle.com/javase/8/doc
 More info  
 
 
-Log a message at level VERBOSE according to the specified format and arguments. 
+Log a message at level VERBOSE according to the specified format andarguments.
 
 
 
- This form avoids superfluous object creation when the logger is disabled for the VERBOSE level. 
+This form avoids superfluous object creation when the logger is disabledfor the VERBOSE level.
 
 
 
@@ -70,9 +70,9 @@ androidJvm
   
 |  Name|  Summary| 
 |---|---|
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a>format| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a><br><br>the format string<br><br>
 | <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a>arg1| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a><br><br>the first argument<br><br>
 | <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a>arg2| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a><br><br>the second argument<br><br>
-| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a>format| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object#java.lang.Object/PointingToDeclaration/"></a><br><br>the format string<br><br>
   
   
 
@@ -83,11 +83,11 @@ open fun [trace](trace.md)(format: [String](https://docs.oracle.com/javase/8/doc
 More info  
 
 
-Log a message at level VERBOSE according to the specified format and arguments. 
+Log a message at level VERBOSE according to the specified format andarguments.
 
 
 
- This form avoids superfluous object creation when the logger is disabled for the VERBOSE level. 
+This form avoids superfluous object creation when the logger is disabledfor the VERBOSE level.
 
 
 
@@ -97,8 +97,8 @@ androidJvm
   
 |  Name|  Summary| 
 |---|---|
-| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object.../PointingToDeclaration/"></a>argArray| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object.../PointingToDeclaration/"></a><br><br>an array of arguments<br><br>
 | <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object.../PointingToDeclaration/"></a>format| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object.../PointingToDeclaration/"></a><br><br>the format string<br><br>
+| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object.../PointingToDeclaration/"></a>argArray| <a name="org.slf4j.impl/AndroidLoggerAdapter/trace/#java.lang.String#java.lang.Object.../PointingToDeclaration/"></a><br><br>an array of arguments<br><br>
   
   
 

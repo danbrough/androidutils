@@ -16,7 +16,7 @@ Is this logger instance enabled for the VERBOSE level?
 #### Return  
 
 
-if this Logger is enabled for level VERBOSE, false otherwise.
+True if this Logger is enabled for level VERBOSE, false otherwise.
 
   
 
