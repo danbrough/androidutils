@@ -109,10 +109,10 @@ dependencies {
 //  implementation("com.mikepenz:iconics-core:_")
   implementation(AndroidX.appCompat)
 
+  implementation("com.mikepenz:iconics-core:_@aar")
 
-  implementation("com.mikepenz:fontawesome-typeface:_")
-  implementation("com.mikepenz:google-material-typeface:_")
-  implementation("com.mikepenz:iconics-core:_")
+  implementation("com.mikepenz:fontawesome-typeface:_@aar")
+  implementation("com.mikepenz:google-material-typeface:_@aar")
 
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
   //implementation("com.mikepenz:material-design-iconic-typeface:2.2.0.7-kotlin")
