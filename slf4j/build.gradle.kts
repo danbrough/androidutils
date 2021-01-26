@@ -71,7 +71,7 @@ afterEvaluate {
 
 
 dependencies {
-  implementation("org.slf4j:slf4j-api:_")
+  api("org.slf4j:slf4j-api:_")
   //api(Libs.appcompat)
 
   androidTestImplementation(AndroidX.test.core)

@@ -1,5 +1,3 @@
-import org.jetbrains.dokka.gradle.gradleDokkaSourceSetBuilderFactory
-
 plugins {
   id("org.jetbrains.dokka")
 }
@@ -8,7 +6,7 @@ buildscript {
 
   dependencies {
     classpath("com.android.tools.build:gradle:7.0.0-alpha04")
-   // classpath("com.android.tools.build:gradle:4.1.0")
+    // classpath("com.android.tools.build:gradle:4.1.0")
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:_")
     classpath("org.jetbrains.dokka:dokka-gradle-plugin:_")
 
@@ -48,7 +46,7 @@ allprojects {
         substitute(project(":slf4j")).with(module("ch.qos.logback:logback-classic:1.2.3"))
       }*/
     }
-    resolutionStrategy.force("org.slf4j:slf4j-api:1.7.30")
+//    resolutionStrategy.force("org.slf4j:slf4j-api:1.7.30")
   }
 }
 

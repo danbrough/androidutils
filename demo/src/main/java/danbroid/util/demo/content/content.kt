@@ -3,7 +3,6 @@ package danbroid.util.demo.content
 import android.content.Context
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.navigation.fragment.findNavController
 import com.mikepenz.iconics.typeface.library.googlematerial.GoogleMaterial
 import danbroid.util.demo.DemoNavGraph
 import danbroid.util.demo.R
@@ -84,7 +83,7 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
       menu {
         title = "Home Action"
         subtitle = "calls navController?.navigateToHome()"
-        icon = Icons.iconicsIcon(GoogleMaterial.Icon.gmd_home)
+        icon = iconicsIcon(GoogleMaterial.Icon.gmd_home)
 
         onClick = {
           findNavController().navigateToHome()
@@ -130,7 +129,7 @@ roundedCorners = true"""
 
       menu {
         title = "Inline Child 1"
-        onCreate = { item->
+        onCreate = { item ->
           item.title = "The date is ${Date()}"
         }
       }
@@ -152,14 +151,13 @@ roundedCorners = true"""
     subtitle = "deeplink: $id"
     imageID = R.drawable.ic_settings
     onClick = promptToContinue
-
   }
 
 
 }
 
 private val promptToContinue: MenuItemClickHandler = {
-  log.warn("promptToCOntinue")
+  log.info("promptToCOntinue")
   suspendCoroutine<Boolean> { cont ->
     AlertDialog.Builder(requireContext()).apply {
       setTitle(android.R.string.dialog_alert_title)
@@ -172,8 +170,8 @@ private val promptToContinue: MenuItemClickHandler = {
       }
       show()
     }
+  }.also {
+    consumed = !it
   }
-  log.warn("returning false")
-  false
 }
 

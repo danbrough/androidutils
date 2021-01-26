@@ -87,7 +87,7 @@ dependencies {
   implementation("org.slf4j:slf4j-api:_")
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
   implementation(AndroidX.appCompat)
-  implementation(AndroidX.coreKtx)
+  implementation(AndroidX.core.ktx)
   androidTestImplementation(AndroidX.test.core)
   androidTestImplementation(AndroidX.test.rules)
   androidTestImplementation(AndroidX.test.runner)

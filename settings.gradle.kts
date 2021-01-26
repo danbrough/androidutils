@@ -1,17 +1,12 @@
-import de.fayard.dependencies.bootstrapRefreshVersionsAndDependencies
-
+import de.fayard.refreshVersions.bootstrapRefreshVersions
 
 buildscript {
-  repositories {
-    jcenter()
-    gradlePluginPortal()
-  }
-  dependencies.classpath("de.fayard:dependencies:+")
+  repositories { gradlePluginPortal() }
+  dependencies.classpath("de.fayard.refreshVersions:refreshVersions:0.9.7")
 }
 
+bootstrapRefreshVersions()
 
-
-bootstrapRefreshVersionsAndDependencies()
 
 //include ':android_resource',':slf4j', ':touchprompt', ':touchprompt_material',':demo', ':android-ui'
 //include( ":resource",":slf4j",":permissions")

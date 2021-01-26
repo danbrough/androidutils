@@ -2,7 +2,6 @@ package danbroid.util.menu.ui
 
 import android.os.Bundle
 import android.view.View
-import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import danbroid.util.menu.MenuConfiguration
 import danbroid.util.menu.MenuConfiguration.menuClickHandler
 import danbroid.util.menu.MenuItem
+import danbroid.util.menu.MenuItemClickContext
 import danbroid.util.menu.R
 import danbroid.util.menu.model.MenuModel
 import danbroid.util.menu.model.menuViewModel
@@ -37,13 +37,18 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
 
     adapter.onClick = { menuItem ->
       log.trace("clicked $menuItem builder:${menuItem.menuItemBuilder}")
-
+      val clickContext = MenuItemClickContext(this@MenuFragment) {
+        if (!consumed)
+          menuClickHandler.invoke(this@MenuFragment, menuItem)
+      }
       menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
+
         lifecycleScope.launch {
-          if (clickHandler.invoke(this@MenuFragment))
-            menuClickHandler.invoke(this@MenuFragment, menuItem)
+          clickHandler.invoke(clickContext)
+        }.invokeOnCompletion {
+          clickContext.proceed()
         }
-      } ?: menuClickHandler.invoke(this@MenuFragment, menuItem)
+      } ?: clickContext.proceed()
     }
 
 

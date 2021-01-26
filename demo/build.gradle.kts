@@ -98,8 +98,6 @@ dependencies {
   implementation(project(":misc"))
   // or implementation("com.github.danbrough.androidutils:misc:master-SNAPSHOT")
 
-  implementation("org.slf4j:slf4j-api:_")
-
 
   testImplementation(Testing.junit4)
   testImplementation("ch.qos.logback:logback-core:_")
@@ -124,8 +122,8 @@ dependencies {
 
   implementation(AndroidX.preferenceKtx)
 
-  //implementation(AndroidX.activityKtx)
-  implementation(AndroidX.coreKtx)
+
+  implementation(AndroidX.core.ktx)
   implementation(AndroidX.coordinatorLayout)
 
   implementation(AndroidX.fragmentKtx)
@@ -145,6 +143,20 @@ dependencies {
   androidTestImplementation(AndroidX.test.ext.junit)
   androidTestImplementation(AndroidX.test.ext.truth)
   androidTestImplementation(project(":slf4j"))
+
+  testImplementation("ch.qos.logback:logback-core:_")
+  testImplementation("ch.qos.logback:logback-classic:_")
+  testImplementation("ch.qos.logback:logback-classic:_") {
+    exclude(":slf4j")
+    exclude(group=":slf4j")
+    exclude(group="com.github.danbrough.androidutils",module = "slf4j")
+
+    //exclude(project(":slf4j"))
+    /*compile('org.apache.zookeeper:zookeeper:3.4.5') {
+      exclude group: 'ch.qos.logback', module: 'logback-classic'
+    }*/
+  }
+  testImplementation("ch.qos.logback:logback-core:_")
 }
 
 

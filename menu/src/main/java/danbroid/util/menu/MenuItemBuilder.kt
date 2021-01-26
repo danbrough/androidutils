@@ -3,13 +3,23 @@ package danbroid.util.menu
 import android.content.Context
 import androidx.annotation.ColorRes
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import danbroid.util.menu.model.menuViewModel
 import danbroid.util.resource.toResourceURI
 
 
 typealias MenuItemOnCreated = suspend Fragment.(item: MenuItem) -> Unit
 
-typealias MenuItemClickHandler = suspend Fragment.() -> Boolean
+class MenuItemClickContext(val fragment: Fragment, val action: MenuItemClickContext.() -> Unit) {
+  fun requireContext() = fragment.requireContext()
+  fun requireActivity() = fragment.requireActivity()
+  fun findNavController() = fragment.findNavController()
+  var consumed = false
+  fun proceed() = action.invoke(this)
+}
+
+
+typealias MenuItemClickHandler = suspend MenuItemClickContext.() -> Unit
 
 
 class MenuItemBuilder(context: Context) : MenuBuilder(context) {
@@ -76,7 +86,7 @@ class MenuItemBuilder(context: Context) : MenuBuilder(context) {
 }
 
 @MenuDSL
-fun Fragment.invalidateMenu() = menuViewModel().invalidate(this)
+fun MenuItemClickContext.invalidateMenu() = fragment.menuViewModel().invalidate(fragment)
 
 
 //private val log = org.slf4j.LoggerFactory.getLogger(MenuItemBuilder::class.java)

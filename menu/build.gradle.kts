@@ -79,6 +79,7 @@ dependencies {
 
   implementation(project(":misc"))
   implementation("org.slf4j:slf4j-api:_")
+
   implementation(AndroidX.appCompat)
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
 
@@ -103,6 +104,8 @@ dependencies {
   androidTestImplementation(AndroidX.test.rules)
   androidTestImplementation(AndroidX.test.runner)
   androidTestImplementation(AndroidX.test.core)
+
+  testImplementation(Testing.junit4)
 
 }
 
