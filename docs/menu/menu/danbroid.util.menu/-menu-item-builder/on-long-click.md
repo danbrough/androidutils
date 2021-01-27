@@ -5,7 +5,7 @@
 # onLongClick  
 [androidJvm]  
 Content  
-var [onLongClick](on-long-click.md): [MenuItemLongClickHandler](../index.md#%5Bdanbroid.util.menu%2FMenuItemLongClickHandler%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F747950913)? = null  
+var [onLongClick](on-long-click.md): [MenuItemClickHandler](../index.md#%5Bdanbroid.util.menu%2FMenuItemClickHandler%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F16058836)? = null  
 
 
 
