@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import coil.imageLoader
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -78,7 +79,7 @@ open class MenuListAdapter(val fragment: Fragment,
 
   protected open fun bind(viewHolder: MenuViewHolder, payloads: MutableList<Any>) {
     val menuItem = viewHolder.menuItem!!
-    log.trace("bind() ${viewHolder.menuItem}")
+    //log.trace("bind() ${viewHolder.menuItem}")
     val itemView = viewHolder.itemView
 
     menuItem.menuItemBuilder?.contextMenu?.also { provider ->

@@ -42,7 +42,6 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
           menuClickHandler.invoke(this@MenuFragment, menuItem)
       }
       menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
-
         lifecycleScope.launch {
           clickHandler.invoke(clickContext)
         }.invokeOnCompletion {

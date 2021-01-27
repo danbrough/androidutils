@@ -9,8 +9,7 @@ import danbroid.util.demo.R
 import danbroid.util.demo.URI_CONTENT_PREFIX
 import danbroid.util.menu.*
 import danbroid.util.menu.Icons.iconicsIcon
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.*
 import org.slf4j.LoggerFactory
 import java.util.*
 import kotlin.coroutines.suspendCoroutine
@@ -21,6 +20,7 @@ private val log = LoggerFactory.getLogger("danbroid.util.demo.content")
 fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
   id = URI_CONTENT_PREFIX
   titleID = R.string.app_name
+
 
   menu {
     title = "Dynamic Children"
@@ -37,7 +37,6 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
           subtitle = "${Date()}"
         }
       }
-      true
     }
   }
 
@@ -87,7 +86,6 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
 
         onClick = {
           findNavController().navigateToHome()
-          false
         }
       }
 
@@ -100,7 +98,6 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
         onClick = {
           subtitle = "Counter: ${counter++}"
           invalidateMenu()
-          false
         }
       }
 
