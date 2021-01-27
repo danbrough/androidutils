@@ -23,7 +23,7 @@ object MenuConfiguration {
       log.trace("menu.isBrowsable so navigating to ${menu.id}")
       navController.navigateToMenuID(menu.id)
     } else {
-      log.warn("unhandled menu: ${menu.id}")
+      log.trace("unhandled menu: ${menu.id}")
     }
   }
 

@@ -23,6 +23,7 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import danbroid.util.menu.MENU_TINT_DISABLED
 import danbroid.util.menu.MenuItem
+import danbroid.util.menu.MenuItemClickContext
 import danbroid.util.menu.R
 import danbroid.util.menu.databinding.MenuItemFragmentBinding
 import danbroid.util.resource.*
@@ -46,6 +47,7 @@ open class MenuListAdapter(val fragment: Fragment,
   var DEFAULT_FILE_ICON = R.attr.dbMenuIconFile.getThemeDrawableRes(context, R.drawable.ic_file)
 
   var onClick: ((MenuItem) -> Unit)? = null
+  var onLongClick: ((MenuItem) -> Boolean)? = null
 
   override fun onViewRecycled(holder: MenuViewHolder) {
     super.onViewRecycled(holder)
@@ -80,6 +82,13 @@ open class MenuListAdapter(val fragment: Fragment,
     val menuItem = viewHolder.menuItem!!
     //log.trace("bind() ${viewHolder.menuItem}")
     val itemView = viewHolder.itemView
+
+    menuItem.menuItemBuilder?.onLongClick?.also { handler->
+      itemView.setOnLongClickListener {
+        onLongClick?.invoke(menuItem) ?: false
+      }
+    } ?: itemView.setOnLongClickListener(null)
+
 
     menuItem.menuItemBuilder?.contextMenu?.also { provider ->
       itemView.setOnCreateContextMenuListener { contextMenu, _, _ ->

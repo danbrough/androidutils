@@ -21,6 +21,13 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
   id = URI_CONTENT_PREFIX
   titleID = R.string.app_name
 
+  menu {
+    title = "Handle Long click"
+    onLongClick = {
+      Toast.makeText(context, "Long click handled", Toast.LENGTH_SHORT).show()
+      true
+    }
+  }
 
   menu {
     title = "Dynamic Children"

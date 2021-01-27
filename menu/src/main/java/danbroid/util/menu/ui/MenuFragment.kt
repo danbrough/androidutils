@@ -38,8 +38,8 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
     adapter.onClick = { menuItem ->
       log.trace("clicked $menuItem builder:${menuItem.menuItemBuilder}")
       val clickContext = MenuItemClickContext(this@MenuFragment) {
-        if (!consumed)
-          menuClickHandler.invoke(this@MenuFragment, menuItem)
+        log.warn("calling menuClickHandler")
+        menuClickHandler.invoke(this@MenuFragment, menuItem)
       }
       menuItem.menuItemBuilder?.onClick?.also { clickHandler ->
         lifecycleScope.launch {
@@ -48,6 +48,17 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
           clickContext.proceed()
         }
       } ?: clickContext.proceed()
+    }
+
+    adapter.onLongClick = { menuItem ->
+      log.warn("ON LONG CLICK!!")
+      menuItem.menuItemBuilder?.onLongClick?.let { clickHandler ->
+        val clickContext = MenuItemClickContext(this@MenuFragment) {
+          log.warn("calling menuClickHandler")
+          menuClickHandler.invoke(this@MenuFragment, menuItem)
+        }
+        clickHandler.invoke(clickContext)
+      } ?: false
     }
 
 

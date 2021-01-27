@@ -15,11 +15,12 @@ class MenuItemClickContext(val fragment: Fragment, val action: MenuItemClickCont
   fun requireActivity() = fragment.requireActivity()
   fun findNavController() = fragment.findNavController()
   var consumed = false
-  fun proceed() = action.invoke(this)
+  fun proceed() = if (!consumed) action.invoke(this) else Unit
 }
 
 
 typealias MenuItemClickHandler = suspend MenuItemClickContext.() -> Unit
+typealias MenuItemLongClickHandler = MenuItemClickContext.() -> Boolean
 
 
 class MenuItemBuilder(context: Context) : MenuBuilder(context) {
@@ -33,6 +34,7 @@ class MenuItemBuilder(context: Context) : MenuBuilder(context) {
   var roundedCorners: Boolean = true
 
   var onClick: MenuItemClickHandler? = null
+  var onLongClick: MenuItemLongClickHandler? = null
 
   suspend fun createItem(fragment: Fragment, itemID: String = id, depth: Int = 1): MenuItem {
     val context = fragment.requireContext()
