@@ -23,9 +23,11 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
 
   menu {
     title = "Handle Long click"
+    onClick = {
+      consumed = true
+    }
     onLongClick = {
       Toast.makeText(context, "Long click handled", Toast.LENGTH_SHORT).show()
-      true
     }
   }
 
@@ -44,6 +46,7 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
           subtitle = "${Date()}"
         }
       }
+
     }
   }
 

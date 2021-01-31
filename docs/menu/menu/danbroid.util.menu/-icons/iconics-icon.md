@@ -7,7 +7,7 @@
 Content  
 @[JvmStatic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html)()  
   
-fun [iconicsIcon](iconics-icon.md)(icon: IIcon, builder: IconicsDrawable.() -> [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) = {}): [DrawableProvider](../index.md#%5Bdanbroid.util.menu%2FDrawableProvider%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F16058836)  
+fun [iconicsIcon](iconics-icon.md)(icon: IIcon, builder: IconicsDrawable.() -> [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) = {}): [DrawableProvider](../index.md#%5Bdanbroid.util.menu%2FDrawableProvider%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-43745796)  
 
 
 

@@ -2,7 +2,7 @@
 
 ## Danbroid's Util Library
 
-### Latest version: 1.1.5-alpha05
+### Latest version: 1.1.5-beta01
 
 ![alt text](https://jitpack.io/v/danbrough/androidutils.svg "Version Logo")
 

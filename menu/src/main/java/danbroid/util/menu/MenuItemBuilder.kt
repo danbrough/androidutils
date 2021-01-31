@@ -14,13 +14,12 @@ class MenuItemClickContext(val fragment: Fragment, val action: MenuItemClickCont
   fun requireContext() = fragment.requireContext()
   fun requireActivity() = fragment.requireActivity()
   fun findNavController() = fragment.findNavController()
-  var consumed = false
+  var consumed: Boolean = false
   fun proceed() = if (!consumed) action.invoke(this) else Unit
 }
 
 
 typealias MenuItemClickHandler = suspend MenuItemClickContext.() -> Unit
-
 
 
 class MenuItemBuilder(context: Context) : MenuBuilder(context) {
