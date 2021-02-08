@@ -14,8 +14,7 @@ class MenuItemClickContext(val fragment: Fragment, val action: MenuItemClickCont
   fun requireContext() = fragment.requireContext()
   fun requireActivity() = fragment.requireActivity()
   fun findNavController() = fragment.findNavController()
-  var consumed: Boolean = false
-  fun proceed() = if (!consumed) action.invoke(this) else Unit
+  fun proceed() = action.invoke(this)
 }
 
 

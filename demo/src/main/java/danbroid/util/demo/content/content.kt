@@ -24,7 +24,6 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
   menu {
     title = "Handle Long click"
     onClick = {
-      consumed = true
     }
     onLongClick = {
       Toast.makeText(context, "Long click handled", Toast.LENGTH_SHORT).show()
@@ -178,7 +177,7 @@ private val promptToContinue: MenuItemClickHandler = {
       show()
     }
   }.also {
-    consumed = !it
+    if (it) proceed()
   }
 }
 

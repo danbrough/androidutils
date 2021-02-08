@@ -20,14 +20,14 @@ object ProjectVersions {
     MIN_SDK_VERSION = props.getProperty("minSdkVersion", "21").toInt()
     BUILD_VERSION = props.getProperty("buildVersion", "1").toInt()
     VERSION_OFFSET = props.getProperty("versionOffset", "1").toInt()
-    VERSION_FORMAT = props.getProperty("versionFormat", "0.0.%d")
-    GROUP_ID = props.getProperty("groupID", "")
-    KEYSTORE_PASSWORD = props.getProperty("keystorePassword", "")
+    VERSION_FORMAT = props.getProperty("versionFormat", "0.0.%d").trim()
+    GROUP_ID = props.getProperty("groupID", "").trim()
+    KEYSTORE_PASSWORD = props.getProperty("keystorePassword", "").trim()
   }
 
   fun getIncrementedVersionName() = getVersionName(BUILD_VERSION + 1)
 
 
   fun getVersionName(version: Int = BUILD_VERSION) =
-    VERSION_FORMAT.format(version - VERSION_OFFSET)
+    VERSION_FORMAT.format(version - VERSION_OFFSET).trim()
 }
