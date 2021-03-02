@@ -5,7 +5,7 @@
 # onClick  
 [androidJvm]  
 Content  
-var [onClick](on-click.md): [MenuItemClickHandler](../index.md#%5Bdanbroid.util.menu%2FMenuItemClickHandler%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F71752720)? = null  
+var [onClick](on-click.md): [MenuItemClickHandler](../index.md#%5Bdanbroid.util.menu%2FMenuItemClickHandler%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-102930891)? = null  
 
 
 
