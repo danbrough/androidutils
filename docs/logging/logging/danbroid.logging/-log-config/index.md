@@ -6,14 +6,6 @@
  [jvm] object [LogConfig](index.md)   
 
 
-## Types  
-  
-|  Name |  Summary | 
-|---|---|
-| <a name="danbroid.logging/LogConfig.NullLog///PointingToDeclaration/"></a>[NullLog](-null-log/index.md)| <a name="danbroid.logging/LogConfig.NullLog///PointingToDeclaration/"></a>[jvm]  <br>Content  <br>class [NullLog](-null-log/index.md) : [Log](../-log/index.md)  <br><br><br>|
-| <a name="danbroid.logging/LogConfig.PrintlnImpl///PointingToDeclaration/"></a>[PrintlnImpl](-println-impl/index.md)| <a name="danbroid.logging/LogConfig.PrintlnImpl///PointingToDeclaration/"></a>[jvm]  <br>Content  <br>class [PrintlnImpl](-println-impl/index.md)(**name**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [LogImpl](../-log-impl/index.md)  <br><br><br>|
-
-
 ## Properties  
   
 |  Name |  Summary | 

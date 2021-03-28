@@ -13,7 +13,7 @@ plugins {
   id("org.jetbrains.dokka")
   // `java-test-fixtures`
   //id("com.google.protobuf")
- // kotlin("plugin.serialization")
+  // kotlin("plugin.serialization")
 }
 
 
@@ -21,7 +21,6 @@ java {
   sourceCompatibility = ProjectVersions.JAVA_VERSION
   targetCompatibility = ProjectVersions.JAVA_VERSION
 }
-
 
 
 val sourcesJar by tasks.registering(Jar::class) {
@@ -39,5 +38,10 @@ publishing {
       artifact(sourcesJar)
     }
   }
+}
+
+
+dependencies {
+  implementation("org.slf4j:slf4j-api:_")
 }
 

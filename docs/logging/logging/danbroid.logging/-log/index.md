@@ -29,6 +29,6 @@
   
 |  Name | 
 |---|
-| <a name="danbroid.logging/LogConfig.NullLog///PointingToDeclaration/"></a>[LogConfig](../-log-config/-null-log/index.md)|
 | <a name="danbroid.logging/LogImpl///PointingToDeclaration/"></a>[LogImpl](../-log-impl/index.md)|
+| <a name="danbroid.logging/NullLog///PointingToDeclaration/"></a>[NullLog](../-null-log/index.md)|
 

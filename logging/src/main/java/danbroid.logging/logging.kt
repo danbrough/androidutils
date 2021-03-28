@@ -21,21 +21,8 @@ object LogConfig {
   var MIN_LOG_LEVEL: Log.Level? = null
 
   var CREATE_LOG: (String) -> Log = { PrintlnImpl(it) }
-
-  class NullLog : Log {
-    override inline fun write_log(level: Log.Level, msg: CharSequence, error: Throwable?) {}
-  }
-
-  class PrintlnImpl(name: String) : LogImpl(name) {
-
-    override fun write_log_native(level: Log.Level, msg: CharSequence, error: Throwable?) {
-      println("$level: $msg ${error?.message}")
-      error?.also {
-        it.printStackTrace()
-      }
-    }
-  }
 }
+
 
 abstract class LogImpl(val name: String) : Log {
 
@@ -54,7 +41,23 @@ abstract class LogImpl(val name: String) : Log {
   abstract fun write_log_native(level: Log.Level, msg: CharSequence, error: Throwable?)
 }
 
-fun createLog(name: String): Log = LogConfig.PrintlnImpl(name)
+
+class PrintlnImpl(name: String) : LogImpl(name) {
+
+  override fun write_log_native(level: Log.Level, msg: CharSequence, error: Throwable?) {
+    println("$name:$level: $msg ${error?.message}")
+    error?.also {
+      it.printStackTrace()
+    }
+  }
+}
+
+
+class NullLog : Log {
+  override inline fun write_log(level: Log.Level, msg: CharSequence, error: Throwable?) {}
+}
+
+fun createLog(name: String): Log = LogConfig.CREATE_LOG(name)
 
 fun createLog(kclass: KClass<*>): Log = createLog(kclass.qualifiedName!!)
 

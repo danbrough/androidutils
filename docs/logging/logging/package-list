@@ -26,12 +26,6 @@ $dokka.location:danbroid.logging/Log/info/#kotlin.CharSequence#kotlin.Throwable?
 $dokka.location:danbroid.logging/Log/trace/#kotlin.CharSequence#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-log/trace.md
 $dokka.location:danbroid.logging/Log/warn/#kotlin.CharSequence#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-log/warn.md
 $dokka.location:danbroid.logging/Log/write_log/#danbroid.logging.Log.Level#kotlin.CharSequence#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-log/write_log.md
-$dokka.location:danbroid.logging/LogConfig.NullLog///PointingToDeclaration/logging/danbroid.logging/-log-config/-null-log/index.md
-$dokka.location:danbroid.logging/LogConfig.NullLog/NullLog/#/PointingToDeclaration/logging/danbroid.logging/-log-config/-null-log/-null-log.md
-$dokka.location:danbroid.logging/LogConfig.NullLog/write_log/#danbroid.logging.Log.Level#kotlin.CharSequence#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-log-config/-null-log/write_log.md
-$dokka.location:danbroid.logging/LogConfig.PrintlnImpl///PointingToDeclaration/logging/danbroid.logging/-log-config/-println-impl/index.md
-$dokka.location:danbroid.logging/LogConfig.PrintlnImpl/PrintlnImpl/#kotlin.String/PointingToDeclaration/logging/danbroid.logging/-log-config/-println-impl/-println-impl.md
-$dokka.location:danbroid.logging/LogConfig.PrintlnImpl/write_log_native/#danbroid.logging.Log.Level#kotlin.CharSequence#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-log-config/-println-impl/write_log_native.md
 $dokka.location:danbroid.logging/LogConfig///PointingToDeclaration/logging/danbroid.logging/-log-config/index.md
 $dokka.location:danbroid.logging/LogConfig/CREATE_LOG/#/PointingToDeclaration/logging/danbroid.logging/-log-config/-c-r-e-a-t-e_-l-o-g.md
 $dokka.location:danbroid.logging/LogConfig/MIN_LOG_LEVEL/#/PointingToDeclaration/logging/danbroid.logging/-log-config/-m-i-n_-l-o-g_-l-e-v-e-l.md
@@ -40,5 +34,15 @@ $dokka.location:danbroid.logging/LogImpl/LogImpl/#kotlin.String/PointingToDeclar
 $dokka.location:danbroid.logging/LogImpl/name/#/PointingToDeclaration/logging/danbroid.logging/-log-impl/name.md
 $dokka.location:danbroid.logging/LogImpl/write_log/#danbroid.logging.Log.Level#kotlin.CharSequence#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-log-impl/write_log.md
 $dokka.location:danbroid.logging/LogImpl/write_log_native/#danbroid.logging.Log.Level#kotlin.CharSequence#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-log-impl/write_log_native.md
+$dokka.location:danbroid.logging/NullLog///PointingToDeclaration/logging/danbroid.logging/-null-log/index.md
+$dokka.location:danbroid.logging/NullLog/NullLog/#/PointingToDeclaration/logging/danbroid.logging/-null-log/-null-log.md
+$dokka.location:danbroid.logging/NullLog/write_log/#danbroid.logging.Log.Level#kotlin.CharSequence#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-null-log/write_log.md
+$dokka.location:danbroid.logging/PrintlnImpl///PointingToDeclaration/logging/danbroid.logging/-println-impl/index.md
+$dokka.location:danbroid.logging/PrintlnImpl/PrintlnImpl/#kotlin.String/PointingToDeclaration/logging/danbroid.logging/-println-impl/-println-impl.md
+$dokka.location:danbroid.logging/PrintlnImpl/write_log_native/#danbroid.logging.Log.Level#kotlin.CharSequence#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-println-impl/write_log_native.md
+$dokka.location:danbroid.logging/Slf4jLogImpl///PointingToDeclaration/logging/danbroid.logging/-slf4j-log-impl/index.md
+$dokka.location:danbroid.logging/Slf4jLogImpl/Slf4jLogImpl/#kotlin.reflect.KClass[*]/PointingToDeclaration/logging/danbroid.logging/-slf4j-log-impl/-slf4j-log-impl.md
+$dokka.location:danbroid.logging/Slf4jLogImpl/log/#/PointingToDeclaration/logging/danbroid.logging/-slf4j-log-impl/log.md
+$dokka.location:danbroid.logging/Slf4jLogImpl/write_log_native/#danbroid.logging.Log.Level#kotlin.CharSequence#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-slf4j-log-impl/write_log_native.md
 danbroid.logging
 
