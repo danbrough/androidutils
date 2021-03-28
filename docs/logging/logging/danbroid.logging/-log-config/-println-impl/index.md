@@ -23,5 +23,5 @@
   
 |  Name |  Summary | 
 |---|---|
-| <a name="danbroid.logging/LogConfig.PrintlnImpl/name/#/PointingToDeclaration/"></a>[name](index.md#%5Bdanbroid.logging%2FLogConfig.PrintlnImpl%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-749265327)| <a name="danbroid.logging/LogConfig.PrintlnImpl/name/#/PointingToDeclaration/"></a> [jvm] val [name](index.md#%5Bdanbroid.logging%2FLogConfig.PrintlnImpl%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-749265327): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)   <br>|
+| <a name="danbroid.logging/LogConfig.PrintlnImpl/name/#/PointingToDeclaration/"></a>[name](index.md#%5Bdanbroid.logging%2FLogConfig.PrintlnImpl%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-388272147)| <a name="danbroid.logging/LogConfig.PrintlnImpl/name/#/PointingToDeclaration/"></a> [jvm] val [name](index.md#%5Bdanbroid.logging%2FLogConfig.PrintlnImpl%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-388272147): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)   <br>|
 

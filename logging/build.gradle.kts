@@ -29,17 +29,14 @@ val sourcesJar by tasks.registering(Jar::class) {
   from(sourceSets.getByName("main").java.srcDirs)
 }
 
-group = "danbroid.logging"
-version = "0.0.1-alpha01"
+group = ProjectVersions.GROUP_ID
+version = ProjectVersions.getVersionName()
 
 publishing {
   publications {
     create<MavenPublication>("default") {
       from(components["java"])
       artifact(sourcesJar)
-      this.groupId = "danbroid.logging"
-      this.artifactId = "core"
-      this.version = "0.0.1-alpha02"
     }
   }
 }
