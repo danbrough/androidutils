@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu](../index.md)/[MenuConfiguration](index.md)/[setToolbarTitle](set-toolbar-title.md)
+//[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuConfiguration](index.md)/[setToolbarTitle](set-toolbar-title.md)
 
 
 

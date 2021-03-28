@@ -1,4 +1,4 @@
-//[slf4j](../index.md)/[org.slf4j.impl](index.md)
+//[slf4j](../../index.md)/[org.slf4j.impl](index.md)
 
 
 
@@ -7,9 +7,8 @@
 
 ## Types  
   
-|  Name|  Summary| 
+|  Name |  Summary | 
 |---|---|
-| <a name="org.slf4j.impl/AndroidLoggerAdapter///PointingToDeclaration/"></a>[AndroidLoggerAdapter](-android-logger-adapter/index.md)| <a name="org.slf4j.impl/AndroidLoggerAdapter///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open class [AndroidLoggerAdapter](-android-logger-adapter/index.md) : MarkerIgnoringBase  <br><br><br>
-| <a name="org.slf4j.impl/AndroidLoggerFactory///PointingToDeclaration/"></a>[AndroidLoggerFactory](-android-logger-factory/index.md)| <a name="org.slf4j.impl/AndroidLoggerFactory///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open class [AndroidLoggerFactory](-android-logger-factory/index.md) : ILoggerFactory  <br><br><br>
-| <a name="org.slf4j.impl/StaticLoggerBinder///PointingToDeclaration/"></a>[StaticLoggerBinder](-static-logger-binder/index.md)| <a name="org.slf4j.impl/StaticLoggerBinder///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open class [StaticLoggerBinder](-static-logger-binder/index.md) : LoggerFactoryBinder  <br><br><br>
+| <a name="org.slf4j.impl/AndroidLoggerFactory///PointingToDeclaration/"></a>[AndroidLoggerFactory](-android-logger-factory/index.md)| <a name="org.slf4j.impl/AndroidLoggerFactory///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open class [AndroidLoggerFactory](-android-logger-factory/index.md) : ILoggerFactory  <br><br><br>|
+| <a name="org.slf4j.impl/StaticLoggerBinder///PointingToDeclaration/"></a>[StaticLoggerBinder](-static-logger-binder/index.md)| <a name="org.slf4j.impl/StaticLoggerBinder///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open class [StaticLoggerBinder](-static-logger-binder/index.md) : LoggerFactoryBinder  <br><br><br>|
 

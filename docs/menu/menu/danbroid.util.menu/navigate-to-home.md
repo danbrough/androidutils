@@ -1,4 +1,4 @@
-//[menu](../index.md)/[danbroid.util.menu](index.md)/[navigateToHome](navigate-to-home.md)
+//[menu](../../index.md)/[danbroid.util.menu](index.md)/[navigateToHome](navigate-to-home.md)
 
 
 

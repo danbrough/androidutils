@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu.ui](../index.md)/[MenuItemDiffCallback](index.md)/[areItemsTheSame](are-items-the-same.md)
+//[menu](../../../index.md)/[danbroid.util.menu.ui](../index.md)/[MenuItemDiffCallback](index.md)/[areItemsTheSame](are-items-the-same.md)
 
 
 

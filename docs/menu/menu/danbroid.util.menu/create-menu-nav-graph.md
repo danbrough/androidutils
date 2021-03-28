@@ -1,4 +1,4 @@
-//[menu](../index.md)/[danbroid.util.menu](index.md)/[createMenuNavGraph](create-menu-nav-graph.md)
+//[menu](../../index.md)/[danbroid.util.menu](index.md)/[createMenuNavGraph](create-menu-nav-graph.md)
 
 
 

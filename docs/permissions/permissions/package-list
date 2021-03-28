@@ -1,5 +1,25 @@
 $dokka.format:gfm-v1
 $dokka.linkExtension:md
-
+$dokka.location:danbroid.util.permissions////PointingToDeclaration/permissions/danbroid.util.permissions/index.md
+$dokka.location:danbroid.util.permissions//processPermissionResult/androidx.appcompat.app.AppCompatActivity#kotlin.Int#kotlin.Array[kotlin.String]#kotlin.IntArray/PointingToDeclaration/permissions/danbroid.util.permissions/process-permission-result.md
+$dokka.location:danbroid.util.permissions//showAppPermissionsSettings/android.app.Activity#/PointingToDeclaration/permissions/danbroid.util.permissions/show-app-permissions-settings.md
+$dokka.location:danbroid.util.permissions//withPermission/androidx.appcompat.app.AppCompatActivity#kotlin.String#kotlin.String?#kotlin.coroutines.SuspendFunction1[kotlin.Boolean,kotlin.Unit]/PointingToDeclaration/permissions/danbroid.util.permissions/with-permission.md
+$dokka.location:danbroid.util.permissions//withPermission/androidx.appcompat.app.AppCompatActivity#kotlin.String#kotlin.String?/PointingToDeclaration/permissions/danbroid.util.permissions/with-permission.md
+$dokka.location:danbroid.util.permissions//withPermission/androidx.fragment.app.Fragment#kotlin.String#kotlin.String?#kotlin.coroutines.SuspendFunction1[kotlin.Boolean,kotlin.Unit]/PointingToDeclaration/permissions/danbroid.util.permissions/with-permission.md
+$dokka.location:danbroid.util.permissions//withPermission/androidx.fragment.app.Fragment#kotlin.String#kotlin.String?/PointingToDeclaration/permissions/danbroid.util.permissions/with-permission.md
+$dokka.location:danbroid.util.permissions//withPermissions/android.app.Activity#pub.devrel.easypermissions.PermissionRequest/PointingToDeclaration/permissions/danbroid.util.permissions/with-permissions.md
+$dokka.location:danbroid.util.permissions//withPermissions/androidx.fragment.app.Fragment#pub.devrel.easypermissions.PermissionRequest/PointingToDeclaration/permissions/danbroid.util.permissions/with-permissions.md
+$dokka.location:danbroid.util.permissions/PermissionResult///PointingToDeclaration/permissions/danbroid.util.permissions/-permission-result/index.md
+$dokka.location:danbroid.util.permissions/PermissionResult/PermissionResult/#kotlin.Int#kotlin.Array[kotlin.String]#kotlin.collections.List[kotlin.Boolean]/PointingToDeclaration/permissions/danbroid.util.permissions/-permission-result/-permission-result.md
+$dokka.location:danbroid.util.permissions/PermissionResult/isGranted/#kotlin.String/PointingToDeclaration/permissions/danbroid.util.permissions/-permission-result/is-granted.md
+$dokka.location:danbroid.util.permissions/PermissionResult/permissions/#/PointingToDeclaration/permissions/danbroid.util.permissions/-permission-result/permissions.md
+$dokka.location:danbroid.util.permissions/PermissionResult/requestCode/#/PointingToDeclaration/permissions/danbroid.util.permissions/-permission-result/request-code.md
+$dokka.location:danbroid.util.permissions/PermissionResult/results/#/PointingToDeclaration/permissions/danbroid.util.permissions/-permission-result/results.md
+$dokka.location:danbroid.util.permissions/PermissionsManager///PointingToDeclaration/permissions/danbroid.util.permissions/-permissions-manager/index.md
+$dokka.location:danbroid.util.permissions/PermissionsManager/close/#/PointingToDeclaration/permissions/danbroid.util.permissions/-permissions-manager/close.md
+$dokka.location:danbroid.util.permissions/PermissionsManager/processPermissionResult/#androidx.appcompat.app.AppCompatActivity#kotlin.Int#kotlin.Array[kotlin.String]#kotlin.IntArray/PointingToDeclaration/permissions/danbroid.util.permissions/-permissions-manager/process-permission-result.md
+$dokka.location:danbroid.util.permissions/PermissionsManager/withPermission/#android.app.Activity#kotlin.String#kotlin.String?/PointingToDeclaration/permissions/danbroid.util.permissions/-permissions-manager/with-permission.md
+$dokka.location:danbroid.util.permissions/PermissionsManager/withPermission/#android.content.Context#pub.devrel.easypermissions.PermissionRequest/PointingToDeclaration/permissions/danbroid.util.permissions/-permissions-manager/with-permission.md
+$dokka.location:danbroid.util.permissions/PermissionsManager/withPermissions/#android.app.Activity#pub.devrel.easypermissions.PermissionRequest/PointingToDeclaration/permissions/danbroid.util.permissions/-permissions-manager/with-permissions.md
 danbroid.util.permissions
 

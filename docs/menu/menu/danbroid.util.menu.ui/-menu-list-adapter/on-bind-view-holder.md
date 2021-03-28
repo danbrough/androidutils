@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu.ui](../index.md)/[MenuListAdapter](index.md)/[onBindViewHolder](on-bind-view-holder.md)
+//[menu](../../../index.md)/[danbroid.util.menu.ui](../index.md)/[MenuListAdapter](index.md)/[onBindViewHolder](on-bind-view-holder.md)
 
 
 

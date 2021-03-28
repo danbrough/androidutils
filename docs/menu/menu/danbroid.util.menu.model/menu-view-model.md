@@ -1,4 +1,4 @@
-//[menu](../index.md)/[danbroid.util.menu.model](index.md)/[menuViewModel](menu-view-model.md)
+//[menu](../../index.md)/[danbroid.util.menu.model](index.md)/[menuViewModel](menu-view-model.md)
 
 
 

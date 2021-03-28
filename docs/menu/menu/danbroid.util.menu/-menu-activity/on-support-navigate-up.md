@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu](../index.md)/[MenuActivity](index.md)/[onSupportNavigateUp](on-support-navigate-up.md)
+//[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuActivity](index.md)/[onSupportNavigateUp](on-support-navigate-up.md)
 
 
 

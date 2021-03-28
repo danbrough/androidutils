@@ -1,4 +1,4 @@
-//[menu](../../../index.md)/[danbroid.util.menu.ui](../../index.md)/[MenuListAdapter](../index.md)/[MenuViewHolder](index.md)/[menuItem](menu-item.md)
+//[menu](../../../../index.md)/[danbroid.util.menu.ui](../../index.md)/[MenuListAdapter](../index.md)/[MenuViewHolder](index.md)/[menuItem](menu-item.md)
 
 
 

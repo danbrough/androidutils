@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.resource](index.md)/[getThemeDrawable](get-theme-drawable.md)
+//[misc](../../index.md)/[danbroid.util.resource](index.md)/[getThemeDrawable](get-theme-drawable.md)
 
 
 

@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu](../index.md)/[MenuItem](index.md)/[isVisible](is-visible.md)
+//[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuItem](index.md)/[isVisible](is-visible.md)
 
 
 

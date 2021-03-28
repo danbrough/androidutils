@@ -1,4 +1,4 @@
-//[menu](../index.md)/[danbroid.util.menu](index.md)/[MENU_TINT_DEFAULT](-m-e-n-u_-t-i-n-t_-d-e-f-a-u-l-t.md)
+//[menu](../../index.md)/[danbroid.util.menu](index.md)/[MENU_TINT_DEFAULT](-m-e-n-u_-t-i-n-t_-d-e-f-a-u-l-t.md)
 
 
 

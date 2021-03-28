@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.format](../index.md)/[FormatUtils](index.md)/[FormatUtils](-format-utils.md)
+//[misc](../../../index.md)/[danbroid.util.format](../index.md)/[FormatUtils](index.md)/[FormatUtils](-format-utils.md)
 
 
 

@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.format](index.md)/[humanReadableByteCount](human-readable-byte-count.md)
+//[misc](../../index.md)/[danbroid.util.format](index.md)/[humanReadableByteCount](human-readable-byte-count.md)
 
 
 

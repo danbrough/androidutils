@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu](../index.md)/[MenuItemClickContext](index.md)/[findNavController](find-nav-controller.md)
+//[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuItemClickContext](index.md)/[findNavController](find-nav-controller.md)
 
 
 

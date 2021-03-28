@@ -1,5 +1,13 @@
 $dokka.format:gfm-v1
 $dokka.linkExtension:md
-
+$dokka.location:org.slf4j.impl////PointingToDeclaration/slf4j/org.slf4j.impl/index.md
+$dokka.location:org.slf4j.impl/AndroidLoggerFactory.LogInfo///PointingToDeclaration/slf4j/org.slf4j.impl/-android-logger-factory/-log-info/index.md
+$dokka.location:org.slf4j.impl/AndroidLoggerFactory///PointingToDeclaration/slf4j/org.slf4j.impl/-android-logger-factory/index.md
+$dokka.location:org.slf4j.impl/AndroidLoggerFactory/TAG/#/PointingToDeclaration/slf4j/org.slf4j.impl/-android-logger-factory/-t-a-g.md
+$dokka.location:org.slf4j.impl/AndroidLoggerFactory/getLogger/#java.lang.String/PointingToDeclaration/slf4j/org.slf4j.impl/-android-logger-factory/get-logger.md
+$dokka.location:org.slf4j.impl/StaticLoggerBinder///PointingToDeclaration/slf4j/org.slf4j.impl/-static-logger-binder/index.md
+$dokka.location:org.slf4j.impl/StaticLoggerBinder/getSingleton/#/PointingToDeclaration/slf4j/org.slf4j.impl/-static-logger-binder/get-singleton.md
+$dokka.location:org.slf4j.impl/StaticLoggerBinder/loggerFactory/#/PointingToDeclaration/slf4j/org.slf4j.impl/-static-logger-binder/logger-factory.md
+$dokka.location:org.slf4j.impl/StaticLoggerBinder/loggerFactoryClassStr/#/PointingToDeclaration/slf4j/org.slf4j.impl/-static-logger-binder/logger-factory-class-str.md
 org.slf4j.impl
 

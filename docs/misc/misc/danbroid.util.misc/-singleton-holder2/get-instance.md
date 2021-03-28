@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.misc](../index.md)/[SingletonHolder2](index.md)/[getInstance](get-instance.md)
+//[misc](../../../index.md)/[danbroid.util.misc](../index.md)/[SingletonHolder2](index.md)/[getInstance](get-instance.md)
 
 
 

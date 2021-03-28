@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.resource](../index.md)/[ResourceUtils](index.md)/[getDimensionPixelSize](get-dimension-pixel-size.md)
+//[misc](../../../index.md)/[danbroid.util.resource](../index.md)/[ResourceUtils](index.md)/[getDimensionPixelSize](get-dimension-pixel-size.md)
 
 
 
@@ -11,7 +11,7 @@ fun [getDimensionPixelSize](get-dimension-pixel-size.md)(context: [Context](http
 More info  
 
 
-Retrieves the [Px](https://developer.android.com/reference/kotlin/androidx/annotation/Px.html) from your theme with the attribute identified by dimensionAttribute
+Retrieves the [Px](https://developer.android.com/reference/kotlin/androidx/annotation/Px.html) from your theme with the attribute identified by [dimensionAttribute](get-dimension-pixel-size.md)
 
   
 

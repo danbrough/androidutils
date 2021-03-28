@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.resource](index.md)/[getThemeBoolean](get-theme-boolean.md)
+//[misc](../../index.md)/[danbroid.util.resource](index.md)/[getThemeBoolean](get-theme-boolean.md)
 
 
 

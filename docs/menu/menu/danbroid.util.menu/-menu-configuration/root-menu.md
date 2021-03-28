@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu](../index.md)/[MenuConfiguration](index.md)/[rootMenu](root-menu.md)
+//[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuConfiguration](index.md)/[rootMenu](root-menu.md)
 
 
 

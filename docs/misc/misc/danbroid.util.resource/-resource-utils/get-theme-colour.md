@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.resource](../index.md)/[ResourceUtils](index.md)/[getThemeColour](get-theme-colour.md)
+//[misc](../../../index.md)/[danbroid.util.resource](../index.md)/[ResourceUtils](index.md)/[getThemeColour](get-theme-colour.md)
 
 
 
@@ -11,7 +11,7 @@ fun [getThemeColour](get-theme-colour.md)(context: [Context](https://developer.a
 More info  
 
 
-Retrieves the [ColorInt](https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html) from your theme with the attribute identified by themeColorAttribute
+Retrieves the [ColorInt](https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html) from your theme with the attribute identified by [themeColorAttribute](get-theme-colour.md)
 
   
 

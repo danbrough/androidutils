@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.resource](index.md)/[toDisplayText](to-display-text.md)
+//[misc](../../index.md)/[danbroid.util.resource](index.md)/[toDisplayText](to-display-text.md)
 
 
 

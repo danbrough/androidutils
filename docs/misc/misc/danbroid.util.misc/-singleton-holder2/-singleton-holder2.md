@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.misc](../index.md)/[SingletonHolder2](index.md)/[SingletonHolder2](-singleton-holder2.md)
+//[misc](../../../index.md)/[danbroid.util.misc](../index.md)/[SingletonHolder2](index.md)/[SingletonHolder2](-singleton-holder2.md)
 
 
 

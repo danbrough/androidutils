@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu](../index.md)/[MenuBuilder](index.md)/[addChild](add-child.md)
+//[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuBuilder](index.md)/[addChild](add-child.md)
 
 
 

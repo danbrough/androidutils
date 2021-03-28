@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu](../index.md)/[MenuConfiguration](index.md)/[menuClickHandler](menu-click-handler.md)
+//[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuConfiguration](index.md)/[menuClickHandler](menu-click-handler.md)
 
 
 

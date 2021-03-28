@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu](../index.md)/[MenuItem](index.md)/[imageURI](image-u-r-i.md)
+//[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuItem](index.md)/[imageURI](image-u-r-i.md)
 
 
 

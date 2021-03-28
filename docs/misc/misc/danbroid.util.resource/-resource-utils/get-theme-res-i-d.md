@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.resource](../index.md)/[ResourceUtils](index.md)/[getThemeResID](get-theme-res-i-d.md)
+//[misc](../../../index.md)/[danbroid.util.resource](../index.md)/[ResourceUtils](index.md)/[getThemeResID](get-theme-res-i-d.md)
 
 
 

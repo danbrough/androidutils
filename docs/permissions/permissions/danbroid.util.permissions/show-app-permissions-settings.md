@@ -1,4 +1,4 @@
-//[permissions](../index.md)/[danbroid.util.permissions](index.md)/[showAppPermissionsSettings](show-app-permissions-settings.md)
+//[permissions](../../index.md)/[danbroid.util.permissions](index.md)/[showAppPermissionsSettings](show-app-permissions-settings.md)
 
 
 

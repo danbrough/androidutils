@@ -1,4 +1,4 @@
-//[permissions](../../index.md)/[danbroid.util.permissions](../index.md)/[PermissionResult](index.md)/[results](results.md)
+//[permissions](../../../index.md)/[danbroid.util.permissions](../index.md)/[PermissionResult](index.md)/[results](results.md)
 
 
 
