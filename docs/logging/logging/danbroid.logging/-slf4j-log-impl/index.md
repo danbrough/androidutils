@@ -24,5 +24,5 @@
 |  Name |  Summary | 
 |---|---|
 | <a name="danbroid.logging/Slf4jLogImpl/log/#/PointingToDeclaration/"></a>[log](log.md)| <a name="danbroid.logging/Slf4jLogImpl/log/#/PointingToDeclaration/"></a> [jvm] val [log](log.md): Logger   <br>|
-| <a name="danbroid.logging/Slf4jLogImpl/name/#/PointingToDeclaration/"></a>[name](index.md#%5Bdanbroid.logging%2FSlf4jLogImpl%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F81692023)| <a name="danbroid.logging/Slf4jLogImpl/name/#/PointingToDeclaration/"></a> [jvm] val [name](index.md#%5Bdanbroid.logging%2FSlf4jLogImpl%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F81692023): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)   <br>|
+| <a name="danbroid.logging/Slf4jLogImpl/name/#/PointingToDeclaration/"></a>[name](index.md#%5Bdanbroid.logging%2FSlf4jLogImpl%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-639197017)| <a name="danbroid.logging/Slf4jLogImpl/name/#/PointingToDeclaration/"></a> [jvm] open val [name](index.md#%5Bdanbroid.logging%2FSlf4jLogImpl%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-639197017): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)   <br>|
 

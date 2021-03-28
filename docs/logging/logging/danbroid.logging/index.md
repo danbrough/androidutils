@@ -21,5 +21,5 @@
   
 |  Name |  Summary | 
 |---|---|
-| <a name="danbroid.logging//createLog/#kotlin.String/PointingToDeclaration/"></a>[createLog](create-log.md)| <a name="danbroid.logging//createLog/#kotlin.String/PointingToDeclaration/"></a>[jvm]  <br>Content  <br>fun [createLog](create-log.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Log](-log/index.md)  <br>fun [createLog](create-log.md)(kclass: [KClass](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html)<*>): [Log](-log/index.md)  <br><br><br>|
+| <a name="danbroid.logging//createLog/#kotlin.reflect.KClass[*]/PointingToDeclaration/"></a>[createLog](create-log.md)| <a name="danbroid.logging//createLog/#kotlin.reflect.KClass[*]/PointingToDeclaration/"></a>[jvm]  <br>Content  <br>fun [createLog](create-log.md)(kclass: [KClass](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html)<*>): [Log](-log/index.md)  <br><br><br>|
 

@@ -1,7 +1,6 @@
 $dokka.format:gfm-v1
 $dokka.linkExtension:md
 $dokka.location:danbroid.logging////PointingToDeclaration/logging/danbroid.logging/index.md
-$dokka.location:danbroid.logging//createLog/#kotlin.String/PointingToDeclaration/logging/danbroid.logging/create-log.md
 $dokka.location:danbroid.logging//createLog/#kotlin.reflect.KClass[*]/PointingToDeclaration/logging/danbroid.logging/create-log.md
 $dokka.location:danbroid.logging/Log.Level.DEBUG///PointingToDeclaration/logging/danbroid.logging/-log/-level/-d-e-b-u-g/index.md
 $dokka.location:danbroid.logging/Log.Level.DEBUG/name/#/PointingToDeclaration/logging/danbroid.logging/-log/-level/-d-e-b-u-g/name.md

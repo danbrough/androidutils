@@ -23,7 +23,7 @@
   
 |  Name |  Summary | 
 |---|---|
-| <a name="danbroid.logging/LogImpl/name/#/PointingToDeclaration/"></a>[name](name.md)| <a name="danbroid.logging/LogImpl/name/#/PointingToDeclaration/"></a> [jvm] val [name](name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)   <br>|
+| <a name="danbroid.logging/LogImpl/name/#/PointingToDeclaration/"></a>[name](name.md)| <a name="danbroid.logging/LogImpl/name/#/PointingToDeclaration/"></a> [jvm] open val [name](name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)   <br>|
 
 
 ## Inheritors  

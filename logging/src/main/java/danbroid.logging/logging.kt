@@ -6,6 +6,7 @@ interface Log {
   enum class Level {
     TRACE, DEBUG, INFO, WARN, ERROR
   }
+
   fun trace(msg: CharSequence?, error: Throwable? = null) = write_log(Level.TRACE, msg, error)
   fun debug(msg: CharSequence?, error: Throwable? = null) = write_log(Level.DEBUG, msg, error)
   fun info(msg: CharSequence?, error: Throwable? = null) = write_log(Level.INFO, msg, error)
@@ -19,11 +20,12 @@ interface Log {
 object LogConfig {
   var MIN_LOG_LEVEL: Log.Level? = null
 
-  var CREATE_LOG: (String) -> Log = { PrintlnImpl(it) }
+  var CREATE_LOG: (KClass<*>) -> Log = { PrintlnImpl(it.qualifiedName!!) }
 }
 
 
-abstract class LogImpl(val name: String) : Log {
+abstract class LogImpl(open val name: String) : Log {
+
 
   @Suppress("OVERRIDE_BY_INLINE")
   override final inline fun write_log(
@@ -56,7 +58,6 @@ class NullLog : Log {
   override inline fun write_log(level: Log.Level, msg: CharSequence?, error: Throwable?) {}
 }
 
-fun createLog(name: String): Log = LogConfig.CREATE_LOG(name)
 
-fun createLog(kclass: KClass<*>): Log = createLog(kclass.qualifiedName!!)
+fun createLog(kclass: KClass<*>): Log = LogConfig.CREATE_LOG(kclass)
 
