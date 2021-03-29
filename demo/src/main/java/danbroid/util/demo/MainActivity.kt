@@ -2,7 +2,9 @@ package danbroid.util.demo
 
 import android.os.Bundle
 import androidx.navigation.NavController
-import danbroid.logging.*
+import danbroid.logging.AndroidLog
+import danbroid.logging.LogConfig
+import danbroid.logging.getLog
 import danbroid.util.demo.content.rootContent
 import danbroid.util.menu.MenuActivity
 import danbroid.util.permissions.PermissionsManager.processPermissionResult
@@ -38,8 +40,6 @@ class MainActivity : MenuActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     log.info("onCreate()")
-    Thang()
-    Thang2()
   }
 
   @ExperimentalCoroutinesApi
