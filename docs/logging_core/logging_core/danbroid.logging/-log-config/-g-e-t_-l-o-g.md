@@ -5,7 +5,7 @@
 # GET_LOG  
 [jvm]  
 Content  
-var [GET_LOG](-g-e-t_-l-o-g.md): ([String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) -> [Log](../-log/index.md)?  
+var [GET_LOG](-g-e-t_-l-o-g.md): ([String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) -> [DBLog](../-d-b-log/index.md)?  
 
 
 

@@ -5,7 +5,7 @@
 # AndroidLog  
 [androidJvm]  
 Content  
-fun [AndroidLog](-android-log.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html))  
+fun [AndroidLog](-android-log.md)(logName: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html))  
 
 
 

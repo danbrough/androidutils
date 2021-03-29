@@ -87,15 +87,19 @@ tasks.withType<Test> {
 
 
 dependencies {
+  implementation(project(":logging_core"))
+  implementation(project(":logging"))
 
   implementation(project(":menu"))
+  implementation(project(":misc"))
+
   implementation(project(":permissions"))
   // or implementation("com.github.danbrough.androidutils:permissions:master-SNAPSHOT")
 
-  implementation(project(":slf4j"))
+
   // or implementation("com.github.danbrough.androidutils:slf4j:master-SNAPSHOT")
 
-  implementation(project(":misc"))
+  //implementation(project(":misc"))
   // or implementation("com.github.danbrough.androidutils:misc:master-SNAPSHOT")
 
 

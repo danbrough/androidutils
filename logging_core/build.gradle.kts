@@ -42,6 +42,6 @@ publishing {
 
 
 dependencies {
-  implementation("org.slf4j:slf4j-api:_")
+  compileOnly("org.slf4j:slf4j-api:_")
 }
 

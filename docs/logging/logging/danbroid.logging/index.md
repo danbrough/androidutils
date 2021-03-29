@@ -9,5 +9,5 @@
   
 |  Name |  Summary | 
 |---|---|
-| <a name="danbroid.logging/AndroidLog///PointingToDeclaration/"></a>[AndroidLog](-android-log/index.md)| <a name="danbroid.logging/AndroidLog///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>class [AndroidLog](-android-log/index.md)(**name**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [Log](../../../logging/danbroid.logging/-log/index.md)  <br><br><br>|
+| <a name="danbroid.logging/AndroidLog///PointingToDeclaration/"></a>[AndroidLog](-android-log/index.md)| <a name="danbroid.logging/AndroidLog///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>class [AndroidLog](-android-log/index.md)(**logName**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [DBLog](../../../logging/danbroid.logging/-d-b-log/index.md)  <br><br><br>|
 

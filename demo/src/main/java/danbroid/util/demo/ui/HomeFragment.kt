@@ -39,4 +39,4 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
   }
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(HomeFragment::class.java)
+private val log = danbroid.logging.getLog(HomeFragment::class)

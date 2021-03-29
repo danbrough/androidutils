@@ -3,7 +3,7 @@ $dokka.linkExtension:md
 $dokka.location:danbroid.logging////PointingToDeclaration/logging/danbroid.logging/index.md
 $dokka.location:danbroid.logging/AndroidLog///PointingToDeclaration/logging/danbroid.logging/-android-log/index.md
 $dokka.location:danbroid.logging/AndroidLog/AndroidLog/#kotlin.String/PointingToDeclaration/logging/danbroid.logging/-android-log/-android-log.md
-$dokka.location:danbroid.logging/AndroidLog/name/#/PointingToDeclaration/logging/danbroid.logging/-android-log/name.md
-$dokka.location:danbroid.logging/AndroidLog/write_log_native/#kotlin.String#danbroid.logging.Log.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-android-log/write_log_native.md
+$dokka.location:danbroid.logging/AndroidLog/logName/#/PointingToDeclaration/logging/danbroid.logging/-android-log/log-name.md
+$dokka.location:danbroid.logging/AndroidLog/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging/danbroid.logging/-android-log/write_log_native.md
 danbroid.logging
 

@@ -3,22 +3,22 @@ package danbroid.logging
 
 import org.slf4j.LoggerFactory
 
-class Slf4jLogImpl(override val name: String) : Log() {
+class Slf4jLogImpl(override val logName: String) : DBLog {
 
-  val log = LoggerFactory.getLogger(name)
+  val log = LoggerFactory.getLogger(logName)
 
   override inline fun write_log_native(
     name: String,
-    level: Log.Level,
+    level: DBLog.Level,
     msg: CharSequence?,
     error: Throwable?
   ) {
     when (level) {
-      Log.Level.TRACE -> log.trace(msg.toString(), error)
-      Log.Level.DEBUG -> log.debug(msg.toString(), error)
-      Log.Level.INFO -> log.info(msg.toString(), error)
-      Log.Level.WARN -> log.warn(msg.toString(), error)
-      Log.Level.ERROR -> log.error(msg.toString(), error)
+      DBLog.Level.TRACE -> log.trace(msg.toString(), error)
+      DBLog.Level.DEBUG -> log.debug(msg.toString(), error)
+      DBLog.Level.INFO -> log.info(msg.toString(), error)
+      DBLog.Level.WARN -> log.warn(msg.toString(), error)
+      DBLog.Level.ERROR -> log.error(msg.toString(), error)
     }
   }
 

@@ -2,6 +2,7 @@ package danbroid.util.demo.content
 
 import android.Manifest
 import android.widget.Toast
+import danbroid.logging.getLog
 import danbroid.util.menu.MenuItemBuilder
 import danbroid.util.menu.menu
 import danbroid.util.permissions.showAppPermissionsSettings
@@ -9,7 +10,6 @@ import danbroid.util.permissions.withPermission
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.withContext
-import org.slf4j.LoggerFactory
 import java.io.File
 
 @ExperimentalCoroutinesApi
@@ -63,7 +63,7 @@ private fun MenuItemBuilder.fileMenu(file: File): MenuItemBuilder = menu {
 }
 
 
-private val log = LoggerFactory.getLogger("danbroid.util.demo.content")
+private val log = getLog("danbroid.util.demo.content")
 
 
 
