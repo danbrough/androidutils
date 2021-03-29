@@ -20,7 +20,6 @@ $dokka.location:danbroid.logging/DBLog.Level.WARN/name/#/PointingToDeclaration/
 $dokka.location:danbroid.logging/DBLog.Level.WARN/ordinal/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-w-a-r-n/ordinal.md
 $dokka.location:danbroid.logging/DBLog.Level///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/index.md
 $dokka.location:danbroid.logging/DBLog///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/index.md
-$dokka.location:danbroid.logging/DBLog/DBLog/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-d-b-log.md
 $dokka.location:danbroid.logging/DBLog/debug/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/debug.md
 $dokka.location:danbroid.logging/DBLog/error/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/error.md
 $dokka.location:danbroid.logging/DBLog/info/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/info.md

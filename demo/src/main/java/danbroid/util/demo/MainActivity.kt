@@ -2,9 +2,7 @@ package danbroid.util.demo
 
 import android.os.Bundle
 import androidx.navigation.NavController
-import danbroid.logging.AndroidLog
-import danbroid.logging.LogConfig
-import danbroid.logging.getLog
+import danbroid.logging.*
 import danbroid.util.demo.content.rootContent
 import danbroid.util.menu.MenuActivity
 import danbroid.util.permissions.PermissionsManager.processPermissionResult
@@ -36,9 +34,12 @@ class MainActivity : MenuActivity() {
   override fun createNavGraph(navController: NavController) =
       navController.createDemoNavGraph(this)
 
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     log.info("onCreate()")
+    Thang()
+    Thang2()
   }
 
   @ExperimentalCoroutinesApi
@@ -49,4 +50,4 @@ class MainActivity : MenuActivity() {
 
 }
 
-//private val log = org.slf4j.LoggerFactory.getLogger(MainActivity::class.java)
+

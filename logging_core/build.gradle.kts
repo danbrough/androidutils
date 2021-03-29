@@ -42,6 +42,7 @@ publishing {
 
 
 dependencies {
+  implementation("net.jcip:jcip-annotations:1.0")
   compileOnly("org.slf4j:slf4j-api:_")
 }
 

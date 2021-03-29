@@ -5,7 +5,7 @@
 # write_log  
 [jvm]  
 Content  
-fun [write_log](write_log.md)(level: [DBLog.Level](-level/index.md), msg: [CharSequence](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)?, error: [Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)?)  
+open fun [write_log](write_log.md)(level: [DBLog.Level](-level/index.md), msg: [CharSequence](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)?, error: [Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)?)  
 
 
 
