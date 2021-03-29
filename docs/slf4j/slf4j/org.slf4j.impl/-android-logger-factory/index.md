@@ -17,7 +17,7 @@
   
 |  Name |  Summary | 
 |---|---|
-| <a name="org.slf4j.impl/AndroidLoggerFactory/getLogger/#java.lang.String/PointingToDeclaration/"></a>[getLogger](get-logger.md)| <a name="org.slf4j.impl/AndroidLoggerFactory/getLogger/#java.lang.String/PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open fun [getLogger](get-logger.md)(name: [String](https://developer.android.com/reference/kotlin/java/lang/String.html)): Logger  <br>More info  <br>Return a [AndroidLoggerAdapter](../../../../slf4j/org.slf4j.impl/-android-logger-adapter/index.md) instance by name.  <br><br><br>[androidJvm]  <br>Content  <br>abstract fun [getLogger](index.md#%5Borg.slf4j%2FILoggerFactory%2FgetLogger%2F%23java.lang.String%2FPointingToDeclaration%2F%5D%2FFunctions%2F-68664126)(p: [String](https://developer.android.com/reference/kotlin/java/lang/String.html)): Logger  <br><br><br>|
+| <a name="org.slf4j.impl/AndroidLoggerFactory/getLogger/#java.lang.String/PointingToDeclaration/"></a>[getLogger](get-logger.md)| <a name="org.slf4j.impl/AndroidLoggerFactory/getLogger/#java.lang.String/PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open fun [getLogger](get-logger.md)(name: [String](https://developer.android.com/reference/kotlin/java/lang/String.html)): Logger  <br>More info  <br>Return a [AndroidLoggerAdapter](../../../../slf4j/org.slf4j.impl/-android-logger-adapter/index.md) instance by name.  <br><br><br>[androidJvm]  <br>Content  <br>abstract fun [getLogger](index.md#%5Borg.slf4j%2FILoggerFactory%2FgetLogger%2F%23java.lang.String%2FPointingToDeclaration%2F%5D%2FFunctions%2F471374959)(p: [String](https://developer.android.com/reference/kotlin/java/lang/String.html)): Logger  <br><br><br>|
 
 
 ## Properties  

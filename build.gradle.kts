@@ -2,6 +2,7 @@ plugins {
   id("org.jetbrains.dokka")
 }
 
+@Suppress("GradlePluginVersion")
 buildscript {
 
   dependencies {
@@ -15,7 +16,7 @@ buildscript {
 
   repositories {
     google()
-    jcenter()
+    //jcenter()
   }
 }
 
@@ -29,7 +30,9 @@ allprojects {
     maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
     google()
     jcenter()
+    mavenCentral()
     maven("https://jitpack.io")
+
   }
 
   tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
@@ -70,7 +73,7 @@ subprojects {
         }
 
 
-        lintOptions {
+        lint {
           isAbortOnError = false
         }
 

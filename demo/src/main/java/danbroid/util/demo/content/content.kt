@@ -30,23 +30,30 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
     }
   }
 
+
+
   menu {
+    val builder = this
     title = "Dynamic Children"
     subtitle = "Generates children when clicked"
     val random = Random()
     var viewCount = 1
-    isBrowsable = true
+
     onClick = {
       children?.clear()
-      title = "View count: ${viewCount++}"
-      (0 until random.nextInt(10) + 1).forEach {
+      title = "View Count ${viewCount++}"
+      fun childCount() = children?.size ?: 0
+      (0 .. random.nextInt(10)).forEach {
         menu {
-          title = "Child $it"
+          title = "Child ${childCount()}"
           subtitle = "${Date()}"
         }
       }
 
+      log.debug("children $children browsable: $isBrowsable")
+      proceed()
     }
+
   }
 
   menu {
@@ -74,7 +81,7 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
     onClick = {
       Toast.makeText(context, "Opening menu ${this@menu.id} in 1 second", Toast.LENGTH_SHORT).show()
       delay(1000)
-      true
+      proceed()
     }
 
     menu {
@@ -153,6 +160,7 @@ roundedCorners = true"""
   menu {
     id = DemoNavGraph.deep_link.settings
     title = "Settings"
+    subtitle = "Shows a prompt"
     subtitle = "deeplink: $id"
     imageID = R.drawable.ic_settings
     onClick = promptToContinue
