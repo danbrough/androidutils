@@ -27,4 +27,3 @@ open class Event<out T>(private val content: T) {
   fun peekContent(): T = content
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(Event::class.java)
