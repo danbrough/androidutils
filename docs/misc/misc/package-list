@@ -43,8 +43,6 @@ $dokka.location:danbroid.util.misc/WeakSingletonHolder/getInstance/#TypeParam(bo
 $dokka.location:danbroid.util.misc/WeakSingletonHolder/instance/#/PointingToDeclaration/misc/danbroid.util.misc/-weak-singleton-holder/instance.md
 $dokka.location:danbroid.util.prefs////PointingToDeclaration/misc/danbroid.util.prefs/index.md
 $dokka.location:danbroid.util.prefs//edit/TypeParam(bounds=[danbroid.util.prefs.Prefs])#kotlin.Boolean#kotlin.Function1[TypeParam(bounds=[danbroid.util.prefs.Prefs]),kotlin.Unit]/PointingToDeclaration/misc/danbroid.util.prefs/edit.md
-$dokka.location:danbroid.util.prefs/Prefs.Companion///PointingToDeclaration/misc/danbroid.util.prefs/-prefs/-companion/index.md
-$dokka.location:danbroid.util.prefs/Prefs.Companion/log/#/PointingToDeclaration/misc/danbroid.util.prefs/-prefs/-companion/log.md
 $dokka.location:danbroid.util.prefs/Prefs.Pref///PointingToDeclaration/misc/danbroid.util.prefs/-prefs/-pref/index.md
 $dokka.location:danbroid.util.prefs/Prefs.Pref/Pref/#kotlin.Any?/PointingToDeclaration/misc/danbroid.util.prefs/-prefs/-pref/-pref.md
 $dokka.location:danbroid.util.prefs/Prefs.Pref/defValue/#/PointingToDeclaration/misc/danbroid.util.prefs/-prefs/-pref/def-value.md

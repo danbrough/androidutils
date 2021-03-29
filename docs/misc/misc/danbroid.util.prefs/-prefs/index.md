@@ -22,7 +22,6 @@ Classes that allow you to implement properties that delegate to a [android.conte
   
 |  Name |  Summary | 
 |---|---|
-| <a name="danbroid.util.prefs/Prefs.Companion///PointingToDeclaration/"></a>[Companion](-companion/index.md)| <a name="danbroid.util.prefs/Prefs.Companion///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>object [Companion](-companion/index.md)  <br><br><br>|
 | <a name="danbroid.util.prefs/Prefs.Pref///PointingToDeclaration/"></a>[Pref](-pref/index.md)| <a name="danbroid.util.prefs/Prefs.Pref///PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>@[ExperimentalStdlibApi](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-stdlib-api/index.html)()  <br>  <br>inner class [Pref](-pref/index.md)(**defValue**: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?)  <br>More info  <br>val message:String by Pref("default value") var count:Int?  <br><br><br>|
 
 

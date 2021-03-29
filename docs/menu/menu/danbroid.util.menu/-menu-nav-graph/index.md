@@ -3,7 +3,7 @@
 
 
 # MenuNavGraph  
- [androidJvm] object [MenuNavGraph](index.md) : [UniqueIDS](../../../../misc/misc/danbroid.util.misc/-unique-i-d-s/index.md)   
+ [androidJvm] object [MenuNavGraph](index.md) : [UniqueIDS](../../../../logging/logging/danbroid.util.misc/-unique-i-d-s/index.md)   
 
 
 ## Types  
@@ -19,7 +19,7 @@
   
 |  Name |  Summary | 
 |---|---|
-| <a name="danbroid.util.misc/UniqueIDS/nextID/#/PointingToDeclaration/"></a>[nextID](index.md#%5Bdanbroid.util.misc%2FUniqueIDS%2FnextID%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1967064354)| <a name="danbroid.util.misc/UniqueIDS/nextID/#/PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open fun [nextID](index.md#%5Bdanbroid.util.misc%2FUniqueIDS%2FnextID%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1967064354)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  <br><br><br>|
+| <a name="danbroid.util.misc/UniqueIDS/nextID/#/PointingToDeclaration/"></a>[nextID](index.md#%5Bdanbroid.util.misc%2FUniqueIDS%2FnextID%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F2119215733)| <a name="danbroid.util.misc/UniqueIDS/nextID/#/PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open fun [nextID](index.md#%5Bdanbroid.util.misc%2FUniqueIDS%2FnextID%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F2119215733)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  <br><br><br>|
 
 
 ## Properties  

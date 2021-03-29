@@ -57,9 +57,6 @@ open class Prefs(
 
   fun clear() = editor.clear()
 
-  companion object {
-    val log = org.slf4j.LoggerFactory.getLogger(Prefs::class.java)
-  }
 
   fun put(key: String, value: Any?) {
     // log.warn("setting pref: $key to $value")
@@ -112,7 +109,6 @@ open class Prefs(
   }
 
   fun finalize() {
-    log.error("FINALIZE")
     close()
   }
 

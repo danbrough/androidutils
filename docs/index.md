@@ -10,5 +10,6 @@
 | <a name=".ext/permissions///PointingToDeclaration/"></a>[permissions](permissions/index.md)| <a name=".ext/permissions///PointingToDeclaration/"></a>
 | <a name=".ext/misc///PointingToDeclaration/"></a>[misc](misc/index.md)| <a name=".ext/misc///PointingToDeclaration/"></a>
 | <a name=".ext/menu///PointingToDeclaration/"></a>[menu](menu/index.md)| <a name=".ext/menu///PointingToDeclaration/"></a>
+| <a name=".ext/logging_core///PointingToDeclaration/"></a>[logging_core](logging_core/index.md)| <a name=".ext/logging_core///PointingToDeclaration/"></a>
 | <a name=".ext/logging///PointingToDeclaration/"></a>[logging](logging/index.md)| <a name=".ext/logging///PointingToDeclaration/"></a>
 
