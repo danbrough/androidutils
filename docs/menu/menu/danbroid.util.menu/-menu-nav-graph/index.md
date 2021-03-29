@@ -3,7 +3,7 @@
 
 
 # MenuNavGraph  
- [androidJvm] object [MenuNavGraph](index.md) : [UniqueIDS](../../../../logging/logging/danbroid.util.misc/-unique-i-d-s/index.md)   
+ [androidJvm] object [MenuNavGraph](index.md) : [UniqueIDS](../../../../misc/misc/danbroid.util.misc/-unique-i-d-s/index.md)   
 
 
 ## Types  

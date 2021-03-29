@@ -3,7 +3,7 @@
 
 
 # AndroidLog  
-[jvm]  
+[androidJvm]  
 Content  
 fun [AndroidLog](-android-log.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html))  
 

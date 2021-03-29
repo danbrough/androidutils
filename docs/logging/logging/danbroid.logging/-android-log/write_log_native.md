@@ -3,9 +3,9 @@
 
 
 # write_log_native  
-[jvm]  
+[androidJvm]  
 Content  
-open inline override fun [write_log_native](write_log_native.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), level: [Log.Level](../-log/-level/index.md), msg: [CharSequence](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)?, error: [Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)?)  
+open inline override fun [write_log_native](write_log_native.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), level: [Log.Level](../../../../logging/danbroid.logging/-log/-level/index.md), msg: [CharSequence](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)?, error: [Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)?)  
 
 
 
