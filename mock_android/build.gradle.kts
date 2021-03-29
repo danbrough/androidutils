@@ -10,7 +10,7 @@ plugins {
   //kotlin("kapt")
 
   // kotlin("plugin.serialization")
-  id("org.jetbrains.dokka")
+
   // `java-test-fixtures`
   //id("com.google.protobuf")
   // kotlin("plugin.serialization")
@@ -38,11 +38,5 @@ publishing {
       artifact(sourcesJar)
     }
   }
-}
-
-
-dependencies {
-  implementation("org.slf4j:slf4j-api:_")
-  compileOnly(project(":mock_android"))
 }
 

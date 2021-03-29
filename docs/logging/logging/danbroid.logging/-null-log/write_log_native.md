@@ -1,4 +1,4 @@
-//[logging](../../../index.md)/[danbroid.logging](../index.md)/[Slf4jLogImpl](index.md)/[write_log_native](write_log_native.md)
+//[logging](../../../index.md)/[danbroid.logging](../index.md)/[NullLog](index.md)/[write_log_native](write_log_native.md)
 
 
 
