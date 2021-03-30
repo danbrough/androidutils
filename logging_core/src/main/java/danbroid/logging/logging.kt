@@ -54,8 +54,6 @@ object LogConfig {
 
   var MESSAGE_DECORATOR: ((DBLog.Level, String) -> String)? = null
 
-  var CLASS_TO_NAME: (KClass<*>) -> String = { it.qualifiedName!! }
-
   var COLOURED = false
   var DETAILED = true
 
@@ -91,7 +89,7 @@ inline fun DetailedDecorator(level: DBLog.Level, msg: String): String {
 
 
 @Suppress("OVERRIDE_BY_INLINE")
-inline fun getLog(kclass: KClass<*>): DBLog = getLog(LogConfig.CLASS_TO_NAME(kclass))
+inline fun getLog(kclass: KClass<*>): DBLog = getLog(kclass.qualifiedName!!)
 
 @Suppress("OVERRIDE_BY_INLINE")
 inline fun getLog(tag: String): DBLog = LogConfig.GET_LOG(tag) ?: NullLog

@@ -31,7 +31,6 @@ $dokka.location:danbroid.logging/DBLog/trace/#kotlin.CharSequence?#kotlin.Throwa
 $dokka.location:danbroid.logging/DBLog/warn/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/warn.md
 $dokka.location:danbroid.logging/DBLog/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/write_log_native.md
 $dokka.location:danbroid.logging/LogConfig///PointingToDeclaration/logging_core/danbroid.logging/-log-config/index.md
-$dokka.location:danbroid.logging/LogConfig/CLASS_TO_NAME/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-c-l-a-s-s_-t-o_-n-a-m-e.md
 $dokka.location:danbroid.logging/LogConfig/COLOURED/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-c-o-l-o-u-r-e-d.md
 $dokka.location:danbroid.logging/LogConfig/DETAILED/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-d-e-t-a-i-l-e-d.md
 $dokka.location:danbroid.logging/LogConfig/GET_LOG/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-g-e-t_-l-o-g.md
