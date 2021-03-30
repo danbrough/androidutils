@@ -21,8 +21,8 @@
   
 |  Name |  Summary | 
 |---|---|
-| <a name="danbroid.logging/DBLog.Level/name/#/PointingToDeclaration/"></a>[name](index.md#%5Bdanbroid.logging%2FDBLog.Level%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F2146497104)| <a name="danbroid.logging/DBLog.Level/name/#/PointingToDeclaration/"></a> [jvm] val [name](index.md#%5Bdanbroid.logging%2FDBLog.Level%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F2146497104): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)   <br>|
-| <a name="danbroid.logging/DBLog.Level/ordinal/#/PointingToDeclaration/"></a>[ordinal](index.md#%5Bdanbroid.logging%2FDBLog.Level%2Fordinal%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F2146497104)| <a name="danbroid.logging/DBLog.Level/ordinal/#/PointingToDeclaration/"></a> [jvm] val [ordinal](index.md#%5Bdanbroid.logging%2FDBLog.Level%2Fordinal%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F2146497104): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>|
+| <a name="danbroid.logging/DBLog.Level/name/#/PointingToDeclaration/"></a>[name](index.md#%5Bdanbroid.logging%2FDBLog.Level%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F1595558255)| <a name="danbroid.logging/DBLog.Level/name/#/PointingToDeclaration/"></a> [jvm] val [name](index.md#%5Bdanbroid.logging%2FDBLog.Level%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F1595558255): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)   <br>|
+| <a name="danbroid.logging/DBLog.Level/ordinal/#/PointingToDeclaration/"></a>[ordinal](index.md#%5Bdanbroid.logging%2FDBLog.Level%2Fordinal%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F1595558255)| <a name="danbroid.logging/DBLog.Level/ordinal/#/PointingToDeclaration/"></a> [jvm] val [ordinal](index.md#%5Bdanbroid.logging%2FDBLog.Level%2Fordinal%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F1595558255): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>|
 
 
 ## Extensions  
