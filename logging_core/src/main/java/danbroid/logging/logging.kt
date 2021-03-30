@@ -85,7 +85,7 @@ inline fun DetailedDecorator(level: DBLog.Level, msg: String): String {
 
   val element = stackElements[5]
   val header =
-    "[***<${thread.name}:${thread.id}>:${element.className}:${element.methodName}():${element.lineNumber}] "
+    "[<${thread.name}:${thread.id}>:${element.className}:${element.methodName}():${element.lineNumber}] "
   return "$header$msg"
 }
 
