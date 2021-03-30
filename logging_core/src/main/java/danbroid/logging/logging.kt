@@ -10,17 +10,17 @@ interface DBLog {
   val logName: String
 
   fun trace(msg: CharSequence?, error: Throwable? = null) =
-      write_log(Level.TRACE, msg, error)
+    write_log(Level.TRACE, msg, error)
 
   fun debug(msg: CharSequence?, error: Throwable? = null) =
-      write_log(Level.DEBUG, msg, error)
+    write_log(Level.DEBUG, msg, error)
 
   fun info(msg: CharSequence?, error: Throwable? = null) = write_log(Level.INFO, msg, error)
   fun warn(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error)
   fun error(msg: CharSequence?, error: Throwable? = null) =
-      write_log(Level.ERROR, msg, error)
+    write_log(Level.ERROR, msg, error)
 
-  fun write_log(level: Level, msg: CharSequence?, error: Throwable?) {
+  private inline fun write_log(level: Level, msg: CharSequence?, error: Throwable?) {
     LogConfig.MIN_LOG_LEVEL?.also { if (level < it) return }
 
     var newMsg = "$msg"
@@ -32,18 +32,18 @@ interface DBLog {
       newMsg = ColouredDecorator(level, newMsg)
 
     write_log_native(
-        logName,
-        level,
-        LogConfig.MESSAGE_DECORATOR?.invoke(level, newMsg) ?: newMsg,
-        error
+      logName,
+      level,
+      LogConfig.MESSAGE_DECORATOR?.invoke(level, newMsg) ?: newMsg,
+      error
     )
   }
 
   fun write_log_native(
-      name: String,
-      level: Level,
-      msg: CharSequence?,
-      error: Throwable?
+    name: String,
+    level: Level,
+    msg: CharSequence?,
+    error: Throwable?
   )
 
 }
@@ -64,7 +64,7 @@ object LogConfig {
 }
 
 
-private fun DBLog.Level.colorInt(): Int = when (this) {
+fun DBLog.Level.colorInt(): Int = when (this) {
   DBLog.Level.TRACE -> 35
   DBLog.Level.DEBUG -> 36
   DBLog.Level.INFO -> 32
@@ -74,17 +74,18 @@ private fun DBLog.Level.colorInt(): Int = when (this) {
 
 
 @Suppress("OVERRIDE_BY_INLINE")
-private inline fun ColouredDecorator(level: DBLog.Level, msg: String): String =
-    "\u001b[0;${level.colorInt()}m${msg}\u001b[0m"
+fun ColouredDecorator(level: DBLog.Level, msg: String): String =
+  "\u001b[0;${level.colorInt()}m${msg}\u001b[0m"
 
 
 @Suppress("OVERRIDE_BY_INLINE")
-private inline fun DetailedDecorator(level: DBLog.Level, msg: String): String {
+inline fun DetailedDecorator(level: DBLog.Level, msg: String): String {
   val thread = Thread.currentThread()
   val stackElements = thread.stackTrace
+
   val element = stackElements[5]
   val header =
-      "[<${thread.name}:${thread.id}>:${element.className}:${element.methodName}():${element.lineNumber}] "
+    "[***<${thread.name}:${thread.id}>:${element.className}:${element.methodName}():${element.lineNumber}] "
   return "$header$msg"
 }
 
@@ -100,10 +101,10 @@ object NullLog : DBLog {
 
   @Suppress("OVERRIDE_BY_INLINE")
   override inline fun write_log_native(
-      name: String,
-      level: DBLog.Level,
-      msg: CharSequence?,
-      error: Throwable?
+    name: String,
+    level: DBLog.Level,
+    msg: CharSequence?,
+    error: Throwable?
   ) {
   }
 
@@ -114,10 +115,10 @@ object StdOutLog : DBLog {
 
   @Suppress("OVERRIDE_BY_INLINE")
   override inline fun write_log_native(
-      name: String,
-      level: DBLog.Level,
-      msg: CharSequence?,
-      error: Throwable?
+    name: String,
+    level: DBLog.Level,
+    msg: CharSequence?,
+    error: Throwable?
   ) {
     println(msg)
   }

@@ -5,7 +5,7 @@
 # write_log_native  
 [androidJvm]  
 Content  
-open inline override fun [write_log_native](write_log_native.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), level: [DBLog.Level](../../../../logging/danbroid.logging/-d-b-log/-level/index.md), msg: [CharSequence](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)?, error: [Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)?)  
+open override fun [write_log_native](write_log_native.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), level: [DBLog.Level](../../../../logging/danbroid.logging/-d-b-log/-level/index.md), msg: [CharSequence](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)?, error: [Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)?)  
 
 
 

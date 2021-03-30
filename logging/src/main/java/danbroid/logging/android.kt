@@ -1,11 +1,11 @@
 package danbroid.logging
 
 class AndroidLog(override val logName: String) : DBLog {
-  override inline fun write_log_native(
-      name: String,
-      level: DBLog.Level,
-      msg: CharSequence?,
-      error: Throwable?
+  override fun write_log_native(
+    name: String,
+    level: DBLog.Level,
+    msg: CharSequence?,
+    error: Throwable?
   ) {
     when (level) {
       DBLog.Level.TRACE -> android.util.Log.v(name, "$msg", error)
