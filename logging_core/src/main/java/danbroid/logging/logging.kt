@@ -1,5 +1,8 @@
 package danbroid.logging
 
+import java.io.PrintWriter
+import java.io.StringWriter
+import java.net.UnknownHostException
 import kotlin.reflect.KClass
 
 interface DBLog {
@@ -20,6 +23,7 @@ interface DBLog {
   fun error(msg: CharSequence?, error: Throwable? = null) =
     write_log(Level.ERROR, msg, error)
 
+
   private inline fun write_log(level: Level, msg: CharSequence?, error: Throwable?) {
     LogConfig.MIN_LOG_LEVEL?.also { if (level < it) return }
 
@@ -27,6 +31,8 @@ interface DBLog {
 
     if (LogConfig.DETAILED)
       newMsg = DetailedDecorator(level, newMsg)
+
+    if (error != null) newMsg += ": " + getStackTraceString(error)
 
     if (LogConfig.COLOURED)
       newMsg = ColouredDecorator(level, newMsg)
@@ -37,6 +43,27 @@ interface DBLog {
       LogConfig.MESSAGE_DECORATOR?.invoke(level, newMsg) ?: newMsg,
       error
     )
+  }
+
+  private inline fun getStackTraceString(tr: Throwable?): String? {
+    if (tr == null) {
+      return ""
+    }
+
+    // This is to reduce the amount of log spew that apps do in the non-error
+    // condition of the network being unavailable.
+    var t = tr
+    while (t != null) {
+      if (t is UnknownHostException) {
+        return ""
+      }
+      t = t.cause
+    }
+    val sw = StringWriter()
+    val pw = PrintWriter(sw)
+    tr.printStackTrace(pw)
+    pw.flush()
+    return sw.toString()
   }
 
   fun write_log_native(
