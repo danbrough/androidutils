@@ -13,7 +13,7 @@ bootstrapRefreshVersions()
 //include(":menu2", ":menu2test")
 include(":slf4j", ":permissions", ":misc", ":menu", ":logging", ":logging_core")
 
-if (!System.getenv().containsKey("JITPACK")) {
+if (!System.getenv().containsKey("JITPACK") && !System.getenv().containsKey("CI")) {
   include(":demo")
 }
 
