@@ -19,7 +19,7 @@
   
 |  Name |  Summary | 
 |---|---|
-| <a name="danbroid.util.misc/UniqueIDS/nextID/#/PointingToDeclaration/"></a>[nextID](index.md#%5Bdanbroid.util.misc%2FUniqueIDS%2FnextID%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F842338024)| <a name="danbroid.util.misc/UniqueIDS/nextID/#/PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open fun [nextID](index.md#%5Bdanbroid.util.misc%2FUniqueIDS%2FnextID%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F842338024)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  <br><br><br>|
+| <a name="danbroid.util.misc/UniqueIDS/nextID/#/PointingToDeclaration/"></a>[nextID](index.md#%5Bdanbroid.util.misc%2FUniqueIDS%2FnextID%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1683307714)| <a name="danbroid.util.misc/UniqueIDS/nextID/#/PointingToDeclaration/"></a>[androidJvm]  <br>Content  <br>open fun [nextID](index.md#%5Bdanbroid.util.misc%2FUniqueIDS%2FnextID%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1683307714)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  <br><br><br>|
 
 
 ## Properties  

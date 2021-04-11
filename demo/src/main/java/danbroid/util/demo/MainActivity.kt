@@ -16,6 +16,7 @@ class MainActivity : MenuActivity() {
   companion object {
     init {
       LogConfig.apply {
+        DEBUG = BuildConfig.DEBUG
         val tag = "DEMO"
         val log = AndroidLog(tag)
         GET_LOG = { log }

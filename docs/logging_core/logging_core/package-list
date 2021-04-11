@@ -23,6 +23,11 @@ $dokka.location:danbroid.logging/DBLog.Level.WARN/name/#/PointingToDeclaration/
 $dokka.location:danbroid.logging/DBLog.Level.WARN/ordinal/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-w-a-r-n/ordinal.md
 $dokka.location:danbroid.logging/DBLog.Level///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/index.md
 $dokka.location:danbroid.logging/DBLog///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/index.md
+$dokka.location:danbroid.logging/DBLog/d_debug/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_debug.md
+$dokka.location:danbroid.logging/DBLog/d_eror/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_eror.md
+$dokka.location:danbroid.logging/DBLog/d_info/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_info.md
+$dokka.location:danbroid.logging/DBLog/d_trace/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_trace.md
+$dokka.location:danbroid.logging/DBLog/d_warn/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_warn.md
 $dokka.location:danbroid.logging/DBLog/debug/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/debug.md
 $dokka.location:danbroid.logging/DBLog/error/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/error.md
 $dokka.location:danbroid.logging/DBLog/info/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/info.md
@@ -32,6 +37,7 @@ $dokka.location:danbroid.logging/DBLog/warn/#kotlin.CharSequence?#kotlin.Throwab
 $dokka.location:danbroid.logging/DBLog/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/write_log_native.md
 $dokka.location:danbroid.logging/LogConfig///PointingToDeclaration/logging_core/danbroid.logging/-log-config/index.md
 $dokka.location:danbroid.logging/LogConfig/COLOURED/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-c-o-l-o-u-r-e-d.md
+$dokka.location:danbroid.logging/LogConfig/DEBUG/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-d-e-b-u-g.md
 $dokka.location:danbroid.logging/LogConfig/DETAILED/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-d-e-t-a-i-l-e-d.md
 $dokka.location:danbroid.logging/LogConfig/GET_LOG/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-g-e-t_-l-o-g.md
 $dokka.location:danbroid.logging/LogConfig/MESSAGE_DECORATOR/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-m-e-s-s-a-g-e_-d-e-c-o-r-a-t-o-r.md
