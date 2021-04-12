@@ -24,7 +24,7 @@ $dokka.location:danbroid.logging/DBLog.Level.WARN/ordinal/#/PointingToDeclaratio
 $dokka.location:danbroid.logging/DBLog.Level///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/index.md
 $dokka.location:danbroid.logging/DBLog///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/index.md
 $dokka.location:danbroid.logging/DBLog/d_debug/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_debug.md
-$dokka.location:danbroid.logging/DBLog/d_eror/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_eror.md
+$dokka.location:danbroid.logging/DBLog/d_error/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_error.md
 $dokka.location:danbroid.logging/DBLog/d_info/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_info.md
 $dokka.location:danbroid.logging/DBLog/d_trace/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_trace.md
 $dokka.location:danbroid.logging/DBLog/d_warn/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_warn.md

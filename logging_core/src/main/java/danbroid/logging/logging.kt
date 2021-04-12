@@ -24,7 +24,7 @@ interface DBLog {
   fun d_warn(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error, true)
   fun warn(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error)
 
-  fun d_eror(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error, true)
+  fun d_error(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error, true)
   fun error(msg: CharSequence?, error: Throwable? = null) =
       write_log(Level.ERROR, msg, error)
 
