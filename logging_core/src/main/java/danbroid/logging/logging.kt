@@ -12,17 +12,11 @@ interface DBLog {
 
   val logName: String
 
-  fun d_trace(msg: CharSequence?, error: Throwable? = null) =
-      write_log(Level.TRACE, msg, error, true)
+  fun d_trace(msg: CharSequence?, error: Throwable? = null) = write_log(Level.TRACE, msg, error, true)
+  fun trace(msg: CharSequence?, error: Throwable? = null) = write_log(Level.TRACE, msg, error)
 
-  fun trace(msg: CharSequence?, error: Throwable? = null) =
-      write_log(Level.TRACE, msg, error)
-
-  fun d_debug(msg: CharSequence?, error: Throwable? = null) =
-      write_log(Level.DEBUG, msg, error, true)
-
-  fun debug(msg: CharSequence?, error: Throwable? = null) =
-      write_log(Level.DEBUG, msg, error)
+  fun d_debug(msg: CharSequence?, error: Throwable? = null) = write_log(Level.DEBUG, msg, error, true)
+  fun debug(msg: CharSequence?, error: Throwable? = null) = write_log(Level.DEBUG, msg, error)
 
   fun d_info(msg: CharSequence?, error: Throwable? = null) = write_log(Level.INFO, msg, error, true)
   fun info(msg: CharSequence?, error: Throwable? = null) = write_log(Level.INFO, msg, error)
@@ -36,7 +30,7 @@ interface DBLog {
 
 
   private inline fun write_log(level: Level, msg: CharSequence?, error: Throwable?, debug: Boolean = false) {
-    if (LogConfig.DEBUG != debug) return
+    if (debug && !LogConfig.DEBUG) return
 
     LogConfig.MIN_LOG_LEVEL?.also { if (level < it) return }
 
@@ -131,7 +125,7 @@ inline fun DetailedDecorator(level: DBLog.Level, msg: String): String {
 
 
 @Suppress("OVERRIDE_BY_INLINE")
-inline fun getLog(kclass: KClass<*>): DBLog = getLog(kclass.qualifiedName!!)
+inline fun getLog(kclass: KClass<*>) = getLog(kclass.qualifiedName!!)
 
 @Suppress("OVERRIDE_BY_INLINE")
 inline fun getLog(tag: String) = LogConfig.GET_LOG(tag) ?: NullLog
