@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu.ui](../index.md)/[MenuListAdapter](index.md)/[iconSize](icon-size.md)
+//[menu](../../../index.md)/[danbroid.util.menu.ui](../index.md)/[MenuListAdapter](index.md)/[iconSize](icon-size.md)
 
 
 

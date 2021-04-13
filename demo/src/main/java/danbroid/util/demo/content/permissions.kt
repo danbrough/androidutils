@@ -2,8 +2,7 @@ package danbroid.util.demo.content
 
 import android.Manifest
 import android.widget.Toast
-import com.google.android.material.datepicker.MaterialDatePicker
-import danbroid.util.menu.MenuItem
+import danbroid.logging.getLog
 import danbroid.util.menu.MenuItemBuilder
 import danbroid.util.menu.menu
 import danbroid.util.permissions.showAppPermissionsSettings
@@ -11,10 +10,7 @@ import danbroid.util.permissions.withPermission
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.withContext
-import org.slf4j.LoggerFactory
 import java.io.File
-import java.util.*
-import kotlin.coroutines.suspendCoroutine
 
 @ExperimentalCoroutinesApi
 internal fun MenuItemBuilder.permissionExamples() = menu {
@@ -26,7 +22,7 @@ internal fun MenuItemBuilder.permissionExamples() = menu {
 
 
     onClick = {
-      if (withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+      if (fragment.withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)) {
         fileMenu(File("/sdcard/"))
         true
       } else {
@@ -67,7 +63,7 @@ private fun MenuItemBuilder.fileMenu(file: File): MenuItemBuilder = menu {
 }
 
 
-private val log = LoggerFactory.getLogger("danbroid.util.demo.content")
+private val log = getLog("danbroid.util.demo.content")
 
 
 

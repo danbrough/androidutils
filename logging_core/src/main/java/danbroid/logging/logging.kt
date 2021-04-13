@@ -1,0 +1,162 @@
+package danbroid.logging
+
+import java.io.PrintWriter
+import java.io.StringWriter
+import java.net.UnknownHostException
+import kotlin.reflect.KClass
+
+interface DBLog {
+  enum class Level {
+    TRACE, DEBUG, INFO, WARN, ERROR
+  }
+
+  val logName: String
+
+  fun d_trace(msg: CharSequence?, error: Throwable? = null) = write_log(Level.TRACE, msg, error, true)
+  fun trace(msg: CharSequence?, error: Throwable? = null) = write_log(Level.TRACE, msg, error)
+
+  fun d_debug(msg: CharSequence?, error: Throwable? = null) = write_log(Level.DEBUG, msg, error, true)
+  fun debug(msg: CharSequence?, error: Throwable? = null) = write_log(Level.DEBUG, msg, error)
+
+  fun d_info(msg: CharSequence?, error: Throwable? = null) = write_log(Level.INFO, msg, error, true)
+  fun info(msg: CharSequence?, error: Throwable? = null) = write_log(Level.INFO, msg, error)
+
+  fun d_warn(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error, true)
+  fun warn(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error)
+
+  fun d_error(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error, true)
+  fun error(msg: CharSequence?, error: Throwable? = null) =
+      write_log(Level.ERROR, msg, error)
+
+
+  private inline fun write_log(level: Level, msg: CharSequence?, error: Throwable?, debug: Boolean = false) {
+    if (debug && !LogConfig.DEBUG) return
+
+    LogConfig.MIN_LOG_LEVEL?.also { if (level < it) return }
+
+    var newMsg = "$msg"
+
+    if (LogConfig.DETAILED)
+      newMsg = DetailedDecorator(level, newMsg)
+
+    if (error != null) newMsg += ": " + getStackTraceString(error)
+
+    if (LogConfig.COLOURED)
+      newMsg = ColouredDecorator(level, newMsg)
+
+    write_log_native(
+        logName,
+        level,
+        LogConfig.MESSAGE_DECORATOR?.invoke(level, newMsg) ?: newMsg,
+        error
+    )
+  }
+
+  private inline fun getStackTraceString(tr: Throwable?): String? {
+    if (tr == null) {
+      return ""
+    }
+
+    // This is to reduce the amount of log spew that apps do in the non-error
+    // condition of the network being unavailable.
+    var t = tr
+    while (t != null) {
+      if (t is UnknownHostException) {
+        return ""
+      }
+      t = t.cause
+    }
+    val sw = StringWriter()
+    val pw = PrintWriter(sw)
+    tr.printStackTrace(pw)
+    pw.flush()
+    return sw.toString()
+  }
+
+  fun write_log_native(
+      name: String,
+      level: Level,
+      msg: CharSequence?,
+      error: Throwable?
+  )
+
+}
+
+object LogConfig {
+
+  var DEBUG = true
+
+  var MIN_LOG_LEVEL: DBLog.Level? = null
+
+  var MESSAGE_DECORATOR: ((DBLog.Level, String) -> String)? = null
+
+  var COLOURED = false
+  var DETAILED = true
+
+  var GET_LOG: (String) -> DBLog? = { StdOutLog }
+
+}
+
+
+fun DBLog.Level.colorInt(): Int = when (this) {
+  DBLog.Level.TRACE -> 35
+  DBLog.Level.DEBUG -> 36
+  DBLog.Level.INFO -> 32
+  DBLog.Level.WARN -> 33
+  else -> 31
+}
+
+
+@Suppress("OVERRIDE_BY_INLINE")
+fun ColouredDecorator(level: DBLog.Level, msg: String): String =
+    "\u001b[0;${level.colorInt()}m${msg}\u001b[0m"
+
+
+@Suppress("OVERRIDE_BY_INLINE")
+inline fun DetailedDecorator(level: DBLog.Level, msg: String): String {
+  val thread = Thread.currentThread()
+  val stackElements = thread.stackTrace
+
+  val element = stackElements[5]
+  val header =
+      "[<${thread.name}:${thread.id}>:${element.className}:${element.methodName}():${element.lineNumber}] "
+  return "$header$msg"
+}
+
+
+@Suppress("OVERRIDE_BY_INLINE")
+inline fun getLog(kclass: KClass<*>) = getLog(kclass.qualifiedName!!)
+
+@Suppress("OVERRIDE_BY_INLINE")
+inline fun getLog(tag: String) = LogConfig.GET_LOG(tag) ?: NullLog
+
+object NullLog : DBLog {
+  override val logName: String = "NullLog"
+
+  @Suppress("OVERRIDE_BY_INLINE")
+  override inline fun write_log_native(
+      name: String,
+      level: DBLog.Level,
+      msg: CharSequence?,
+      error: Throwable?
+  ) {
+  }
+
+}
+
+object StdOutLog : DBLog {
+  override val logName: String = "StdOutLog"
+
+  @Suppress("OVERRIDE_BY_INLINE")
+  override inline fun write_log_native(
+      name: String,
+      level: DBLog.Level,
+      msg: CharSequence?,
+      error: Throwable?
+  ) {
+    println(msg)
+  }
+
+}
+
+

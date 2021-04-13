@@ -1,0 +1,57 @@
+$dokka.format:gfm-v1
+$dokka.linkExtension:md
+$dokka.location:danbroid.logging////PointingToDeclaration/logging_core/danbroid.logging/index.md
+$dokka.location:danbroid.logging//ColouredDecorator/#danbroid.logging.DBLog.Level#kotlin.String/PointingToDeclaration/logging_core/danbroid.logging/-coloured-decorator.md
+$dokka.location:danbroid.logging//DetailedDecorator/#danbroid.logging.DBLog.Level#kotlin.String/PointingToDeclaration/logging_core/danbroid.logging/-detailed-decorator.md
+$dokka.location:danbroid.logging//colorInt/danbroid.logging.DBLog.Level#/PointingToDeclaration/logging_core/danbroid.logging/color-int.md
+$dokka.location:danbroid.logging//getLog/#kotlin.String/PointingToDeclaration/logging_core/danbroid.logging/get-log.md
+$dokka.location:danbroid.logging//getLog/#kotlin.reflect.KClass[*]/PointingToDeclaration/logging_core/danbroid.logging/get-log.md
+$dokka.location:danbroid.logging/DBLog.Level.DEBUG///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-d-e-b-u-g/index.md
+$dokka.location:danbroid.logging/DBLog.Level.DEBUG/name/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-d-e-b-u-g/name.md
+$dokka.location:danbroid.logging/DBLog.Level.DEBUG/ordinal/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-d-e-b-u-g/ordinal.md
+$dokka.location:danbroid.logging/DBLog.Level.ERROR///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-e-r-r-o-r/index.md
+$dokka.location:danbroid.logging/DBLog.Level.ERROR/name/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-e-r-r-o-r/name.md
+$dokka.location:danbroid.logging/DBLog.Level.ERROR/ordinal/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-e-r-r-o-r/ordinal.md
+$dokka.location:danbroid.logging/DBLog.Level.INFO///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-i-n-f-o/index.md
+$dokka.location:danbroid.logging/DBLog.Level.INFO/name/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-i-n-f-o/name.md
+$dokka.location:danbroid.logging/DBLog.Level.INFO/ordinal/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-i-n-f-o/ordinal.md
+$dokka.location:danbroid.logging/DBLog.Level.TRACE///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-t-r-a-c-e/index.md
+$dokka.location:danbroid.logging/DBLog.Level.TRACE/name/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-t-r-a-c-e/name.md
+$dokka.location:danbroid.logging/DBLog.Level.TRACE/ordinal/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-t-r-a-c-e/ordinal.md
+$dokka.location:danbroid.logging/DBLog.Level.WARN///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-w-a-r-n/index.md
+$dokka.location:danbroid.logging/DBLog.Level.WARN/name/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-w-a-r-n/name.md
+$dokka.location:danbroid.logging/DBLog.Level.WARN/ordinal/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-w-a-r-n/ordinal.md
+$dokka.location:danbroid.logging/DBLog.Level///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/index.md
+$dokka.location:danbroid.logging/DBLog///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/index.md
+$dokka.location:danbroid.logging/DBLog/d_debug/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_debug.md
+$dokka.location:danbroid.logging/DBLog/d_error/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_error.md
+$dokka.location:danbroid.logging/DBLog/d_info/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_info.md
+$dokka.location:danbroid.logging/DBLog/d_trace/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_trace.md
+$dokka.location:danbroid.logging/DBLog/d_warn/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_warn.md
+$dokka.location:danbroid.logging/DBLog/debug/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/debug.md
+$dokka.location:danbroid.logging/DBLog/error/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/error.md
+$dokka.location:danbroid.logging/DBLog/info/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/info.md
+$dokka.location:danbroid.logging/DBLog/logName/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/log-name.md
+$dokka.location:danbroid.logging/DBLog/trace/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/trace.md
+$dokka.location:danbroid.logging/DBLog/warn/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/warn.md
+$dokka.location:danbroid.logging/DBLog/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/write_log_native.md
+$dokka.location:danbroid.logging/LogConfig///PointingToDeclaration/logging_core/danbroid.logging/-log-config/index.md
+$dokka.location:danbroid.logging/LogConfig/COLOURED/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-c-o-l-o-u-r-e-d.md
+$dokka.location:danbroid.logging/LogConfig/DEBUG/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-d-e-b-u-g.md
+$dokka.location:danbroid.logging/LogConfig/DETAILED/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-d-e-t-a-i-l-e-d.md
+$dokka.location:danbroid.logging/LogConfig/GET_LOG/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-g-e-t_-l-o-g.md
+$dokka.location:danbroid.logging/LogConfig/MESSAGE_DECORATOR/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-m-e-s-s-a-g-e_-d-e-c-o-r-a-t-o-r.md
+$dokka.location:danbroid.logging/LogConfig/MIN_LOG_LEVEL/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-m-i-n_-l-o-g_-l-e-v-e-l.md
+$dokka.location:danbroid.logging/NullLog///PointingToDeclaration/logging_core/danbroid.logging/-null-log/index.md
+$dokka.location:danbroid.logging/NullLog/logName/#/PointingToDeclaration/logging_core/danbroid.logging/-null-log/log-name.md
+$dokka.location:danbroid.logging/NullLog/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-null-log/write_log_native.md
+$dokka.location:danbroid.logging/Slf4jLogImpl///PointingToDeclaration/logging_core/danbroid.logging/-slf4j-log-impl/index.md
+$dokka.location:danbroid.logging/Slf4jLogImpl/Slf4jLogImpl/#kotlin.String/PointingToDeclaration/logging_core/danbroid.logging/-slf4j-log-impl/-slf4j-log-impl.md
+$dokka.location:danbroid.logging/Slf4jLogImpl/log/#/PointingToDeclaration/logging_core/danbroid.logging/-slf4j-log-impl/log.md
+$dokka.location:danbroid.logging/Slf4jLogImpl/logName/#/PointingToDeclaration/logging_core/danbroid.logging/-slf4j-log-impl/log-name.md
+$dokka.location:danbroid.logging/Slf4jLogImpl/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-slf4j-log-impl/write_log_native.md
+$dokka.location:danbroid.logging/StdOutLog///PointingToDeclaration/logging_core/danbroid.logging/-std-out-log/index.md
+$dokka.location:danbroid.logging/StdOutLog/logName/#/PointingToDeclaration/logging_core/danbroid.logging/-std-out-log/log-name.md
+$dokka.location:danbroid.logging/StdOutLog/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-std-out-log/write_log_native.md
+danbroid.logging
+

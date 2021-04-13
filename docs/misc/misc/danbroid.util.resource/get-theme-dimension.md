@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.resource](index.md)/[getThemeDimension](get-theme-dimension.md)
+//[misc](../../index.md)/[danbroid.util.resource](index.md)/[getThemeDimension](get-theme-dimension.md)
 
 
 

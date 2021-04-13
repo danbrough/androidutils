@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.event](../index.md)/[Event](index.md)/[hasBeenHandled](has-been-handled.md)
+//[misc](../../../index.md)/[danbroid.util.event](../index.md)/[Event](index.md)/[hasBeenHandled](has-been-handled.md)
 
 
 

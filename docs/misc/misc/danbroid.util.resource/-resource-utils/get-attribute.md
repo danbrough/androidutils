@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.resource](../index.md)/[ResourceUtils](index.md)/[getAttribute](get-attribute.md)
+//[misc](../../../index.md)/[danbroid.util.resource](../index.md)/[ResourceUtils](index.md)/[getAttribute](get-attribute.md)
 
 
 

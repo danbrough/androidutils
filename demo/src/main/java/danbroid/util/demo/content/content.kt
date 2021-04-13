@@ -3,20 +3,18 @@ package danbroid.util.demo.content
 import android.content.Context
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.navigation.fragment.findNavController
 import com.mikepenz.iconics.typeface.library.googlematerial.GoogleMaterial
+import danbroid.logging.getLog
 import danbroid.util.demo.DemoNavGraph
 import danbroid.util.demo.R
 import danbroid.util.demo.URI_CONTENT_PREFIX
 import danbroid.util.menu.*
 import danbroid.util.menu.Icons.iconicsIcon
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.delay
-import org.slf4j.LoggerFactory
+import kotlinx.coroutines.*
 import java.util.*
 import kotlin.coroutines.suspendCoroutine
 
-private val log = LoggerFactory.getLogger("danbroid.util.demo.content")
+private val log = getLog("danbroid.util.demo.content")
 
 @ExperimentalCoroutinesApi
 fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
@@ -24,22 +22,38 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
   titleID = R.string.app_name
 
   menu {
+    title = "Handle Long click"
+    onClick = {
+    }
+    onLongClick = {
+      Toast.makeText(context, "Long click handled", Toast.LENGTH_SHORT).show()
+    }
+  }
+
+
+
+  menu {
+    val builder = this
     title = "Dynamic Children"
     subtitle = "Generates children when clicked"
     val random = Random()
     var viewCount = 1
-    isBrowsable = true
+
     onClick = {
       children?.clear()
-      title = "View count: ${viewCount++}"
-      (0 until random.nextInt(10) + 1).forEach {
+      title = "View Count ${viewCount++}"
+      fun childCount() = children?.size ?: 0
+      (0 .. random.nextInt(10)).forEach {
         menu {
-          title = "Child $it"
+          title = "Child ${childCount()}"
           subtitle = "${Date()}"
         }
       }
-      true
+
+      log.debug("children $children browsable: $isBrowsable")
+      proceed()
     }
+
   }
 
   menu {
@@ -67,7 +81,7 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
     onClick = {
       Toast.makeText(context, "Opening menu ${this@menu.id} in 1 second", Toast.LENGTH_SHORT).show()
       delay(1000)
-      true
+      proceed()
     }
 
     menu {
@@ -84,11 +98,10 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
       menu {
         title = "Home Action"
         subtitle = "calls navController?.navigateToHome()"
-        icon = Icons.iconicsIcon(GoogleMaterial.Icon.gmd_home)
+        icon = iconicsIcon(GoogleMaterial.Icon.gmd_home)
 
         onClick = {
           findNavController().navigateToHome()
-          false
         }
       }
 
@@ -101,7 +114,6 @@ fun rootContent(context: Context) = context.rootMenu<MenuItemBuilder> {
         onClick = {
           subtitle = "Counter: ${counter++}"
           invalidateMenu()
-          false
         }
       }
 
@@ -130,7 +142,7 @@ roundedCorners = true"""
 
       menu {
         title = "Inline Child 1"
-        onCreate = { item->
+        onCreate = { item ->
           item.title = "The date is ${Date()}"
         }
       }
@@ -144,22 +156,21 @@ roundedCorners = true"""
 
   permissionExamples()
 
-  prefsExamples()
 
   menu {
     id = DemoNavGraph.deep_link.settings
     title = "Settings"
+    subtitle = "Shows a prompt"
     subtitle = "deeplink: $id"
     imageID = R.drawable.ic_settings
     onClick = promptToContinue
-
   }
 
 
 }
 
 private val promptToContinue: MenuItemClickHandler = {
-  log.warn("promptToCOntinue")
+  log.info("promptToCOntinue")
   suspendCoroutine<Boolean> { cont ->
     AlertDialog.Builder(requireContext()).apply {
       setTitle(android.R.string.dialog_alert_title)
@@ -172,8 +183,8 @@ private val promptToContinue: MenuItemClickHandler = {
       }
       show()
     }
+  }.also {
+    if (it) proceed()
   }
-  log.warn("returning false")
-  false
 }
 

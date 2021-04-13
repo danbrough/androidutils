@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu](../index.md)/[MenuItemBuilder](index.md)/[tintRes](tint-res.md)
+//[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuItemBuilder](index.md)/[tintRes](tint-res.md)
 
 
 

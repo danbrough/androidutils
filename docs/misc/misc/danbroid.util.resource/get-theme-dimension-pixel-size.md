@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.resource](index.md)/[getThemeDimensionPixelSize](get-theme-dimension-pixel-size.md)
+//[misc](../../index.md)/[danbroid.util.resource](index.md)/[getThemeDimensionPixelSize](get-theme-dimension-pixel-size.md)
 
 
 

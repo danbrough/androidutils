@@ -1,4 +1,5 @@
 package danbroid.util.demo.ui
+
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -31,4 +32,4 @@ class HomeModel : ViewModel() {
   }
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(HomeModel::class.java)
+private val log = danbroid.logging.getLog(HomeModel::class)

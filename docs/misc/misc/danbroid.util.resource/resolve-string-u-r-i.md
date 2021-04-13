@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.resource](index.md)/[resolveStringURI](resolve-string-u-r-i.md)
+//[misc](../../index.md)/[danbroid.util.resource](index.md)/[resolveStringURI](resolve-string-u-r-i.md)
 
 
 

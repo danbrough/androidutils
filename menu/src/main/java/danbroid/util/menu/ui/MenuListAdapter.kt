@@ -23,9 +23,10 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import danbroid.util.menu.MENU_TINT_DISABLED
 import danbroid.util.menu.MenuItem
+import danbroid.util.menu.MenuItemClickContext
 import danbroid.util.menu.R
+import danbroid.util.menu.databinding.MenuItemFragmentBinding
 import danbroid.util.resource.*
-import kotlinx.android.synthetic.main.menu_item_fragment.view.*
 
 typealias ContextMenuHandler = MenuListAdapter.MenuViewHolder.(
     menu: ContextMenu,
@@ -46,17 +47,17 @@ open class MenuListAdapter(val fragment: Fragment,
   var DEFAULT_FILE_ICON = R.attr.dbMenuIconFile.getThemeDrawableRes(context, R.drawable.ic_file)
 
   var onClick: ((MenuItem) -> Unit)? = null
+  var onLongClick: ((MenuItem) -> Boolean)? = null
 
   override fun onViewRecycled(holder: MenuViewHolder) {
     super.onViewRecycled(holder)
     holder.recycle()
   }
 
-  inner class MenuViewHolder(itemView: ViewGroup) : RecyclerView.ViewHolder(itemView) {
+  inner class MenuViewHolder(val binding: MenuItemFragmentBinding) : RecyclerView.ViewHolder(binding.root) {
+
 
     init {
-
-
       onClick?.also { handler ->
         itemView.setOnClickListener {
           handler.invoke(menuItem!!)
@@ -79,8 +80,15 @@ open class MenuListAdapter(val fragment: Fragment,
 
   protected open fun bind(viewHolder: MenuViewHolder, payloads: MutableList<Any>) {
     val menuItem = viewHolder.menuItem!!
-    log.trace("bind() ${viewHolder.menuItem}")
+    //log.trace("bind() ${viewHolder.menuItem}")
     val itemView = viewHolder.itemView
+
+    menuItem.menuItemBuilder?.onLongClick?.also { handler->
+      itemView.setOnLongClickListener {
+        onLongClick?.invoke(menuItem) ?: false
+      }
+    } ?: itemView.setOnLongClickListener(null)
+
 
     menuItem.menuItemBuilder?.contextMenu?.also { provider ->
       itemView.setOnCreateContextMenuListener { contextMenu, _, _ ->
@@ -90,7 +98,7 @@ open class MenuListAdapter(val fragment: Fragment,
     } ?: itemView.setOnCreateContextMenuListener(null)
 
     //log.trace("bind() payloads: $payloads")
-    itemView.subtitle.visibility = if (menuItem.subtitle.isBlank()) {
+    viewHolder.binding.subtitle.visibility = if (menuItem.subtitle.isBlank()) {
       // log.error("${menu.title} has no subtitle")
       View.GONE
     } else View.VISIBLE
@@ -101,11 +109,11 @@ open class MenuListAdapter(val fragment: Fragment,
       }
       if (changes and MEDIA_ITEM_PAYLOAD_TITLE != 0) {
         //  log.trace("MEDIA_ITEM_PAYLOAD_TITLE")
-        itemView.title.text = menuItem.title
+        viewHolder.binding.title.text = menuItem.title
       }
       if (changes and MEDIA_ITEM_PAYLOAD_SUBTITLE != 0) {
         // log.trace("MEDIA_ITEM_PAYLOAD_SUBTITLE")
-        itemView.subtitle.text = menuItem.subtitle
+        viewHolder.binding.subtitle.text = menuItem.subtitle
       }
       if (changes and MEDIA_ITEM_PAYLOAD_IMAGE != 0) {
         // log.trace("MEDIA_ITEM_PAYLOAD_IMAGE")
@@ -113,10 +121,10 @@ open class MenuListAdapter(val fragment: Fragment,
       }
       return
     }
-    itemView.title.text = menuItem.title
-    itemView.subtitle.text = menuItem.subtitle
+    viewHolder.binding.title.text = menuItem.title
+    viewHolder.binding.subtitle.text = menuItem.subtitle
 
-    itemView.state_in_playlist.visibility = View.GONE
+    viewHolder.binding.stateInPlaylist.visibility = View.GONE
     setIcon(viewHolder)
   }
 
@@ -125,7 +133,7 @@ open class MenuListAdapter(val fragment: Fragment,
     val itemView = viewHolder.itemView
     val menu = viewHolder.menuItem!!
 
-    val iconContext = itemView.icon.context
+    val iconContext = viewHolder.binding.icon.context
 
     if (menu.tint != MENU_TINT_DISABLED) {
       @ColorInt
@@ -135,11 +143,11 @@ open class MenuListAdapter(val fragment: Fragment,
             R.attr.colorPrimary.toThemeColour(iconContext)
         }
 
-      itemView.icon.setTintColor(tint)
+      viewHolder.binding.icon.setTintColor(tint)
     }
 
     if (menu.icon != null) {
-      itemView.icon.setImageDrawable(menu.icon!!)
+      viewHolder.binding.icon.setImageDrawable(menu.icon!!)
       return
     }
 
@@ -154,7 +162,7 @@ open class MenuListAdapter(val fragment: Fragment,
     //itemView.icon.setTintColor(if (menu.tint != 0) menu.tint else R.attr.colorPrimary.toThemeColour(context))
 
     if (resID != 0) {
-      itemView.icon.setImageDrawable(
+      viewHolder.binding.icon.setImageDrawable(
           ResourcesCompat.getDrawable(
               context.resources,
               resID,
@@ -163,7 +171,7 @@ open class MenuListAdapter(val fragment: Fragment,
       )
     } else {
 
-      val roundedCorners = R.attr.dbMenuIconRoundedCorners.getThemeBoolean(itemView.icon.context, menu.roundedCorners)
+      val roundedCorners = R.attr.dbMenuIconRoundedCorners.getThemeBoolean(viewHolder.binding.icon.context, menu.roundedCorners)
       val placeholder = ResourcesCompat.getDrawable(
           context.resources,
           if (menu.isBrowsable) DEFAULT_FOLDER_ICON else DEFAULT_FILE_ICON,
@@ -195,16 +203,19 @@ open class MenuListAdapter(val fragment: Fragment,
                 dataSource: DataSource?,
                 isFirstResource: Boolean
             ): Boolean {
-              ImageViewCompat.setImageTintList(itemView.icon, null)
+              ImageViewCompat.setImageTintList(viewHolder.binding.icon, null)
               return false
             }
 
           })
-          .into(itemView.icon)
+          .into(viewHolder.binding.icon)
     }
   }
 
-  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder =
+      MenuViewHolder(MenuItemFragmentBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+
+  /*override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
       MenuViewHolder(
           LayoutInflater.from(parent.context).inflate(
               R.layout.menu_item_fragment,
@@ -212,7 +223,7 @@ open class MenuListAdapter(val fragment: Fragment,
               false
           ) as ViewGroup
       )
-
+*/
 
   override fun onBindViewHolder(holder: MenuViewHolder, position: Int): Unit =
       onBindViewHolder(holder, position, mutableListOf())

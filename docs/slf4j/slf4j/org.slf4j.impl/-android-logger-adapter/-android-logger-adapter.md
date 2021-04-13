@@ -9,7 +9,7 @@ open fun [AndroidLoggerAdapter](-android-logger-adapter.md)(logInfo: [AndroidLog
 More info  
 
 
-Package access allows only [AndroidLoggerFactory](../-android-logger-factory/index.md) to instantiate SimpleLogger instances.
+Package access allows only [AndroidLoggerFactory](../-android-logger-factory/index.md) to instantiateSimpleLogger instances.
 
   
 

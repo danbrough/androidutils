@@ -11,7 +11,7 @@ android {
 
   compileSdkVersion(ProjectVersions.SDK_VERSION)
   defaultConfig {
-    minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
+    minSdkVersion(16)
     targetSdkVersion(ProjectVersions.SDK_VERSION)
     versionCode = ProjectVersions.BUILD_VERSION
     versionName = ProjectVersions.VERSION_NAME
@@ -71,7 +71,7 @@ afterEvaluate {
 
 
 dependencies {
-  implementation("org.slf4j:slf4j-api:_")
+  api("org.slf4j:slf4j-api:_")
   //api(Libs.appcompat)
 
   androidTestImplementation(AndroidX.test.core)

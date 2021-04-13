@@ -2,7 +2,6 @@ plugins {
   id("com.android.application")
   kotlin("android")
   kotlin("kapt")
-  kotlin("android.extensions")
 }
 
 
@@ -11,7 +10,7 @@ android {
   compileSdkVersion(ProjectVersions.SDK_VERSION)
 
   defaultConfig {
-    minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
+    minSdkVersion(21)
     targetSdkVersion(ProjectVersions.SDK_VERSION)
     versionCode = ProjectVersions.BUILD_VERSION
     versionName = ProjectVersions.VERSION_NAME
@@ -88,18 +87,20 @@ tasks.withType<Test> {
 
 
 dependencies {
+  implementation(project(":logging_core"))
+  implementation(project(":logging"))
 
   implementation(project(":menu"))
+  implementation(project(":misc"))
+
   implementation(project(":permissions"))
   // or implementation("com.github.danbrough.androidutils:permissions:master-SNAPSHOT")
 
-  implementation(project(":slf4j"))
+
   // or implementation("com.github.danbrough.androidutils:slf4j:master-SNAPSHOT")
 
-  implementation(project(":misc"))
+  //implementation(project(":misc"))
   // or implementation("com.github.danbrough.androidutils:misc:master-SNAPSHOT")
-
-  implementation("org.slf4j:slf4j-api:_")
 
 
   testImplementation(Testing.junit4)
@@ -110,9 +111,10 @@ dependencies {
 //  implementation("com.mikepenz:iconics-core:_")
   implementation(AndroidX.appCompat)
 
-  implementation("com.mikepenz:fontawesome-typeface:_")
-  implementation("com.mikepenz:google-material-typeface:_")
-  implementation("com.mikepenz:iconics-core:_")
+  implementation("com.mikepenz:iconics-core:_@aar")
+
+  implementation("com.mikepenz:fontawesome-typeface:_@aar")
+  implementation("com.mikepenz:google-material-typeface:_@aar")
 
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
   //implementation("com.mikepenz:material-design-iconic-typeface:2.2.0.7-kotlin")
@@ -124,8 +126,8 @@ dependencies {
 
   implementation(AndroidX.preferenceKtx)
 
-  //implementation(AndroidX.activityKtx)
-  implementation(AndroidX.coreKtx)
+
+  implementation(AndroidX.core.ktx)
   implementation(AndroidX.coordinatorLayout)
 
   implementation(AndroidX.fragmentKtx)
@@ -145,6 +147,20 @@ dependencies {
   androidTestImplementation(AndroidX.test.ext.junit)
   androidTestImplementation(AndroidX.test.ext.truth)
   androidTestImplementation(project(":slf4j"))
+
+  testImplementation("ch.qos.logback:logback-core:_")
+  testImplementation("ch.qos.logback:logback-classic:_")
+  testImplementation("ch.qos.logback:logback-classic:_") {
+    exclude(":slf4j")
+    exclude(group=":slf4j")
+    exclude(group="com.github.danbrough.androidutils",module = "slf4j")
+
+    //exclude(project(":slf4j"))
+    /*compile('org.apache.zookeeper:zookeeper:3.4.5') {
+      exclude group: 'ch.qos.logback', module: 'logback-classic'
+    }*/
+  }
+  testImplementation("ch.qos.logback:logback-core:_")
 }
 
 

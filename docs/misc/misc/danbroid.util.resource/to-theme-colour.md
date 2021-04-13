@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.resource](index.md)/[toThemeColour](to-theme-colour.md)
+//[misc](../../index.md)/[danbroid.util.resource](index.md)/[toThemeColour](to-theme-colour.md)
 
 
 

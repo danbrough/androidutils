@@ -2,7 +2,6 @@ plugins {
   id("com.android.library")
   kotlin("android")
   kotlin("kapt")
-  kotlin("android.extensions")
   id("maven-publish")
   id("org.jetbrains.dokka")
 
@@ -20,7 +19,7 @@ android {
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     consumerProguardFiles("consumer-rules.pro")
   }
-  lintOptions {
+  lint {
     isAbortOnError = false
   }
   compileOptions {

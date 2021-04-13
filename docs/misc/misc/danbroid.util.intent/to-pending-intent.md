@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.intent](index.md)/[toPendingIntent](to-pending-intent.md)
+//[misc](../../index.md)/[danbroid.util.intent](index.md)/[toPendingIntent](to-pending-intent.md)
 
 
 

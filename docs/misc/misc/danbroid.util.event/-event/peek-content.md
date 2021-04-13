@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.event](../index.md)/[Event](index.md)/[peekContent](peek-content.md)
+//[misc](../../../index.md)/[danbroid.util.event](../index.md)/[Event](index.md)/[peekContent](peek-content.md)
 
 
 

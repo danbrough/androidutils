@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.misc](../index.md)/[WeakSingletonHolder](index.md)/[WeakSingletonHolder](-weak-singleton-holder.md)
+//[misc](../../../index.md)/[danbroid.util.misc](../index.md)/[WeakSingletonHolder](index.md)/[WeakSingletonHolder](-weak-singleton-holder.md)
 
 
 

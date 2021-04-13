@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.resource](index.md)/[toResourceURI](to-resource-u-r-i.md)
+//[misc](../../index.md)/[danbroid.util.resource](index.md)/[toResourceURI](to-resource-u-r-i.md)
 
 
 

@@ -154,10 +154,13 @@ fun Context.getThemeColour(@AttrRes themeColorAttribute: Int) =
 fun Context.getResourceColour(@ColorRes colorID: Int) =
     ResourceUtils.getResourceColour(this, colorID)
 
+@ColorInt
+fun Int.getResourceColour(context: Context) =
+    ResourceUtils.getResourceColour(context, this)
 
-fun Int.getThemeDrawable(context: Context, @DrawableRes defValue: Int): Drawable =
+fun Int.getThemeDrawable(context: Context, @DrawableRes defValue: Int): Drawable? =
     ResourceUtils.getThemeDrawable(context, this)
-        ?: ResourcesCompat.getDrawable(context.resources, defValue, context.theme)!!
+        ?: ResourcesCompat.getDrawable(context.resources, defValue, context.theme)
 
 
 @ColorInt

@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.resource](index.md)/[resolveDrawableURI](resolve-drawable-u-r-i.md)
+//[misc](../../index.md)/[danbroid.util.resource](index.md)/[resolveDrawableURI](resolve-drawable-u-r-i.md)
 
 
 

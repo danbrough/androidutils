@@ -1,4 +1,4 @@
-//[menu](../../index.md)/[danbroid.util.menu.ui](../index.md)/[MenuListAdapter](index.md)/[onViewRecycled](on-view-recycled.md)
+//[menu](../../../index.md)/[danbroid.util.menu.ui](../index.md)/[MenuListAdapter](index.md)/[onViewRecycled](on-view-recycled.md)
 
 
 

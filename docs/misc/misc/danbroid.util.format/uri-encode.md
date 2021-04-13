@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.format](index.md)/[uriEncode](uri-encode.md)
+//[misc](../../index.md)/[danbroid.util.format](index.md)/[uriEncode](uri-encode.md)
 
 
 

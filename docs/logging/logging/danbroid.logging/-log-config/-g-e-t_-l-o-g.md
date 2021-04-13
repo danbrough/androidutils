@@ -1,0 +1,11 @@
+//[logging](../../../index.md)/[danbroid.logging](../index.md)/[LogConfig](index.md)/[GET_LOG](-g-e-t_-l-o-g.md)
+
+
+
+# GET_LOG  
+[jvm]  
+Content  
+var [GET_LOG](-g-e-t_-l-o-g.md): ([String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) -> [Log](../-log/index.md)?  
+
+
+

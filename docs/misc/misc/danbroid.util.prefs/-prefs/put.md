@@ -1,4 +1,4 @@
-//[misc](../../index.md)/[danbroid.util.prefs](../index.md)/[Prefs](index.md)/[put](put.md)
+//[misc](../../../index.md)/[danbroid.util.prefs](../index.md)/[Prefs](index.md)/[put](put.md)
 
 
 

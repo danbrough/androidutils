@@ -1,4 +1,4 @@
-//[misc](../index.md)/[danbroid.util.resource](index.md)/[setTintColor](set-tint-color.md)
+//[misc](../../index.md)/[danbroid.util.resource](index.md)/[setTintColor](set-tint-color.md)
 
 
 
