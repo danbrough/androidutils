@@ -23,12 +23,12 @@ $dokka.location:danbroid.logging/DBLog.Level.WARN/name/#/PointingToDeclaration/
 $dokka.location:danbroid.logging/DBLog.Level.WARN/ordinal/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/-w-a-r-n/ordinal.md
 $dokka.location:danbroid.logging/DBLog.Level///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/-level/index.md
 $dokka.location:danbroid.logging/DBLog///PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/index.md
-$dokka.location:danbroid.logging/DBLog/d_debug/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_debug.md
-$dokka.location:danbroid.logging/DBLog/d_error/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_error.md
-$dokka.location:danbroid.logging/DBLog/d_info/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_info.md
-$dokka.location:danbroid.logging/DBLog/d_trace/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_trace.md
-$dokka.location:danbroid.logging/DBLog/d_warn/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/d_warn.md
+$dokka.location:danbroid.logging/DBLog/ddebug/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/ddebug.md
 $dokka.location:danbroid.logging/DBLog/debug/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/debug.md
+$dokka.location:danbroid.logging/DBLog/derror/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/derror.md
+$dokka.location:danbroid.logging/DBLog/dinfo/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/dinfo.md
+$dokka.location:danbroid.logging/DBLog/dtrace/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/dtrace.md
+$dokka.location:danbroid.logging/DBLog/dwarn/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/dwarn.md
 $dokka.location:danbroid.logging/DBLog/error/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/error.md
 $dokka.location:danbroid.logging/DBLog/info/#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/info.md
 $dokka.location:danbroid.logging/DBLog/logName/#/PointingToDeclaration/logging_core/danbroid.logging/-d-b-log/log-name.md

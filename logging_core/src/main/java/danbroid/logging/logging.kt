@@ -12,19 +12,19 @@ interface DBLog {
 
   val logName: String
 
-  fun d_trace(msg: CharSequence?, error: Throwable? = null) = write_log(Level.TRACE, msg, error, true)
+  fun dtrace(msg: CharSequence?, error: Throwable? = null) = write_log(Level.TRACE, msg, error, true)
   fun trace(msg: CharSequence?, error: Throwable? = null) = write_log(Level.TRACE, msg, error)
 
-  fun d_debug(msg: CharSequence?, error: Throwable? = null) = write_log(Level.DEBUG, msg, error, true)
+  fun ddebug(msg: CharSequence?, error: Throwable? = null) = write_log(Level.DEBUG, msg, error, true)
   fun debug(msg: CharSequence?, error: Throwable? = null) = write_log(Level.DEBUG, msg, error)
 
-  fun d_info(msg: CharSequence?, error: Throwable? = null) = write_log(Level.INFO, msg, error, true)
+  fun dinfo(msg: CharSequence?, error: Throwable? = null) = write_log(Level.INFO, msg, error, true)
   fun info(msg: CharSequence?, error: Throwable? = null) = write_log(Level.INFO, msg, error)
 
-  fun d_warn(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error, true)
+  fun dwarn(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error, true)
   fun warn(msg: CharSequence?, error: Throwable? = null) = write_log(Level.WARN, msg, error)
 
-  fun d_error(msg: CharSequence?, error: Throwable? = null) = write_log(Level.ERROR, msg, error, true)
+  fun derror(msg: CharSequence?, error: Throwable? = null) = write_log(Level.ERROR, msg, error, true)
   fun error(msg: CharSequence?, error: Throwable? = null) = write_log(Level.ERROR, msg, error)
 
 
