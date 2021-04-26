@@ -62,7 +62,7 @@ android {
 dependencies {
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
   implementation(AndroidX.core)
-  implementation(AndroidX.compose.ui.graphics)
+  implementation("androidx.compose.ui:ui:_")
 }
 
 
