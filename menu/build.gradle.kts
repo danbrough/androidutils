@@ -20,7 +20,7 @@ android {
     consumerProguardFiles("consumer-rules.pro")
   }
 
-  lintOptions {
+  lint {
     isAbortOnError = false
   }
 

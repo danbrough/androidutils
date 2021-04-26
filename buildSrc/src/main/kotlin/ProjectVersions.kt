@@ -6,11 +6,10 @@ object ProjectVersions {
   const val SDK_VERSION = 29
   const val MIN_SDK_VERSION = 19
   const val BUILD_TOOLS_VERSION = "30.0.3"
-
   val JAVA_VERSION = JavaVersion.VERSION_1_8
   var BUILD_VERSION = 1
   var VERSION_OFFSET = 1
-  const val GROUP_ID = ""
+  const val GROUP_ID = "com.github.danbrough.androidutils"
   const val KEYSTORE_PASSWORD = ""
   var VERSION_FORMAT = ""
   const val COMPOSE_VERSION = "1.0.0-beta05"
