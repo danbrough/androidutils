@@ -5,7 +5,7 @@
 # onCreate  
 [androidJvm]  
 Content  
-var [onCreate](on-create.md): [MenuItemOnCreated](../index.md#%5Bdanbroid.util.menu%2FMenuItemOnCreated%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F787876325)? = null  
+var [onCreate](on-create.md): [MenuItemOnCreated](../index.md#2071487011%2FClasslikes%2F1173194265)? = null  
 
 
 

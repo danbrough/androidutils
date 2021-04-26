@@ -46,4 +46,4 @@ class Test {
   }
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(Test::class.java)
+private val log = danbroid.logging.getLog(Test::class)

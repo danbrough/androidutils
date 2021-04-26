@@ -3,31 +3,30 @@ import java.util.*
 
 
 object ProjectVersions {
-  var SDK_VERSION = 29
-  var MIN_SDK_VERSION = 19
+  const val SDK_VERSION = 29
+  const val MIN_SDK_VERSION = 19
+  const val BUILD_TOOLS_VERSION = "30.0.3"
+
   val JAVA_VERSION = JavaVersion.VERSION_1_8
   var BUILD_VERSION = 1
   var VERSION_OFFSET = 1
-  var GROUP_ID = ""
-  var KEYSTORE_PASSWORD = ""
+  const val GROUP_ID = ""
+  const val KEYSTORE_PASSWORD = ""
   var VERSION_FORMAT = ""
+  const val COMPOSE_VERSION = "1.0.0-beta05"
 
   val VERSION_NAME: String
     get() = getVersionName()
 
   fun init(props: Properties) {
-    SDK_VERSION = props.getProperty("sdkVersion", "29").toInt()
-    MIN_SDK_VERSION = props.getProperty("minSdkVersion", "21").toInt()
     BUILD_VERSION = props.getProperty("buildVersion", "1").toInt()
     VERSION_OFFSET = props.getProperty("versionOffset", "1").toInt()
     VERSION_FORMAT = props.getProperty("versionFormat", "0.0.%d").trim()
-    GROUP_ID = props.getProperty("groupID", "").trim()
-    KEYSTORE_PASSWORD = props.getProperty("keystorePassword", "").trim()
   }
 
   fun getIncrementedVersionName() = getVersionName(BUILD_VERSION + 1)
 
 
   fun getVersionName(version: Int = BUILD_VERSION) =
-    VERSION_FORMAT.format(version - VERSION_OFFSET).trim()
+      VERSION_FORMAT.format(version - VERSION_OFFSET).trim()
 }
