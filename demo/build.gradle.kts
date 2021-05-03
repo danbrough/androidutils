@@ -16,7 +16,7 @@ android {
     versionName = ProjectVersions.VERSION_NAME
     multiDexEnabled = true
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    consumerProguardFiles("consumer-rules.pro")
+   // consumerProguardFiles("consumer-rules.pro")
   }
 
 
