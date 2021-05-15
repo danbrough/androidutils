@@ -3,7 +3,7 @@ import java.util.*
 
 
 object ProjectVersions {
-  const val SDK_VERSION = 29
+  const val SDK_VERSION = 30
   const val MIN_SDK_VERSION = 19
   const val BUILD_TOOLS_VERSION = "30.0.3"
   val JAVA_VERSION = JavaVersion.VERSION_1_8
@@ -12,7 +12,7 @@ object ProjectVersions {
   const val GROUP_ID = "com.github.danbrough.androidutils"
   const val KEYSTORE_PASSWORD = ""
   var VERSION_FORMAT = ""
-  const val COMPOSE_VERSION = "1.0.0-beta05"
+  const val COMPOSE_VERSION = "1.0.0-beta06"
 
   val VERSION_NAME: String
     get() = getVersionName()
