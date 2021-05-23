@@ -1,5 +1,6 @@
 package danbroid.logging
 
+import danbroid.logging.LogConfig.STACK_DEPTH
 import java.io.PrintWriter
 import java.io.StringWriter
 import java.net.UnknownHostException
@@ -89,11 +90,22 @@ object LogConfig {
 
   var MESSAGE_DECORATOR: ((DBLog.Level, String) -> String)? = null
 
+  /**
+   * Coloured console output
+   */
   var COLOURED = false
+
+  /**
+   * Apply the [DetailedDecorator]. default: true
+   */
   var DETAILED = true
 
   var GET_LOG: (String) -> DBLog? = { StdOutLog }
 
+  /**
+   * How far to go back up the stack to get the line number and method name
+   */
+  var STACK_DEPTH = 5
 }
 
 
@@ -116,7 +128,7 @@ inline fun DetailedDecorator(level: DBLog.Level, msg: String): String {
   val thread = Thread.currentThread()
   val stackElements = thread.stackTrace
 
-  val element = stackElements[5]
+  val element = stackElements[STACK_DEPTH]
   val header =
       "[<${thread.name}:${thread.id}>:${element.className}:${element.methodName}():${element.lineNumber}] "
   return "$header$msg"

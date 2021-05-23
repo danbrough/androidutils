@@ -42,6 +42,7 @@ $dokka.location:danbroid.logging/LogConfig/DETAILED/#/PointingToDeclaration/log
 $dokka.location:danbroid.logging/LogConfig/GET_LOG/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-g-e-t_-l-o-g.md
 $dokka.location:danbroid.logging/LogConfig/MESSAGE_DECORATOR/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-m-e-s-s-a-g-e_-d-e-c-o-r-a-t-o-r.md
 $dokka.location:danbroid.logging/LogConfig/MIN_LOG_LEVEL/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-m-i-n_-l-o-g_-l-e-v-e-l.md
+$dokka.location:danbroid.logging/LogConfig/STACK_DEPTH/#/PointingToDeclaration/logging_core/danbroid.logging/-log-config/-s-t-a-c-k_-d-e-p-t-h.md
 $dokka.location:danbroid.logging/NullLog///PointingToDeclaration/logging_core/danbroid.logging/-null-log/index.md
 $dokka.location:danbroid.logging/NullLog/logName/#/PointingToDeclaration/logging_core/danbroid.logging/-null-log/log-name.md
 $dokka.location:danbroid.logging/NullLog/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-null-log/write_log_native.md

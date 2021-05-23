@@ -6,6 +6,12 @@
 [jvm]  
 Content  
 var [COLOURED](-c-o-l-o-u-r-e-d.md): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = false  
+More info  
+
+
+Coloured console output
+
+  
 
 
 
