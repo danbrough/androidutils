@@ -12,7 +12,7 @@ object ProjectVersions {
   const val GROUP_ID = "com.github.danbrough.androidutils"
   const val KEYSTORE_PASSWORD = ""
   var VERSION_FORMAT = ""
-  const val COMPOSE_VERSION = "1.0.0-beta06"
+  const val COMPOSE_VERSION = "1.0.0-beta08"
 
   val VERSION_NAME: String
     get() = getVersionName()

@@ -7,11 +7,12 @@ plugins {
 
 android {
 
-  compileSdkVersion(ProjectVersions.SDK_VERSION)
+  compileSdk = ProjectVersions.SDK_VERSION
   buildToolsVersion = ProjectVersions.BUILD_TOOLS_VERSION
+
   defaultConfig {
-    minSdkVersion(21)
-    targetSdkVersion(ProjectVersions.SDK_VERSION)
+    minSdk = 21
+    targetSdk = ProjectVersions.SDK_VERSION
     versionCode = ProjectVersions.BUILD_VERSION
     versionName = ProjectVersions.VERSION_NAME
     multiDexEnabled = true
@@ -32,9 +33,8 @@ android {
   kotlinOptions {
     jvmTarget = "1.8"
     //freeCompilerArgs = listOf("-Xjsr305=strict")
-    freeCompilerArgs = mutableListOf("-Xopt-in=kotlin.ExperimentalStdlibApi").also {
-      it.addAll(freeCompilerArgs)
-    }
+    freeCompilerArgs = freeCompilerArgs + listOf("-Xopt-in=kotlin.ExperimentalStdlibApi")
+
   }
   buildTypes {
     getByName("release") {

@@ -54,6 +54,7 @@ allprojects {
   }
 }
 
+
 tasks.dokkaGfmMultiModule {
   outputDirectory.set(file("docs"))
 }
