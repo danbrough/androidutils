@@ -8,12 +8,10 @@ android {
   buildToolsVersion = ProjectVersions.BUILD_TOOLS_VERSION
 
   defaultConfig {
-    applicationId = "danbroid.utils.app"
     minSdk = 21
     targetSdk = ProjectVersions.SDK_VERSION
     versionCode = 1
     versionName = "1.0"
-
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
 
@@ -29,7 +27,7 @@ android {
     targetCompatibility = ProjectVersions.JAVA_VERSION
   }
   kotlinOptions {
-    jvmTarget = "1.8"
+    jvmTarget = "11"
   }
   buildFeatures {
     viewBinding = true
