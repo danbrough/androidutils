@@ -5,7 +5,7 @@
 # getLogger  
 [androidJvm]  
 Content  
-open fun [getLogger](get-logger.md)(name: [String](https://developer.android.com/reference/kotlin/java/lang/String.html)): Logger  
+open fun [getLogger](get-logger.md)(name: [String](https://developer.android.com/reference/kotlin/java/lang/String.html)): [Logger](../../../../logging_from_slf4j/org.slf4j/-logger/index.md)  
 More info  
 
 

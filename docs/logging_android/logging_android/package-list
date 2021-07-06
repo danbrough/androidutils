@@ -1,0 +1,9 @@
+$dokka.format:gfm-v1
+$dokka.linkExtension:md
+$dokka.location:danbroid.logging////PointingToDeclaration/logging_android/danbroid.logging/index.md
+$dokka.location:danbroid.logging/AndroidLog///PointingToDeclaration/logging_android/danbroid.logging/-android-log/index.md
+$dokka.location:danbroid.logging/AndroidLog/AndroidLog/#kotlin.String/PointingToDeclaration/logging_android/danbroid.logging/-android-log/-android-log.md
+$dokka.location:danbroid.logging/AndroidLog/logName/#/PointingToDeclaration/logging_android/danbroid.logging/-android-log/log-name.md
+$dokka.location:danbroid.logging/AndroidLog/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_android/danbroid.logging/-android-log/write_log_native.md
+danbroid.logging
+

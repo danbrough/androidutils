@@ -43,5 +43,4 @@
 |---|
 | <a name="danbroid.logging/NullLog///PointingToDeclaration/"></a>[NullLog](../-null-log/index.md)|
 | <a name="danbroid.logging/StdOutLog///PointingToDeclaration/"></a>[StdOutLog](../-std-out-log/index.md)|
-| <a name="danbroid.logging/Slf4jLogImpl///PointingToDeclaration/"></a>[Slf4jLogImpl](../-slf4j-log-impl/index.md)|
 

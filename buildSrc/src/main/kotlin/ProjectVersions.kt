@@ -7,6 +7,7 @@ object ProjectVersions {
   const val MIN_SDK_VERSION = 19
   const val BUILD_TOOLS_VERSION = "30.0.3"
   val JAVA_VERSION = JavaVersion.VERSION_1_8
+  val KOTLIN_JVM_TARGET = "11"
   var BUILD_VERSION = 1
   var VERSION_OFFSET = 1
   const val GROUP_ID = "com.github.danbrough.androidutils"

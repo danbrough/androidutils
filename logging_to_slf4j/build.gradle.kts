@@ -43,5 +43,7 @@ publishing {
 
 dependencies {
  // implementation("net.jcip:jcip-annotations:1.0")
+  api(project(":logging_core"))
+  implementation("org.slf4j:slf4j-api:_")
 }
 

@@ -1,0 +1,10 @@
+$dokka.format:gfm-v1
+$dokka.linkExtension:md
+$dokka.location:org.slf4j////PointingToDeclaration/logging_from_slf4j/org.slf4j/index.md
+$dokka.location:org.slf4j/LoggerFactory.Companion///PointingToDeclaration/logging_from_slf4j/org.slf4j/-logger-factory/-companion/index.md
+$dokka.location:org.slf4j/LoggerFactory.Companion/getLogger/#java.lang.Class[*]/PointingToDeclaration/logging_from_slf4j/org.slf4j/-logger-factory/-companion/get-logger.md
+$dokka.location:org.slf4j/LoggerFactory.Companion/getLogger/#kotlin.String/PointingToDeclaration/logging_from_slf4j/org.slf4j/-logger-factory/-companion/get-logger.md
+$dokka.location:org.slf4j/LoggerFactory///PointingToDeclaration/logging_from_slf4j/org.slf4j/-logger-factory/index.md
+$dokka.location:org.slf4j/LoggerFactory/LoggerFactory/#/PointingToDeclaration/logging_from_slf4j/org.slf4j/-logger-factory/-logger-factory.md
+org.slf4j
+

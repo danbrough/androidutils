@@ -36,7 +36,7 @@ android {
 
 dependencies {
 
-  implementation(project(":logging"))
+  implementation(project(":logging_android"))
   implementation(project(":menu"))
   implementation(project(":misc"))
 

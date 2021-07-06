@@ -5,7 +5,7 @@
 # loggerFactory  
 [androidJvm]  
 Content  
-private val [loggerFactory](logger-factory.md): ILoggerFactory  
+private val [loggerFactory](logger-factory.md): [ILoggerFactory](../../../../logging_from_slf4j/org.slf4j/-i-logger-factory/index.md)  
 
 
 

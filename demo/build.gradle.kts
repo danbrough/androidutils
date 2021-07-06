@@ -87,8 +87,8 @@ tasks.withType<Test> {
 
 
 dependencies {
-  implementation(project(":logging_core"))
-  implementation(project(":logging"))
+
+  implementation(project(":logging_android"))
 
   implementation(project(":menu"))
   implementation(project(":misc"))

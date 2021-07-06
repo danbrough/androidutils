@@ -30,7 +30,7 @@ allprojects {
   repositories {
     maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
     google()
-    jcenter()
+    //jcenter()
     mavenCentral()
     maven("https://jitpack.io")
 

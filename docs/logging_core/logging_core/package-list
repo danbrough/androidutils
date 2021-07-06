@@ -46,11 +46,6 @@ $dokka.location:danbroid.logging/LogConfig/STACK_DEPTH/#/PointingToDeclaration/
 $dokka.location:danbroid.logging/NullLog///PointingToDeclaration/logging_core/danbroid.logging/-null-log/index.md
 $dokka.location:danbroid.logging/NullLog/logName/#/PointingToDeclaration/logging_core/danbroid.logging/-null-log/log-name.md
 $dokka.location:danbroid.logging/NullLog/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-null-log/write_log_native.md
-$dokka.location:danbroid.logging/Slf4jLogImpl///PointingToDeclaration/logging_core/danbroid.logging/-slf4j-log-impl/index.md
-$dokka.location:danbroid.logging/Slf4jLogImpl/Slf4jLogImpl/#kotlin.String/PointingToDeclaration/logging_core/danbroid.logging/-slf4j-log-impl/-slf4j-log-impl.md
-$dokka.location:danbroid.logging/Slf4jLogImpl/log/#/PointingToDeclaration/logging_core/danbroid.logging/-slf4j-log-impl/log.md
-$dokka.location:danbroid.logging/Slf4jLogImpl/logName/#/PointingToDeclaration/logging_core/danbroid.logging/-slf4j-log-impl/log-name.md
-$dokka.location:danbroid.logging/Slf4jLogImpl/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-slf4j-log-impl/write_log_native.md
 $dokka.location:danbroid.logging/StdOutLog///PointingToDeclaration/logging_core/danbroid.logging/-std-out-log/index.md
 $dokka.location:danbroid.logging/StdOutLog/logName/#/PointingToDeclaration/logging_core/danbroid.logging/-std-out-log/log-name.md
 $dokka.location:danbroid.logging/StdOutLog/write_log_native/#kotlin.String#danbroid.logging.DBLog.Level#kotlin.CharSequence?#kotlin.Throwable?/PointingToDeclaration/logging_core/danbroid.logging/-std-out-log/write_log_native.md

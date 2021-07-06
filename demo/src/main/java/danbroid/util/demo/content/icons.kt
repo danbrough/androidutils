@@ -61,10 +61,10 @@ internal fun MenuItemBuilder.iconExamples() =
 
       menu {
         title = "Iconics Icon"
-        subtitle = "icon = Icons.iconicsIcon(FontAwesome.Icon.faw_android)"
+        subtitle = "icon = Icons.iconicsIcon(FontAwesome.Icon.faw_air_freshener)"
         //disable default tint
         tintRes = MENU_TINT_DISABLED
-        icon = iconicsIcon(FontAwesome.Icon.faw_android) {
+        icon = iconicsIcon(FontAwesome.Icon.faw_air_freshener) {
           colorRes = R.color.colorAccent
           backgroundColorRes = R.color.colorPrimaryLight
           backgroundContourWidth = IconicsSize.dp(2)

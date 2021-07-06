@@ -12,12 +12,12 @@ plugins {
 
 android {
 
-  compileSdkVersion(ProjectVersions.SDK_VERSION)
+  compileSdk = ProjectVersions.SDK_VERSION
   buildToolsVersion = ProjectVersions.BUILD_TOOLS_VERSION
 
   defaultConfig {
-    minSdkVersion(16)
-    targetSdkVersion(ProjectVersions.SDK_VERSION)
+    minSdk = 16
+    targetSdk = ProjectVersions.SDK_VERSION
     //versionCode = ProjectVersions.BUILD_VERSION
     //versionName = ProjectVersions.VERSION_NAME
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -34,7 +34,7 @@ android {
   }
 
   kotlinOptions {
-    jvmTarget = "1.8"
+    jvmTarget = ProjectVersions.KOTLIN_JVM_TARGET
     freeCompilerArgs = mutableListOf("-Xopt-in=kotlin.ExperimentalStdlibApi").also {
       it.addAll(freeCompilerArgs)
     }
