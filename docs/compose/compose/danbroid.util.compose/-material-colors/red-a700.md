@@ -1,11 +1,6 @@
 //[compose](../../../index.md)/[danbroid.util.compose](../index.md)/[MaterialColors](index.md)/[redA700](red-a700.md)
 
+# redA700
 
-
-# redA700  
-[androidJvm]  
-Content  
-val [redA700](red-a700.md): Color  
-
-
-
+[androidJvm]\
+val [redA700](red-a700.md): Color

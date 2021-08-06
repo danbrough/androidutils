@@ -1,11 +1,6 @@
 //[permissions](../../../index.md)/[danbroid.util.permissions](../index.md)/[PermissionsManager](index.md)/[close](close.md)
 
+# close
 
-
-# close  
-[androidJvm]  
-Content  
-fun [close](close.md)()  
-
-
-
+[androidJvm]\
+fun [close](close.md)()

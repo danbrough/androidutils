@@ -1,269 +1,267 @@
 //[compose](../../../index.md)/[danbroid.util.compose](../index.md)/[MaterialColors](index.md)
 
+# MaterialColors
 
+[androidJvm]\
+object [MaterialColors](index.md)
 
-# MaterialColors  
- [androidJvm] object [MaterialColors](index.md)   
+## Properties
 
-
-## Properties  
-  
-|  Name |  Summary | 
+| Name | Summary |
 |---|---|
-| <a name="danbroid.util.compose/MaterialColors/amber100/#/PointingToDeclaration/"></a>[amber100](amber100.md)| <a name="danbroid.util.compose/MaterialColors/amber100/#/PointingToDeclaration/"></a> [androidJvm] val [amber100](amber100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amber200/#/PointingToDeclaration/"></a>[amber200](amber200.md)| <a name="danbroid.util.compose/MaterialColors/amber200/#/PointingToDeclaration/"></a> [androidJvm] val [amber200](amber200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amber300/#/PointingToDeclaration/"></a>[amber300](amber300.md)| <a name="danbroid.util.compose/MaterialColors/amber300/#/PointingToDeclaration/"></a> [androidJvm] val [amber300](amber300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amber400/#/PointingToDeclaration/"></a>[amber400](amber400.md)| <a name="danbroid.util.compose/MaterialColors/amber400/#/PointingToDeclaration/"></a> [androidJvm] val [amber400](amber400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amber50/#/PointingToDeclaration/"></a>[amber50](amber50.md)| <a name="danbroid.util.compose/MaterialColors/amber50/#/PointingToDeclaration/"></a> [androidJvm] val [amber50](amber50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amber500/#/PointingToDeclaration/"></a>[amber500](amber500.md)| <a name="danbroid.util.compose/MaterialColors/amber500/#/PointingToDeclaration/"></a> [androidJvm] val [amber500](amber500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amber600/#/PointingToDeclaration/"></a>[amber600](amber600.md)| <a name="danbroid.util.compose/MaterialColors/amber600/#/PointingToDeclaration/"></a> [androidJvm] val [amber600](amber600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amber700/#/PointingToDeclaration/"></a>[amber700](amber700.md)| <a name="danbroid.util.compose/MaterialColors/amber700/#/PointingToDeclaration/"></a> [androidJvm] val [amber700](amber700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amber800/#/PointingToDeclaration/"></a>[amber800](amber800.md)| <a name="danbroid.util.compose/MaterialColors/amber800/#/PointingToDeclaration/"></a> [androidJvm] val [amber800](amber800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amber900/#/PointingToDeclaration/"></a>[amber900](amber900.md)| <a name="danbroid.util.compose/MaterialColors/amber900/#/PointingToDeclaration/"></a> [androidJvm] val [amber900](amber900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amberA100/#/PointingToDeclaration/"></a>[amberA100](amber-a100.md)| <a name="danbroid.util.compose/MaterialColors/amberA100/#/PointingToDeclaration/"></a> [androidJvm] val [amberA100](amber-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amberA200/#/PointingToDeclaration/"></a>[amberA200](amber-a200.md)| <a name="danbroid.util.compose/MaterialColors/amberA200/#/PointingToDeclaration/"></a> [androidJvm] val [amberA200](amber-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amberA400/#/PointingToDeclaration/"></a>[amberA400](amber-a400.md)| <a name="danbroid.util.compose/MaterialColors/amberA400/#/PointingToDeclaration/"></a> [androidJvm] val [amberA400](amber-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/amberA700/#/PointingToDeclaration/"></a>[amberA700](amber-a700.md)| <a name="danbroid.util.compose/MaterialColors/amberA700/#/PointingToDeclaration/"></a> [androidJvm] val [amberA700](amber-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/black/#/PointingToDeclaration/"></a>[black](black.md)| <a name="danbroid.util.compose/MaterialColors/black/#/PointingToDeclaration/"></a> [androidJvm] val [black](black.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue100/#/PointingToDeclaration/"></a>[blue100](blue100.md)| <a name="danbroid.util.compose/MaterialColors/blue100/#/PointingToDeclaration/"></a> [androidJvm] val [blue100](blue100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue200/#/PointingToDeclaration/"></a>[blue200](blue200.md)| <a name="danbroid.util.compose/MaterialColors/blue200/#/PointingToDeclaration/"></a> [androidJvm] val [blue200](blue200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue300/#/PointingToDeclaration/"></a>[blue300](blue300.md)| <a name="danbroid.util.compose/MaterialColors/blue300/#/PointingToDeclaration/"></a> [androidJvm] val [blue300](blue300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue400/#/PointingToDeclaration/"></a>[blue400](blue400.md)| <a name="danbroid.util.compose/MaterialColors/blue400/#/PointingToDeclaration/"></a> [androidJvm] val [blue400](blue400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue50/#/PointingToDeclaration/"></a>[blue50](blue50.md)| <a name="danbroid.util.compose/MaterialColors/blue50/#/PointingToDeclaration/"></a> [androidJvm] val [blue50](blue50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue500/#/PointingToDeclaration/"></a>[blue500](blue500.md)| <a name="danbroid.util.compose/MaterialColors/blue500/#/PointingToDeclaration/"></a> [androidJvm] val [blue500](blue500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue600/#/PointingToDeclaration/"></a>[blue600](blue600.md)| <a name="danbroid.util.compose/MaterialColors/blue600/#/PointingToDeclaration/"></a> [androidJvm] val [blue600](blue600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue700/#/PointingToDeclaration/"></a>[blue700](blue700.md)| <a name="danbroid.util.compose/MaterialColors/blue700/#/PointingToDeclaration/"></a> [androidJvm] val [blue700](blue700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue800/#/PointingToDeclaration/"></a>[blue800](blue800.md)| <a name="danbroid.util.compose/MaterialColors/blue800/#/PointingToDeclaration/"></a> [androidJvm] val [blue800](blue800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue900/#/PointingToDeclaration/"></a>[blue900](blue900.md)| <a name="danbroid.util.compose/MaterialColors/blue900/#/PointingToDeclaration/"></a> [androidJvm] val [blue900](blue900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue_grey100/#/PointingToDeclaration/"></a>[blue_grey100](blue_grey100.md)| <a name="danbroid.util.compose/MaterialColors/blue_grey100/#/PointingToDeclaration/"></a> [androidJvm] val [blue_grey100](blue_grey100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue_grey200/#/PointingToDeclaration/"></a>[blue_grey200](blue_grey200.md)| <a name="danbroid.util.compose/MaterialColors/blue_grey200/#/PointingToDeclaration/"></a> [androidJvm] val [blue_grey200](blue_grey200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue_grey300/#/PointingToDeclaration/"></a>[blue_grey300](blue_grey300.md)| <a name="danbroid.util.compose/MaterialColors/blue_grey300/#/PointingToDeclaration/"></a> [androidJvm] val [blue_grey300](blue_grey300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue_grey400/#/PointingToDeclaration/"></a>[blue_grey400](blue_grey400.md)| <a name="danbroid.util.compose/MaterialColors/blue_grey400/#/PointingToDeclaration/"></a> [androidJvm] val [blue_grey400](blue_grey400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue_grey50/#/PointingToDeclaration/"></a>[blue_grey50](blue_grey50.md)| <a name="danbroid.util.compose/MaterialColors/blue_grey50/#/PointingToDeclaration/"></a> [androidJvm] val [blue_grey50](blue_grey50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue_grey500/#/PointingToDeclaration/"></a>[blue_grey500](blue_grey500.md)| <a name="danbroid.util.compose/MaterialColors/blue_grey500/#/PointingToDeclaration/"></a> [androidJvm] val [blue_grey500](blue_grey500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue_grey600/#/PointingToDeclaration/"></a>[blue_grey600](blue_grey600.md)| <a name="danbroid.util.compose/MaterialColors/blue_grey600/#/PointingToDeclaration/"></a> [androidJvm] val [blue_grey600](blue_grey600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue_grey700/#/PointingToDeclaration/"></a>[blue_grey700](blue_grey700.md)| <a name="danbroid.util.compose/MaterialColors/blue_grey700/#/PointingToDeclaration/"></a> [androidJvm] val [blue_grey700](blue_grey700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue_grey800/#/PointingToDeclaration/"></a>[blue_grey800](blue_grey800.md)| <a name="danbroid.util.compose/MaterialColors/blue_grey800/#/PointingToDeclaration/"></a> [androidJvm] val [blue_grey800](blue_grey800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blue_grey900/#/PointingToDeclaration/"></a>[blue_grey900](blue_grey900.md)| <a name="danbroid.util.compose/MaterialColors/blue_grey900/#/PointingToDeclaration/"></a> [androidJvm] val [blue_grey900](blue_grey900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blueA100/#/PointingToDeclaration/"></a>[blueA100](blue-a100.md)| <a name="danbroid.util.compose/MaterialColors/blueA100/#/PointingToDeclaration/"></a> [androidJvm] val [blueA100](blue-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blueA200/#/PointingToDeclaration/"></a>[blueA200](blue-a200.md)| <a name="danbroid.util.compose/MaterialColors/blueA200/#/PointingToDeclaration/"></a> [androidJvm] val [blueA200](blue-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blueA400/#/PointingToDeclaration/"></a>[blueA400](blue-a400.md)| <a name="danbroid.util.compose/MaterialColors/blueA400/#/PointingToDeclaration/"></a> [androidJvm] val [blueA400](blue-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/blueA700/#/PointingToDeclaration/"></a>[blueA700](blue-a700.md)| <a name="danbroid.util.compose/MaterialColors/blueA700/#/PointingToDeclaration/"></a> [androidJvm] val [blueA700](blue-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/brown100/#/PointingToDeclaration/"></a>[brown100](brown100.md)| <a name="danbroid.util.compose/MaterialColors/brown100/#/PointingToDeclaration/"></a> [androidJvm] val [brown100](brown100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/brown200/#/PointingToDeclaration/"></a>[brown200](brown200.md)| <a name="danbroid.util.compose/MaterialColors/brown200/#/PointingToDeclaration/"></a> [androidJvm] val [brown200](brown200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/brown300/#/PointingToDeclaration/"></a>[brown300](brown300.md)| <a name="danbroid.util.compose/MaterialColors/brown300/#/PointingToDeclaration/"></a> [androidJvm] val [brown300](brown300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/brown400/#/PointingToDeclaration/"></a>[brown400](brown400.md)| <a name="danbroid.util.compose/MaterialColors/brown400/#/PointingToDeclaration/"></a> [androidJvm] val [brown400](brown400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/brown50/#/PointingToDeclaration/"></a>[brown50](brown50.md)| <a name="danbroid.util.compose/MaterialColors/brown50/#/PointingToDeclaration/"></a> [androidJvm] val [brown50](brown50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/brown500/#/PointingToDeclaration/"></a>[brown500](brown500.md)| <a name="danbroid.util.compose/MaterialColors/brown500/#/PointingToDeclaration/"></a> [androidJvm] val [brown500](brown500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/brown600/#/PointingToDeclaration/"></a>[brown600](brown600.md)| <a name="danbroid.util.compose/MaterialColors/brown600/#/PointingToDeclaration/"></a> [androidJvm] val [brown600](brown600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/brown700/#/PointingToDeclaration/"></a>[brown700](brown700.md)| <a name="danbroid.util.compose/MaterialColors/brown700/#/PointingToDeclaration/"></a> [androidJvm] val [brown700](brown700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/brown800/#/PointingToDeclaration/"></a>[brown800](brown800.md)| <a name="danbroid.util.compose/MaterialColors/brown800/#/PointingToDeclaration/"></a> [androidJvm] val [brown800](brown800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/brown900/#/PointingToDeclaration/"></a>[brown900](brown900.md)| <a name="danbroid.util.compose/MaterialColors/brown900/#/PointingToDeclaration/"></a> [androidJvm] val [brown900](brown900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyan100/#/PointingToDeclaration/"></a>[cyan100](cyan100.md)| <a name="danbroid.util.compose/MaterialColors/cyan100/#/PointingToDeclaration/"></a> [androidJvm] val [cyan100](cyan100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyan200/#/PointingToDeclaration/"></a>[cyan200](cyan200.md)| <a name="danbroid.util.compose/MaterialColors/cyan200/#/PointingToDeclaration/"></a> [androidJvm] val [cyan200](cyan200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyan300/#/PointingToDeclaration/"></a>[cyan300](cyan300.md)| <a name="danbroid.util.compose/MaterialColors/cyan300/#/PointingToDeclaration/"></a> [androidJvm] val [cyan300](cyan300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyan400/#/PointingToDeclaration/"></a>[cyan400](cyan400.md)| <a name="danbroid.util.compose/MaterialColors/cyan400/#/PointingToDeclaration/"></a> [androidJvm] val [cyan400](cyan400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyan50/#/PointingToDeclaration/"></a>[cyan50](cyan50.md)| <a name="danbroid.util.compose/MaterialColors/cyan50/#/PointingToDeclaration/"></a> [androidJvm] val [cyan50](cyan50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyan500/#/PointingToDeclaration/"></a>[cyan500](cyan500.md)| <a name="danbroid.util.compose/MaterialColors/cyan500/#/PointingToDeclaration/"></a> [androidJvm] val [cyan500](cyan500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyan600/#/PointingToDeclaration/"></a>[cyan600](cyan600.md)| <a name="danbroid.util.compose/MaterialColors/cyan600/#/PointingToDeclaration/"></a> [androidJvm] val [cyan600](cyan600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyan700/#/PointingToDeclaration/"></a>[cyan700](cyan700.md)| <a name="danbroid.util.compose/MaterialColors/cyan700/#/PointingToDeclaration/"></a> [androidJvm] val [cyan700](cyan700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyan800/#/PointingToDeclaration/"></a>[cyan800](cyan800.md)| <a name="danbroid.util.compose/MaterialColors/cyan800/#/PointingToDeclaration/"></a> [androidJvm] val [cyan800](cyan800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyan900/#/PointingToDeclaration/"></a>[cyan900](cyan900.md)| <a name="danbroid.util.compose/MaterialColors/cyan900/#/PointingToDeclaration/"></a> [androidJvm] val [cyan900](cyan900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyanA100/#/PointingToDeclaration/"></a>[cyanA100](cyan-a100.md)| <a name="danbroid.util.compose/MaterialColors/cyanA100/#/PointingToDeclaration/"></a> [androidJvm] val [cyanA100](cyan-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyanA200/#/PointingToDeclaration/"></a>[cyanA200](cyan-a200.md)| <a name="danbroid.util.compose/MaterialColors/cyanA200/#/PointingToDeclaration/"></a> [androidJvm] val [cyanA200](cyan-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyanA400/#/PointingToDeclaration/"></a>[cyanA400](cyan-a400.md)| <a name="danbroid.util.compose/MaterialColors/cyanA400/#/PointingToDeclaration/"></a> [androidJvm] val [cyanA400](cyan-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/cyanA700/#/PointingToDeclaration/"></a>[cyanA700](cyan-a700.md)| <a name="danbroid.util.compose/MaterialColors/cyanA700/#/PointingToDeclaration/"></a> [androidJvm] val [cyanA700](cyan-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orange100/#/PointingToDeclaration/"></a>[deep_orange100](deep_orange100.md)| <a name="danbroid.util.compose/MaterialColors/deep_orange100/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orange100](deep_orange100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orange200/#/PointingToDeclaration/"></a>[deep_orange200](deep_orange200.md)| <a name="danbroid.util.compose/MaterialColors/deep_orange200/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orange200](deep_orange200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orange300/#/PointingToDeclaration/"></a>[deep_orange300](deep_orange300.md)| <a name="danbroid.util.compose/MaterialColors/deep_orange300/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orange300](deep_orange300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orange400/#/PointingToDeclaration/"></a>[deep_orange400](deep_orange400.md)| <a name="danbroid.util.compose/MaterialColors/deep_orange400/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orange400](deep_orange400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orange50/#/PointingToDeclaration/"></a>[deep_orange50](deep_orange50.md)| <a name="danbroid.util.compose/MaterialColors/deep_orange50/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orange50](deep_orange50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orange500/#/PointingToDeclaration/"></a>[deep_orange500](deep_orange500.md)| <a name="danbroid.util.compose/MaterialColors/deep_orange500/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orange500](deep_orange500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orange600/#/PointingToDeclaration/"></a>[deep_orange600](deep_orange600.md)| <a name="danbroid.util.compose/MaterialColors/deep_orange600/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orange600](deep_orange600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orange700/#/PointingToDeclaration/"></a>[deep_orange700](deep_orange700.md)| <a name="danbroid.util.compose/MaterialColors/deep_orange700/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orange700](deep_orange700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orange800/#/PointingToDeclaration/"></a>[deep_orange800](deep_orange800.md)| <a name="danbroid.util.compose/MaterialColors/deep_orange800/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orange800](deep_orange800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orange900/#/PointingToDeclaration/"></a>[deep_orange900](deep_orange900.md)| <a name="danbroid.util.compose/MaterialColors/deep_orange900/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orange900](deep_orange900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orangeA100/#/PointingToDeclaration/"></a>[deep_orangeA100](deep_orange-a100.md)| <a name="danbroid.util.compose/MaterialColors/deep_orangeA100/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orangeA100](deep_orange-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orangeA200/#/PointingToDeclaration/"></a>[deep_orangeA200](deep_orange-a200.md)| <a name="danbroid.util.compose/MaterialColors/deep_orangeA200/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orangeA200](deep_orange-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orangeA400/#/PointingToDeclaration/"></a>[deep_orangeA400](deep_orange-a400.md)| <a name="danbroid.util.compose/MaterialColors/deep_orangeA400/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orangeA400](deep_orange-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_orangeA700/#/PointingToDeclaration/"></a>[deep_orangeA700](deep_orange-a700.md)| <a name="danbroid.util.compose/MaterialColors/deep_orangeA700/#/PointingToDeclaration/"></a> [androidJvm] val [deep_orangeA700](deep_orange-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purple100/#/PointingToDeclaration/"></a>[deep_purple100](deep_purple100.md)| <a name="danbroid.util.compose/MaterialColors/deep_purple100/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purple100](deep_purple100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purple200/#/PointingToDeclaration/"></a>[deep_purple200](deep_purple200.md)| <a name="danbroid.util.compose/MaterialColors/deep_purple200/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purple200](deep_purple200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purple300/#/PointingToDeclaration/"></a>[deep_purple300](deep_purple300.md)| <a name="danbroid.util.compose/MaterialColors/deep_purple300/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purple300](deep_purple300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purple400/#/PointingToDeclaration/"></a>[deep_purple400](deep_purple400.md)| <a name="danbroid.util.compose/MaterialColors/deep_purple400/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purple400](deep_purple400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purple50/#/PointingToDeclaration/"></a>[deep_purple50](deep_purple50.md)| <a name="danbroid.util.compose/MaterialColors/deep_purple50/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purple50](deep_purple50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purple500/#/PointingToDeclaration/"></a>[deep_purple500](deep_purple500.md)| <a name="danbroid.util.compose/MaterialColors/deep_purple500/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purple500](deep_purple500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purple600/#/PointingToDeclaration/"></a>[deep_purple600](deep_purple600.md)| <a name="danbroid.util.compose/MaterialColors/deep_purple600/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purple600](deep_purple600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purple700/#/PointingToDeclaration/"></a>[deep_purple700](deep_purple700.md)| <a name="danbroid.util.compose/MaterialColors/deep_purple700/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purple700](deep_purple700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purple800/#/PointingToDeclaration/"></a>[deep_purple800](deep_purple800.md)| <a name="danbroid.util.compose/MaterialColors/deep_purple800/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purple800](deep_purple800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purple900/#/PointingToDeclaration/"></a>[deep_purple900](deep_purple900.md)| <a name="danbroid.util.compose/MaterialColors/deep_purple900/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purple900](deep_purple900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purpleA100/#/PointingToDeclaration/"></a>[deep_purpleA100](deep_purple-a100.md)| <a name="danbroid.util.compose/MaterialColors/deep_purpleA100/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purpleA100](deep_purple-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purpleA200/#/PointingToDeclaration/"></a>[deep_purpleA200](deep_purple-a200.md)| <a name="danbroid.util.compose/MaterialColors/deep_purpleA200/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purpleA200](deep_purple-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purpleA400/#/PointingToDeclaration/"></a>[deep_purpleA400](deep_purple-a400.md)| <a name="danbroid.util.compose/MaterialColors/deep_purpleA400/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purpleA400](deep_purple-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/deep_purpleA700/#/PointingToDeclaration/"></a>[deep_purpleA700](deep_purple-a700.md)| <a name="danbroid.util.compose/MaterialColors/deep_purpleA700/#/PointingToDeclaration/"></a> [androidJvm] val [deep_purpleA700](deep_purple-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/green100/#/PointingToDeclaration/"></a>[green100](green100.md)| <a name="danbroid.util.compose/MaterialColors/green100/#/PointingToDeclaration/"></a> [androidJvm] val [green100](green100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/green200/#/PointingToDeclaration/"></a>[green200](green200.md)| <a name="danbroid.util.compose/MaterialColors/green200/#/PointingToDeclaration/"></a> [androidJvm] val [green200](green200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/green300/#/PointingToDeclaration/"></a>[green300](green300.md)| <a name="danbroid.util.compose/MaterialColors/green300/#/PointingToDeclaration/"></a> [androidJvm] val [green300](green300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/green400/#/PointingToDeclaration/"></a>[green400](green400.md)| <a name="danbroid.util.compose/MaterialColors/green400/#/PointingToDeclaration/"></a> [androidJvm] val [green400](green400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/green50/#/PointingToDeclaration/"></a>[green50](green50.md)| <a name="danbroid.util.compose/MaterialColors/green50/#/PointingToDeclaration/"></a> [androidJvm] val [green50](green50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/green500/#/PointingToDeclaration/"></a>[green500](green500.md)| <a name="danbroid.util.compose/MaterialColors/green500/#/PointingToDeclaration/"></a> [androidJvm] val [green500](green500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/green600/#/PointingToDeclaration/"></a>[green600](green600.md)| <a name="danbroid.util.compose/MaterialColors/green600/#/PointingToDeclaration/"></a> [androidJvm] val [green600](green600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/green700/#/PointingToDeclaration/"></a>[green700](green700.md)| <a name="danbroid.util.compose/MaterialColors/green700/#/PointingToDeclaration/"></a> [androidJvm] val [green700](green700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/green800/#/PointingToDeclaration/"></a>[green800](green800.md)| <a name="danbroid.util.compose/MaterialColors/green800/#/PointingToDeclaration/"></a> [androidJvm] val [green800](green800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/green900/#/PointingToDeclaration/"></a>[green900](green900.md)| <a name="danbroid.util.compose/MaterialColors/green900/#/PointingToDeclaration/"></a> [androidJvm] val [green900](green900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/greenA100/#/PointingToDeclaration/"></a>[greenA100](green-a100.md)| <a name="danbroid.util.compose/MaterialColors/greenA100/#/PointingToDeclaration/"></a> [androidJvm] val [greenA100](green-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/greenA200/#/PointingToDeclaration/"></a>[greenA200](green-a200.md)| <a name="danbroid.util.compose/MaterialColors/greenA200/#/PointingToDeclaration/"></a> [androidJvm] val [greenA200](green-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/greenA400/#/PointingToDeclaration/"></a>[greenA400](green-a400.md)| <a name="danbroid.util.compose/MaterialColors/greenA400/#/PointingToDeclaration/"></a> [androidJvm] val [greenA400](green-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/greenA700/#/PointingToDeclaration/"></a>[greenA700](green-a700.md)| <a name="danbroid.util.compose/MaterialColors/greenA700/#/PointingToDeclaration/"></a> [androidJvm] val [greenA700](green-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/grey100/#/PointingToDeclaration/"></a>[grey100](grey100.md)| <a name="danbroid.util.compose/MaterialColors/grey100/#/PointingToDeclaration/"></a> [androidJvm] val [grey100](grey100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/grey200/#/PointingToDeclaration/"></a>[grey200](grey200.md)| <a name="danbroid.util.compose/MaterialColors/grey200/#/PointingToDeclaration/"></a> [androidJvm] val [grey200](grey200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/grey300/#/PointingToDeclaration/"></a>[grey300](grey300.md)| <a name="danbroid.util.compose/MaterialColors/grey300/#/PointingToDeclaration/"></a> [androidJvm] val [grey300](grey300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/grey400/#/PointingToDeclaration/"></a>[grey400](grey400.md)| <a name="danbroid.util.compose/MaterialColors/grey400/#/PointingToDeclaration/"></a> [androidJvm] val [grey400](grey400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/grey50/#/PointingToDeclaration/"></a>[grey50](grey50.md)| <a name="danbroid.util.compose/MaterialColors/grey50/#/PointingToDeclaration/"></a> [androidJvm] val [grey50](grey50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/grey500/#/PointingToDeclaration/"></a>[grey500](grey500.md)| <a name="danbroid.util.compose/MaterialColors/grey500/#/PointingToDeclaration/"></a> [androidJvm] val [grey500](grey500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/grey600/#/PointingToDeclaration/"></a>[grey600](grey600.md)| <a name="danbroid.util.compose/MaterialColors/grey600/#/PointingToDeclaration/"></a> [androidJvm] val [grey600](grey600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/grey700/#/PointingToDeclaration/"></a>[grey700](grey700.md)| <a name="danbroid.util.compose/MaterialColors/grey700/#/PointingToDeclaration/"></a> [androidJvm] val [grey700](grey700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/grey800/#/PointingToDeclaration/"></a>[grey800](grey800.md)| <a name="danbroid.util.compose/MaterialColors/grey800/#/PointingToDeclaration/"></a> [androidJvm] val [grey800](grey800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/grey900/#/PointingToDeclaration/"></a>[grey900](grey900.md)| <a name="danbroid.util.compose/MaterialColors/grey900/#/PointingToDeclaration/"></a> [androidJvm] val [grey900](grey900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigo100/#/PointingToDeclaration/"></a>[indigo100](indigo100.md)| <a name="danbroid.util.compose/MaterialColors/indigo100/#/PointingToDeclaration/"></a> [androidJvm] val [indigo100](indigo100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigo200/#/PointingToDeclaration/"></a>[indigo200](indigo200.md)| <a name="danbroid.util.compose/MaterialColors/indigo200/#/PointingToDeclaration/"></a> [androidJvm] val [indigo200](indigo200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigo300/#/PointingToDeclaration/"></a>[indigo300](indigo300.md)| <a name="danbroid.util.compose/MaterialColors/indigo300/#/PointingToDeclaration/"></a> [androidJvm] val [indigo300](indigo300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigo400/#/PointingToDeclaration/"></a>[indigo400](indigo400.md)| <a name="danbroid.util.compose/MaterialColors/indigo400/#/PointingToDeclaration/"></a> [androidJvm] val [indigo400](indigo400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigo50/#/PointingToDeclaration/"></a>[indigo50](indigo50.md)| <a name="danbroid.util.compose/MaterialColors/indigo50/#/PointingToDeclaration/"></a> [androidJvm] val [indigo50](indigo50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigo500/#/PointingToDeclaration/"></a>[indigo500](indigo500.md)| <a name="danbroid.util.compose/MaterialColors/indigo500/#/PointingToDeclaration/"></a> [androidJvm] val [indigo500](indigo500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigo600/#/PointingToDeclaration/"></a>[indigo600](indigo600.md)| <a name="danbroid.util.compose/MaterialColors/indigo600/#/PointingToDeclaration/"></a> [androidJvm] val [indigo600](indigo600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigo700/#/PointingToDeclaration/"></a>[indigo700](indigo700.md)| <a name="danbroid.util.compose/MaterialColors/indigo700/#/PointingToDeclaration/"></a> [androidJvm] val [indigo700](indigo700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigo800/#/PointingToDeclaration/"></a>[indigo800](indigo800.md)| <a name="danbroid.util.compose/MaterialColors/indigo800/#/PointingToDeclaration/"></a> [androidJvm] val [indigo800](indigo800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigo900/#/PointingToDeclaration/"></a>[indigo900](indigo900.md)| <a name="danbroid.util.compose/MaterialColors/indigo900/#/PointingToDeclaration/"></a> [androidJvm] val [indigo900](indigo900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigoA100/#/PointingToDeclaration/"></a>[indigoA100](indigo-a100.md)| <a name="danbroid.util.compose/MaterialColors/indigoA100/#/PointingToDeclaration/"></a> [androidJvm] val [indigoA100](indigo-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigoA200/#/PointingToDeclaration/"></a>[indigoA200](indigo-a200.md)| <a name="danbroid.util.compose/MaterialColors/indigoA200/#/PointingToDeclaration/"></a> [androidJvm] val [indigoA200](indigo-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigoA400/#/PointingToDeclaration/"></a>[indigoA400](indigo-a400.md)| <a name="danbroid.util.compose/MaterialColors/indigoA400/#/PointingToDeclaration/"></a> [androidJvm] val [indigoA400](indigo-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/indigoA700/#/PointingToDeclaration/"></a>[indigoA700](indigo-a700.md)| <a name="danbroid.util.compose/MaterialColors/indigoA700/#/PointingToDeclaration/"></a> [androidJvm] val [indigoA700](indigo-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blue100/#/PointingToDeclaration/"></a>[light_blue100](light_blue100.md)| <a name="danbroid.util.compose/MaterialColors/light_blue100/#/PointingToDeclaration/"></a> [androidJvm] val [light_blue100](light_blue100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blue200/#/PointingToDeclaration/"></a>[light_blue200](light_blue200.md)| <a name="danbroid.util.compose/MaterialColors/light_blue200/#/PointingToDeclaration/"></a> [androidJvm] val [light_blue200](light_blue200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blue300/#/PointingToDeclaration/"></a>[light_blue300](light_blue300.md)| <a name="danbroid.util.compose/MaterialColors/light_blue300/#/PointingToDeclaration/"></a> [androidJvm] val [light_blue300](light_blue300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blue400/#/PointingToDeclaration/"></a>[light_blue400](light_blue400.md)| <a name="danbroid.util.compose/MaterialColors/light_blue400/#/PointingToDeclaration/"></a> [androidJvm] val [light_blue400](light_blue400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blue50/#/PointingToDeclaration/"></a>[light_blue50](light_blue50.md)| <a name="danbroid.util.compose/MaterialColors/light_blue50/#/PointingToDeclaration/"></a> [androidJvm] val [light_blue50](light_blue50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blue500/#/PointingToDeclaration/"></a>[light_blue500](light_blue500.md)| <a name="danbroid.util.compose/MaterialColors/light_blue500/#/PointingToDeclaration/"></a> [androidJvm] val [light_blue500](light_blue500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blue600/#/PointingToDeclaration/"></a>[light_blue600](light_blue600.md)| <a name="danbroid.util.compose/MaterialColors/light_blue600/#/PointingToDeclaration/"></a> [androidJvm] val [light_blue600](light_blue600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blue700/#/PointingToDeclaration/"></a>[light_blue700](light_blue700.md)| <a name="danbroid.util.compose/MaterialColors/light_blue700/#/PointingToDeclaration/"></a> [androidJvm] val [light_blue700](light_blue700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blue800/#/PointingToDeclaration/"></a>[light_blue800](light_blue800.md)| <a name="danbroid.util.compose/MaterialColors/light_blue800/#/PointingToDeclaration/"></a> [androidJvm] val [light_blue800](light_blue800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blue900/#/PointingToDeclaration/"></a>[light_blue900](light_blue900.md)| <a name="danbroid.util.compose/MaterialColors/light_blue900/#/PointingToDeclaration/"></a> [androidJvm] val [light_blue900](light_blue900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blueA100/#/PointingToDeclaration/"></a>[light_blueA100](light_blue-a100.md)| <a name="danbroid.util.compose/MaterialColors/light_blueA100/#/PointingToDeclaration/"></a> [androidJvm] val [light_blueA100](light_blue-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blueA200/#/PointingToDeclaration/"></a>[light_blueA200](light_blue-a200.md)| <a name="danbroid.util.compose/MaterialColors/light_blueA200/#/PointingToDeclaration/"></a> [androidJvm] val [light_blueA200](light_blue-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blueA400/#/PointingToDeclaration/"></a>[light_blueA400](light_blue-a400.md)| <a name="danbroid.util.compose/MaterialColors/light_blueA400/#/PointingToDeclaration/"></a> [androidJvm] val [light_blueA400](light_blue-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_blueA700/#/PointingToDeclaration/"></a>[light_blueA700](light_blue-a700.md)| <a name="danbroid.util.compose/MaterialColors/light_blueA700/#/PointingToDeclaration/"></a> [androidJvm] val [light_blueA700](light_blue-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_green100/#/PointingToDeclaration/"></a>[light_green100](light_green100.md)| <a name="danbroid.util.compose/MaterialColors/light_green100/#/PointingToDeclaration/"></a> [androidJvm] val [light_green100](light_green100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_green200/#/PointingToDeclaration/"></a>[light_green200](light_green200.md)| <a name="danbroid.util.compose/MaterialColors/light_green200/#/PointingToDeclaration/"></a> [androidJvm] val [light_green200](light_green200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_green300/#/PointingToDeclaration/"></a>[light_green300](light_green300.md)| <a name="danbroid.util.compose/MaterialColors/light_green300/#/PointingToDeclaration/"></a> [androidJvm] val [light_green300](light_green300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_green400/#/PointingToDeclaration/"></a>[light_green400](light_green400.md)| <a name="danbroid.util.compose/MaterialColors/light_green400/#/PointingToDeclaration/"></a> [androidJvm] val [light_green400](light_green400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_green50/#/PointingToDeclaration/"></a>[light_green50](light_green50.md)| <a name="danbroid.util.compose/MaterialColors/light_green50/#/PointingToDeclaration/"></a> [androidJvm] val [light_green50](light_green50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_green500/#/PointingToDeclaration/"></a>[light_green500](light_green500.md)| <a name="danbroid.util.compose/MaterialColors/light_green500/#/PointingToDeclaration/"></a> [androidJvm] val [light_green500](light_green500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_green600/#/PointingToDeclaration/"></a>[light_green600](light_green600.md)| <a name="danbroid.util.compose/MaterialColors/light_green600/#/PointingToDeclaration/"></a> [androidJvm] val [light_green600](light_green600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_green700/#/PointingToDeclaration/"></a>[light_green700](light_green700.md)| <a name="danbroid.util.compose/MaterialColors/light_green700/#/PointingToDeclaration/"></a> [androidJvm] val [light_green700](light_green700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_green800/#/PointingToDeclaration/"></a>[light_green800](light_green800.md)| <a name="danbroid.util.compose/MaterialColors/light_green800/#/PointingToDeclaration/"></a> [androidJvm] val [light_green800](light_green800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_green900/#/PointingToDeclaration/"></a>[light_green900](light_green900.md)| <a name="danbroid.util.compose/MaterialColors/light_green900/#/PointingToDeclaration/"></a> [androidJvm] val [light_green900](light_green900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_greenA100/#/PointingToDeclaration/"></a>[light_greenA100](light_green-a100.md)| <a name="danbroid.util.compose/MaterialColors/light_greenA100/#/PointingToDeclaration/"></a> [androidJvm] val [light_greenA100](light_green-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_greenA200/#/PointingToDeclaration/"></a>[light_greenA200](light_green-a200.md)| <a name="danbroid.util.compose/MaterialColors/light_greenA200/#/PointingToDeclaration/"></a> [androidJvm] val [light_greenA200](light_green-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_greenA400/#/PointingToDeclaration/"></a>[light_greenA400](light_green-a400.md)| <a name="danbroid.util.compose/MaterialColors/light_greenA400/#/PointingToDeclaration/"></a> [androidJvm] val [light_greenA400](light_green-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/light_greenA700/#/PointingToDeclaration/"></a>[light_greenA700](light_green-a700.md)| <a name="danbroid.util.compose/MaterialColors/light_greenA700/#/PointingToDeclaration/"></a> [androidJvm] val [light_greenA700](light_green-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/lime100/#/PointingToDeclaration/"></a>[lime100](lime100.md)| <a name="danbroid.util.compose/MaterialColors/lime100/#/PointingToDeclaration/"></a> [androidJvm] val [lime100](lime100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/lime200/#/PointingToDeclaration/"></a>[lime200](lime200.md)| <a name="danbroid.util.compose/MaterialColors/lime200/#/PointingToDeclaration/"></a> [androidJvm] val [lime200](lime200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/lime300/#/PointingToDeclaration/"></a>[lime300](lime300.md)| <a name="danbroid.util.compose/MaterialColors/lime300/#/PointingToDeclaration/"></a> [androidJvm] val [lime300](lime300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/lime400/#/PointingToDeclaration/"></a>[lime400](lime400.md)| <a name="danbroid.util.compose/MaterialColors/lime400/#/PointingToDeclaration/"></a> [androidJvm] val [lime400](lime400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/lime50/#/PointingToDeclaration/"></a>[lime50](lime50.md)| <a name="danbroid.util.compose/MaterialColors/lime50/#/PointingToDeclaration/"></a> [androidJvm] val [lime50](lime50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/lime500/#/PointingToDeclaration/"></a>[lime500](lime500.md)| <a name="danbroid.util.compose/MaterialColors/lime500/#/PointingToDeclaration/"></a> [androidJvm] val [lime500](lime500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/lime600/#/PointingToDeclaration/"></a>[lime600](lime600.md)| <a name="danbroid.util.compose/MaterialColors/lime600/#/PointingToDeclaration/"></a> [androidJvm] val [lime600](lime600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/lime700/#/PointingToDeclaration/"></a>[lime700](lime700.md)| <a name="danbroid.util.compose/MaterialColors/lime700/#/PointingToDeclaration/"></a> [androidJvm] val [lime700](lime700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/lime800/#/PointingToDeclaration/"></a>[lime800](lime800.md)| <a name="danbroid.util.compose/MaterialColors/lime800/#/PointingToDeclaration/"></a> [androidJvm] val [lime800](lime800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/lime900/#/PointingToDeclaration/"></a>[lime900](lime900.md)| <a name="danbroid.util.compose/MaterialColors/lime900/#/PointingToDeclaration/"></a> [androidJvm] val [lime900](lime900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/limeA100/#/PointingToDeclaration/"></a>[limeA100](lime-a100.md)| <a name="danbroid.util.compose/MaterialColors/limeA100/#/PointingToDeclaration/"></a> [androidJvm] val [limeA100](lime-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/limeA200/#/PointingToDeclaration/"></a>[limeA200](lime-a200.md)| <a name="danbroid.util.compose/MaterialColors/limeA200/#/PointingToDeclaration/"></a> [androidJvm] val [limeA200](lime-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/limeA400/#/PointingToDeclaration/"></a>[limeA400](lime-a400.md)| <a name="danbroid.util.compose/MaterialColors/limeA400/#/PointingToDeclaration/"></a> [androidJvm] val [limeA400](lime-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/limeA700/#/PointingToDeclaration/"></a>[limeA700](lime-a700.md)| <a name="danbroid.util.compose/MaterialColors/limeA700/#/PointingToDeclaration/"></a> [androidJvm] val [limeA700](lime-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orange100/#/PointingToDeclaration/"></a>[orange100](orange100.md)| <a name="danbroid.util.compose/MaterialColors/orange100/#/PointingToDeclaration/"></a> [androidJvm] val [orange100](orange100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orange200/#/PointingToDeclaration/"></a>[orange200](orange200.md)| <a name="danbroid.util.compose/MaterialColors/orange200/#/PointingToDeclaration/"></a> [androidJvm] val [orange200](orange200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orange300/#/PointingToDeclaration/"></a>[orange300](orange300.md)| <a name="danbroid.util.compose/MaterialColors/orange300/#/PointingToDeclaration/"></a> [androidJvm] val [orange300](orange300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orange400/#/PointingToDeclaration/"></a>[orange400](orange400.md)| <a name="danbroid.util.compose/MaterialColors/orange400/#/PointingToDeclaration/"></a> [androidJvm] val [orange400](orange400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orange50/#/PointingToDeclaration/"></a>[orange50](orange50.md)| <a name="danbroid.util.compose/MaterialColors/orange50/#/PointingToDeclaration/"></a> [androidJvm] val [orange50](orange50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orange500/#/PointingToDeclaration/"></a>[orange500](orange500.md)| <a name="danbroid.util.compose/MaterialColors/orange500/#/PointingToDeclaration/"></a> [androidJvm] val [orange500](orange500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orange600/#/PointingToDeclaration/"></a>[orange600](orange600.md)| <a name="danbroid.util.compose/MaterialColors/orange600/#/PointingToDeclaration/"></a> [androidJvm] val [orange600](orange600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orange700/#/PointingToDeclaration/"></a>[orange700](orange700.md)| <a name="danbroid.util.compose/MaterialColors/orange700/#/PointingToDeclaration/"></a> [androidJvm] val [orange700](orange700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orange800/#/PointingToDeclaration/"></a>[orange800](orange800.md)| <a name="danbroid.util.compose/MaterialColors/orange800/#/PointingToDeclaration/"></a> [androidJvm] val [orange800](orange800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orange900/#/PointingToDeclaration/"></a>[orange900](orange900.md)| <a name="danbroid.util.compose/MaterialColors/orange900/#/PointingToDeclaration/"></a> [androidJvm] val [orange900](orange900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orangeA100/#/PointingToDeclaration/"></a>[orangeA100](orange-a100.md)| <a name="danbroid.util.compose/MaterialColors/orangeA100/#/PointingToDeclaration/"></a> [androidJvm] val [orangeA100](orange-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orangeA200/#/PointingToDeclaration/"></a>[orangeA200](orange-a200.md)| <a name="danbroid.util.compose/MaterialColors/orangeA200/#/PointingToDeclaration/"></a> [androidJvm] val [orangeA200](orange-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orangeA400/#/PointingToDeclaration/"></a>[orangeA400](orange-a400.md)| <a name="danbroid.util.compose/MaterialColors/orangeA400/#/PointingToDeclaration/"></a> [androidJvm] val [orangeA400](orange-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/orangeA700/#/PointingToDeclaration/"></a>[orangeA700](orange-a700.md)| <a name="danbroid.util.compose/MaterialColors/orangeA700/#/PointingToDeclaration/"></a> [androidJvm] val [orangeA700](orange-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pink100/#/PointingToDeclaration/"></a>[pink100](pink100.md)| <a name="danbroid.util.compose/MaterialColors/pink100/#/PointingToDeclaration/"></a> [androidJvm] val [pink100](pink100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pink200/#/PointingToDeclaration/"></a>[pink200](pink200.md)| <a name="danbroid.util.compose/MaterialColors/pink200/#/PointingToDeclaration/"></a> [androidJvm] val [pink200](pink200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pink300/#/PointingToDeclaration/"></a>[pink300](pink300.md)| <a name="danbroid.util.compose/MaterialColors/pink300/#/PointingToDeclaration/"></a> [androidJvm] val [pink300](pink300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pink400/#/PointingToDeclaration/"></a>[pink400](pink400.md)| <a name="danbroid.util.compose/MaterialColors/pink400/#/PointingToDeclaration/"></a> [androidJvm] val [pink400](pink400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pink50/#/PointingToDeclaration/"></a>[pink50](pink50.md)| <a name="danbroid.util.compose/MaterialColors/pink50/#/PointingToDeclaration/"></a> [androidJvm] val [pink50](pink50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pink500/#/PointingToDeclaration/"></a>[pink500](pink500.md)| <a name="danbroid.util.compose/MaterialColors/pink500/#/PointingToDeclaration/"></a> [androidJvm] val [pink500](pink500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pink600/#/PointingToDeclaration/"></a>[pink600](pink600.md)| <a name="danbroid.util.compose/MaterialColors/pink600/#/PointingToDeclaration/"></a> [androidJvm] val [pink600](pink600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pink700/#/PointingToDeclaration/"></a>[pink700](pink700.md)| <a name="danbroid.util.compose/MaterialColors/pink700/#/PointingToDeclaration/"></a> [androidJvm] val [pink700](pink700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pink800/#/PointingToDeclaration/"></a>[pink800](pink800.md)| <a name="danbroid.util.compose/MaterialColors/pink800/#/PointingToDeclaration/"></a> [androidJvm] val [pink800](pink800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pink900/#/PointingToDeclaration/"></a>[pink900](pink900.md)| <a name="danbroid.util.compose/MaterialColors/pink900/#/PointingToDeclaration/"></a> [androidJvm] val [pink900](pink900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pinkA100/#/PointingToDeclaration/"></a>[pinkA100](pink-a100.md)| <a name="danbroid.util.compose/MaterialColors/pinkA100/#/PointingToDeclaration/"></a> [androidJvm] val [pinkA100](pink-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pinkA200/#/PointingToDeclaration/"></a>[pinkA200](pink-a200.md)| <a name="danbroid.util.compose/MaterialColors/pinkA200/#/PointingToDeclaration/"></a> [androidJvm] val [pinkA200](pink-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pinkA400/#/PointingToDeclaration/"></a>[pinkA400](pink-a400.md)| <a name="danbroid.util.compose/MaterialColors/pinkA400/#/PointingToDeclaration/"></a> [androidJvm] val [pinkA400](pink-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/pinkA700/#/PointingToDeclaration/"></a>[pinkA700](pink-a700.md)| <a name="danbroid.util.compose/MaterialColors/pinkA700/#/PointingToDeclaration/"></a> [androidJvm] val [pinkA700](pink-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purple100/#/PointingToDeclaration/"></a>[purple100](purple100.md)| <a name="danbroid.util.compose/MaterialColors/purple100/#/PointingToDeclaration/"></a> [androidJvm] val [purple100](purple100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purple200/#/PointingToDeclaration/"></a>[purple200](purple200.md)| <a name="danbroid.util.compose/MaterialColors/purple200/#/PointingToDeclaration/"></a> [androidJvm] val [purple200](purple200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purple300/#/PointingToDeclaration/"></a>[purple300](purple300.md)| <a name="danbroid.util.compose/MaterialColors/purple300/#/PointingToDeclaration/"></a> [androidJvm] val [purple300](purple300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purple400/#/PointingToDeclaration/"></a>[purple400](purple400.md)| <a name="danbroid.util.compose/MaterialColors/purple400/#/PointingToDeclaration/"></a> [androidJvm] val [purple400](purple400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purple50/#/PointingToDeclaration/"></a>[purple50](purple50.md)| <a name="danbroid.util.compose/MaterialColors/purple50/#/PointingToDeclaration/"></a> [androidJvm] val [purple50](purple50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purple500/#/PointingToDeclaration/"></a>[purple500](purple500.md)| <a name="danbroid.util.compose/MaterialColors/purple500/#/PointingToDeclaration/"></a> [androidJvm] val [purple500](purple500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purple600/#/PointingToDeclaration/"></a>[purple600](purple600.md)| <a name="danbroid.util.compose/MaterialColors/purple600/#/PointingToDeclaration/"></a> [androidJvm] val [purple600](purple600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purple700/#/PointingToDeclaration/"></a>[purple700](purple700.md)| <a name="danbroid.util.compose/MaterialColors/purple700/#/PointingToDeclaration/"></a> [androidJvm] val [purple700](purple700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purple800/#/PointingToDeclaration/"></a>[purple800](purple800.md)| <a name="danbroid.util.compose/MaterialColors/purple800/#/PointingToDeclaration/"></a> [androidJvm] val [purple800](purple800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purple900/#/PointingToDeclaration/"></a>[purple900](purple900.md)| <a name="danbroid.util.compose/MaterialColors/purple900/#/PointingToDeclaration/"></a> [androidJvm] val [purple900](purple900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purpleA100/#/PointingToDeclaration/"></a>[purpleA100](purple-a100.md)| <a name="danbroid.util.compose/MaterialColors/purpleA100/#/PointingToDeclaration/"></a> [androidJvm] val [purpleA100](purple-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purpleA200/#/PointingToDeclaration/"></a>[purpleA200](purple-a200.md)| <a name="danbroid.util.compose/MaterialColors/purpleA200/#/PointingToDeclaration/"></a> [androidJvm] val [purpleA200](purple-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purpleA400/#/PointingToDeclaration/"></a>[purpleA400](purple-a400.md)| <a name="danbroid.util.compose/MaterialColors/purpleA400/#/PointingToDeclaration/"></a> [androidJvm] val [purpleA400](purple-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/purpleA700/#/PointingToDeclaration/"></a>[purpleA700](purple-a700.md)| <a name="danbroid.util.compose/MaterialColors/purpleA700/#/PointingToDeclaration/"></a> [androidJvm] val [purpleA700](purple-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/red100/#/PointingToDeclaration/"></a>[red100](red100.md)| <a name="danbroid.util.compose/MaterialColors/red100/#/PointingToDeclaration/"></a> [androidJvm] val [red100](red100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/red200/#/PointingToDeclaration/"></a>[red200](red200.md)| <a name="danbroid.util.compose/MaterialColors/red200/#/PointingToDeclaration/"></a> [androidJvm] val [red200](red200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/red300/#/PointingToDeclaration/"></a>[red300](red300.md)| <a name="danbroid.util.compose/MaterialColors/red300/#/PointingToDeclaration/"></a> [androidJvm] val [red300](red300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/red400/#/PointingToDeclaration/"></a>[red400](red400.md)| <a name="danbroid.util.compose/MaterialColors/red400/#/PointingToDeclaration/"></a> [androidJvm] val [red400](red400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/red50/#/PointingToDeclaration/"></a>[red50](red50.md)| <a name="danbroid.util.compose/MaterialColors/red50/#/PointingToDeclaration/"></a> [androidJvm] val [red50](red50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/red500/#/PointingToDeclaration/"></a>[red500](red500.md)| <a name="danbroid.util.compose/MaterialColors/red500/#/PointingToDeclaration/"></a> [androidJvm] val [red500](red500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/red600/#/PointingToDeclaration/"></a>[red600](red600.md)| <a name="danbroid.util.compose/MaterialColors/red600/#/PointingToDeclaration/"></a> [androidJvm] val [red600](red600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/red700/#/PointingToDeclaration/"></a>[red700](red700.md)| <a name="danbroid.util.compose/MaterialColors/red700/#/PointingToDeclaration/"></a> [androidJvm] val [red700](red700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/red800/#/PointingToDeclaration/"></a>[red800](red800.md)| <a name="danbroid.util.compose/MaterialColors/red800/#/PointingToDeclaration/"></a> [androidJvm] val [red800](red800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/red900/#/PointingToDeclaration/"></a>[red900](red900.md)| <a name="danbroid.util.compose/MaterialColors/red900/#/PointingToDeclaration/"></a> [androidJvm] val [red900](red900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/redA100/#/PointingToDeclaration/"></a>[redA100](red-a100.md)| <a name="danbroid.util.compose/MaterialColors/redA100/#/PointingToDeclaration/"></a> [androidJvm] val [redA100](red-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/redA200/#/PointingToDeclaration/"></a>[redA200](red-a200.md)| <a name="danbroid.util.compose/MaterialColors/redA200/#/PointingToDeclaration/"></a> [androidJvm] val [redA200](red-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/redA400/#/PointingToDeclaration/"></a>[redA400](red-a400.md)| <a name="danbroid.util.compose/MaterialColors/redA400/#/PointingToDeclaration/"></a> [androidJvm] val [redA400](red-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/redA700/#/PointingToDeclaration/"></a>[redA700](red-a700.md)| <a name="danbroid.util.compose/MaterialColors/redA700/#/PointingToDeclaration/"></a> [androidJvm] val [redA700](red-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/teal100/#/PointingToDeclaration/"></a>[teal100](teal100.md)| <a name="danbroid.util.compose/MaterialColors/teal100/#/PointingToDeclaration/"></a> [androidJvm] val [teal100](teal100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/teal200/#/PointingToDeclaration/"></a>[teal200](teal200.md)| <a name="danbroid.util.compose/MaterialColors/teal200/#/PointingToDeclaration/"></a> [androidJvm] val [teal200](teal200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/teal300/#/PointingToDeclaration/"></a>[teal300](teal300.md)| <a name="danbroid.util.compose/MaterialColors/teal300/#/PointingToDeclaration/"></a> [androidJvm] val [teal300](teal300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/teal400/#/PointingToDeclaration/"></a>[teal400](teal400.md)| <a name="danbroid.util.compose/MaterialColors/teal400/#/PointingToDeclaration/"></a> [androidJvm] val [teal400](teal400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/teal50/#/PointingToDeclaration/"></a>[teal50](teal50.md)| <a name="danbroid.util.compose/MaterialColors/teal50/#/PointingToDeclaration/"></a> [androidJvm] val [teal50](teal50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/teal500/#/PointingToDeclaration/"></a>[teal500](teal500.md)| <a name="danbroid.util.compose/MaterialColors/teal500/#/PointingToDeclaration/"></a> [androidJvm] val [teal500](teal500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/teal600/#/PointingToDeclaration/"></a>[teal600](teal600.md)| <a name="danbroid.util.compose/MaterialColors/teal600/#/PointingToDeclaration/"></a> [androidJvm] val [teal600](teal600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/teal700/#/PointingToDeclaration/"></a>[teal700](teal700.md)| <a name="danbroid.util.compose/MaterialColors/teal700/#/PointingToDeclaration/"></a> [androidJvm] val [teal700](teal700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/teal800/#/PointingToDeclaration/"></a>[teal800](teal800.md)| <a name="danbroid.util.compose/MaterialColors/teal800/#/PointingToDeclaration/"></a> [androidJvm] val [teal800](teal800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/teal900/#/PointingToDeclaration/"></a>[teal900](teal900.md)| <a name="danbroid.util.compose/MaterialColors/teal900/#/PointingToDeclaration/"></a> [androidJvm] val [teal900](teal900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/tealA100/#/PointingToDeclaration/"></a>[tealA100](teal-a100.md)| <a name="danbroid.util.compose/MaterialColors/tealA100/#/PointingToDeclaration/"></a> [androidJvm] val [tealA100](teal-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/tealA200/#/PointingToDeclaration/"></a>[tealA200](teal-a200.md)| <a name="danbroid.util.compose/MaterialColors/tealA200/#/PointingToDeclaration/"></a> [androidJvm] val [tealA200](teal-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/tealA400/#/PointingToDeclaration/"></a>[tealA400](teal-a400.md)| <a name="danbroid.util.compose/MaterialColors/tealA400/#/PointingToDeclaration/"></a> [androidJvm] val [tealA400](teal-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/tealA700/#/PointingToDeclaration/"></a>[tealA700](teal-a700.md)| <a name="danbroid.util.compose/MaterialColors/tealA700/#/PointingToDeclaration/"></a> [androidJvm] val [tealA700](teal-a700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/white/#/PointingToDeclaration/"></a>[white](white.md)| <a name="danbroid.util.compose/MaterialColors/white/#/PointingToDeclaration/"></a> [androidJvm] val [white](white.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellow100/#/PointingToDeclaration/"></a>[yellow100](yellow100.md)| <a name="danbroid.util.compose/MaterialColors/yellow100/#/PointingToDeclaration/"></a> [androidJvm] val [yellow100](yellow100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellow200/#/PointingToDeclaration/"></a>[yellow200](yellow200.md)| <a name="danbroid.util.compose/MaterialColors/yellow200/#/PointingToDeclaration/"></a> [androidJvm] val [yellow200](yellow200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellow300/#/PointingToDeclaration/"></a>[yellow300](yellow300.md)| <a name="danbroid.util.compose/MaterialColors/yellow300/#/PointingToDeclaration/"></a> [androidJvm] val [yellow300](yellow300.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellow400/#/PointingToDeclaration/"></a>[yellow400](yellow400.md)| <a name="danbroid.util.compose/MaterialColors/yellow400/#/PointingToDeclaration/"></a> [androidJvm] val [yellow400](yellow400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellow50/#/PointingToDeclaration/"></a>[yellow50](yellow50.md)| <a name="danbroid.util.compose/MaterialColors/yellow50/#/PointingToDeclaration/"></a> [androidJvm] val [yellow50](yellow50.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellow500/#/PointingToDeclaration/"></a>[yellow500](yellow500.md)| <a name="danbroid.util.compose/MaterialColors/yellow500/#/PointingToDeclaration/"></a> [androidJvm] val [yellow500](yellow500.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellow600/#/PointingToDeclaration/"></a>[yellow600](yellow600.md)| <a name="danbroid.util.compose/MaterialColors/yellow600/#/PointingToDeclaration/"></a> [androidJvm] val [yellow600](yellow600.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellow700/#/PointingToDeclaration/"></a>[yellow700](yellow700.md)| <a name="danbroid.util.compose/MaterialColors/yellow700/#/PointingToDeclaration/"></a> [androidJvm] val [yellow700](yellow700.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellow800/#/PointingToDeclaration/"></a>[yellow800](yellow800.md)| <a name="danbroid.util.compose/MaterialColors/yellow800/#/PointingToDeclaration/"></a> [androidJvm] val [yellow800](yellow800.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellow900/#/PointingToDeclaration/"></a>[yellow900](yellow900.md)| <a name="danbroid.util.compose/MaterialColors/yellow900/#/PointingToDeclaration/"></a> [androidJvm] val [yellow900](yellow900.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellowA100/#/PointingToDeclaration/"></a>[yellowA100](yellow-a100.md)| <a name="danbroid.util.compose/MaterialColors/yellowA100/#/PointingToDeclaration/"></a> [androidJvm] val [yellowA100](yellow-a100.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellowA200/#/PointingToDeclaration/"></a>[yellowA200](yellow-a200.md)| <a name="danbroid.util.compose/MaterialColors/yellowA200/#/PointingToDeclaration/"></a> [androidJvm] val [yellowA200](yellow-a200.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellowA400/#/PointingToDeclaration/"></a>[yellowA400](yellow-a400.md)| <a name="danbroid.util.compose/MaterialColors/yellowA400/#/PointingToDeclaration/"></a> [androidJvm] val [yellowA400](yellow-a400.md): Color   <br>|
-| <a name="danbroid.util.compose/MaterialColors/yellowA700/#/PointingToDeclaration/"></a>[yellowA700](yellow-a700.md)| <a name="danbroid.util.compose/MaterialColors/yellowA700/#/PointingToDeclaration/"></a> [androidJvm] val [yellowA700](yellow-a700.md): Color   <br>|
-
+| [amber100](amber100.md) | [androidJvm]<br>val [amber100](amber100.md): Color |
+| [amber200](amber200.md) | [androidJvm]<br>val [amber200](amber200.md): Color |
+| [amber300](amber300.md) | [androidJvm]<br>val [amber300](amber300.md): Color |
+| [amber400](amber400.md) | [androidJvm]<br>val [amber400](amber400.md): Color |
+| [amber50](amber50.md) | [androidJvm]<br>val [amber50](amber50.md): Color |
+| [amber500](amber500.md) | [androidJvm]<br>val [amber500](amber500.md): Color |
+| [amber600](amber600.md) | [androidJvm]<br>val [amber600](amber600.md): Color |
+| [amber700](amber700.md) | [androidJvm]<br>val [amber700](amber700.md): Color |
+| [amber800](amber800.md) | [androidJvm]<br>val [amber800](amber800.md): Color |
+| [amber900](amber900.md) | [androidJvm]<br>val [amber900](amber900.md): Color |
+| [amberA100](amber-a100.md) | [androidJvm]<br>val [amberA100](amber-a100.md): Color |
+| [amberA200](amber-a200.md) | [androidJvm]<br>val [amberA200](amber-a200.md): Color |
+| [amberA400](amber-a400.md) | [androidJvm]<br>val [amberA400](amber-a400.md): Color |
+| [amberA700](amber-a700.md) | [androidJvm]<br>val [amberA700](amber-a700.md): Color |
+| [black](black.md) | [androidJvm]<br>val [black](black.md): Color |
+| [blue100](blue100.md) | [androidJvm]<br>val [blue100](blue100.md): Color |
+| [blue200](blue200.md) | [androidJvm]<br>val [blue200](blue200.md): Color |
+| [blue300](blue300.md) | [androidJvm]<br>val [blue300](blue300.md): Color |
+| [blue400](blue400.md) | [androidJvm]<br>val [blue400](blue400.md): Color |
+| [blue50](blue50.md) | [androidJvm]<br>val [blue50](blue50.md): Color |
+| [blue500](blue500.md) | [androidJvm]<br>val [blue500](blue500.md): Color |
+| [blue600](blue600.md) | [androidJvm]<br>val [blue600](blue600.md): Color |
+| [blue700](blue700.md) | [androidJvm]<br>val [blue700](blue700.md): Color |
+| [blue800](blue800.md) | [androidJvm]<br>val [blue800](blue800.md): Color |
+| [blue900](blue900.md) | [androidJvm]<br>val [blue900](blue900.md): Color |
+| [blue_grey100](blue_grey100.md) | [androidJvm]<br>val [blue_grey100](blue_grey100.md): Color |
+| [blue_grey200](blue_grey200.md) | [androidJvm]<br>val [blue_grey200](blue_grey200.md): Color |
+| [blue_grey300](blue_grey300.md) | [androidJvm]<br>val [blue_grey300](blue_grey300.md): Color |
+| [blue_grey400](blue_grey400.md) | [androidJvm]<br>val [blue_grey400](blue_grey400.md): Color |
+| [blue_grey50](blue_grey50.md) | [androidJvm]<br>val [blue_grey50](blue_grey50.md): Color |
+| [blue_grey500](blue_grey500.md) | [androidJvm]<br>val [blue_grey500](blue_grey500.md): Color |
+| [blue_grey600](blue_grey600.md) | [androidJvm]<br>val [blue_grey600](blue_grey600.md): Color |
+| [blue_grey700](blue_grey700.md) | [androidJvm]<br>val [blue_grey700](blue_grey700.md): Color |
+| [blue_grey800](blue_grey800.md) | [androidJvm]<br>val [blue_grey800](blue_grey800.md): Color |
+| [blue_grey900](blue_grey900.md) | [androidJvm]<br>val [blue_grey900](blue_grey900.md): Color |
+| [blueA100](blue-a100.md) | [androidJvm]<br>val [blueA100](blue-a100.md): Color |
+| [blueA200](blue-a200.md) | [androidJvm]<br>val [blueA200](blue-a200.md): Color |
+| [blueA400](blue-a400.md) | [androidJvm]<br>val [blueA400](blue-a400.md): Color |
+| [blueA700](blue-a700.md) | [androidJvm]<br>val [blueA700](blue-a700.md): Color |
+| [brown100](brown100.md) | [androidJvm]<br>val [brown100](brown100.md): Color |
+| [brown200](brown200.md) | [androidJvm]<br>val [brown200](brown200.md): Color |
+| [brown300](brown300.md) | [androidJvm]<br>val [brown300](brown300.md): Color |
+| [brown400](brown400.md) | [androidJvm]<br>val [brown400](brown400.md): Color |
+| [brown50](brown50.md) | [androidJvm]<br>val [brown50](brown50.md): Color |
+| [brown500](brown500.md) | [androidJvm]<br>val [brown500](brown500.md): Color |
+| [brown600](brown600.md) | [androidJvm]<br>val [brown600](brown600.md): Color |
+| [brown700](brown700.md) | [androidJvm]<br>val [brown700](brown700.md): Color |
+| [brown800](brown800.md) | [androidJvm]<br>val [brown800](brown800.md): Color |
+| [brown900](brown900.md) | [androidJvm]<br>val [brown900](brown900.md): Color |
+| [cyan100](cyan100.md) | [androidJvm]<br>val [cyan100](cyan100.md): Color |
+| [cyan200](cyan200.md) | [androidJvm]<br>val [cyan200](cyan200.md): Color |
+| [cyan300](cyan300.md) | [androidJvm]<br>val [cyan300](cyan300.md): Color |
+| [cyan400](cyan400.md) | [androidJvm]<br>val [cyan400](cyan400.md): Color |
+| [cyan50](cyan50.md) | [androidJvm]<br>val [cyan50](cyan50.md): Color |
+| [cyan500](cyan500.md) | [androidJvm]<br>val [cyan500](cyan500.md): Color |
+| [cyan600](cyan600.md) | [androidJvm]<br>val [cyan600](cyan600.md): Color |
+| [cyan700](cyan700.md) | [androidJvm]<br>val [cyan700](cyan700.md): Color |
+| [cyan800](cyan800.md) | [androidJvm]<br>val [cyan800](cyan800.md): Color |
+| [cyan900](cyan900.md) | [androidJvm]<br>val [cyan900](cyan900.md): Color |
+| [cyanA100](cyan-a100.md) | [androidJvm]<br>val [cyanA100](cyan-a100.md): Color |
+| [cyanA200](cyan-a200.md) | [androidJvm]<br>val [cyanA200](cyan-a200.md): Color |
+| [cyanA400](cyan-a400.md) | [androidJvm]<br>val [cyanA400](cyan-a400.md): Color |
+| [cyanA700](cyan-a700.md) | [androidJvm]<br>val [cyanA700](cyan-a700.md): Color |
+| [deep_orange100](deep_orange100.md) | [androidJvm]<br>val [deep_orange100](deep_orange100.md): Color |
+| [deep_orange200](deep_orange200.md) | [androidJvm]<br>val [deep_orange200](deep_orange200.md): Color |
+| [deep_orange300](deep_orange300.md) | [androidJvm]<br>val [deep_orange300](deep_orange300.md): Color |
+| [deep_orange400](deep_orange400.md) | [androidJvm]<br>val [deep_orange400](deep_orange400.md): Color |
+| [deep_orange50](deep_orange50.md) | [androidJvm]<br>val [deep_orange50](deep_orange50.md): Color |
+| [deep_orange500](deep_orange500.md) | [androidJvm]<br>val [deep_orange500](deep_orange500.md): Color |
+| [deep_orange600](deep_orange600.md) | [androidJvm]<br>val [deep_orange600](deep_orange600.md): Color |
+| [deep_orange700](deep_orange700.md) | [androidJvm]<br>val [deep_orange700](deep_orange700.md): Color |
+| [deep_orange800](deep_orange800.md) | [androidJvm]<br>val [deep_orange800](deep_orange800.md): Color |
+| [deep_orange900](deep_orange900.md) | [androidJvm]<br>val [deep_orange900](deep_orange900.md): Color |
+| [deep_orangeA100](deep_orange-a100.md) | [androidJvm]<br>val [deep_orangeA100](deep_orange-a100.md): Color |
+| [deep_orangeA200](deep_orange-a200.md) | [androidJvm]<br>val [deep_orangeA200](deep_orange-a200.md): Color |
+| [deep_orangeA400](deep_orange-a400.md) | [androidJvm]<br>val [deep_orangeA400](deep_orange-a400.md): Color |
+| [deep_orangeA700](deep_orange-a700.md) | [androidJvm]<br>val [deep_orangeA700](deep_orange-a700.md): Color |
+| [deep_purple100](deep_purple100.md) | [androidJvm]<br>val [deep_purple100](deep_purple100.md): Color |
+| [deep_purple200](deep_purple200.md) | [androidJvm]<br>val [deep_purple200](deep_purple200.md): Color |
+| [deep_purple300](deep_purple300.md) | [androidJvm]<br>val [deep_purple300](deep_purple300.md): Color |
+| [deep_purple400](deep_purple400.md) | [androidJvm]<br>val [deep_purple400](deep_purple400.md): Color |
+| [deep_purple50](deep_purple50.md) | [androidJvm]<br>val [deep_purple50](deep_purple50.md): Color |
+| [deep_purple500](deep_purple500.md) | [androidJvm]<br>val [deep_purple500](deep_purple500.md): Color |
+| [deep_purple600](deep_purple600.md) | [androidJvm]<br>val [deep_purple600](deep_purple600.md): Color |
+| [deep_purple700](deep_purple700.md) | [androidJvm]<br>val [deep_purple700](deep_purple700.md): Color |
+| [deep_purple800](deep_purple800.md) | [androidJvm]<br>val [deep_purple800](deep_purple800.md): Color |
+| [deep_purple900](deep_purple900.md) | [androidJvm]<br>val [deep_purple900](deep_purple900.md): Color |
+| [deep_purpleA100](deep_purple-a100.md) | [androidJvm]<br>val [deep_purpleA100](deep_purple-a100.md): Color |
+| [deep_purpleA200](deep_purple-a200.md) | [androidJvm]<br>val [deep_purpleA200](deep_purple-a200.md): Color |
+| [deep_purpleA400](deep_purple-a400.md) | [androidJvm]<br>val [deep_purpleA400](deep_purple-a400.md): Color |
+| [deep_purpleA700](deep_purple-a700.md) | [androidJvm]<br>val [deep_purpleA700](deep_purple-a700.md): Color |
+| [green100](green100.md) | [androidJvm]<br>val [green100](green100.md): Color |
+| [green200](green200.md) | [androidJvm]<br>val [green200](green200.md): Color |
+| [green300](green300.md) | [androidJvm]<br>val [green300](green300.md): Color |
+| [green400](green400.md) | [androidJvm]<br>val [green400](green400.md): Color |
+| [green50](green50.md) | [androidJvm]<br>val [green50](green50.md): Color |
+| [green500](green500.md) | [androidJvm]<br>val [green500](green500.md): Color |
+| [green600](green600.md) | [androidJvm]<br>val [green600](green600.md): Color |
+| [green700](green700.md) | [androidJvm]<br>val [green700](green700.md): Color |
+| [green800](green800.md) | [androidJvm]<br>val [green800](green800.md): Color |
+| [green900](green900.md) | [androidJvm]<br>val [green900](green900.md): Color |
+| [greenA100](green-a100.md) | [androidJvm]<br>val [greenA100](green-a100.md): Color |
+| [greenA200](green-a200.md) | [androidJvm]<br>val [greenA200](green-a200.md): Color |
+| [greenA400](green-a400.md) | [androidJvm]<br>val [greenA400](green-a400.md): Color |
+| [greenA700](green-a700.md) | [androidJvm]<br>val [greenA700](green-a700.md): Color |
+| [grey100](grey100.md) | [androidJvm]<br>val [grey100](grey100.md): Color |
+| [grey200](grey200.md) | [androidJvm]<br>val [grey200](grey200.md): Color |
+| [grey300](grey300.md) | [androidJvm]<br>val [grey300](grey300.md): Color |
+| [grey400](grey400.md) | [androidJvm]<br>val [grey400](grey400.md): Color |
+| [grey50](grey50.md) | [androidJvm]<br>val [grey50](grey50.md): Color |
+| [grey500](grey500.md) | [androidJvm]<br>val [grey500](grey500.md): Color |
+| [grey600](grey600.md) | [androidJvm]<br>val [grey600](grey600.md): Color |
+| [grey700](grey700.md) | [androidJvm]<br>val [grey700](grey700.md): Color |
+| [grey800](grey800.md) | [androidJvm]<br>val [grey800](grey800.md): Color |
+| [grey900](grey900.md) | [androidJvm]<br>val [grey900](grey900.md): Color |
+| [indigo100](indigo100.md) | [androidJvm]<br>val [indigo100](indigo100.md): Color |
+| [indigo200](indigo200.md) | [androidJvm]<br>val [indigo200](indigo200.md): Color |
+| [indigo300](indigo300.md) | [androidJvm]<br>val [indigo300](indigo300.md): Color |
+| [indigo400](indigo400.md) | [androidJvm]<br>val [indigo400](indigo400.md): Color |
+| [indigo50](indigo50.md) | [androidJvm]<br>val [indigo50](indigo50.md): Color |
+| [indigo500](indigo500.md) | [androidJvm]<br>val [indigo500](indigo500.md): Color |
+| [indigo600](indigo600.md) | [androidJvm]<br>val [indigo600](indigo600.md): Color |
+| [indigo700](indigo700.md) | [androidJvm]<br>val [indigo700](indigo700.md): Color |
+| [indigo800](indigo800.md) | [androidJvm]<br>val [indigo800](indigo800.md): Color |
+| [indigo900](indigo900.md) | [androidJvm]<br>val [indigo900](indigo900.md): Color |
+| [indigoA100](indigo-a100.md) | [androidJvm]<br>val [indigoA100](indigo-a100.md): Color |
+| [indigoA200](indigo-a200.md) | [androidJvm]<br>val [indigoA200](indigo-a200.md): Color |
+| [indigoA400](indigo-a400.md) | [androidJvm]<br>val [indigoA400](indigo-a400.md): Color |
+| [indigoA700](indigo-a700.md) | [androidJvm]<br>val [indigoA700](indigo-a700.md): Color |
+| [light_blue100](light_blue100.md) | [androidJvm]<br>val [light_blue100](light_blue100.md): Color |
+| [light_blue200](light_blue200.md) | [androidJvm]<br>val [light_blue200](light_blue200.md): Color |
+| [light_blue300](light_blue300.md) | [androidJvm]<br>val [light_blue300](light_blue300.md): Color |
+| [light_blue400](light_blue400.md) | [androidJvm]<br>val [light_blue400](light_blue400.md): Color |
+| [light_blue50](light_blue50.md) | [androidJvm]<br>val [light_blue50](light_blue50.md): Color |
+| [light_blue500](light_blue500.md) | [androidJvm]<br>val [light_blue500](light_blue500.md): Color |
+| [light_blue600](light_blue600.md) | [androidJvm]<br>val [light_blue600](light_blue600.md): Color |
+| [light_blue700](light_blue700.md) | [androidJvm]<br>val [light_blue700](light_blue700.md): Color |
+| [light_blue800](light_blue800.md) | [androidJvm]<br>val [light_blue800](light_blue800.md): Color |
+| [light_blue900](light_blue900.md) | [androidJvm]<br>val [light_blue900](light_blue900.md): Color |
+| [light_blueA100](light_blue-a100.md) | [androidJvm]<br>val [light_blueA100](light_blue-a100.md): Color |
+| [light_blueA200](light_blue-a200.md) | [androidJvm]<br>val [light_blueA200](light_blue-a200.md): Color |
+| [light_blueA400](light_blue-a400.md) | [androidJvm]<br>val [light_blueA400](light_blue-a400.md): Color |
+| [light_blueA700](light_blue-a700.md) | [androidJvm]<br>val [light_blueA700](light_blue-a700.md): Color |
+| [light_green100](light_green100.md) | [androidJvm]<br>val [light_green100](light_green100.md): Color |
+| [light_green200](light_green200.md) | [androidJvm]<br>val [light_green200](light_green200.md): Color |
+| [light_green300](light_green300.md) | [androidJvm]<br>val [light_green300](light_green300.md): Color |
+| [light_green400](light_green400.md) | [androidJvm]<br>val [light_green400](light_green400.md): Color |
+| [light_green50](light_green50.md) | [androidJvm]<br>val [light_green50](light_green50.md): Color |
+| [light_green500](light_green500.md) | [androidJvm]<br>val [light_green500](light_green500.md): Color |
+| [light_green600](light_green600.md) | [androidJvm]<br>val [light_green600](light_green600.md): Color |
+| [light_green700](light_green700.md) | [androidJvm]<br>val [light_green700](light_green700.md): Color |
+| [light_green800](light_green800.md) | [androidJvm]<br>val [light_green800](light_green800.md): Color |
+| [light_green900](light_green900.md) | [androidJvm]<br>val [light_green900](light_green900.md): Color |
+| [light_greenA100](light_green-a100.md) | [androidJvm]<br>val [light_greenA100](light_green-a100.md): Color |
+| [light_greenA200](light_green-a200.md) | [androidJvm]<br>val [light_greenA200](light_green-a200.md): Color |
+| [light_greenA400](light_green-a400.md) | [androidJvm]<br>val [light_greenA400](light_green-a400.md): Color |
+| [light_greenA700](light_green-a700.md) | [androidJvm]<br>val [light_greenA700](light_green-a700.md): Color |
+| [lime100](lime100.md) | [androidJvm]<br>val [lime100](lime100.md): Color |
+| [lime200](lime200.md) | [androidJvm]<br>val [lime200](lime200.md): Color |
+| [lime300](lime300.md) | [androidJvm]<br>val [lime300](lime300.md): Color |
+| [lime400](lime400.md) | [androidJvm]<br>val [lime400](lime400.md): Color |
+| [lime50](lime50.md) | [androidJvm]<br>val [lime50](lime50.md): Color |
+| [lime500](lime500.md) | [androidJvm]<br>val [lime500](lime500.md): Color |
+| [lime600](lime600.md) | [androidJvm]<br>val [lime600](lime600.md): Color |
+| [lime700](lime700.md) | [androidJvm]<br>val [lime700](lime700.md): Color |
+| [lime800](lime800.md) | [androidJvm]<br>val [lime800](lime800.md): Color |
+| [lime900](lime900.md) | [androidJvm]<br>val [lime900](lime900.md): Color |
+| [limeA100](lime-a100.md) | [androidJvm]<br>val [limeA100](lime-a100.md): Color |
+| [limeA200](lime-a200.md) | [androidJvm]<br>val [limeA200](lime-a200.md): Color |
+| [limeA400](lime-a400.md) | [androidJvm]<br>val [limeA400](lime-a400.md): Color |
+| [limeA700](lime-a700.md) | [androidJvm]<br>val [limeA700](lime-a700.md): Color |
+| [orange100](orange100.md) | [androidJvm]<br>val [orange100](orange100.md): Color |
+| [orange200](orange200.md) | [androidJvm]<br>val [orange200](orange200.md): Color |
+| [orange300](orange300.md) | [androidJvm]<br>val [orange300](orange300.md): Color |
+| [orange400](orange400.md) | [androidJvm]<br>val [orange400](orange400.md): Color |
+| [orange50](orange50.md) | [androidJvm]<br>val [orange50](orange50.md): Color |
+| [orange500](orange500.md) | [androidJvm]<br>val [orange500](orange500.md): Color |
+| [orange600](orange600.md) | [androidJvm]<br>val [orange600](orange600.md): Color |
+| [orange700](orange700.md) | [androidJvm]<br>val [orange700](orange700.md): Color |
+| [orange800](orange800.md) | [androidJvm]<br>val [orange800](orange800.md): Color |
+| [orange900](orange900.md) | [androidJvm]<br>val [orange900](orange900.md): Color |
+| [orangeA100](orange-a100.md) | [androidJvm]<br>val [orangeA100](orange-a100.md): Color |
+| [orangeA200](orange-a200.md) | [androidJvm]<br>val [orangeA200](orange-a200.md): Color |
+| [orangeA400](orange-a400.md) | [androidJvm]<br>val [orangeA400](orange-a400.md): Color |
+| [orangeA700](orange-a700.md) | [androidJvm]<br>val [orangeA700](orange-a700.md): Color |
+| [pink100](pink100.md) | [androidJvm]<br>val [pink100](pink100.md): Color |
+| [pink200](pink200.md) | [androidJvm]<br>val [pink200](pink200.md): Color |
+| [pink300](pink300.md) | [androidJvm]<br>val [pink300](pink300.md): Color |
+| [pink400](pink400.md) | [androidJvm]<br>val [pink400](pink400.md): Color |
+| [pink50](pink50.md) | [androidJvm]<br>val [pink50](pink50.md): Color |
+| [pink500](pink500.md) | [androidJvm]<br>val [pink500](pink500.md): Color |
+| [pink600](pink600.md) | [androidJvm]<br>val [pink600](pink600.md): Color |
+| [pink700](pink700.md) | [androidJvm]<br>val [pink700](pink700.md): Color |
+| [pink800](pink800.md) | [androidJvm]<br>val [pink800](pink800.md): Color |
+| [pink900](pink900.md) | [androidJvm]<br>val [pink900](pink900.md): Color |
+| [pinkA100](pink-a100.md) | [androidJvm]<br>val [pinkA100](pink-a100.md): Color |
+| [pinkA200](pink-a200.md) | [androidJvm]<br>val [pinkA200](pink-a200.md): Color |
+| [pinkA400](pink-a400.md) | [androidJvm]<br>val [pinkA400](pink-a400.md): Color |
+| [pinkA700](pink-a700.md) | [androidJvm]<br>val [pinkA700](pink-a700.md): Color |
+| [purple100](purple100.md) | [androidJvm]<br>val [purple100](purple100.md): Color |
+| [purple200](purple200.md) | [androidJvm]<br>val [purple200](purple200.md): Color |
+| [purple300](purple300.md) | [androidJvm]<br>val [purple300](purple300.md): Color |
+| [purple400](purple400.md) | [androidJvm]<br>val [purple400](purple400.md): Color |
+| [purple50](purple50.md) | [androidJvm]<br>val [purple50](purple50.md): Color |
+| [purple500](purple500.md) | [androidJvm]<br>val [purple500](purple500.md): Color |
+| [purple600](purple600.md) | [androidJvm]<br>val [purple600](purple600.md): Color |
+| [purple700](purple700.md) | [androidJvm]<br>val [purple700](purple700.md): Color |
+| [purple800](purple800.md) | [androidJvm]<br>val [purple800](purple800.md): Color |
+| [purple900](purple900.md) | [androidJvm]<br>val [purple900](purple900.md): Color |
+| [purpleA100](purple-a100.md) | [androidJvm]<br>val [purpleA100](purple-a100.md): Color |
+| [purpleA200](purple-a200.md) | [androidJvm]<br>val [purpleA200](purple-a200.md): Color |
+| [purpleA400](purple-a400.md) | [androidJvm]<br>val [purpleA400](purple-a400.md): Color |
+| [purpleA700](purple-a700.md) | [androidJvm]<br>val [purpleA700](purple-a700.md): Color |
+| [red100](red100.md) | [androidJvm]<br>val [red100](red100.md): Color |
+| [red200](red200.md) | [androidJvm]<br>val [red200](red200.md): Color |
+| [red300](red300.md) | [androidJvm]<br>val [red300](red300.md): Color |
+| [red400](red400.md) | [androidJvm]<br>val [red400](red400.md): Color |
+| [red50](red50.md) | [androidJvm]<br>val [red50](red50.md): Color |
+| [red500](red500.md) | [androidJvm]<br>val [red500](red500.md): Color |
+| [red600](red600.md) | [androidJvm]<br>val [red600](red600.md): Color |
+| [red700](red700.md) | [androidJvm]<br>val [red700](red700.md): Color |
+| [red800](red800.md) | [androidJvm]<br>val [red800](red800.md): Color |
+| [red900](red900.md) | [androidJvm]<br>val [red900](red900.md): Color |
+| [redA100](red-a100.md) | [androidJvm]<br>val [redA100](red-a100.md): Color |
+| [redA200](red-a200.md) | [androidJvm]<br>val [redA200](red-a200.md): Color |
+| [redA400](red-a400.md) | [androidJvm]<br>val [redA400](red-a400.md): Color |
+| [redA700](red-a700.md) | [androidJvm]<br>val [redA700](red-a700.md): Color |
+| [teal100](teal100.md) | [androidJvm]<br>val [teal100](teal100.md): Color |
+| [teal200](teal200.md) | [androidJvm]<br>val [teal200](teal200.md): Color |
+| [teal300](teal300.md) | [androidJvm]<br>val [teal300](teal300.md): Color |
+| [teal400](teal400.md) | [androidJvm]<br>val [teal400](teal400.md): Color |
+| [teal50](teal50.md) | [androidJvm]<br>val [teal50](teal50.md): Color |
+| [teal500](teal500.md) | [androidJvm]<br>val [teal500](teal500.md): Color |
+| [teal600](teal600.md) | [androidJvm]<br>val [teal600](teal600.md): Color |
+| [teal700](teal700.md) | [androidJvm]<br>val [teal700](teal700.md): Color |
+| [teal800](teal800.md) | [androidJvm]<br>val [teal800](teal800.md): Color |
+| [teal900](teal900.md) | [androidJvm]<br>val [teal900](teal900.md): Color |
+| [tealA100](teal-a100.md) | [androidJvm]<br>val [tealA100](teal-a100.md): Color |
+| [tealA200](teal-a200.md) | [androidJvm]<br>val [tealA200](teal-a200.md): Color |
+| [tealA400](teal-a400.md) | [androidJvm]<br>val [tealA400](teal-a400.md): Color |
+| [tealA700](teal-a700.md) | [androidJvm]<br>val [tealA700](teal-a700.md): Color |
+| [white](white.md) | [androidJvm]<br>val [white](white.md): Color |
+| [yellow100](yellow100.md) | [androidJvm]<br>val [yellow100](yellow100.md): Color |
+| [yellow200](yellow200.md) | [androidJvm]<br>val [yellow200](yellow200.md): Color |
+| [yellow300](yellow300.md) | [androidJvm]<br>val [yellow300](yellow300.md): Color |
+| [yellow400](yellow400.md) | [androidJvm]<br>val [yellow400](yellow400.md): Color |
+| [yellow50](yellow50.md) | [androidJvm]<br>val [yellow50](yellow50.md): Color |
+| [yellow500](yellow500.md) | [androidJvm]<br>val [yellow500](yellow500.md): Color |
+| [yellow600](yellow600.md) | [androidJvm]<br>val [yellow600](yellow600.md): Color |
+| [yellow700](yellow700.md) | [androidJvm]<br>val [yellow700](yellow700.md): Color |
+| [yellow800](yellow800.md) | [androidJvm]<br>val [yellow800](yellow800.md): Color |
+| [yellow900](yellow900.md) | [androidJvm]<br>val [yellow900](yellow900.md): Color |
+| [yellowA100](yellow-a100.md) | [androidJvm]<br>val [yellowA100](yellow-a100.md): Color |
+| [yellowA200](yellow-a200.md) | [androidJvm]<br>val [yellowA200](yellow-a200.md): Color |
+| [yellowA400](yellow-a400.md) | [androidJvm]<br>val [yellowA400](yellow-a400.md): Color |
+| [yellowA700](yellow-a700.md) | [androidJvm]<br>val [yellowA700](yellow-a700.md): Color |

@@ -1,11 +1,6 @@
 //[compose](../../../index.md)/[danbroid.util.compose](../index.md)/[MaterialColors](index.md)/[blue_grey400](blue_grey400.md)
 
+# blue_grey400
 
-
-# blue_grey400  
-[androidJvm]  
-Content  
-val [blue_grey400](blue_grey400.md): Color  
-
-
-
+[androidJvm]\
+val [blue_grey400](blue_grey400.md): Color

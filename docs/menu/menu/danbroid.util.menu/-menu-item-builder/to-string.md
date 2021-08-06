@@ -1,11 +1,6 @@
 //[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuItemBuilder](index.md)/[toString](to-string.md)
 
+# toString
 
-
-# toString  
-[androidJvm]  
-Content  
-open override fun [toString](to-string.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)  
-
-
-
+[androidJvm]\
+open override fun [toString](to-string.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)

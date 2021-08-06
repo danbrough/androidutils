@@ -1,11 +1,6 @@
 //[menu](../../../index.md)/[danbroid.util.menu](../index.md)/[MenuBuilder](index.md)/[inlineChildren](inline-children.md)
 
+# inlineChildren
 
-
-# inlineChildren  
-[androidJvm]  
-Content  
-open var [inlineChildren](inline-children.md): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = false  
-
-
-
+[androidJvm]\
+open var [inlineChildren](inline-children.md): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = false

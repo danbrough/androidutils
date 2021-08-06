@@ -1,13 +1,9 @@
 //[logging_core](index.md)
 
+# logging_core
 
+## Packages
 
-# logging_core  
-
-
-## Packages  
-  
-|  Name | 
+| Name |
 |---|
-| <a name="danbroid.logging////PointingToDeclaration/"></a>[danbroid.logging](logging_core/danbroid.logging/index.md)|
-
+| [danbroid.logging](logging_core/danbroid.logging/index.md) |

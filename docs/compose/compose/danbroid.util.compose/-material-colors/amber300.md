@@ -1,11 +1,6 @@
 //[compose](../../../index.md)/[danbroid.util.compose](../index.md)/[MaterialColors](index.md)/[amber300](amber300.md)
 
+# amber300
 
-
-# amber300  
-[androidJvm]  
-Content  
-val [amber300](amber300.md): Color  
-
-
-
+[androidJvm]\
+val [amber300](amber300.md): Color

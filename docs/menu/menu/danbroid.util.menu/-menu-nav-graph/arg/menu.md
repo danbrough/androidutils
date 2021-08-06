@@ -1,11 +1,6 @@
 //[menu](../../../../index.md)/[danbroid.util.menu](../../index.md)/[MenuNavGraph](../index.md)/[arg](index.md)/[menu](menu.md)
 
+# menu
 
-
-# menu  
-[androidJvm]  
-Content  
-val [menu](menu.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)  
-
-
-
+[androidJvm]\
+val [menu](menu.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)

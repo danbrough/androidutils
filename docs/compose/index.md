@@ -1,13 +1,9 @@
 //[compose](index.md)
 
+# compose
 
+## Packages
 
-# compose  
-
-
-## Packages  
-  
-|  Name | 
+| Name |
 |---|
-| <a name="danbroid.util.compose////PointingToDeclaration/"></a>[danbroid.util.compose](compose/danbroid.util.compose/index.md)|
-
+| [danbroid.util.compose](compose/danbroid.util.compose/index.md) |

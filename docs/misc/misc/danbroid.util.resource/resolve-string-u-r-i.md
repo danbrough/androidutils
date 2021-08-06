@@ -1,11 +1,6 @@
 //[misc](../../index.md)/[danbroid.util.resource](index.md)/[resolveStringURI](resolve-string-u-r-i.md)
 
+# resolveStringURI
 
-
-# resolveStringURI  
-[androidJvm]  
-Content  
-fun [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?.[resolveStringURI](resolve-string-u-r-i.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html)): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?  
-
-
-
+[androidJvm]\
+fun [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?.[resolveStringURI](resolve-string-u-r-i.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html)): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?

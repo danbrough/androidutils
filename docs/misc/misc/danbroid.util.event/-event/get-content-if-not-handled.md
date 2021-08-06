@@ -1,17 +1,8 @@
 //[misc](../../../index.md)/[danbroid.util.event](../index.md)/[Event](index.md)/[getContentIfNotHandled](get-content-if-not-handled.md)
 
+# getContentIfNotHandled
 
-
-# getContentIfNotHandled  
-[androidJvm]  
-Content  
-fun [getContentIfNotHandled](get-content-if-not-handled.md)(): [T](index.md)?  
-More info  
-
+[androidJvm]\
+fun [getContentIfNotHandled](get-content-if-not-handled.md)(): [T](index.md)?
 
 Returns the content and prevents its use again.
-
-  
-
-
-

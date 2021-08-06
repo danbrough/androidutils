@@ -1,11 +1,6 @@
 //[compose](../../../index.md)/[danbroid.util.compose](../index.md)/[MaterialColors](index.md)/[deep_orangeA100](deep_orange-a100.md)
 
+# deep_orangeA100
 
-
-# deep_orangeA100  
-[androidJvm]  
-Content  
-val [deep_orangeA100](deep_orange-a100.md): Color  
-
-
-
+[androidJvm]\
+val [deep_orangeA100](deep_orange-a100.md): Color

@@ -1,11 +1,6 @@
 //[compose](../../../index.md)/[danbroid.util.compose](../index.md)/[MaterialColors](index.md)/[orangeA200](orange-a200.md)
 
+# orangeA200
 
-
-# orangeA200  
-[androidJvm]  
-Content  
-val [orangeA200](orange-a200.md): Color  
-
-
-
+[androidJvm]\
+val [orangeA200](orange-a200.md): Color

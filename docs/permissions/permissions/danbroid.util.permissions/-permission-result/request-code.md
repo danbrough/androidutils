@@ -1,11 +1,6 @@
 //[permissions](../../../index.md)/[danbroid.util.permissions](../index.md)/[PermissionResult](index.md)/[requestCode](request-code.md)
 
+# requestCode
 
-
-# requestCode  
-[androidJvm]  
-Content  
-val [requestCode](request-code.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  
-
-
-
+[androidJvm]\
+val [requestCode](request-code.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)

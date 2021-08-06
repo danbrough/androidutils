@@ -1,15 +1,13 @@
 //[menu](../../../../index.md)/[danbroid.util.menu](../../index.md)/[MenuNavGraph](../index.md)/[dest](index.md)
 
+# dest
 
+[androidJvm]\
+object [dest](index.md)
 
-# dest  
- [androidJvm] object [dest](index.md)   
+## Properties
 
-
-## Properties  
-  
-|  Name |  Summary | 
+| Name | Summary |
 |---|---|
-| <a name="danbroid.util.menu/MenuNavGraph.dest/home/#/PointingToDeclaration/"></a>[home](home.md)| <a name="danbroid.util.menu/MenuNavGraph.dest/home/#/PointingToDeclaration/"></a> [androidJvm] val [home](home.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>|
-| <a name="danbroid.util.menu/MenuNavGraph.dest/menu/#/PointingToDeclaration/"></a>[menu](menu.md)| <a name="danbroid.util.menu/MenuNavGraph.dest/menu/#/PointingToDeclaration/"></a> [androidJvm] val [menu](menu.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>|
-
+| [home](home.md) | [androidJvm]<br>val [home](home.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [menu](menu.md) | [androidJvm]<br>val [menu](menu.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |

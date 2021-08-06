@@ -1,13 +1,9 @@
 //[permissions](index.md)
 
+# permissions
 
+## Packages
 
-# permissions  
-
-
-## Packages  
-  
-|  Name | 
+| Name |
 |---|
-| <a name="danbroid.util.permissions////PointingToDeclaration/"></a>[danbroid.util.permissions](permissions/danbroid.util.permissions/index.md)|
-
+| [danbroid.util.permissions](permissions/danbroid.util.permissions/index.md) |

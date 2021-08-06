@@ -1,13 +1,9 @@
 //[logging_android](index.md)
 
+# logging_android
 
+## Packages
 
-# logging_android  
-
-
-## Packages  
-  
-|  Name | 
+| Name |
 |---|
-| <a name="danbroid.logging////PointingToDeclaration/"></a>[danbroid.logging](logging_android/danbroid.logging/index.md)|
-
+| [danbroid.logging](logging_android/danbroid.logging/index.md) |

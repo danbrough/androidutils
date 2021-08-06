@@ -1,11 +1,6 @@
 //[logging_core](../../index.md)/[danbroid.logging](index.md)/[colorInt](color-int.md)
 
+# colorInt
 
-
-# colorInt  
-[jvm]  
-Content  
-fun [DBLog.Level](-d-b-log/-level/index.md).[colorInt](color-int.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  
-
-
-
+[jvm]\
+fun [DBLog.Level](-d-b-log/-level/index.md).[colorInt](color-int.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)

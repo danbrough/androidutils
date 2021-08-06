@@ -1,11 +1,6 @@
 //[misc](../../../index.md)/[danbroid.util.misc](../index.md)/[SingletonHolder](index.md)/[creator](creator.md)
 
+# creator
 
-
-# creator  
-[androidJvm]  
-Content  
-var [creator](creator.md): ([A](index.md)) -> [T](index.md)?  
-
-
-
+[androidJvm]\
+var [creator](creator.md): ([A](index.md)) -> [T](index.md)?

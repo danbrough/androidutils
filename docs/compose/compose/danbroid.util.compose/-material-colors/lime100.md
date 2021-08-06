@@ -1,11 +1,6 @@
 //[compose](../../../index.md)/[danbroid.util.compose](../index.md)/[MaterialColors](index.md)/[lime100](lime100.md)
 
+# lime100
 
-
-# lime100  
-[androidJvm]  
-Content  
-val [lime100](lime100.md): Color  
-
-
-
+[androidJvm]\
+val [lime100](lime100.md): Color

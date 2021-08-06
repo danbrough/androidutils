@@ -1,11 +1,6 @@
 //[misc](../../../index.md)/[danbroid.util.prefs](../index.md)/[Prefs](index.md)/[finalize](finalize.md)
 
+# finalize
 
-
-# finalize  
-[androidJvm]  
-Content  
-fun [finalize](finalize.md)()  
-
-
-
+[androidJvm]\
+fun [finalize](finalize.md)()

@@ -1,11 +1,6 @@
 //[logging_to_slf4j](../../../index.md)/[danbroid.logging](../index.md)/[Slf4jLogImpl](index.md)/[logName](log-name.md)
 
+# logName
 
-
-# logName  
-[jvm]  
-Content  
-open override val [logName](log-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)  
-
-
-
+[jvm]\
+open override val [logName](log-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
