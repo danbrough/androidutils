@@ -12,4 +12,4 @@
 
 | Name | Summary |
 |---|---|
-| [configureAndroid](configure-android.md) | [androidJvm]<br>fun [configureAndroid](configure-android.md)(tag: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) |
+| [configureAndroid](configure-android.md) | [androidJvm]<br>fun [configureAndroid](configure-android.md)(tag: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [DBLog](../../../logging_android/danbroid.logging/-d-b-log/index.md) |

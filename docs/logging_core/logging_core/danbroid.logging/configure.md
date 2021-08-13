@@ -3,4 +3,4 @@
 # configure
 
 [jvm]\
-fun [configure](configure.md)(tag: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html))
+fun [configure](configure.md)(tag: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [DBLog](-d-b-log/index.md)

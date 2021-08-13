@@ -18,11 +18,12 @@ class AndroidLog(override var logName: String) : DBLog {
 }
 
 
-fun configureAndroid(tag: String) = run {
+fun configureAndroid(tag: String) :DBLog {
   LogConfig.defaultLog = StdOutLog
   LogConfig.defaultLog.logName = tag
   LogConfig.DEBUG = BuildConfig.DEBUG
   LogConfig.COLOURED = true
   LogConfig.GET_LOG = { LogConfig.defaultLog }
+  return LogConfig.defaultLog
 }
 
