@@ -26,4 +26,4 @@ class [Slf4jLogImpl](index.md)(**logName**: [String](https://kotlinlang.org/api/
 | Name | Summary |
 |---|---|
 | [log](log.md) | [jvm]<br>val [log](log.md): [Logger](../../../../logging_from_slf4j/org.slf4j/-logger/index.md) |
-| [logName](log-name.md) | [jvm]<br>open override val [logName](log-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [logName](log-name.md) | [jvm]<br>open override var [logName](log-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

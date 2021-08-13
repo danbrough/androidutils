@@ -3,7 +3,7 @@ package danbroid.logging
 
 import org.slf4j.LoggerFactory
 
-class Slf4jLogImpl(override val logName: String) : DBLog {
+class Slf4jLogImpl(override var logName: String) : DBLog {
 
   val log = LoggerFactory.getLogger(logName)
 
