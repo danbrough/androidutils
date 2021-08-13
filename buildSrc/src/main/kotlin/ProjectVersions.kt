@@ -10,7 +10,7 @@ object ProjectVersions {
   val KOTLIN_JVM_TARGET = "11"
   var BUILD_VERSION = 1
   var VERSION_OFFSET = 1
-  const val GROUP_ID = "com.github.danbrough.audioservice"
+  const val GROUP_ID = "com.github.danbrough.androidutils"
   const val KEYSTORE_PASSWORD = ""
   var VERSION_FORMAT = ""
   const val COMPOSE_VERSION = "1.1.0-alpha01"
