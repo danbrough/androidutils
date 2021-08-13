@@ -1,11 +1,11 @@
 package danbroid.logging
 
-class AndroidLog(override val logName: String) : DBLog {
+class AndroidLog(override var logName: String) : DBLog {
   override fun write_log_native(
-    name: String,
-    level: DBLog.Level,
-    msg: CharSequence?,
-    error: Throwable?
+      name: String,
+      level: DBLog.Level,
+      msg: CharSequence?,
+      error: Throwable?
   ) {
     when (level) {
       DBLog.Level.TRACE -> android.util.Log.v(name, "$msg", error)
@@ -16,3 +16,13 @@ class AndroidLog(override val logName: String) : DBLog {
     }
   }
 }
+
+
+fun configureAndroid(tag: String) = run {
+  LogConfig.defaultLog = StdOutLog
+  LogConfig.defaultLog.logName = tag
+  LogConfig.DEBUG = BuildConfig.DEBUG
+  LogConfig.COLOURED = true
+  LogConfig.GET_LOG = { LogConfig.defaultLog }
+}
+

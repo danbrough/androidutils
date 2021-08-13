@@ -11,6 +11,7 @@ object [LogConfig](index.md)
 |---|---|
 | [COLOURED](-c-o-l-o-u-r-e-d.md) | [jvm]<br>var [COLOURED](-c-o-l-o-u-r-e-d.md): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = false<br>Coloured console output |
 | [DEBUG](-d-e-b-u-g.md) | [jvm]<br>var [DEBUG](-d-e-b-u-g.md): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = true |
+| [defaultLog](default-log.md) | [jvm]<br>lateinit var [defaultLog](default-log.md): [DBLog](../-d-b-log/index.md) |
 | [DETAILED](-d-e-t-a-i-l-e-d.md) | [jvm]<br>var [DETAILED](-d-e-t-a-i-l-e-d.md): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = true<br>Apply the [DetailedDecorator](../-detailed-decorator.md). |
 | [GET_LOG](-g-e-t_-l-o-g.md) | [jvm]<br>var [GET_LOG](-g-e-t_-l-o-g.md): ([String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) -> [DBLog](../-d-b-log/index.md)? |
 | [MESSAGE_DECORATOR](-m-e-s-s-a-g-e_-d-e-c-o-r-a-t-o-r.md) | [jvm]<br>var [MESSAGE_DECORATOR](-m-e-s-s-a-g-e_-d-e-c-o-r-a-t-o-r.md): ([DBLog.Level](../-d-b-log/-level/index.md), [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) -> [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)? = null |

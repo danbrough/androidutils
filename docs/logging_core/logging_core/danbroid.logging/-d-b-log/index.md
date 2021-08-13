@@ -31,7 +31,7 @@ interface [DBLog](index.md)
 
 | Name | Summary |
 |---|---|
-| [logName](log-name.md) | [jvm]<br>abstract val [logName](log-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [logName](log-name.md) | [jvm]<br>abstract var [logName](log-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 
 ## Inheritors
 

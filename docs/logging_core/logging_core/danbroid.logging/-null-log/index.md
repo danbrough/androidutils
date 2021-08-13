@@ -25,4 +25,4 @@ object [NullLog](index.md) : [DBLog](../-d-b-log/index.md)
 
 | Name | Summary |
 |---|---|
-| [logName](log-name.md) | [jvm]<br>open override val [logName](log-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [logName](log-name.md) | [jvm]<br>open override var [logName](log-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

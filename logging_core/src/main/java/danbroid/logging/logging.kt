@@ -11,7 +11,7 @@ interface DBLog {
     TRACE, DEBUG, INFO, WARN, ERROR
   }
 
-  val logName: String
+  var logName: String
 
   fun dtrace(msg: CharSequence?, error: Throwable? = null) = write_log(Level.TRACE, msg, error, true)
   fun trace(msg: CharSequence?, error: Throwable? = null) = write_log(Level.TRACE, msg, error)
@@ -106,6 +106,9 @@ object LogConfig {
    * How far to go back up the stack to get the line number and method name
    */
   var STACK_DEPTH = 5
+
+  lateinit var defaultLog: DBLog
+
 }
 
 
@@ -115,6 +118,14 @@ fun DBLog.Level.colorInt(): Int = when (this) {
   DBLog.Level.INFO -> 32
   DBLog.Level.WARN -> 33
   else -> 31
+}
+
+fun configure(tag: String) = run {
+  LogConfig.defaultLog = StdOutLog
+  LogConfig.defaultLog.logName = tag
+  LogConfig.DEBUG = true
+  LogConfig.COLOURED = true
+  LogConfig.GET_LOG = { LogConfig.defaultLog }
 }
 
 
@@ -142,7 +153,7 @@ inline fun getLog(kclass: KClass<*>) = getLog(kclass.qualifiedName!!)
 inline fun getLog(tag: String) = LogConfig.GET_LOG(tag) ?: NullLog
 
 object NullLog : DBLog {
-  override val logName: String = "NullLog"
+  override var logName: String = "NullLog"
 
   @Suppress("OVERRIDE_BY_INLINE")
   override inline fun write_log_native(
@@ -156,7 +167,7 @@ object NullLog : DBLog {
 }
 
 object StdOutLog : DBLog {
-  override val logName: String = "StdOutLog"
+  override var logName: String = "StdOutLog"
 
   @Suppress("OVERRIDE_BY_INLINE")
   override inline fun write_log_native(

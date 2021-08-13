@@ -25,4 +25,4 @@ class [AndroidLog](index.md)(**logName**: [String](https://kotlinlang.org/api/la
 
 | Name | Summary |
 |---|---|
-| [logName](log-name.md) | [androidJvm]<br>open override val [logName](log-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [logName](log-name.md) | [androidJvm]<br>open override var [logName](log-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

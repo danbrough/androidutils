@@ -22,9 +22,6 @@ android {
     consumerProguardFiles("consumer-rules.pro")
   }
 
-  lint {
-    isAbortOnError = false
-  }
 
   compileOptions {
     sourceCompatibility = ProjectVersions.JAVA_VERSION
@@ -40,8 +37,7 @@ android {
   }
 
   kotlinOptions {
-    jvmTarget = "1.8"
-    useIR = true
+    jvmTarget = ProjectVersions.KOTLIN_JVM_TARGET
     freeCompilerArgs = mutableListOf("-Xopt-in=kotlin.ExperimentalStdlibApi").also {
       it.addAll(freeCompilerArgs)
     }
