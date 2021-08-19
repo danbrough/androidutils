@@ -22,6 +22,17 @@ java {
   targetCompatibility = ProjectVersions.JAVA_VERSION
 }
 
+tasks.withType<Test> {
+  useJUnit()
+  testLogging {
+    events("standardOut", "started", "passed", "skipped", "failed")
+    showStandardStreams = true
+    outputs.upToDateWhen {
+      false
+    }
+  }
+}
+
 
 val sourcesJar by tasks.registering(Jar::class) {
   archiveClassifier.set("sources")
@@ -42,6 +53,9 @@ publishing {
 
 
 dependencies {
- // implementation("net.jcip:jcip-annotations:1.0")
+  // implementation("net.jcip:jcip-annotations:1.0")
+
+  testImplementation(Kotlin.Test.junit)
 }
+
 

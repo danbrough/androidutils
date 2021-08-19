@@ -105,7 +105,7 @@ object LogConfig {
   /**
    * How far to go back up the stack to get the line number and method name
    */
-  var STACK_DEPTH = 5
+  var STACK_DEPTH = 4
 
   lateinit var defaultLog: DBLog
 
