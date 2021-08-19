@@ -22,7 +22,7 @@ fun configureAndroid(tag: String) :DBLog {
   LogConfig.defaultLog = AndroidLog(tag)
   LogConfig.DEBUG = BuildConfig.DEBUG
   LogConfig.COLOURED = true
-  LogConfig.STACK_DEPTH = 5 
+  LogConfig.STACK_DEPTH = 5
   LogConfig.GET_LOG = { LogConfig.defaultLog }
   return LogConfig.defaultLog
 }

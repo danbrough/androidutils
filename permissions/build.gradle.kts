@@ -80,9 +80,9 @@ tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
 dependencies {
 
 
-  implementation("org.slf4j:slf4j-api:_")
+  implementation(project(":logging_core"))
   implementation(Kotlin.stdlib.jdk8)
-  api(KotlinX.coroutines.android)
+  implementation(KotlinX.coroutines.android)
   implementation(AndroidX.lifecycle.runtimeKtx)
 
   api("pub.devrel:easypermissions:_")

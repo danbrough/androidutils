@@ -88,10 +88,10 @@ dependencies {
   implementation(AndroidX.lifecycle.viewModelKtx)
   implementation(AndroidX.lifecycle.liveDataKtx)
   kapt("com.github.bumptech.glide:compiler:_")
-  api("com.github.bumptech.glide:glide:_")
+  implementation("com.github.bumptech.glide:glide:_")
 
   implementation("jp.wasabeef:glide-transformations:_")
-  api("com.mikepenz:iconics-core:_")
+  implementation("com.mikepenz:iconics-core:_")
 
 
   api(AndroidX.navigation.fragmentKtx)

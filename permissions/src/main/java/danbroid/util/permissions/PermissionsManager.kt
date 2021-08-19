@@ -103,5 +103,5 @@ object PermissionsManager {
 
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(PermissionsManager::class.java)
+private val log = danbroid.logging.getLog(PermissionsManager::class)
 
