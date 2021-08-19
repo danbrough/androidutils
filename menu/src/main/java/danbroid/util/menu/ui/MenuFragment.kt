@@ -86,4 +86,4 @@ class MenuFragment : Fragment(R.layout.fragment_menu_list) {
   }
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(MenuFragment::class.java)
+private val log = danbroid.logging.getLog(MenuFragment::class)

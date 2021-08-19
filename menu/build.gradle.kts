@@ -21,10 +21,6 @@ android {
     consumerProguardFiles("consumer-rules.pro")
   }
 
-  lint {
-    isAbortOnError = false
-  }
-
   buildFeatures {
     viewBinding = true
   }
@@ -79,11 +75,11 @@ afterEvaluate {
 dependencies {
 
   implementation(project(":misc"))
-  implementation("org.slf4j:slf4j-api:_")
+
 
   implementation(AndroidX.appCompat)
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
-
+  implementation(project(":logging_core"))
   implementation(project(":misc"))
   implementation(AndroidX.recyclerView)
   implementation(AndroidX.constraintLayout)
@@ -101,7 +97,6 @@ dependencies {
   api(AndroidX.navigation.fragmentKtx)
   api(AndroidX.navigation.uiKtx)
 
-  androidTestImplementation(project(":slf4j"))
   androidTestImplementation(AndroidX.test.rules)
   androidTestImplementation(AndroidX.test.runner)
   androidTestImplementation(AndroidX.test.core)

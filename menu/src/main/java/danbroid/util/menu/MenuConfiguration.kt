@@ -3,10 +3,11 @@ package danbroid.util.menu
 import android.net.Uri
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import org.slf4j.LoggerFactory
+
 
 object MenuConfiguration {
-  private val log = LoggerFactory.getLogger(MenuConfiguration::class.java)
+  private val log = danbroid.logging.getLog(MenuConfiguration::class)
+
 
   lateinit var rootMenu: () -> MenuItemBuilder
 

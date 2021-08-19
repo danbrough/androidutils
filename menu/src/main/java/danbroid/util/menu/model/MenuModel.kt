@@ -69,4 +69,4 @@ fun Fragment.menuViewModel(id: String = requireArguments().getString(MenuNavGrap
     MenuModel.createModel(this, id)
 
 
-private val log = org.slf4j.LoggerFactory.getLogger(MenuModel::class.java)
+private val log = danbroid.logging.getLog(MenuModel::class)

@@ -24,10 +24,6 @@ android {
     consumerProguardFiles("consumer-rules.pro")
   }
 
-  lint {
-    isAbortOnError = false
-  }
-
   compileOptions {
     sourceCompatibility = ProjectVersions.JAVA_VERSION
     targetCompatibility = ProjectVersions.JAVA_VERSION

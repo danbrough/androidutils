@@ -74,11 +74,6 @@ subprojects {
           from(sourceSets.getByName("main").java.srcDirs)
         }
 
-
-        lint {
-          isAbortOnError = false
-        }
-
         compileOptions {
           sourceCompatibility = ProjectVersions.JAVA_VERSION
           targetCompatibility = ProjectVersions.JAVA_VERSION

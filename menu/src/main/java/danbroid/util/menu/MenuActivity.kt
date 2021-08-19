@@ -62,4 +62,4 @@ abstract class MenuActivity(@LayoutRes layoutID: Int = R.layout.activity_main) :
   }
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(MenuActivity::class.java)
+private val log = danbroid.logging.getLog(MenuActivity::class)

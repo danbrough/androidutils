@@ -267,4 +267,4 @@ object MenuItemDiffCallback : DiffUtil.ItemCallback<MenuItem>() {
   }
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(MenuListAdapter::class.java)
+private val log = danbroid.logging.getLog(MenuListAdapter::class)

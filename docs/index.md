@@ -12,4 +12,3 @@
 | [menu](menu/index.md) |  |
 | [misc](misc/index.md) |  |
 | [permissions](permissions/index.md) |  |
-| [slf4j](slf4j/index.md) |  |

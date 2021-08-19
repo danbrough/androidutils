@@ -3,17 +3,18 @@ import java.util.*
 
 
 object ProjectVersions {
-  const val SDK_VERSION = 30
+  const val SDK_VERSION = 31
   const val MIN_SDK_VERSION = 19
-  const val BUILD_TOOLS_VERSION = "30.0.3"
+  const val BUILD_TOOLS_VERSION = "31.0.0"
   val JAVA_VERSION = JavaVersion.VERSION_1_8
-  val KOTLIN_JVM_TARGET = "11"
+  val KOTLIN_JVM_TARGET = "1.8"
   var BUILD_VERSION = 1
   var VERSION_OFFSET = 1
   const val GROUP_ID = "com.github.danbrough.androidutils"
   const val KEYSTORE_PASSWORD = ""
   var VERSION_FORMAT = ""
-  const val COMPOSE_VERSION = "1.1.0-alpha01"
+
+  val COMPOSE_VERSION = "1.1.0-alpha02"
 
   val VERSION_NAME: String
     get() = getVersionName()

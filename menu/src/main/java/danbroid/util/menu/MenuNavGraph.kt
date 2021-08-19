@@ -98,4 +98,4 @@ fun NavController.navigateToHome() =
     navigate(MenuNavGraph.action.to_home)
 
 
-private val log = org.slf4j.LoggerFactory.getLogger(MenuNavGraph::class.java)
+private val log = danbroid.logging.getLog(MenuNavGraph::class)

@@ -46,9 +46,6 @@ android {
     }
   }
 
-  lint {
-    isAbortOnError = false
-  }
 
   testOptions {
     unitTests.isIncludeAndroidResources = true

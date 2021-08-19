@@ -9,20 +9,18 @@ plugins {
 
 
 android {
-  compileSdkVersion(ProjectVersions.SDK_VERSION)
+  compileSdk = ProjectVersions.SDK_VERSION
   buildToolsVersion = ProjectVersions.BUILD_TOOLS_VERSION
 
   defaultConfig {
-    minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
-    targetSdkVersion(ProjectVersions.SDK_VERSION)
+    minSdk = ProjectVersions.MIN_SDK_VERSION
+    targetSdk = ProjectVersions.SDK_VERSION
     //versionCode = ProjectVersions.BUILD_VERSION
     //versionName = ProjectVersions.VERSION_NAME
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     consumerProguardFiles("consumer-rules.pro")
   }
-  lint {
-    isAbortOnError = false
-  }
+
   compileOptions {
     sourceCompatibility = ProjectVersions.JAVA_VERSION
     targetCompatibility = ProjectVersions.JAVA_VERSION
