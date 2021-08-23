@@ -120,11 +120,12 @@ fun DBLog.Level.colorInt(): Int = when (this) {
   else -> 31
 }
 
-fun configure(tag: String): DBLog {
+fun configure(tag: String, minLogLevel: DBLog.Level? = null, debug: Boolean = true, coloured: Boolean = true): DBLog {
   LogConfig.defaultLog = StdOutLog
   LogConfig.defaultLog.logName = tag
-  LogConfig.DEBUG = true
-  LogConfig.COLOURED = true
+  LogConfig.MIN_LOG_LEVEL = minLogLevel
+  LogConfig.DEBUG = debug
+  LogConfig.COLOURED = coloured
   LogConfig.GET_LOG = { LogConfig.defaultLog }
   return LogConfig.defaultLog
 }
