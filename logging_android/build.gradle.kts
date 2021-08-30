@@ -51,5 +51,5 @@ android {
 
 
 dependencies {
-  implementation(project(":logging_core"))
+  api(project(":logging_core"))
 }

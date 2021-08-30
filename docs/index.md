@@ -10,5 +10,6 @@
 | [logging_from_slf4j](logging_from_slf4j/index.md) |  |
 | [logging_to_slf4j](logging_to_slf4j/index.md) |  |
 | [menu](menu/index.md) |  |
+| [menu2](menu2/index.md) |  |
 | [misc](misc/index.md) |  |
 | [permissions](permissions/index.md) |  |
