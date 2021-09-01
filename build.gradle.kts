@@ -60,6 +60,27 @@ tasks.dokkaGfmMultiModule {
 }
 
 subprojects {
+
+  tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+
+    kotlinOptions {
+      jvmTarget = ProjectVersions.KOTLIN_JVM_VERSION
+      //languageVersion = "1.4"
+      // freeCompilerArgs = listOf("-Xjvm-default=enable")
+      listOf(
+          "kotlin.ExperimentalStdlibApi",
+          "kotlinx.serialization.InternalSerializationApi",
+          "kotlinx.coroutines.ExperimentalCoroutinesApi",
+          "kotlinx.serialization.ExperimentalSerializationApi",
+          "androidx.compose.material.ExperimentalMaterialApi",
+          "androidx.compose.foundation.ExperimentalFoundationApi",
+          "kotlin.time.ExperimentalTime"
+      ).map { "-Xopt-in=$it" }.also {
+        freeCompilerArgs = freeCompilerArgs + it
+      }
+    }
+  }
+
   afterEvaluate {
     (extensions.findByType(com.android.build.gradle.LibraryExtension::class)
         ?: extensions.findByType(com.android.build.gradle.AppExtension::class))?.apply {

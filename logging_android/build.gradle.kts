@@ -29,12 +29,7 @@ android {
     targetCompatibility = ProjectVersions.JAVA_VERSION
   }
 
-  kotlinOptions {
-    jvmTarget = ProjectVersions.KOTLIN_JVM_TARGET
-    freeCompilerArgs = mutableListOf("-Xopt-in=kotlin.ExperimentalStdlibApi").also {
-      it.addAll(freeCompilerArgs)
-    }
-  }
+
 
   buildTypes {
 

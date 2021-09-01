@@ -7,5 +7,4 @@
 | Name |
 |---|
 | [danbroid.util.menu](menu/danbroid.util.menu/index.md) |
-| [danbroid.util.menu.model](menu/danbroid.util.menu.model/index.md) |
 | [danbroid.util.menu.ui](menu/danbroid.util.menu.ui/index.md) |

@@ -2,6 +2,7 @@ plugins {
   id("com.android.library")
   kotlin("android")
   kotlin("kapt")
+  kotlin("plugin.serialization")
   id("maven-publish")
   id("org.jetbrains.dokka")
 }
@@ -22,7 +23,14 @@ android {
   }
 
   buildFeatures {
-    viewBinding = true
+    viewBinding = false
+  }
+
+  buildFeatures {
+    compose = true
+  }
+  composeOptions {
+    kotlinCompilerExtensionVersion = ProjectVersions.COMPOSE_VERSION
   }
 
   compileOptions {
@@ -30,78 +38,39 @@ android {
     targetCompatibility = ProjectVersions.JAVA_VERSION
   }
 
-  kotlinOptions {
-    jvmTarget = "1.8"
-    //freeCompilerArgs = listOf("-Xjsr305=strict")
-
-    freeCompilerArgs = mutableListOf("-Xopt-in=kotlin.ExperimentalStdlibApi").also {
-      it.addAll(freeCompilerArgs)
-    }
-
-  }
-
   buildTypes {
     getByName("release") {
       isMinifyEnabled = false
       proguardFiles(
-          getDefaultProguardFile("proguard-android-optimize.txt"),
-          "proguard-rules.pro"
+        getDefaultProguardFile("proguard-android-optimize.txt"),
+        "proguard-rules.pro"
       )
     }
   }
-
-
 }
 
-/*val sourcesJar by tasks.registering(Jar::class) {
-  archiveClassifier.set("sources")
-  from(android.sourceSets.getByName("main").java.srcDirs)
-}
 
-afterEvaluate {
-  publishing {
-    publications {
-      val release by registering(MavenPublication::class) {
-        from(components["release"])
-        artifact(sourcesJar.get())
-        artifactId = "menu"
-        groupId = ProjectVersions.GROUP_ID
-        version = ProjectVersions.VERSION_NAME
-      }
-    }
-  }
-}*/
 
 dependencies {
 
-  implementation(project(":misc"))
 
-
-  implementation(AndroidX.appCompat)
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
-  implementation(project(":logging_core"))
-  implementation(project(":misc"))
-  implementation(AndroidX.recyclerView)
-  implementation(AndroidX.constraintLayout)
-  implementation(KotlinX.coroutines.android)
-  implementation(AndroidX.lifecycle.runtimeKtx)
-  implementation(AndroidX.lifecycle.viewModelKtx)
-  implementation(AndroidX.lifecycle.liveDataKtx)
-  kapt("com.github.bumptech.glide:compiler:_")
-  implementation("com.github.bumptech.glide:glide:_")
+  implementation(KotlinX.serialization.json)
+  implementation("com.github.danbrough.androidutils:misc:_")
 
-  implementation("jp.wasabeef:glide-transformations:_")
-  implementation("com.mikepenz:iconics-core:_")
+  implementation("com.github.danbrough.androidutils:logging_core:_")
+  implementation("com.github.danbrough.androidutils:logging_android:_")
+  implementation(COIL)
+  implementation(COIL.compose)
+  implementation(AndroidX.compose.runtime)
+  implementation(AndroidX.compose.material)
+  implementation(AndroidX.compose.foundation)
+  implementation(AndroidX.compose.ui.tooling)
+  implementation(AndroidX.constraintLayoutCompose)
 
-
-  api(AndroidX.navigation.fragmentKtx)
-  api(AndroidX.navigation.uiKtx)
-
-  androidTestImplementation(AndroidX.test.rules)
-  androidTestImplementation(AndroidX.test.runner)
-  androidTestImplementation(AndroidX.test.core)
-
-  testImplementation(Testing.junit4)
-
+  implementation(AndroidX.navigation.compose)
+  implementation(AndroidX.activity.compose)
+  implementation(AndroidX.lifecycle.viewModelCompose)
+  implementation(AndroidX.compose.material.icons.extended)
 }
 
