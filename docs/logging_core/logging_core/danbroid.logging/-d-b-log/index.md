@@ -37,5 +37,5 @@ interface [DBLog](index.md)
 
 | Name |
 |---|
-| [NullLog](../-null-log/index.md) |
+| [NoOpLog](../-no-op-log/index.md) |
 | [StdOutLog](../-std-out-log/index.md) |

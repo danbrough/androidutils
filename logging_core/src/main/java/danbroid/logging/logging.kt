@@ -120,8 +120,8 @@ fun DBLog.Level.colorInt(): Int = when (this) {
   else -> 31
 }
 
-fun configure(tag: String, minLogLevel: DBLog.Level? = null, debug: Boolean = true, coloured: Boolean = true): DBLog {
-  LogConfig.defaultLog = StdOutLog
+fun configure(tag: String, defaultLog:DBLog = danbroid.logging.NoOpLog, minLogLevel: DBLog.Level? = null, debug: Boolean = true, coloured: Boolean = true): DBLog {
+  LogConfig.defaultLog = defaultLog
   LogConfig.defaultLog.logName = tag
   LogConfig.MIN_LOG_LEVEL = minLogLevel
   LogConfig.DEBUG = debug
@@ -152,10 +152,10 @@ inline fun DetailedDecorator(level: DBLog.Level, msg: String): String {
 inline fun getLog(kclass: KClass<*>) = getLog(kclass.qualifiedName!!)
 
 @Suppress("OVERRIDE_BY_INLINE")
-inline fun getLog(tag: String) = LogConfig.GET_LOG(tag) ?: NullLog
+inline fun getLog(tag: String) = LogConfig.GET_LOG(tag) ?: NoOpLog
 
-object NullLog : DBLog {
-  override var logName: String = "NullLog"
+object NoOpLog : DBLog {
+  override var logName: String = "NoOpLog"
 
   @Suppress("OVERRIDE_BY_INLINE")
   override inline fun write_log_native(
@@ -163,8 +163,7 @@ object NullLog : DBLog {
       level: DBLog.Level,
       msg: CharSequence?,
       error: Throwable?
-  ) {
-  }
+  )  = Unit
 
 }
 
