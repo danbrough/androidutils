@@ -120,7 +120,7 @@ fun DBLog.Level.colorInt(): Int = when (this) {
   else -> 31
 }
 
-fun configure(tag: String, defaultLog:DBLog = danbroid.logging.NoOpLog, minLogLevel: DBLog.Level? = null, debug: Boolean = true, coloured: Boolean = true): DBLog {
+fun configure(tag: String, defaultLog: DBLog = NoOpLog, minLogLevel: DBLog.Level? = null, debug: Boolean = true, coloured: Boolean = false): DBLog {
   LogConfig.defaultLog = defaultLog
   LogConfig.defaultLog.logName = tag
   LogConfig.MIN_LOG_LEVEL = minLogLevel
@@ -148,10 +148,8 @@ inline fun DetailedDecorator(level: DBLog.Level, msg: String): String {
 }
 
 
-@Suppress("OVERRIDE_BY_INLINE")
 inline fun getLog(kclass: KClass<*>) = getLog(kclass.qualifiedName!!)
 
-@Suppress("OVERRIDE_BY_INLINE")
 inline fun getLog(tag: String) = LogConfig.GET_LOG(tag) ?: NoOpLog
 
 object NoOpLog : DBLog {
@@ -163,7 +161,7 @@ object NoOpLog : DBLog {
       level: DBLog.Level,
       msg: CharSequence?,
       error: Throwable?
-  )  = Unit
+  ) = Unit
 
 }
 
