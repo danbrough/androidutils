@@ -17,7 +17,7 @@ plugins {
 }
 
 sourceSets.main {
-  java.srcDirs("src/main/java", "../logging_core/src/main/myKotlin")
+  java.srcDirs("src/main/java", "../logging_core/src/main/java")
 }
 
 
