@@ -4,7 +4,8 @@ $dokka.location:danbroid.logging////PointingToDeclaration/logging_to_slf4j/logg
 $dokka.location:danbroid.logging//ColouredDecorator/#danbroid.logging.DBLog.Level#kotlin.String/PointingToDeclaration/logging_core/logging_core/danbroid.logging/-coloured-decorator.md
 $dokka.location:danbroid.logging//DetailedDecorator/#danbroid.logging.DBLog.Level#kotlin.String/PointingToDeclaration/logging_core/logging_core/danbroid.logging/-detailed-decorator.md
 $dokka.location:danbroid.logging//colorInt/danbroid.logging.DBLog.Level#/PointingToDeclaration/logging_core/logging_core/danbroid.logging/color-int.md
-$dokka.location:danbroid.logging//configure/#kotlin.String#danbroid.logging.DBLog#danbroid.logging.DBLog.Level?#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/logging_jvm/logging_jvm/danbroid.logging/configure.md
+$dokka.location:danbroid.logging//configure/#kotlin.String#DBLog#DBLog.Level?#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/logging_jvm/logging_jvm/danbroid.logging/configure.md
+$dokka.location:danbroid.logging//configure/#kotlin.String#danbroid.logging.DBLog#danbroid.logging.DBLog.Level?#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/logging_android/logging_android/danbroid.logging/configure.md
 $dokka.location:danbroid.logging//getLog/#kotlin.String/PointingToDeclaration/logging_core/logging_core/danbroid.logging/get-log.md
 $dokka.location:danbroid.logging//getLog/#kotlin.reflect.KClass[*]/PointingToDeclaration/logging_core/logging_core/danbroid.logging/get-log.md
 $dokka.location:danbroid.logging/AndroidLog///PointingToDeclaration/logging_android/logging_android/danbroid.logging/-android-log/index.md
