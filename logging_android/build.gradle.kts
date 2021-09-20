@@ -45,6 +45,5 @@ android {
 
 
 
-dependencies {
-  api(project(":logging_core"))
+dependencies { api(project(":logging_core"))
 }
