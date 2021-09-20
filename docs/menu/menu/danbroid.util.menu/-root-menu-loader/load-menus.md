@@ -3,4 +3,4 @@
 # loadMenus
 
 [androidJvm]\
-open override fun [loadMenus](load-menus.md)(menuID: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): Flow<[MenuState](../-menu-state/index.md)>?
+open override fun [loadMenus](load-menus.md)(menuID: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): Flow&lt;[MenuState](../-menu-state/index.md)&gt;?

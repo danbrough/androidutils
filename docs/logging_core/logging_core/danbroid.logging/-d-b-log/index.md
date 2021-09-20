@@ -9,7 +9,7 @@ interface [DBLog](index.md)
 
 | Name | Summary |
 |---|---|
-| [Level](-level/index.md) | [jvm]<br>enum [Level](-level/index.md) : [Enum](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html)<[DBLog.Level](-level/index.md)> |
+| [Level](-level/index.md) | [jvm]<br>enum [Level](-level/index.md) : [Enum](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html)&lt;[DBLog.Level](-level/index.md)&gt; |
 
 ## Functions
 

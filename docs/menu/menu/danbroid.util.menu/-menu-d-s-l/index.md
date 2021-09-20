@@ -3,6 +3,6 @@
 # MenuDSL
 
 [androidJvm]\
-@[DslMarker](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-dsl-marker/index.html)()
+@[DslMarker](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-dsl-marker/index.html)
 
 annotation class [MenuDSL](index.md)

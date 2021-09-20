@@ -9,7 +9,7 @@ interface [MenuLoader](index.md)
 
 | Name | Summary |
 |---|---|
-| [loadMenus](load-menus.md) | [androidJvm]<br>abstract fun [loadMenus](load-menus.md)(menuID: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): Flow<[MenuState](../-menu-state/index.md)>? |
+| [loadMenus](load-menus.md) | [androidJvm]<br>abstract fun [loadMenus](load-menus.md)(menuID: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): Flow&lt;[MenuState](../-menu-state/index.md)&gt;? |
 
 ## Inheritors
 

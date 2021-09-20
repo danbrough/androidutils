@@ -9,5 +9,5 @@ object [RootMenuLoader](index.md) : [MenuLoader](../-menu-loader/index.md)
 
 | Name | Summary |
 |---|---|
-| [loadMenus](load-menus.md) | [androidJvm]<br>open override fun [loadMenus](load-menus.md)(menuID: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): Flow<[MenuState](../-menu-state/index.md)>? |
+| [loadMenus](load-menus.md) | [androidJvm]<br>open override fun [loadMenus](load-menus.md)(menuID: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): Flow&lt;[MenuState](../-menu-state/index.md)&gt;? |
 | [register](register.md) | [androidJvm]<br>fun [register](register.md)(vararg loaders: [MenuLoader](../-menu-loader/index.md)) |

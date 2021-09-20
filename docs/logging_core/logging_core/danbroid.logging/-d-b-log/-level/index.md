@@ -3,7 +3,7 @@
 # Level
 
 [jvm]\
-enum [Level](index.md) : [Enum](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html)<[DBLog.Level](index.md)>
+enum [Level](index.md) : [Enum](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html)&lt;[DBLog.Level](index.md)&gt;
 
 ## Entries
 
@@ -19,8 +19,8 @@ enum [Level](index.md) : [Enum](https://kotlinlang.org/api/latest/jvm/stdlib/kot
 
 | Name | Summary |
 |---|---|
-| [name](index.md#-194217142%2FProperties%2F2127839086) | [jvm]<br>val [name](index.md#-194217142%2FProperties%2F2127839086): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [ordinal](index.md#-1127600204%2FProperties%2F2127839086) | [jvm]<br>val [ordinal](index.md#-1127600204%2FProperties%2F2127839086): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [name](-t-r-a-c-e/index.md#-372974862%2FProperties%2F2127839086) | [jvm]<br>val [name](-t-r-a-c-e/index.md#-372974862%2FProperties%2F2127839086): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [ordinal](-t-r-a-c-e/index.md#-739389684%2FProperties%2F2127839086) | [jvm]<br>val [ordinal](-t-r-a-c-e/index.md#-739389684%2FProperties%2F2127839086): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 
 ## Extensions
 

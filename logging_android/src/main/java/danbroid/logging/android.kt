@@ -17,13 +17,11 @@ class AndroidLog(override var logName: String) : DBLog {
   }
 }
 
-
-fun configureAndroid(tag: String) :DBLog {
-  LogConfig.defaultLog = AndroidLog(tag)
-  LogConfig.DEBUG = BuildConfig.DEBUG
-  LogConfig.COLOURED = true
+fun configure(tag: String, defaultLog: DBLog = AndroidLog(tag), minLogLevel: DBLog.Level? = null, debug: Boolean = BuildConfig.DEBUG, coloured: Boolean = false): DBLog {
+  LogConfig.defaultLog = defaultLog
+  LogConfig.DEBUG = debug
+  LogConfig.COLOURED = coloured
   LogConfig.STACK_DEPTH = 5
   LogConfig.GET_LOG = { LogConfig.defaultLog }
   return LogConfig.defaultLog
 }
-

@@ -3,4 +3,4 @@
 # menus
 
 [androidJvm]\
-val [menus](menus.md): StateFlow<[MenuState](../-menu-state/index.md)>
+val [menus](menus.md): StateFlow&lt;[MenuState](../-menu-state/index.md)&gt;

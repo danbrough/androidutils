@@ -3,7 +3,7 @@
 # Event
 
 [androidJvm]\
-open class [Event](index.md)<out [T](index.md)>(**content**: [T](index.md))
+open class [Event](index.md)&lt;out [T](index.md)&gt;(content: [T](index.md))
 
 Used as a wrapper for data that is exposed via a LiveData that represents an event.
 
@@ -11,7 +11,7 @@ Used as a wrapper for data that is exposed via a LiveData that represents an eve
 
 | | |
 |---|---|
-| [Event](-event.md) | [androidJvm]<br>fun <out [T](index.md)> [Event](-event.md)(content: [T](index.md)) |
+| [Event](-event.md) | [androidJvm]<br>fun &lt;out [T](index.md)&gt; [Event](-event.md)(content: [T](index.md)) |
 
 ## Functions
 

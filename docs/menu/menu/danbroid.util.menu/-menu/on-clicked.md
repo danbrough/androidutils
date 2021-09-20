@@ -3,4 +3,4 @@
 # onClicked
 
 [androidJvm]\
-var [onClicked](on-clicked.md): suspend [MenuContext](../../danbroid.util.menu.ui/-menu-context/index.md).() -> [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)? = null
+var [onClicked](on-clicked.md): suspend [MenuContext](../../danbroid.util.menu.ui/-menu-context/index.md).() -&gt; [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)? = null

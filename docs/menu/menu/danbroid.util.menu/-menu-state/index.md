@@ -9,9 +9,9 @@ sealed class [MenuState](index.md)
 
 | Name | Summary |
 |---|---|
-| [ERROR](-e-r-r-o-r/index.md) | [androidJvm]<br>data class [ERROR](-e-r-r-o-r/index.md)(**message**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [MenuState](index.md) |
-| [LOADED](-l-o-a-d-e-d/index.md) | [androidJvm]<br>data class [LOADED](-l-o-a-d-e-d/index.md)(**title**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), **menus**: [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)<[Menu](../-menu/index.md)>) : [MenuState](index.md) |
-| [LOADING](-l-o-a-d-i-n-g/index.md) | [androidJvm]<br>data class [LOADING](-l-o-a-d-i-n-g/index.md)(**title**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [MenuState](index.md) |
+| [ERROR](-e-r-r-o-r/index.md) | [androidJvm]<br>data class [ERROR](-e-r-r-o-r/index.md)(message: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [MenuState](index.md) |
+| [LOADED](-l-o-a-d-e-d/index.md) | [androidJvm]<br>data class [LOADED](-l-o-a-d-e-d/index.md)(title: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), menus: [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)&lt;[Menu](../-menu/index.md)&gt;) : [MenuState](index.md) |
+| [LOADING](-l-o-a-d-i-n-g/index.md) | [androidJvm]<br>data class [LOADING](-l-o-a-d-i-n-g/index.md)(title: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [MenuState](index.md) |
 
 ## Inheritors
 

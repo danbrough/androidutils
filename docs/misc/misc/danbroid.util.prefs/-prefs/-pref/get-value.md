@@ -3,4 +3,4 @@
 # getValue
 
 [androidJvm]\
-operator fun <[T](get-value.md)> [getValue](get-value.md)(thisRef: [Prefs](../index.md), property: [KProperty](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html)<*>): [T](get-value.md)
+operator fun &lt;[T](get-value.md)&gt; [getValue](get-value.md)(thisRef: [Prefs](../index.md), property: [KProperty](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html)&lt;*&gt;): [T](get-value.md)

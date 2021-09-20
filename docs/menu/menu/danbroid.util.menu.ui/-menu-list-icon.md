@@ -4,6 +4,6 @@
 
 [androidJvm]\
 
-@Composable()
+@Composable
 
 fun [MenuListIcon](-menu-list-icon.md)(_icon: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, title: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = "")

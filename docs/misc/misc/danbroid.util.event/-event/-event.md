@@ -3,4 +3,4 @@
 # Event
 
 [androidJvm]\
-fun <out [T](index.md)> [Event](-event.md)(content: [T](index.md))
+fun &lt;out [T](index.md)&gt; [Event](-event.md)(content: [T](index.md))

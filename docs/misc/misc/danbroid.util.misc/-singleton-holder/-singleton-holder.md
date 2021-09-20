@@ -3,4 +3,4 @@
 # SingletonHolder
 
 [androidJvm]\
-fun <out [T](index.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), in [A](index.md)> [SingletonHolder](-singleton-holder.md)(creator: ([A](index.md)) -> [T](index.md))
+fun &lt;out [T](index.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), in [A](index.md)&gt; [SingletonHolder](-singleton-holder.md)(creator: ([A](index.md)) -&gt; [T](index.md))

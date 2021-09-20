@@ -3,4 +3,4 @@
 # LocalMenuContext
 
 [androidJvm]\
-val [LocalMenuContext](-local-menu-context.md): ProvidableCompositionLocal<[MenuContext](-menu-context/index.md)>
+val [LocalMenuContext](-local-menu-context.md): ProvidableCompositionLocal&lt;[MenuContext](-menu-context/index.md)&gt;

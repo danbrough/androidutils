@@ -3,4 +3,4 @@
 # creator
 
 [androidJvm]\
-val [creator](creator.md): ([A](index.md)) -> [T](index.md)
+val [creator](creator.md): ([A](index.md)) -&gt; [T](index.md)

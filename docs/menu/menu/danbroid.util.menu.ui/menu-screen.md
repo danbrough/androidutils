@@ -4,6 +4,6 @@
 
 [androidJvm]\
 
-@Composable()
+@Composable
 
-fun [menuScreen](menu-screen.md)(block: LazyListScope.() -> [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html))
+fun [menuScreen](menu-screen.md)(block: LazyListScope.() -&gt; [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html))

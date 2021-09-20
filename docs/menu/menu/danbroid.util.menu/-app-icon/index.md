@@ -3,7 +3,7 @@
 # AppIcon
 
 [androidJvm]\
-interface [AppIcon](index.md)<[T](index.md) : [Enum](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html)<[T](index.md)>>
+interface [AppIcon](index.md)&lt;[T](index.md) : [Enum](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html)&lt;[T](index.md)&gt;&gt;
 
 ## Types
 

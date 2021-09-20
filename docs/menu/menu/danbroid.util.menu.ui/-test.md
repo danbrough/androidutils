@@ -4,8 +4,8 @@
 
 [androidJvm]\
 
-@Composable()
+@Composable
 
-@Preview()
+@Preview
 
 fun [Test](-test.md)()

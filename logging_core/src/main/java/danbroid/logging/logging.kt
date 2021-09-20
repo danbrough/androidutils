@@ -120,16 +120,6 @@ fun DBLog.Level.colorInt(): Int = when (this) {
   else -> 31
 }
 
-fun configure(tag: String, defaultLog: DBLog = NoOpLog, minLogLevel: DBLog.Level? = null, debug: Boolean = true, coloured: Boolean = false): DBLog {
-  LogConfig.defaultLog = defaultLog
-  LogConfig.defaultLog.logName = tag
-  LogConfig.MIN_LOG_LEVEL = minLogLevel
-  LogConfig.DEBUG = debug
-  LogConfig.COLOURED = coloured
-  LogConfig.GET_LOG = { LogConfig.defaultLog }
-  return LogConfig.defaultLog
-}
-
 
 @Suppress("OVERRIDE_BY_INLINE")
 fun ColouredDecorator(level: DBLog.Level, msg: String): String =

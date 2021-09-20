@@ -9,5 +9,5 @@
 
 | Name | Summary |
 |---|---|
-| [name](name.md) | [jvm]<br>val [name](name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [ordinal](ordinal.md) | [jvm]<br>val [ordinal](ordinal.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [name](../-t-r-a-c-e/index.md#-372974862%2FProperties%2F2127839086) | [jvm]<br>val [name](../-t-r-a-c-e/index.md#-372974862%2FProperties%2F2127839086): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [ordinal](../-t-r-a-c-e/index.md#-739389684%2FProperties%2F2127839086) | [jvm]<br>val [ordinal](../-t-r-a-c-e/index.md#-739389684%2FProperties%2F2127839086): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |

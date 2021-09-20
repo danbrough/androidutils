@@ -4,6 +4,6 @@
 
 [androidJvm]\
 
-@Composable()
+@Composable
 
 fun [Menus](-menus.md)(menuState: [MenuState](../danbroid.util.menu/-menu-state/index.md))

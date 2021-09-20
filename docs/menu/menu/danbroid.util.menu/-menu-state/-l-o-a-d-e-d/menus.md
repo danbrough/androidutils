@@ -3,4 +3,4 @@
 # menus
 
 [androidJvm]\
-val [menus](menus.md): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)<[Menu](../../-menu/index.md)>
+val [menus](menus.md): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)&lt;[Menu](../../-menu/index.md)&gt;

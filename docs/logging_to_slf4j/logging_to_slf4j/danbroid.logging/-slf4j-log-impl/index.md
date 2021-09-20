@@ -3,7 +3,7 @@
 # Slf4jLogImpl
 
 [jvm]\
-class [Slf4jLogImpl](index.md)(**logName**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [DBLog](../../../../logging_android/danbroid.logging/-d-b-log/index.md)
+class [Slf4jLogImpl](index.md)(logName: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [DBLog](../../../../logging_android/danbroid.logging/-d-b-log/index.md)
 
 ## Functions
 

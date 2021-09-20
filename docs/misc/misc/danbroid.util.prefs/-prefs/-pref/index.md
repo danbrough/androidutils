@@ -3,9 +3,9 @@
 # Pref
 
 [androidJvm]\
-@[ExperimentalStdlibApi](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-stdlib-api/index.html)()
+@[ExperimentalStdlibApi](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-stdlib-api/index.html)
 
-inner class [Pref](index.md)(**defValue**: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?)
+inner class [Pref](index.md)(defValue: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?)
 
 val message:String by Pref("default value") var count:Int? by Pref(null)
 
@@ -19,8 +19,8 @@ val message:String by Pref("default value") var count:Int? by Pref(null)
 
 | Name | Summary |
 |---|---|
-| [getValue](get-value.md) | [androidJvm]<br>operator fun <[T](get-value.md)> [getValue](get-value.md)(thisRef: [Prefs](../index.md), property: [KProperty](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html)<*>): [T](get-value.md) |
-| [setValue](set-value.md) | [androidJvm]<br>operator fun <[T](set-value.md)> [setValue](set-value.md)(thisRef: [Prefs](../index.md), property: [KProperty](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html)<*>, value: [T](set-value.md)) |
+| [getValue](get-value.md) | [androidJvm]<br>operator fun &lt;[T](get-value.md)&gt; [getValue](get-value.md)(thisRef: [Prefs](../index.md), property: [KProperty](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html)&lt;*&gt;): [T](get-value.md) |
+| [setValue](set-value.md) | [androidJvm]<br>operator fun &lt;[T](set-value.md)&gt; [setValue](set-value.md)(thisRef: [Prefs](../index.md), property: [KProperty](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html)&lt;*&gt;, value: [T](set-value.md)) |
 
 ## Properties
 

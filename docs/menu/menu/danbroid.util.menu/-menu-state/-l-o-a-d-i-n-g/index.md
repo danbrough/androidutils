@@ -3,7 +3,7 @@
 # LOADING
 
 [androidJvm]\
-data class [LOADING](index.md)(**title**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [MenuState](../index.md)
+data class [LOADING](index.md)(title: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [MenuState](../index.md)
 
 ## Properties
 

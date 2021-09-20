@@ -3,4 +3,4 @@
 # register
 
 [androidJvm]\
-fun [register](register.md)(vararg icons: [AppIcon](../index.md)<*>)
+fun [register](register.md)(vararg icons: [AppIcon](../index.md)&lt;*&gt;)

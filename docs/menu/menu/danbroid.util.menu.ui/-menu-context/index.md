@@ -3,7 +3,7 @@
 # MenuContext
 
 [androidJvm]\
-open class [MenuContext](index.md)(**id**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), **context**: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), **navController**: [NavHostController](https://developer.android.com/reference/kotlin/androidx/navigation/NavHostController.html), **snackbarHostState**: SnackbarHostState?)
+open class [MenuContext](index.md)(id: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), navController: [NavHostController](https://developer.android.com/reference/kotlin/androidx/navigation/NavHostController.html), snackbarHostState: SnackbarHostState?)
 
 ## Types
 

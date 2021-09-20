@@ -3,7 +3,7 @@
 # ERROR
 
 [androidJvm]\
-data class [ERROR](index.md)(**message**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [MenuState](../index.md)
+data class [ERROR](index.md)(message: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [MenuState](../index.md)
 
 ## Properties
 

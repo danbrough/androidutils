@@ -3,4 +3,4 @@
 # creator
 
 [androidJvm]\
-var [creator](creator.md): ([A](index.md), [B](index.md), [C](index.md)) -> [T](index.md)?
+var [creator](creator.md): ([A](index.md), [B](index.md), [C](index.md)) -&gt; [T](index.md)?

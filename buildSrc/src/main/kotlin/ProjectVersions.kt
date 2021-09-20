@@ -14,7 +14,7 @@ object ProjectVersions {
   const val KEYSTORE_PASSWORD = ""
   var VERSION_FORMAT = ""
 
-  val COMPOSE_VERSION = "1.1.0-alpha02"
+  val COMPOSE_VERSION = "1.1.0-alpha04"
 
   val VERSION_NAME: String
     get() = getVersionName()
