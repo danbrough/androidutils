@@ -16,9 +16,9 @@ plugins {
   // kotlin("plugin.serialization")
 }
 
-sourceSets.main {
+/*sourceSets.main {
   java.srcDirs("src/main/java", "../logging_core/src/main/java")
-}
+}*/
 
 
 java {
@@ -62,7 +62,7 @@ publishing {
 dependencies {
   // implementation("net.jcip:jcip-annotations:1.0")
 
-  //api(project(":logging_core"))
+  api(project(":logging_core"))
   testImplementation(Kotlin.Test.junit)
 }
 

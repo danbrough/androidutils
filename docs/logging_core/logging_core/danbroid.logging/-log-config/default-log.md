@@ -3,4 +3,6 @@
 # defaultLog
 
 [jvm]\
-lateinit var [defaultLog](default-log.md): [DBLog](../-d-b-log/index.md)
+var [defaultLog](default-log.md): [DBLog](../-d-b-log/index.md)? = null
+
+The default return value of [GET_LOG](-g-e-t_-l-o-g.md). default: null

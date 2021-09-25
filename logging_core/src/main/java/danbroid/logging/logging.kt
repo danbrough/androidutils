@@ -37,12 +37,12 @@ interface DBLog {
     var newMsg = "$msg"
 
     if (LogConfig.DETAILED)
-      newMsg = DetailedDecorator(level, newMsg)
+      newMsg = detailedDecorator(level, newMsg)
 
     if (error != null) newMsg += ": " + getStackTraceString(error)
 
     if (LogConfig.COLOURED)
-      newMsg = ColouredDecorator(level, newMsg)
+      newMsg = colouredDecorator(level, newMsg)
 
     write_log_native(
         logName,
@@ -84,7 +84,15 @@ interface DBLog {
 
 object LogConfig {
 
+  /**
+   * Whether the [DBLog.dtrace],[DBLog.ddebug] .. functions are enabled.
+   */
   var DEBUG = true
+
+  /**
+   * The default return value of [GET_LOG]. default: null
+   */
+  var defaultLog: DBLog? = null
 
   var MIN_LOG_LEVEL: DBLog.Level? = null
 
@@ -96,18 +104,17 @@ object LogConfig {
   var COLOURED = false
 
   /**
-   * Apply the [DetailedDecorator]. default: true
+   * Apply the [detailedDecorator]. default: true
    */
   var DETAILED = true
 
-  var GET_LOG: (String) -> DBLog? = { StdOutLog }
+  var GET_LOG: (String) -> DBLog? = { defaultLog }
 
   /**
    * How far to go back up the stack to get the line number and method name
    */
   var STACK_DEPTH = 4
 
-  lateinit var defaultLog: DBLog
 
 }
 
@@ -122,12 +129,12 @@ fun DBLog.Level.colorInt(): Int = when (this) {
 
 
 @Suppress("OVERRIDE_BY_INLINE")
-fun ColouredDecorator(level: DBLog.Level, msg: String): String =
+fun colouredDecorator(level: DBLog.Level, msg: String): String =
     "\u001b[0;${level.colorInt()}m${msg}\u001b[0m"
 
 
 @Suppress("OVERRIDE_BY_INLINE")
-inline fun DetailedDecorator(level: DBLog.Level, msg: String): String {
+inline fun detailedDecorator(level: DBLog.Level, msg: String): String {
   val thread = Thread.currentThread()
   val stackElements = thread.stackTrace
 

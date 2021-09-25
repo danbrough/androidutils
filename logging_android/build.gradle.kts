@@ -29,8 +29,6 @@ android {
     targetCompatibility = ProjectVersions.JAVA_VERSION
   }
 
-
-
   buildTypes {
 
     getByName("release") {
@@ -45,5 +43,6 @@ android {
 
 
 
-dependencies { api(project(":logging_core"))
+dependencies {
+  api(project(":logging_core"))
 }
