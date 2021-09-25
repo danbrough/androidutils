@@ -1,9 +1,10 @@
 package danbroid.logging
 
 
-fun configure(tag: String, defaultLog: DBLog = NoOpLog, minLogLevel: DBLog.Level? = null, debug: Boolean = true, coloured: Boolean = false): DBLog {
-  LogConfig.defaultLog = defaultLog
-  LogConfig.defaultLog.logName = tag
+fun configure(tag: String, defaultLog: DBLog = StdOutLog, minLogLevel: DBLog.Level? = null, debug: Boolean = true, coloured: Boolean = false): DBLog? {
+  LogConfig.defaultLog = defaultLog.also {
+    it.logName = tag
+  }
   LogConfig.MIN_LOG_LEVEL = minLogLevel
   LogConfig.DEBUG = debug
   LogConfig.COLOURED = coloured

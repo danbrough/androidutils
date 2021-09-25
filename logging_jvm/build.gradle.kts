@@ -7,18 +7,8 @@ plugins {
   kotlin("jvm")
   `java-library`
   `maven-publish`
-  //kotlin("kapt")
-
-  // kotlin("plugin.serialization")
   id("org.jetbrains.dokka")
-  // `java-test-fixtures`
-  //id("com.google.protobuf")
-  // kotlin("plugin.serialization")
 }
-
-/*sourceSets.main {
-  java.srcDirs("src/main/java", "../logging_core/src/main/java")
-}*/
 
 
 java {
@@ -60,9 +50,8 @@ publishing {
 
 
 dependencies {
-  // implementation("net.jcip:jcip-annotations:1.0")
-
   api(project(":logging_core"))
+  implementation(project(mapOf("path" to ":logging_core")))
   testImplementation(Kotlin.Test.junit)
 }
 
