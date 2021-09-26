@@ -67,7 +67,7 @@ actual fun configure(
     MIN_LOG_LEVEL = minLogLevel
     DEBUG = debug
     COLOURED = coloured
-    STACK_DEPTH = 4
+    STACK_DEPTH = 6
     GET_LOG = { this.defaultLog }
   }.defaultLog!!
 
