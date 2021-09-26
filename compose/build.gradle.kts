@@ -47,7 +47,25 @@ android {
       )
     }
   }
+  val sourcesJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("sources")
+    from(sourceSets.getByName("main").java.srcDirs)
+  }
 
+  afterEvaluate {
+
+    publishing {
+      publications {
+        val release by registering(MavenPublication::class) {
+          from(components["release"])
+          artifact(sourcesJar.get())
+          artifactId = project.name
+          groupId = ProjectVersions.GROUP_ID
+          version = ProjectVersions.VERSION_NAME
+        }
+      }
+    }
+  }
 
 }
 

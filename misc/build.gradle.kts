@@ -14,7 +14,7 @@ android {
   buildToolsVersion = ProjectVersions.BUILD_TOOLS_VERSION
 
   defaultConfig {
-    minSdk  = 16
+    minSdk = 16
     targetSdk = ProjectVersions.SDK_VERSION
     //versionCode = ProjectVersions.BUILD_VERSION
     //versionName = ProjectVersions.VERSION_NAME
@@ -45,6 +45,25 @@ android {
     }
   }
 
+  val sourcesJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("sources")
+    from(sourceSets.getByName("main").java.srcDirs)
+  }
+
+  afterEvaluate {
+
+    publishing {
+      publications {
+        val release by registering(MavenPublication::class) {
+          from(components["release"])
+          artifact(sourcesJar.get())
+          artifactId = project.name
+          groupId = ProjectVersions.GROUP_ID
+          version = ProjectVersions.VERSION_NAME
+        }
+      }
+    }
+  }
 
 }
 

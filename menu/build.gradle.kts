@@ -42,9 +42,29 @@ android {
     getByName("release") {
       isMinifyEnabled = false
       proguardFiles(
-        getDefaultProguardFile("proguard-android-optimize.txt"),
-        "proguard-rules.pro"
+          getDefaultProguardFile("proguard-android-optimize.txt"),
+          "proguard-rules.pro"
       )
+    }
+  }
+
+  val sourcesJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("sources")
+    from(sourceSets.getByName("main").java.srcDirs)
+  }
+
+  afterEvaluate {
+
+    publishing {
+      publications {
+        val release by registering(MavenPublication::class) {
+          from(components["release"])
+          artifact(sourcesJar.get())
+          artifactId = project.name
+          groupId = ProjectVersions.GROUP_ID
+          version = ProjectVersions.VERSION_NAME
+        }
+      }
     }
   }
 }
@@ -57,9 +77,8 @@ dependencies {
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
   implementation(KotlinX.serialization.json)
   implementation("com.github.danbrough.androidutils:misc:_")
-
-  implementation("com.github.danbrough.androidutils:logging_core:_")
-  implementation("com.github.danbrough.androidutils:logging_android:_")
+  implementation(project(":logging"))
+  //implementation("com.github.danbrough.androidutils:logging-android:_")
   implementation(COIL)
   implementation(COIL.compose)
   implementation(AndroidX.compose.runtime)

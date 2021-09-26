@@ -38,7 +38,25 @@ android {
 
   }
 
+  val sourcesJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("sources")
+    from(sourceSets.getByName("main").java.srcDirs)
+  }
 
+  afterEvaluate {
+
+    publishing {
+      publications {
+        val release by registering(MavenPublication::class) {
+          from(components["release"])
+          artifact(sourcesJar.get())
+          artifactId = project.name
+          groupId = ProjectVersions.GROUP_ID
+          version = ProjectVersions.VERSION_NAME
+        }
+      }
+    }
+  }
   testOptions {
     //unitTests.setReturnDefaultValues(true)
   }
@@ -80,7 +98,7 @@ tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
 dependencies {
 
 
-  implementation(project(":logging_core"))
+  implementation(project(":logging"))
   implementation(Kotlin.stdlib.jdk8)
   implementation(KotlinX.coroutines.android)
   implementation(AndroidX.lifecycle.runtimeKtx)

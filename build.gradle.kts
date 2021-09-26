@@ -86,19 +86,20 @@ subprojects {
         ?: extensions.findByType(com.android.build.gradle.AppExtension::class))?.apply {
 
       if (this is com.android.build.gradle.LibraryExtension) {
-
-        val publishing =
-            extensions.findByType(PublishingExtension::class.java) ?: return@afterEvaluate
-
-        val sourcesJar by tasks.registering(Jar::class) {
-          archiveClassifier.set("sources")
-          from(sourceSets.getByName("main").java.srcDirs)
-        }
-
         compileOptions {
           sourceCompatibility = ProjectVersions.JAVA_VERSION
           targetCompatibility = ProjectVersions.JAVA_VERSION
         }
+
+        val publishing =
+            extensions.findByType(PublishingExtension::class.java) ?: return@afterEvaluate
+
+/*        val sourcesJar by tasks.registering(Jar::class) {
+          archiveClassifier.set("sources")
+          from(sourceSets.getByName("main").java.srcDirs)
+        }
+
+
 
         afterEvaluate {
 
@@ -106,9 +107,9 @@ subprojects {
             val projectName = name
             publications {
               val release by registering(MavenPublication::class) {
-                /*components.forEach {
+                *//*components.forEach {
                   println("Publication component: ${it.name}")
-                }*/
+                }*//*
                 from(components["release"])
                 artifact(sourcesJar.get())
                 artifactId = projectName
@@ -118,6 +119,8 @@ subprojects {
             }
           }
         }
+        */
+
       }
     }
   }
