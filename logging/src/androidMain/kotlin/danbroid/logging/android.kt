@@ -68,7 +68,7 @@ actual fun configure(
   LogConfig.MIN_LOG_LEVEL = minLogLevel
   LogConfig.DEBUG = debug
   LogConfig.COLOURED = coloured
-  LogConfig.STACK_DEPTH = 5
+  LogConfig.STACK_DEPTH = 6
   LogConfig.GET_LOG = { LogConfig.defaultLog }
   return LogConfig.defaultLog!!
 }
