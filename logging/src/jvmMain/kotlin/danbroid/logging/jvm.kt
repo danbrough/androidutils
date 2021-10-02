@@ -5,20 +5,7 @@ import java.io.StringWriter
 import java.net.UnknownHostException
 
 
-object StdOutLog : DBLog {
-  override var logName: String = "StdOutLog"
 
-  @Suppress("OVERRIDE_BY_INLINE")
-  override inline fun writeLogNative(
-    name: String,
-    level: DBLog.Level,
-    msg: CharSequence?,
-    error: Throwable?
-  ) {
-    println(msg)
-  }
-
-}
 
 
 @Suppress("OVERRIDE_BY_INLINE")

@@ -115,6 +115,21 @@ fun DBLog.Level.colorInt(): Int = when (this) {
   else -> 31
 }
 
+object StdOutLog : DBLog {
+  override var logName: String = "StdOutLog"
+
+  @Suppress("OVERRIDE_BY_INLINE")
+  override inline fun writeLogNative(
+      name: String,
+      level: DBLog.Level,
+      msg: CharSequence?,
+      error: Throwable?
+  ) {
+    println(msg)
+  }
+
+}
+
 
 @Suppress("OVERRIDE_BY_INLINE")
 fun colouredDecorator(level: DBLog.Level, msg: String): String =

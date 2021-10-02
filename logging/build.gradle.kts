@@ -21,27 +21,29 @@ kotlin {
 
   sourceSets {
 
-    val commonMain by getting {
+    commonMain {
     }
 
     val jvmMain by getting {
+      dependsOn(commonMain.get())
     }
 
     val androidMain by getting {
+      dependsOn(commonMain.get())
     }
   }
 
 
   val publicationsFromMainHost =
-    listOf(jvm(), android()).map { it.name } + "kotlinMultiplatform"
+      listOf(jvm(), android()).map { it.name } + "kotlinMultiplatform"
 
   publishing {
     publications {
       matching { it.name in publicationsFromMainHost }.all {
         val targetPublication = this@all
         tasks.withType<AbstractPublishToMaven>()
-          .matching { it.publication == targetPublication }
-          .configureEach { onlyIf { true } }
+            .matching { it.publication == targetPublication }
+            .configureEach { onlyIf { true } }
         //.configureEach { onlyIf { findProperty("isMainHost") == "true" } }
       }
     }
@@ -53,7 +55,7 @@ android {
   sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
   defaultConfig {
-    minSdk = ProjectVersions.MIN_SDK_VERSION
+    minSdk = 16
     targetSdk = ProjectVersions.SDK_VERSION
   }
 }
