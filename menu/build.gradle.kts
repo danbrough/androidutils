@@ -76,7 +76,8 @@ dependencies {
 
   implementation("org.jetbrains.kotlin:kotlin-reflect:_")
   implementation(KotlinX.serialization.json)
-  implementation("com.github.danbrough.androidutils:misc:_")
+
+  implementation(project(":misc"))
   implementation(project(":logging"))
   //implementation("com.github.danbrough.androidutils:logging-android:_")
   implementation(COIL)

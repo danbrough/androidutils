@@ -2,7 +2,6 @@ plugins {
   id("org.jetbrains.dokka")
 }
 
-@Suppress("GradlePluginVersion")
 buildscript {
 
   dependencies {
@@ -32,7 +31,7 @@ allprojects {
     google()
     //jcenter()
     mavenCentral()
-    maven("https://jitpack.io")
+    maven(ProjectVersions.MAVEN_REPO)
 
   }
 
@@ -93,6 +92,12 @@ subprojects {
 
         val publishing =
             extensions.findByType(PublishingExtension::class.java) ?: return@afterEvaluate
+
+        publishing.apply {
+          repositories {
+            maven(ProjectVersions.MAVEN_REPO)
+          }
+        }
 
 /*        val sourcesJar by tasks.registering(Jar::class) {
           archiveClassifier.set("sources")
