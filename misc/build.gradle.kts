@@ -28,7 +28,7 @@ android {
   }
 
   kotlinOptions {
-    jvmTarget = "1.8"
+    jvmTarget = ProjectVersions.KOTLIN_JVM_VERSION
     freeCompilerArgs = mutableListOf("-Xopt-in=kotlin.ExperimentalStdlibApi").also {
       it.addAll(freeCompilerArgs)
     }
