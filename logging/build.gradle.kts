@@ -14,8 +14,6 @@ kotlin {
   }
 
 
-
-
   jvm {
     compilations.all {
       kotlinOptions.jvmTarget = ProjectVersions.KOTLIN_JVM_VERSION
@@ -23,11 +21,9 @@ kotlin {
   }
 
 
+  linuxX64()
 
-  linuxX64("native") {
-
-  }
-
+  linuxArm64()
 
   sourceSets {
 
@@ -36,16 +32,24 @@ kotlin {
 
 
     val jvmMain by getting {
-     // dependsOn(commonMain.get())
+      // dependsOn(commonMain.get())
     }
 
     val androidMain by getting {
-   //   dependsOn(commonMain.get())
+      //   dependsOn(commonMain.get())
     }
 
-    val nativeMain by getting {
-     // dependsOn(commonMain.get())
+    val nativeMain by creating {
+      // dependsOn(commonMain.get())
     }
+
+    val linuxX64Main by getting {
+      dependsOn(nativeMain)
+    }
+    val linuxArm64Main by getting{
+      dependsOn(nativeMain)
+    }
+
 
   }
 

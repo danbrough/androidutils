@@ -1,5 +1,6 @@
 package danbroid.logging
 
+import kotlin.native.concurrent.ThreadLocal
 import kotlin.reflect.KClass
 
 interface DBLog {
@@ -70,6 +71,7 @@ interface DBLog {
 
 expect inline fun getStackTraceString(tr: Throwable?): String
 
+@ThreadLocal
 object LogConfig {
 
   /**
@@ -115,6 +117,7 @@ fun DBLog.Level.colorInt(): Int = when (this) {
   else -> 31
 }
 
+@ThreadLocal
 object StdOutLog : DBLog {
   override var logName: String = "StdOutLog"
 
@@ -140,6 +143,7 @@ inline fun getLog(kclass: KClass<*>) = getLog(kclass.qualifiedName!!)
 
 inline fun getLog(tag: String) = LogConfig.GET_LOG(tag) ?: NoOpLog
 
+@ThreadLocal
 object NoOpLog : DBLog {
   override var logName: String = "NoOpLog"
 

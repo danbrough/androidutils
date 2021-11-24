@@ -19,9 +19,9 @@ actual fun configure(
     }.defaultLog!!
 
 
-actual inline fun getStackTraceString(tr: Throwable?): String = "Error:$tr"
+actual inline fun getStackTraceString(tr: Throwable?): String = tr?.stackTraceToString() ?: "null"
 
-actual fun detailedDecorator(level: DBLog.Level, msg: String): String = "$level: $msg"
+actual fun detailedDecorator(level: DBLog.Level, msg: String): String = "${level.toString().padStart(5,' ')}: $msg"
 
 
 
