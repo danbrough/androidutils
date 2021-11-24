@@ -13,24 +13,40 @@ kotlin {
     publishLibraryVariants("release")
   }
 
+
+
+
   jvm {
     compilations.all {
       kotlinOptions.jvmTarget = ProjectVersions.KOTLIN_JVM_VERSION
     }
   }
 
+
+
+  linuxX64("native") {
+
+  }
+
+
   sourceSets {
 
     commonMain {
     }
 
+
     val jvmMain by getting {
-      dependsOn(commonMain.get())
+     // dependsOn(commonMain.get())
     }
 
     val androidMain by getting {
-      dependsOn(commonMain.get())
+   //   dependsOn(commonMain.get())
     }
+
+    val nativeMain by getting {
+     // dependsOn(commonMain.get())
+    }
+
   }
 
 

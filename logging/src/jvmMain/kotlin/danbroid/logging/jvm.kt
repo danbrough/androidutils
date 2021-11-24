@@ -6,8 +6,6 @@ import java.net.UnknownHostException
 
 
 
-
-
 @Suppress("OVERRIDE_BY_INLINE")
 actual fun detailedDecorator(level: DBLog.Level, msg: String): String {
   val thread = Thread.currentThread()
