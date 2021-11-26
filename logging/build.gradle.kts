@@ -30,7 +30,6 @@ kotlin {
     commonMain {
     }
 
-
     val jvmMain by getting {
       // dependsOn(commonMain.get())
     }
@@ -46,10 +45,10 @@ kotlin {
     val linuxX64Main by getting {
       dependsOn(nativeMain)
     }
+
     val linuxArm64Main by getting{
       dependsOn(nativeMain)
     }
-
 
   }
 
