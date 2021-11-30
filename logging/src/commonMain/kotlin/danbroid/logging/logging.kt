@@ -91,7 +91,7 @@ object LogConfig {
   /**
    * Coloured console output
    */
-  var COLOURED = false
+  var COLOURED = true
 
   /**
    * Apply the [detailedDecorator]. default: true
