@@ -25,6 +25,8 @@ kotlin {
 
   linuxArm64()
 
+  linuxArm32Hfp()
+
   sourceSets {
 
     commonMain {
@@ -47,6 +49,9 @@ kotlin {
     }
 
     val linuxArm64Main by getting{
+      dependsOn(nativeMain)
+    }
+    val linuxArm32HfpMain by getting{
       dependsOn(nativeMain)
     }
 

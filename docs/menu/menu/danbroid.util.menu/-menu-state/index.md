@@ -17,6 +17,6 @@ sealed class [MenuState](index.md)
 
 | Name |
 |---|
-| [MenuState](-l-o-a-d-i-n-g/index.md) |
-| [MenuState](-l-o-a-d-e-d/index.md) |
-| [MenuState](-e-r-r-o-r/index.md) |
+| [LOADING](-l-o-a-d-i-n-g/index.md) |
+| [LOADED](-l-o-a-d-e-d/index.md) |
+| [ERROR](-e-r-r-o-r/index.md) |

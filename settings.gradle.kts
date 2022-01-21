@@ -1,5 +1,5 @@
 plugins {
-  id("de.fayard.refreshVersions") version "0.23.0"
+  id("de.fayard.refreshVersions") version "0.30.2"
 }
 
 //include ':android_resource',':slf4j', ':touchprompt', ':touchprompt_material',':demo', ':android-ui'

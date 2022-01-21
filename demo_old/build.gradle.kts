@@ -121,16 +121,17 @@ dependencies {
 
   implementation(Google.android.material)
 
-  implementation(AndroidX.preferenceKtx)
+  implementation(AndroidX.preference.ktx)
 
 
   implementation(AndroidX.core.ktx)
   implementation(AndroidX.coordinatorLayout)
 
-  implementation(AndroidX.fragmentKtx)
+  implementation(AndroidX.fragment.ktx)
 
   //implementation(AndroidX.lifecycle.extensions)
-  implementation(AndroidX.lifecycle.liveDataCoreKtx)
+  // Removed from refreshVersions built-in dependency notations because not documented on d.android.com
+  implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:_")
   implementation(AndroidX.lifecycle.liveDataKtx)
   implementation(AndroidX.lifecycle.viewModelKtx)
   implementation(AndroidX.lifecycle.runtimeKtx)

@@ -86,7 +86,7 @@ dependencies {
   implementation(AndroidX.compose.material)
   implementation(AndroidX.compose.foundation)
   implementation(AndroidX.compose.ui.tooling)
-  implementation(AndroidX.constraintLayoutCompose)
+  implementation(AndroidX.constraintLayout.compose)
 
   implementation(AndroidX.navigation.compose)
   implementation(AndroidX.activity.compose)
