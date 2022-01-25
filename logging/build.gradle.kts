@@ -27,6 +27,12 @@ kotlin {
 
   linuxArm32Hfp()
 
+  mingwX64()
+  mingwX86()
+
+
+
+
   sourceSets {
 
     commonMain {
@@ -55,6 +61,13 @@ kotlin {
       dependsOn(nativeMain)
     }
 
+    val mingwX86Main by getting {
+      dependsOn(nativeMain)
+    }
+
+    val mingwX64Main by getting {
+      dependsOn(nativeMain)
+    }
   }
 
 
