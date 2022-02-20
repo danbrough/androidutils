@@ -38,14 +38,16 @@ fi
 #sed -i  README.md  -e 's/Latest version.*/Latest version: '$VERSION_NAME'/g'
 sed -i README.md -e 's/## Latest version:.*/## Latest version: '$VERSION_NAME'/g'
 
-./gradlew dokkaGfmMultiModule || exit 1
+#./gradlew dokkaGfmMultiModule || exit 1
 
 ./gradlew -q projectIncrementVersion
 git add .
 git commit -am "$VERSION_NAME"
 git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"
 
-./gradlew publishToMavenLocal || exit 1
+#./gradlew publishToMavenLocal || exit 1
+./gradlew publishAllPublicationsToMavenRepository
+exit 0
 
 #find ~/.m2/repository/com/github/danbrough/androidutils/ -type f -name 'maven-metadata-local.xml' | \
 #while read n; do
