@@ -15,7 +15,7 @@ object ProjectVersions {
   const val KEYSTORE_PASSWORD = ""
   var VERSION_FORMAT = ""
   lateinit var MAVEN_REPO: String
-  val COMPOSE_VERSION = "1.1.0-rc01"
+  val COMPOSE_VERSION = "1.1.1"
 
   val VERSION_NAME: String
     get() = getVersionName()

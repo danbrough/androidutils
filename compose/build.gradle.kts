@@ -1,6 +1,6 @@
 plugins {
   id("com.android.library")
-  kotlin("android") version "1.6.0"
+  kotlin("android")
   //kotlin("kapt")
   id("maven-publish")
   id("org.jetbrains.dokka")
