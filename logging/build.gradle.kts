@@ -1,6 +1,6 @@
 plugins {
   kotlin("multiplatform")
-  // id("com.android.library")
+  id("com.android.library")
   `maven-publish`
 }
 
@@ -8,19 +8,20 @@ group = ProjectVersions.GROUP_ID
 version = ProjectVersions.VERSION_NAME
 
 kotlin {
-/*
+
   android {
     publishLibraryVariants("release")
-  }*/
+  }
 
 
   jvm {
-    withJava()
+  //  withJava()
 
     compilations.all {
       kotlinOptions.jvmTarget = ProjectVersions.KOTLIN_JVM_VERSION
     }
   }
+
 
 
   androidNativeX86()
@@ -43,19 +44,19 @@ kotlin {
 
   sourceSets {
 
-    commonMain {
-    }
+
+    val sharedMain by creating
 
     val jvmMain by getting {
-      // dependsOn(commonMain.get())
+      dependsOn(sharedMain)
     }
 
-/*    val androidMain by getting {
-      //   dependsOn(commonMain.get())
-    }*/
+    val androidMain by getting {
+      dependsOn(sharedMain)
+    }
 
     val nativeMain by creating {
-      // dependsOn(commonMain.get())
+      dependsOn(sharedMain)
     }
 
     val linuxX64Main by getting {
@@ -92,10 +93,6 @@ kotlin {
       dependsOn(nativeMain)
     }
 
-
-/*    val android386Main by getting {
-      dependsOn(nativeMain)
-    }*/
   }
 
 /*
@@ -146,7 +143,7 @@ publishing {
 }
 
 
-/*
+
 android {
   compileSdk = ProjectVersions.SDK_VERSION
   sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
@@ -158,5 +155,5 @@ android {
 }
 
 
-*/
+
 
