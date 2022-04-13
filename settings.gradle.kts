@@ -6,7 +6,7 @@ plugins {
 //include(":misc", ":menu",  ":permissions", ":logging")
 
 //include(":compose")
-include(":logging",":compose",":misc")
+include(":logging",":misc")
 
 if (!System.getenv().containsKey("JITPACK") && !System.getenv().containsKey("CI")) {
   // include(":demo")
