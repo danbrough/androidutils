@@ -62,6 +62,10 @@ actual fun configure(
   debug: Boolean,
   coloured: Boolean
 ): DBLog {
+  LogConfig.defaultLog?.also {
+    it.warn("Logging has already been configured")
+    return it
+  }
   LogConfig.defaultLog = defaultLog?.also {
     it.logName = tag
   } ?: AndroidLog(tag)
