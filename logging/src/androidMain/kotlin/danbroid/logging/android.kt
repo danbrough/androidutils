@@ -65,6 +65,8 @@ actual fun configure(
   LogConfig.defaultLog = defaultLog?.also {
     it.logName = tag
   } ?: AndroidLog(tag)
+
+
   LogConfig.MIN_LOG_LEVEL = minLogLevel
   LogConfig.DEBUG = debug
   LogConfig.COLOURED = coloured
