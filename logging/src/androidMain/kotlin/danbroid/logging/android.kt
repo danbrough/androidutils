@@ -62,10 +62,21 @@ actual fun configure(
   debug: Boolean,
   coloured: Boolean
 ): DBLog {
+
   LogConfig.defaultLog?.also {
     it.warn("Logging has already been configured")
     return it
   }
+
+
+  runCatching {
+    android.util.Log.v("Logging","Testing logging")
+  }.exceptionOrNull()?.also {
+    //android log isn't mocked. Use stdout
+    LogConfig.defaultLog = StdOutLog
+    return LogConfig.defaultLog!!
+  }
+
   LogConfig.defaultLog = defaultLog?.also {
     it.logName = tag
   } ?: AndroidLog(tag)
