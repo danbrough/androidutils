@@ -18,7 +18,7 @@ kotlin {
   //  withJava()
 
     compilations.all {
-      kotlinOptions.jvmTarget = ProjectVersions.KOTLIN_JVM_VERSION
+      kotlinOptions.jvmTarget = "1"
     }
   }
 
